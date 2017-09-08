@@ -1,7 +1,7 @@
 product_type, product_name, product_price
 Laptops QWERTY,HP Pavilion 15-cc593nd,€ 799.00
 Laptops QWERTY,Acer Aspire ES1-523-81VF,€ 499.00
-Laptops QWERTY,HP Pavilion Power 15-cb091nd,€ 1299.00
+Laptops QWERTY,HP Pavilion Power 15-cb091nd,"€ 1,299.00"
 Laptops QWERTY,Asus ZenBook UX410UA-GV028T,€ 899.00
 Laptops QWERTY,Acer Aspire ES1-132-C0R8,€ 199.00
 Laptops QWERTY,Lenovo Ideapad 320-14ISK 80XG0057MH,€ 479.00
@@ -9,10 +9,10 @@ Laptops QWERTY,Lenovo Yoga 520-14IKB 80X800NQMH,€ 799.00
 Laptops QWERTY,Acer Aspire E5-774G-56RD,€ 849.00
 Laptops QWERTY,HP 17-y072nd,€ 499.00
 Laptops QWERTY,Acer Chromebook R13 CB5-312T-K7SP,€ 449.00
-Laptops QWERTY,HP Pavilion 17-ab273nd,€ 1349.00
-Laptops QWERTY,Lenovo Ideapad 720S-13IKB 81A80052MH,€ 1049.00
-Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) MPXV2N/A Space Gray,€ 1962.95
-Laptops QWERTY,Apple MacBook Air 13|3" (2017) MQD32N/A,€ 1049.00
+Laptops QWERTY,HP Pavilion 17-ab273nd,"€ 1,349.00"
+Laptops QWERTY,Lenovo Ideapad 720S-13IKB 81A80052MH,"€ 1,049.00"
+Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) MPXV2N/A Space Gray,"€ 1,962.95"
+Laptops QWERTY,"Apple MacBook Air 13|3"" (2017) MQD32N/A","€ 1,049.00"
 Laptops QWERTY,HP 15-bw090nd,€ 379.00
 Laptops QWERTY,HP 15-bs591nd,€ 699.00
 Laptops QWERTY,Lenovo Ideapad 320-15IKBN 80XL02NPMH,€ 599.00
@@ -24,12 +24,12 @@ Laptops QWERTY,Acer Aspire ES1-332-C53V,€ 399.00
 Laptops QWERTY,Acer Aspire ES1-523-81JN,€ 449.00
 Laptops QWERTY,HP 15-ay081nd,€ 349.00
 Laptops QWERTY,Asus ZenBook UX410UA-GV262T,€ 749.00
-Laptops QWERTY,Acer Aspire 7 A715-71G-76Z5,€ 1149.00
+Laptops QWERTY,Acer Aspire 7 A715-71G-76Z5,"€ 1,149.00"
 Laptops QWERTY,Lenovo Yoga 510-14ISK 80S700FAMH,€ 649.00
 Laptops QWERTY,Acer Aspire 7 A715-71G-70GD,€ 999.00
 Laptops QWERTY,Acer Chromebook 14 CB3-431-C5K7,€ 349.00
-Laptops QWERTY,Lenovo Legion Y520-15IKBN 80WK00U8MH,€ 1099.00
-Laptops QWERTY,Apple MacBook Air 13" (2017) MQD42N/A,€ 1266.00
+Laptops QWERTY,Lenovo Legion Y520-15IKBN 80WK00U8MH,"€ 1,099.00"
+Laptops QWERTY,"Apple MacBook Air 13"" (2017) MQD42N/A","€ 1,266.00"
 Laptops QWERTY,HP Pavilion X360 14-ba091nd,€ 799.00
 Laptops QWERTY,Apple MacBook Air 13|3'' 8/128 GB - 1|6 GHZ,€ 979.00
 Laptops QWERTY,HP Thinbook 14-bp090nd,€ 699.00
@@ -47,7 +47,7 @@ Laptops QWERTY,HP ProBook 430 G4  i5-8gb-256ssd,€ 899.00
 Laptops QWERTY,Lenovo Yoga 520-14IKB 80X800LAMH,€ 499.00
 Laptops QWERTY,Asus VivoBook A541UA-DM1033T,€ 629.00
 Laptops QWERTY,HP 14-bs092nd,€ 529.00
-Laptops QWERTY,Asus VivoBook Pro N580VD-E4392T,€ 1299.00
+Laptops QWERTY,Asus VivoBook Pro N580VD-E4392T,"€ 1,299.00"
 Laptops QWERTY,Medion Akoya E2215T 32GB Zilver,€ 199.00
 Laptops QWERTY,Asus VivoBook R540SA-XX608T,€ 379.00
 Laptops QWERTY,HP 15-bs592nd,€ 779.00
@@ -60,9 +60,9 @@ Laptops QWERTY,Medion Akoya E6416,€ 399.00
 Laptops QWERTY,Lenovo Yoga 310-11IAP 80U20041MH,€ 369.00
 Laptops QWERTY,Acer Spin 1 SP111-31-C34F,€ 329.00
 Laptops QWERTY,Acer Aspire E15 E5-575G-78P0,€ 899.00
-Laptops QWERTY,Apple MacBook Pro 13'' (2017) MPXT2N/A Space Gray,€ 1695.00
+Laptops QWERTY,Apple MacBook Pro 13'' (2017) MPXT2N/A Space Gray,"€ 1,695.00"
 Laptops QWERTY,Lenovo Ideapad 320S-14IKB 80X4006WMH,€ 749.00
-Laptops QWERTY,Apple MacBook Pro Retina 15|4'' 256 GB,€ 2098.00
+Laptops QWERTY,Apple MacBook Pro Retina 15|4'' 256 GB,"€ 2,098.00"
 Laptops QWERTY,Acer Chromebook 11 CB3-131-C2SS,€ 259.00
 Laptops QWERTY,Lenovo Legion Y520-15IKBN 80WK00XYMH,€ 899.00
 Laptops QWERTY,Asus VivoBook R417SA-WX235T,€ 259.00
@@ -76,29 +76,29 @@ Laptops QWERTY,Asus VivoBook A541UA-DM1741T,€ 529.00
 Laptops QWERTY,Acer Aspire 3 A315-31-C440,€ 329.00
 Laptops QWERTY,Lenovo Ideapad 320-14IAP 80XQ0042MH,€ 399.00
 Laptops QWERTY,Asus Eeebook R417SA-FR170T,€ 299.00
-Laptops QWERTY,Lenovo Legion Y720-15 80VR002EMH,€ 1599.00
+Laptops QWERTY,Lenovo Legion Y720-15 80VR002EMH,"€ 1,599.00"
 Laptops QWERTY,HP Thinbook 14-bp032nd,€ 799.00
-Laptops QWERTY,MSI GP62M 7RDX-1263NL Leopard,€ 1299.00
+Laptops QWERTY,MSI GP62M 7RDX-1263NL Leopard,"€ 1,299.00"
 Laptops QWERTY,HP Chromebook 11-v001nd,€ 249.00
 Laptops QWERTY,Asus Eeebook R417SA-FR188T,€ 299.00
 Laptops QWERTY,HP 17-ak092nd,€ 549.00
 Laptops QWERTY,Lenovo Ideapad 320S-14IKB 80X4007AMH,€ 829.00
-Laptops QWERTY,Microsoft Surface Pro - i5 - 4 GB - 128 GB,€ 1049.00
+Laptops QWERTY,Microsoft Surface Pro - i5 - 4 GB - 128 GB,"€ 1,049.00"
 Laptops QWERTY,Medion Akoya S6219 Zilver 628,€ 349.00
-Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar MLW82N/A Silver,€ 2699.00
-Laptops QWERTY,Dell XPS 15 CNX95603,€ 1949.00
-Laptops QWERTY,Microsoft Surface Pro - i5 - 8 GB - 256 GB,€ 1449.00
+Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar MLW82N/A Silver,"€ 2,699.00"
+Laptops QWERTY,Dell XPS 15 CNX95603,"€ 1,949.00"
+Laptops QWERTY,Microsoft Surface Pro - i5 - 8 GB - 256 GB,"€ 1,449.00"
 Laptops QWERTY,Lenovo Yoga 720-13 80X600GJMH,€ 999.00
 Laptops QWERTY,HP 17-bs035nd,€ 899.00
 Laptops QWERTY,Dell Chromebook 3189,€ 399.00
 Laptops QWERTY,Lenovo Ideapad 320-15ABR 80XS005LMH,€ 699.00
 Laptops QWERTY,HP Pavilion Thinbook 14-bf015nd,€ 899.00
 Laptops QWERTY,HP Envy X360 15-bq015nd,€ 899.00
-Laptops QWERTY,Asus ZenBook Pro UX550VD-BN005T,€ 1799.00
+Laptops QWERTY,Asus ZenBook Pro UX550VD-BN005T,"€ 1,799.00"
 Laptops QWERTY,Acer Aspire E5-553G-T6V0,€ 699.00
 Laptops QWERTY,HP 14 Thinbook 14-bp004nd,€ 349.00
 Laptops QWERTY,Asus VivoBook S510UQ-BQ399T,€ 949.00
-Laptops QWERTY,Acer Aspire 7 A717-71G-785Y,€ 1399.00
+Laptops QWERTY,Acer Aspire 7 A717-71G-785Y,"€ 1,399.00"
 Laptops QWERTY,Acer Aspire E5-774-39HZ,€ 599.00
 Laptops QWERTY,Lenovo Ideapad 320-15IAP 80XR00NMMH,€ 349.00
 Laptops QWERTY,HP 14 Thinbook 14-bp005nd,€ 349.00
@@ -108,65 +108,65 @@ Laptops QWERTY,Acer Aspire E5-774G-70BN,€ 999.00
 Laptops QWERTY,Lenovo Ideapad 320-17IKB 80XM009AMH,€ 479.00
 Laptops QWERTY,MSI GL62M 7RDX-1267NL,€ 999.00
 Laptops QWERTY,HP Pavilion X360 14-ba012nd,€ 766.00
-Laptops QWERTY,MSI GP62M 7RDX-1265NL Leopard,€ 1099.00
-Laptops QWERTY,Microsoft Surface Laptop - i5 - 8 GB - 256 GB,€ 1379.00
+Laptops QWERTY,MSI GP62M 7RDX-1265NL Leopard,"€ 1,099.00"
+Laptops QWERTY,Microsoft Surface Laptop - i5 - 8 GB - 256 GB,"€ 1,379.00"
 Laptops QWERTY,Asus ZenBook UX430UA-GV235T,€ 999.00
-Laptops QWERTY,HP Spectre x360 15-bl020nd,€ 1924.00
-Laptops QWERTY,HP Pavilion 17-ab240nd,€ 1599.00
-Laptops QWERTY,Asus Strix FX502VM-FY250T,€ 1649.00
-Laptops QWERTY,HP ProBook 450 G4 i7-8gb-256ssd,€ 1099.00
-Laptops QWERTY,MSI GP72M 7REX-687NL Leopard Pro,€ 1499.00
+Laptops QWERTY,HP Spectre x360 15-bl020nd,"€ 1,924.00"
+Laptops QWERTY,HP Pavilion 17-ab240nd,"€ 1,599.00"
+Laptops QWERTY,Asus Strix FX502VM-FY250T,"€ 1,649.00"
+Laptops QWERTY,HP ProBook 450 G4 i7-8gb-256ssd,"€ 1,099.00"
+Laptops QWERTY,MSI GP72M 7REX-687NL Leopard Pro,"€ 1,499.00"
 Laptops QWERTY,Acer Aspire ES1-732-C202,€ 449.00
 Laptops QWERTY,Asus VivoBook R541UA-DM1457T,€ 549.00
-Laptops QWERTY,HP ProBook 470 G4 i7-8gb-256ssd+1tb-930mx,€ 1249.00
+Laptops QWERTY,HP ProBook 470 G4 i7-8gb-256ssd+1tb-930mx,"€ 1,249.00"
 Laptops QWERTY,Lenovo Ideapad 110-17IKB 80VK0003MH,€ 649.00
 Laptops QWERTY,Dell Latitude 7275 H3KN8,€ 799.00
 Laptops QWERTY,Acer Chromebook 15 CB5-571-C506,€ 349.00
-Laptops QWERTY,Lenovo Yoga 720-15 80X7009KMH,€ 1599.00
+Laptops QWERTY,Lenovo Yoga 720-15 80X7009KMH,"€ 1,599.00"
 Laptops QWERTY,Lenovo IdeaPad 110-15ACL 80TJ004QMH,€ 379.00
 Laptops QWERTY,Acer Chromebook 11 CB3-131-C2E2,€ 219.00
-Laptops QWERTY,Asus Strix FX502VM-FY361T,€ 1399.00
-Laptops QWERTY,HP Spectre X360 13-ac000nd,€ 1299.00
+Laptops QWERTY,Asus Strix FX502VM-FY361T,"€ 1,399.00"
+Laptops QWERTY,HP Spectre X360 13-ac000nd,"€ 1,299.00"
 Laptops QWERTY,HP 17-x011nd,€ 499.00
 Laptops QWERTY,HP 15-bs590nd,€ 549.00
-Laptops QWERTY,Microsoft Surface Laptop - i5 - 4 GB - 128 GB,€ 1049.00
-Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2017) MPTT2N/A Space Gray,€ 3298.00
+Laptops QWERTY,Microsoft Surface Laptop - i5 - 4 GB - 128 GB,"€ 1,049.00"
+Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2017) MPTT2N/A Space Gray,"€ 3,298.00"
 Laptops QWERTY,Lenovo Ideapad 320-15IAP 80XR00NJMH,€ 399.00
-Laptops QWERTY,Dell XPS 15 CNX95604,€ 2199.00
+Laptops QWERTY,Dell XPS 15 CNX95604,"€ 2,199.00"
 Laptops QWERTY,Asus VivoBook S510UA-BQ113T,€ 899.00
-Laptops QWERTY,HP Pavilion 17-ab200nd,€ 1199.00
+Laptops QWERTY,HP Pavilion 17-ab200nd,"€ 1,199.00"
 Laptops QWERTY,Medion Akoya E2215T 32GB Roze,€ 229.00
-Laptops QWERTY,HP Probook 450 i7 16gb 256+1tb 930mx,€ 1239.00
-Laptops QWERTY,Apple MacBook Air 13|3'' 8/256 GB - 1|6 GHZ,€ 1249.00
+Laptops QWERTY,HP Probook 450 i7 16gb 256+1tb 930mx,"€ 1,239.00"
+Laptops QWERTY,Apple MacBook Air 13|3'' 8/256 GB - 1|6 GHZ,"€ 1,249.00"
 Laptops QWERTY,HP 17-y071nd,€ 449.00
 Laptops QWERTY,Lenovo Yoga 520-14 80X800SCMH,€ 999.00
 Laptops QWERTY,HP ProBook 450 G4 i5-8gb-128ssd+1tb-930mx,€ 999.00
-Laptops QWERTY,HP Envy 13-ad031nd,€ 1299.00
+Laptops QWERTY,HP Envy 13-ad031nd,"€ 1,299.00"
 Laptops QWERTY,Lenovo ThinkPad E570 - i5-8gb-256ssd-fhd ips,€ 899.00
 Laptops QWERTY,HP Chromebook 11 G5 X0N99EA,€ 349.00
 Laptops QWERTY,HP Stream 11-y011nd,€ 299.00
-Laptops QWERTY,MSI GE62MVR 7RG-036NL Apache Pro,€ 1899.00
-Laptops QWERTY,Lenovo Yoga 720-15 80X7004CMH,€ 1999.00
+Laptops QWERTY,MSI GE62MVR 7RG-036NL Apache Pro,"€ 1,899.00"
+Laptops QWERTY,Lenovo Yoga 720-15 80X7004CMH,"€ 1,999.00"
 Laptops QWERTY,Acer Spin 5 SP513-51-370V,€ 699.00
 Laptops QWERTY,HP 15-bs020nd,€ 549.00
-Laptops QWERTY,HP Envy 13-ad012nd,€ 1099.00
+Laptops QWERTY,HP Envy 13-ad012nd,"€ 1,099.00"
 Laptops QWERTY,Medion Erazer P7643-i5-256,€ 799.00
-Laptops QWERTY,HP ProBook 470 G4 i5-8gb-128ssd+1tb-930mx,€ 1079.00
+Laptops QWERTY,HP ProBook 470 G4 i5-8gb-128ssd+1tb-930mx,"€ 1,079.00"
 Laptops QWERTY,Acer Aspire E5-774-56AG,€ 749.00
 Laptops QWERTY,Lenovo Ideapad 320-15IAP 80XR00NCMH,€ 449.00
 Laptops QWERTY,Asus VivoBook R702NA-BX032T,€ 449.00
 Laptops QWERTY,Dell Chromebook 3180,€ 299.00
-Laptops QWERTY,Dell XPS 15 CNX95602,€ 1699.00
-Laptops QWERTY,Asus Gaming ROG Strix GL753VD-GC366T,€ 1369.00
+Laptops QWERTY,Dell XPS 15 CNX95602,"€ 1,699.00"
+Laptops QWERTY,Asus Gaming ROG Strix GL753VD-GC366T,"€ 1,369.00"
 Laptops QWERTY,Acer Chromebook 14 CP5-471-33PC,€ 449.00
-Laptops QWERTY,HP Pavilion Power 15-cb001nd,€ 1099.00
+Laptops QWERTY,HP Pavilion Power 15-cb001nd,"€ 1,099.00"
 Laptops QWERTY,Acer Swift 3 SF314-51-53S8,€ 799.00
 Laptops QWERTY,Asus Chromebook C201PA-FD0009,€ 269.00
-Laptops QWERTY,HP Envy Notebook 17-ae020nd,€ 1276.01
-Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) MPXW2N/A Space Gray,€ 2249.00
-Laptops QWERTY,Asus Gaming ROG Strix GL553VD-DM535T,€ 1099.00
+Laptops QWERTY,HP Envy Notebook 17-ae020nd,"€ 1,276.01"
+Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) MPXW2N/A Space Gray,"€ 2,249.00"
+Laptops QWERTY,Asus Gaming ROG Strix GL553VD-DM535T,"€ 1,099.00"
 Laptops QWERTY,Dell Vostro 14 5468 4W59W,€ 759.00
-Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2017) MPTR2N/A Space Gray,€ 2799.00
+Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2017) MPTR2N/A Space Gray,"€ 2,799.00"
 Laptops QWERTY,Medion Akoya E6421,€ 549.00
 Laptops QWERTY,Lenovo Yoga Book Pro YB1-X91F Zwart,€ 599.00
 Laptops QWERTY,Asus Chromebook C301SA-FC032,€ 379.00
@@ -174,261 +174,261 @@ Laptops QWERTY,HP Pavilion 15-cc526nd,€ 999.00
 Laptops QWERTY,Asus Transformer Book T101HA-GR004T,€ 299.00
 Laptops QWERTY,HP X360 11-ab001nd,€ 449.00
 Laptops QWERTY,Medion Akoya S6219W White 128,€ 349.00
-Laptops QWERTY,Apple MacBook 12" (2017) MNYF2N/A Space Gray,€ 1492.00
+Laptops QWERTY,"Apple MacBook 12"" (2017) MNYF2N/A Space Gray","€ 1,492.00"
 Laptops QWERTY,Medion Erazer P7643-i7-1628,€ 999.00
-Laptops QWERTY,Asus Gaming ROG Strix GL502VS-FI407T,€ 2499.00
+Laptops QWERTY,Asus Gaming ROG Strix GL502VS-FI407T,"€ 2,499.00"
 Laptops QWERTY,HP Chromebook 14 G4 P5T65EA,€ 389.00
-Laptops QWERTY,MSI GP62MVR 7RF-285NL Leopard Pro,€ 1399.00
+Laptops QWERTY,MSI GP62MVR 7RF-285NL Leopard Pro,"€ 1,399.00"
 Laptops QWERTY,HP Probook 440 G3 W4N88ET,€ 749.00
 Laptops QWERTY,Asus VivoBook R540YA-DM326T,€ 449.00
 Laptops QWERTY,Asus VivoBook R541UA-DM1209T,€ 529.00
 Laptops QWERTY,Asus Chromebook C302CA-GU006,€ 589.00
-Laptops QWERTY,Apple MacBook Pro 13'' (2017) MPXU2N/A Silver,€ 1720.90
+Laptops QWERTY,Apple MacBook Pro 13'' (2017) MPXU2N/A Silver,"€ 1,720.90"
 Laptops QWERTY,Dell Latitude 7275 1JXV0,€ 699.00
 Laptops QWERTY,HP Pavilion 15-cd023nd,€ 799.00
-Laptops QWERTY,HP Omen 15-ce032nd,€ 1399.00
+Laptops QWERTY,HP Omen 15-ce032nd,"€ 1,399.00"
 Laptops QWERTY,Lenovo Ideapad 320-17IKB 80XM009JMH,€ 749.00
-Laptops QWERTY,Asus ZenBook Flip S UX370UA-C4147T,€ 1199.00
-Laptops QWERTY,HP Spectre X360 13-ac011nd,€ 1599.00
+Laptops QWERTY,Asus ZenBook Flip S UX370UA-C4147T,"€ 1,199.00"
+Laptops QWERTY,HP Spectre X360 13-ac011nd,"€ 1,599.00"
 Laptops QWERTY,Asus Zenbook RX410UA-GV222R,€ 999.00
 Laptops QWERTY,HP 14 Thinbook 14-bp000nd,€ 448.00
 Laptops QWERTY,HP Chromebook 11 G5 X0P00EA,€ 309.00
 Laptops QWERTY,Acer Switch SW312-31-P9XJ,€ 599.00
-Laptops QWERTY,Apple MacBook Air 13|3'' (2017) 8/256 GB - 2|2GHz,€ 1266.00
+Laptops QWERTY,Apple MacBook Air 13|3'' (2017) 8/256 GB - 2|2GHz,"€ 1,266.00"
 Laptops QWERTY,HP 17-bs097nd,€ 449.00
-Laptops QWERTY,Acer Predator Helios 300 G3-572-71SP,€ 1349.00
+Laptops QWERTY,Acer Predator Helios 300 G3-572-71SP,"€ 1,349.00"
 Laptops QWERTY,Medion Akoya E2225T 64GB Wit,€ 279.00
 Laptops QWERTY,HP 14 Thinbook 14-bp001nd,€ 449.00
-Laptops QWERTY,Microsoft Surface Pro - i7 - 8 GB - 256 GB,€ 1799.00
-Laptops QWERTY,MSI GP72MVR 7RFX-498NL Leopard Pro,€ 1599.00
+Laptops QWERTY,Microsoft Surface Pro - i7 - 8 GB - 256 GB,"€ 1,799.00"
+Laptops QWERTY,MSI GP72MVR 7RFX-498NL Leopard Pro,"€ 1,599.00"
 Laptops QWERTY,HP 17-ak022nd,€ 699.00
-Laptops QWERTY,Asus ZenBook Flip UX560UQ-FJ089T,€ 1683.00
+Laptops QWERTY,Asus ZenBook Flip UX560UQ-FJ089T,"€ 1,683.00"
 Laptops QWERTY,Medion Akoya E2225T 64GB Zilver,€ 279.00
 Laptops QWERTY,Acer Chromebook 14 CP5-471-53B9,€ 549.00
 Laptops QWERTY,HP ProBook 450 G4 i3-8gb-128ssd,€ 799.00
 Laptops QWERTY,Lenovo ThinkPad 13 - i5-8gb-256ssd-fhd,€ 999.00
 Laptops QWERTY,Lenovo Ideapad 320-15IAP 80XR00NKMH,€ 369.00
-Laptops QWERTY,Dell XPS 15 CNX95605,€ 2699.00
+Laptops QWERTY,Dell XPS 15 CNX95605,"€ 2,699.00"
 Laptops QWERTY,Toshiba Tecra A40-C-1DF,€ 799.00
-Laptops QWERTY,Lenovo ThinkPad X1 Carbon 20HR0021MH,€ 1599.00
-Laptops QWERTY,Asus Gaming ROG Strix GL553VE-FY264T,€ 1499.00
-Laptops QWERTY,HP Probook 450 G4 Y8A30ET,€ 1189.00
-Laptops QWERTY,HP ProBook 450 G4 i7-8gb-128ssd+1tb-930mx,€ 1149.00
-Laptops QWERTY,MSI GL62M 7REX-1269NL,€ 1199.00
+Laptops QWERTY,Lenovo ThinkPad X1 Carbon 20HR0021MH,"€ 1,599.00"
+Laptops QWERTY,Asus Gaming ROG Strix GL553VE-FY264T,"€ 1,499.00"
+Laptops QWERTY,HP Probook 450 G4 Y8A30ET,"€ 1,189.00"
+Laptops QWERTY,HP ProBook 450 G4 i7-8gb-128ssd+1tb-930mx,"€ 1,149.00"
+Laptops QWERTY,MSI GL62M 7REX-1269NL,"€ 1,199.00"
 Laptops QWERTY,HP ZBook 15u G3 T7W11ET,€ 919.00
-Laptops QWERTY,HP Probook 450 G4 T8B72ET,€ 1089.00
+Laptops QWERTY,HP Probook 450 G4 T8B72ET,"€ 1,089.00"
 Laptops QWERTY,Acer Spin 5 SP513-51-79TA,€ 999.00
-Laptops QWERTY,Microsoft Surface Book - i5 - 8 GB - 128 GB,€ 1599.00
+Laptops QWERTY,Microsoft Surface Book - i5 - 8 GB - 128 GB,"€ 1,599.00"
 Laptops QWERTY,Acer Chromebook 11 CB3-131-C4DD,€ 229.00
 Laptops QWERTY,Acer Chromebook 15 CB5-571-34MD,€ 439.00
 Laptops QWERTY,Acer Swift 3 SF314-51-53MQ,€ 899.00
-Laptops QWERTY,HP ProBook 470 G4 Y8A82ET,€ 1189.00
-Laptops QWERTY,Microsoft Surface Pro 4 - i7 - 16 GB - 1 TB,€ 2149.00
+Laptops QWERTY,HP ProBook 470 G4 Y8A82ET,"€ 1,189.00"
+Laptops QWERTY,Microsoft Surface Pro 4 - i7 - 16 GB - 1 TB,"€ 2,149.00"
 Laptops QWERTY,Acer Swift 5 SF514-51-59B2,€ 999.00
-Laptops QWERTY,MSI GE73VR 7RE-009NL,€ 1949.00
-Laptops QWERTY,Asus ROG Strix GL753VD-GC097T,€ 1049.00
+Laptops QWERTY,MSI GE73VR 7RE-009NL,"€ 1,949.00"
+Laptops QWERTY,Asus ROG Strix GL753VD-GC097T,"€ 1,049.00"
 Laptops QWERTY,Asus VivoBook X555QA-DM020T,€ 729.00
-Laptops QWERTY,Asus Gaming ROG Strix GL502VM-FY536T,€ 1699.00
-Laptops QWERTY,Asus ZenBook Pro UX550VE-BN050T,€ 2199.00
+Laptops QWERTY,Asus Gaming ROG Strix GL502VM-FY536T,"€ 1,699.00"
+Laptops QWERTY,Asus ZenBook Pro UX550VE-BN050T,"€ 2,199.00"
 Laptops QWERTY,HP ProBook 430 G4 i3-8gb-128ssd,€ 814.00
 Laptops QWERTY,Medion Akoya E7419,€ 449.00
-Laptops QWERTY,MSI GP62MVR 7RFX-804NL Leopard Pro,€ 1599.00
-Laptops QWERTY,MSI GS63VR 7RF-216NL Stealth Pro 4K,€ 2299.00
+Laptops QWERTY,MSI GP62MVR 7RFX-804NL Leopard Pro,"€ 1,599.00"
+Laptops QWERTY,MSI GS63VR 7RF-216NL Stealth Pro 4K,"€ 2,299.00"
 Laptops QWERTY,Asus VivoBook Flip TP501UA-FZ186T,€ 999.00
-Laptops QWERTY,Asus ZenBook Flip S UX370UA-C4137T,€ 1699.00
-Laptops QWERTY,Microsoft Surface Book - i7 - 16 GB - 512 GB,€ 2719.00
+Laptops QWERTY,Asus ZenBook Flip S UX370UA-C4137T,"€ 1,699.00"
+Laptops QWERTY,Microsoft Surface Book - i7 - 16 GB - 512 GB,"€ 2,719.00"
 Laptops QWERTY,Medion Akoya P7645-i5-256,€ 779.00
-Laptops QWERTY,HP Omen 17-an031nd,€ 1499.00
-Laptops QWERTY,Microsoft Surface Laptop - i7 - 16 GB - 512 GB,€ 2499.00
-Laptops QWERTY,Acer Swift 3 SF314-51-79L3,€ 1089.00
+Laptops QWERTY,HP Omen 17-an031nd,"€ 1,499.00"
+Laptops QWERTY,Microsoft Surface Laptop - i7 - 16 GB - 512 GB,"€ 2,499.00"
+Laptops QWERTY,Acer Swift 3 SF314-51-79L3,"€ 1,089.00"
 Laptops QWERTY,Lenovo Ideapad 110-15ISK 80UD00TEMH,€ 529.00
 Laptops QWERTY,HP 17-ak091nd,€ 529.00
 Laptops QWERTY,HP 15-bw052nd,€ 699.00
-Laptops QWERTY,Microsoft Surface Book - i5 - 8 GB - 256 GB,€ 1859.00
+Laptops QWERTY,Microsoft Surface Book - i5 - 8 GB - 256 GB,"€ 1,859.00"
 Laptops QWERTY,HP Chromebook 14 G4 P5T64EA,€ 339.00
-Laptops QWERTY,Asus Gaming ROG Strix GL553VD-FY806T,€ 1399.00
-Laptops QWERTY,Asus Gaming ROG Strix GL753VD-GC150T,€ 1299.00
-Laptops QWERTY,MSI GL72M 7RDX-854NL,€ 1099.00
-Laptops QWERTY,Dell XPS 15 CNX95601,€ 1499.00
-Laptops QWERTY,Apple MacBook Pro 15'' (2017) Touch Bar MPTU2N/A Silver,€ 2799.00
+Laptops QWERTY,Asus Gaming ROG Strix GL553VD-FY806T,"€ 1,399.00"
+Laptops QWERTY,Asus Gaming ROG Strix GL753VD-GC150T,"€ 1,299.00"
+Laptops QWERTY,MSI GL72M 7RDX-854NL,"€ 1,099.00"
+Laptops QWERTY,Dell XPS 15 CNX95601,"€ 1,499.00"
+Laptops QWERTY,Apple MacBook Pro 15'' (2017) Touch Bar MPTU2N/A Silver,"€ 2,799.00"
 Laptops QWERTY,Acer Chromebook R13 CB5-312T-K5G1,€ 399.00
 Laptops QWERTY,Asus VivoBook R541NA-DM198T,€ 499.00
 Laptops QWERTY,Acer Chromebook 14 CP5-471-C8KZ,€ 399.00
-Laptops QWERTY,MSI GE73VR 7RF-007NL,€ 2299.00
+Laptops QWERTY,MSI GE73VR 7RF-007NL,"€ 2,299.00"
 Laptops QWERTY,Medion Akoya E1239T,€ 279.00
-Laptops QWERTY,Asus B9440UA-GV0081R,€ 1499.00
+Laptops QWERTY,Asus B9440UA-GV0081R,"€ 1,499.00"
 Laptops QWERTY,Medion Erazer P6679-i5-256,€ 799.00
 Laptops QWERTY,Acer Chromebook 11 C731-C5H7,€ 329.00
 Laptops QWERTY,Medion Akoya P7645-i5-1128,€ 799.00
-Laptops QWERTY,Acer Predator Helios 300 G3-572-76M9,€ 1549.00
+Laptops QWERTY,Acer Predator Helios 300 G3-572-76M9,"€ 1,549.00"
 Laptops QWERTY,Acer Chromebook R11 CB5-132T-C6V4,€ 279.00
-Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2017) MPTV2N/A Silver,€ 3257.00
+Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2017) MPTV2N/A Silver,"€ 3,257.00"
 Laptops QWERTY,Asus VivoBook R752SA-TY135T,€ 449.00
 Laptops QWERTY,Acer Aspire R3-131T-C282,€ 319.00
 Laptops QWERTY,Medion Akoya S6421S-i5-128,€ 529.00
-Laptops QWERTY,Lenovo ThinkPad Yoga 370 20JH002KMH,€ 1399.00
-Laptops QWERTY,Microsoft Surface Pro - i7 - 16 GB - 512 GB,€ 2499.00
-Laptops QWERTY,HP ProBook 430 G4 I7-8GB-256SSD,€ 1079.00
-Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) MPXX2N/A Silver,€ 1999.00
-Laptops QWERTY,Asus VivoBook Pro N580VD-E4380R,€ 1249.00
-Laptops QWERTY,Asus ZenBook Flip UX360UAK-DQ405R,€ 1399.00
-Laptops QWERTY,Asus Zenbook Flip S UX370UA-C4143R,€ 1399.00
-Laptops QWERTY,HP Probook 440 G4 Y7Z67ET,€ 1009.00
+Laptops QWERTY,Lenovo ThinkPad Yoga 370 20JH002KMH,"€ 1,399.00"
+Laptops QWERTY,Microsoft Surface Pro - i7 - 16 GB - 512 GB,"€ 2,499.00"
+Laptops QWERTY,HP ProBook 430 G4 I7-8GB-256SSD,"€ 1,079.00"
+Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) MPXX2N/A Silver,"€ 1,999.00"
+Laptops QWERTY,Asus VivoBook Pro N580VD-E4380R,"€ 1,249.00"
+Laptops QWERTY,Asus ZenBook Flip UX360UAK-DQ405R,"€ 1,399.00"
+Laptops QWERTY,Asus Zenbook Flip S UX370UA-C4143R,"€ 1,399.00"
+Laptops QWERTY,HP Probook 440 G4 Y7Z67ET,"€ 1,009.00"
 Laptops QWERTY,Toshiba Satellite Pro A50-C-20C,€ 999.00
-Laptops QWERTY,Apple MacBook 12" (2017) MNYM2N/A Rose Gold,€ 1499.00
-Laptops QWERTY,Acer Aspire VN7-793G-70F0,€ 1899.00
+Laptops QWERTY,"Apple MacBook 12"" (2017) MNYM2N/A Rose Gold","€ 1,499.00"
+Laptops QWERTY,Acer Aspire VN7-793G-70F0,"€ 1,899.00"
 Laptops QWERTY,HP Chromebook 11 G5 X0N98EA,€ 319.00
-Laptops QWERTY,HP Elite x2 1012 G1 L5H36ET,€ 1379.00
+Laptops QWERTY,HP Elite x2 1012 G1 L5H36ET,"€ 1,379.00"
 Laptops QWERTY,Medion Akoya E7419-C256,€ 499.00
 Laptops QWERTY,Medion Akoya E7415-F3-256,€ 549.00
-Laptops QWERTY,HP EliteBook x360 1030 G2 Z2W66EA,€ 1869.00
-Laptops QWERTY,Asus Gaming ROG Strix GL553VD-FY827T,€ 1299.00
-Laptops QWERTY,HP Omen 17-an001nd,€ 1199.00
-Laptops QWERTY,HP Elitebook x360 1030 G2 i7 8gb 512SSD 4K,€ 2499.00
-Laptops QWERTY,Microsoft Surface Laptop - i7 - 8 GB - 256 GB,€ 1799.00
+Laptops QWERTY,HP EliteBook x360 1030 G2 Z2W66EA,"€ 1,869.00"
+Laptops QWERTY,Asus Gaming ROG Strix GL553VD-FY827T,"€ 1,299.00"
+Laptops QWERTY,HP Omen 17-an001nd,"€ 1,199.00"
+Laptops QWERTY,HP Elitebook x360 1030 G2 i7 8gb 512SSD 4K,"€ 2,499.00"
+Laptops QWERTY,Microsoft Surface Laptop - i7 - 8 GB - 256 GB,"€ 1,799.00"
 Laptops QWERTY,Asus VivoBook Flip TP203NA-BP029T,€ 379.00
-Laptops QWERTY,HP ProBook 650 G3 Z2X35ET,€ 1349.00
-Laptops QWERTY,HP ProBook 450 G3 i7-8gb-256ssd+1tb-R7 M340,€ 1149.00
-Laptops QWERTY,Acer Spin 7 SP714-51-M0U6,€ 1299.00
-Laptops QWERTY,HP ProBook 650 G2 T4J06ET,€ 1149.00
-Laptops QWERTY,Microsoft Surface Book - i7 - 8 GB - 256 GB,€ 2339.00
-Laptops QWERTY,Microsoft Surface Book - i7 - 16 GB - 1 TB,€ 3285.00
-Laptops QWERTY,Lenovo IdeaPad Y910-17ISK 80V10019MH,€ 2499.00
-Laptops QWERTY,HP EliteBook 850 G4 Z2W92EA,€ 1779.00
+Laptops QWERTY,HP ProBook 650 G3 Z2X35ET,"€ 1,349.00"
+Laptops QWERTY,HP ProBook 450 G3 i7-8gb-256ssd+1tb-R7 M340,"€ 1,149.00"
+Laptops QWERTY,Acer Spin 7 SP714-51-M0U6,"€ 1,299.00"
+Laptops QWERTY,HP ProBook 650 G2 T4J06ET,"€ 1,149.00"
+Laptops QWERTY,Microsoft Surface Book - i7 - 8 GB - 256 GB,"€ 2,339.00"
+Laptops QWERTY,Microsoft Surface Book - i7 - 16 GB - 1 TB,"€ 3,285.00"
+Laptops QWERTY,Lenovo IdeaPad Y910-17ISK 80V10019MH,"€ 2,499.00"
+Laptops QWERTY,HP EliteBook 850 G4 Z2W92EA,"€ 1,779.00"
 Laptops QWERTY,HP Chromebook 11 G5 X0N97EA,€ 299.00
-Laptops QWERTY,HP EliteBook Folio G1 V1C39EA,€ 1809.00
-Laptops QWERTY,MSI GT83VR 6RE-033NL Titan SLI,€ 3399.00
-Laptops QWERTY,HP Pro x2 612 G2 L5H58EA,€ 1329.00
-Laptops QWERTY,Asus ZenBook Deluxe UX490UA-BE029T,€ 1399.00
-Laptops QWERTY,Asus ZenBook Deluxe UX490UA-BE010T,€ 2099.00
-Laptops QWERTY,MSI GE62VR 7RF-635NL Camo Squad,€ 1799.00
-Laptops QWERTY,Acer Swift 7 SF713-51-M53D,€ 1499.00
+Laptops QWERTY,HP EliteBook Folio G1 V1C39EA,"€ 1,809.00"
+Laptops QWERTY,MSI GT83VR 6RE-033NL Titan SLI,"€ 3,399.00"
+Laptops QWERTY,HP Pro x2 612 G2 L5H58EA,"€ 1,329.00"
+Laptops QWERTY,Asus ZenBook Deluxe UX490UA-BE029T,"€ 1,399.00"
+Laptops QWERTY,Asus ZenBook Deluxe UX490UA-BE010T,"€ 2,099.00"
+Laptops QWERTY,MSI GE62VR 7RF-635NL Camo Squad,"€ 1,799.00"
+Laptops QWERTY,Acer Swift 7 SF713-51-M53D,"€ 1,499.00"
 Laptops QWERTY,Medion Chromebook S2013,€ 229.00
 Laptops QWERTY,Medion Akoya E6421-i5-1628,€ 749.00
-Laptops QWERTY,HP Elite x2 1012 G1 L5H12EA,€ 1199.00
-Laptops QWERTY,Acer Swift 7 SF713-51-M25G,€ 1299.00
-Laptops QWERTY,Lenovo Thinkpad T560 20FH001BMH,€ 1299.00
-Laptops QWERTY,HP Elite x2 1012 G1 L5H08EA,€ 1779.00
-Laptops QWERTY,MSI GT83VR 7RF-217NL Titan SLI,€ 5349.00
-Laptops QWERTY,MSI GT83VR 7RE-215NL Titan SLI,€ 4199.00
-Laptops QWERTY,MSI GT73VR 7RE-400NL Titan SLI 4K,€ 4099.00
-Laptops QWERTY,MSI GT73VR 7RF-403NL Titan Pro 4K,€ 3699.00
-Laptops QWERTY,MSI GT73VR 7RE-406NL Titan 4K,€ 3099.00
-Laptops QWERTY,MSI GT73VR 7RE-412NL Titan,€ 2699.00
-Laptops QWERTY,MSI GS73VR 7RF-213NL Stealth Pro 4K,€ 2649.00
+Laptops QWERTY,HP Elite x2 1012 G1 L5H12EA,"€ 1,199.00"
+Laptops QWERTY,Acer Swift 7 SF713-51-M25G,"€ 1,299.00"
+Laptops QWERTY,Lenovo Thinkpad T560 20FH001BMH,"€ 1,299.00"
+Laptops QWERTY,HP Elite x2 1012 G1 L5H08EA,"€ 1,779.00"
+Laptops QWERTY,MSI GT83VR 7RF-217NL Titan SLI,"€ 5,349.00"
+Laptops QWERTY,MSI GT83VR 7RE-215NL Titan SLI,"€ 4,199.00"
+Laptops QWERTY,MSI GT73VR 7RE-400NL Titan SLI 4K,"€ 4,099.00"
+Laptops QWERTY,MSI GT73VR 7RF-403NL Titan Pro 4K,"€ 3,699.00"
+Laptops QWERTY,MSI GT73VR 7RE-406NL Titan 4K,"€ 3,099.00"
+Laptops QWERTY,MSI GT73VR 7RE-412NL Titan,"€ 2,699.00"
+Laptops QWERTY,MSI GS73VR 7RF-213NL Stealth Pro 4K,"€ 2,649.00"
 Laptops QWERTY,Acer Aspire R3-131T-C9R5,€ 319.00
 Laptops QWERTY,Medion Akoya P7645-i7-1128,€ 999.00
 Laptops QWERTY,Medion Erazer X6603-i5-1000,€ 999.00
-Laptops QWERTY,Medion Erazer X6603-i5-256,€ 1049.00
-Laptops QWERTY,Medion Erazer X6603-i7-1128,€ 1199.00
-Laptops QWERTY,Medion Erazer X7851-i7-256,€ 1699.00
-Laptops QWERTY,Medion Erazer X7853-i7-1512,€ 1999.00
-Laptops QWERTY,Toshiba Portege X20W-D-10Q,€ 1499.00
-Laptops QWERTY,HP EliteBook x360 1030 G2 Z2W63EA,€ 1809.00
-Laptops QWERTY,Asus ROG G752VS-GC310T,€ 2349.00
+Laptops QWERTY,Medion Erazer X6603-i5-256,"€ 1,049.00"
+Laptops QWERTY,Medion Erazer X6603-i7-1128,"€ 1,199.00"
+Laptops QWERTY,Medion Erazer X7851-i7-256,"€ 1,699.00"
+Laptops QWERTY,Medion Erazer X7853-i7-1512,"€ 1,999.00"
+Laptops QWERTY,Toshiba Portege X20W-D-10Q,"€ 1,499.00"
+Laptops QWERTY,HP EliteBook x360 1030 G2 Z2W63EA,"€ 1,809.00"
+Laptops QWERTY,Asus ROG G752VS-GC310T,"€ 2,349.00"
 Laptops QWERTY,Medion Akoya S3409 F3,€ 499.00
 Laptops QWERTY,Medion Akoya S6421S-i3-256,€ 529.00
 Laptops QWERTY,Medion Akoya S6421W-i3-256,€ 549.00
 Laptops QWERTY,Medion Akoya S6421S-i5-512,€ 699.00
-Laptops QWERTY,HP Spectre Pro 13 G1 X2F01EA,€ 1699.00
-Laptops QWERTY,Lenovo ThinkPad X1 Carbon 20HR002FMH,€ 2099.00
-Laptops QWERTY,Acer Predator G5-793-76E3,€ 1999.00
-Laptops QWERTY,Acer Predator G9-593-7757,€ 2499.00
+Laptops QWERTY,HP Spectre Pro 13 G1 X2F01EA,"€ 1,699.00"
+Laptops QWERTY,Lenovo ThinkPad X1 Carbon 20HR002FMH,"€ 2,099.00"
+Laptops QWERTY,Acer Predator G5-793-76E3,"€ 1,999.00"
+Laptops QWERTY,Acer Predator G9-593-7757,"€ 2,499.00"
 Laptops QWERTY,HP Chromebook 11 G1 X360 1TT17EA,€ 499.00
-Laptops QWERTY,Asus Zenbook UX490UA-BE049R,€ 2199.00
+Laptops QWERTY,Asus Zenbook UX490UA-BE049R,"€ 2,199.00"
 Laptops QWERTY,Acer Chromebook 11 C731T-C9M4,€ 369.00
-Laptops QWERTY,Microsoft Surface Pro - i7 - 16 GB - 1 TB,€ 3099.00
-Laptops QWERTY,Apple MacBook 12" (2017) MNYG2N/A Space Gray,€ 1799.00
-Laptops QWERTY,Apple MacBook 12" (2017) MNYH2N/A Silver,€ 1499.00
-Laptops QWERTY,Apple MacBook 12" (2017) MNYJ2N/A Silver,€ 1799.00
-Laptops QWERTY,Apple MacBook 12" (2017) MNYK2N/A Gold,€ 1499.00
-Laptops QWERTY,Apple MacBook 12" (2017) MNYN2N/A Rose Gold,€ 1799.00
-Laptops QWERTY,Apple MacBook 12" (2017) MNYL2N/A Gold,€ 1799.00
-Laptops QWERTY,HP Omen 15-ce000nd,€ 1099.00
-Laptops QWERTY,HP Omen 15-ce054nd,€ 1999.00
-Laptops QWERTY,HP Omen 17-an040nd,€ 1899.00
-Laptops QWERTY,HP Omen 17-an051nd,€ 2299.00
-Laptops QWERTY,HP Pro x2 612 G2 i5 8gb 360SSD,€ 1399.00
-Laptops QWERTY,HP Pro x2 612 G2 i5 8gb 256SSD,€ 1349.00
-Laptops QWERTY,HP Pro x2 612 G2 i5 8gb 128SSD,€ 1249.00
+Laptops QWERTY,Microsoft Surface Pro - i7 - 16 GB - 1 TB,"€ 3,099.00"
+Laptops QWERTY,"Apple MacBook 12"" (2017) MNYG2N/A Space Gray","€ 1,799.00"
+Laptops QWERTY,"Apple MacBook 12"" (2017) MNYH2N/A Silver","€ 1,499.00"
+Laptops QWERTY,"Apple MacBook 12"" (2017) MNYJ2N/A Silver","€ 1,799.00"
+Laptops QWERTY,"Apple MacBook 12"" (2017) MNYK2N/A Gold","€ 1,499.00"
+Laptops QWERTY,"Apple MacBook 12"" (2017) MNYN2N/A Rose Gold","€ 1,799.00"
+Laptops QWERTY,"Apple MacBook 12"" (2017) MNYL2N/A Gold","€ 1,799.00"
+Laptops QWERTY,HP Omen 15-ce000nd,"€ 1,099.00"
+Laptops QWERTY,HP Omen 15-ce054nd,"€ 1,999.00"
+Laptops QWERTY,HP Omen 17-an040nd,"€ 1,899.00"
+Laptops QWERTY,HP Omen 17-an051nd,"€ 2,299.00"
+Laptops QWERTY,HP Pro x2 612 G2 i5 8gb 360SSD,"€ 1,399.00"
+Laptops QWERTY,HP Pro x2 612 G2 i5 8gb 256SSD,"€ 1,349.00"
+Laptops QWERTY,HP Pro x2 612 G2 i5 8gb 128SSD,"€ 1,249.00"
 Laptops QWERTY,Acer Chromebook R11 CB5-132T-C0KZ,€ 279.00
-Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) MPXY2N/A Silver,€ 2249.00
-Laptops QWERTY,Toshiba X30-D-10J,€ 1439.00
-Laptops QWERTY,Toshiba X30-D-10K,€ 1749.00
-Laptops QWERTY,Toshiba X40-D-10G,€ 1449.00
-Laptops QWERTY,Asus Gaming ROG Strix GL702VM-GC143T,€ 1899.00
-Laptops QWERTY,Asus Gaming ROG Strix GL702VS-GC198T,€ 2099.00
-Laptops QWERTY,Asus ROG Zephyrus GX501VI-GZ021T,€ 3299.00
-Laptops QWERTY,MSI GE63VR 7RF-005NL,€ 2199.00
-Laptops QWERTY,MSI GS63VR 7RG-045NL,€ 2299.00
-Laptops QWERTY,MSI GS73VR 7RG-039NL,€ 2549.00
-Laptops QWERTY,MSI GL72M 7REX-859NL,€ 1299.00
+Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) MPXY2N/A Silver,"€ 2,249.00"
+Laptops QWERTY,Toshiba X30-D-10J,"€ 1,439.00"
+Laptops QWERTY,Toshiba X30-D-10K,"€ 1,749.00"
+Laptops QWERTY,Toshiba X40-D-10G,"€ 1,449.00"
+Laptops QWERTY,Asus Gaming ROG Strix GL702VM-GC143T,"€ 1,899.00"
+Laptops QWERTY,Asus Gaming ROG Strix GL702VS-GC198T,"€ 2,099.00"
+Laptops QWERTY,Asus ROG Zephyrus GX501VI-GZ021T,"€ 3,299.00"
+Laptops QWERTY,MSI GE63VR 7RF-005NL,"€ 2,199.00"
+Laptops QWERTY,MSI GS63VR 7RG-045NL,"€ 2,299.00"
+Laptops QWERTY,MSI GS73VR 7RG-039NL,"€ 2,549.00"
+Laptops QWERTY,MSI GL72M 7REX-859NL,"€ 1,299.00"
 Laptops QWERTY,Toshiba Tecra Z40-C-12x,€ 824.00
-Laptops QWERTY,MSI GT75VR 7RE-039NL,€ 4399.00
-Laptops QWERTY,MSI GT75VR 7RE-043NL,€ 2599.00
-Laptops QWERTY,MSI GT75VR 7RF-041NL,€ 3499.00
-Laptops QWERTY,Apple MacBook Pro 13'' (2017) 8/256 GB - 2|5Ghz Silver,€ 2109.00
-Laptops QWERTY,Apple MacBook Pro 13'' (2017) 16/128 GB - 2|3Ghz Space Gray,€ 1739.00
-Laptops QWERTY,Apple MacBook Air 13|3'' (2017) 8/128 GB - 2|2GHz,€ 1279.00
-Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2017) 16/512 GB - 2|8Ghz Space Gray,€ 3039.00
+Laptops QWERTY,MSI GT75VR 7RE-039NL,"€ 4,399.00"
+Laptops QWERTY,MSI GT75VR 7RE-043NL,"€ 2,599.00"
+Laptops QWERTY,MSI GT75VR 7RF-041NL,"€ 3,499.00"
+Laptops QWERTY,Apple MacBook Pro 13'' (2017) 8/256 GB - 2|5Ghz Silver,"€ 2,109.00"
+Laptops QWERTY,Apple MacBook Pro 13'' (2017) 16/128 GB - 2|3Ghz Space Gray,"€ 1,739.00"
+Laptops QWERTY,Apple MacBook Air 13|3'' (2017) 8/128 GB - 2|2GHz,"€ 1,279.00"
+Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2017) 16/512 GB - 2|8Ghz Space Gray,"€ 3,039.00"
 Laptops QWERTY,Medion Akoya E3213T 64GB Zilver,€ 399.00
 Laptops QWERTY,Medion Akoya E3213T 64GB Wit,€ 399.00
 Laptops QWERTY,Medion Akoya E3213T 128GB Zilver,€ 499.00
 Laptops QWERTY,Medion Akoya E3213T 128GB Wit,€ 499.00
-Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2016) MPDL2N/A Zilver,€ 2399.00
-Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2016) MLH52N/A Space Gray,€ 3199.00
-Laptops QWERTY,Apple MacBook Pro 13'' (2017) 16/256 GB - 2|5Ghz Space Gray,€ 2349.00
-Laptops QWERTY,Apple MacBook Pro 13'' (2017) 16/256 GB - 2|3Ghz Space Gray,€ 1989.00
-Laptops QWERTY,Apple MacBook Pro 13'' (2017) 8/256 GB - 2|5Ghz Space Gray,€ 2109.00
-Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) 16/256 GB - 3|1Ghz Space Gray,€ 2239.00
-Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) 16/256 GB - 3|1Ghz Silver,€ 2239.00
-Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) 16/256 GB - 3|3GHz Space Gray,€ 2359.00
-Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) 16/256 GB - 3|1Ghz Space Gray,€ 2239.00
-Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) 16/256 GB - 3|1Ghz Silver,€ 2239.00
-Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) 16/256 GB - 3|3GHz Space Gray,€ 2359.00
-Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2017) 16/256 GB - 3|1Ghz Space Gray,€ 3159.00
-Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2017) 16/256 GB - 3|1Ghz Silver,€ 3159.00
-Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) 16/256 GB - 3|3GHz Silver,€ 2359.00
-Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) 16/512 GB - 3|3GHz Space Gray,€ 2849.00
-Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2017) 16/512SSD - 3|1Ghz Space Gray,€ 3519.00
-Laptops QWERTY,HP EliteBook 850 G3 T9X36EA,€ 1709.00
+Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2016) MPDL2N/A Zilver,"€ 2,399.00"
+Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2016) MLH52N/A Space Gray,"€ 3,199.00"
+Laptops QWERTY,Apple MacBook Pro 13'' (2017) 16/256 GB - 2|5Ghz Space Gray,"€ 2,349.00"
+Laptops QWERTY,Apple MacBook Pro 13'' (2017) 16/256 GB - 2|3Ghz Space Gray,"€ 1,989.00"
+Laptops QWERTY,Apple MacBook Pro 13'' (2017) 8/256 GB - 2|5Ghz Space Gray,"€ 2,109.00"
+Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) 16/256 GB - 3|1Ghz Space Gray,"€ 2,239.00"
+Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) 16/256 GB - 3|1Ghz Silver,"€ 2,239.00"
+Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) 16/256 GB - 3|3GHz Space Gray,"€ 2,359.00"
+Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) 16/256 GB - 3|1Ghz Space Gray,"€ 2,239.00"
+Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) 16/256 GB - 3|1Ghz Silver,"€ 2,239.00"
+Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) 16/256 GB - 3|3GHz Space Gray,"€ 2,359.00"
+Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2017) 16/256 GB - 3|1Ghz Space Gray,"€ 3,159.00"
+Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2017) 16/256 GB - 3|1Ghz Silver,"€ 3,159.00"
+Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) 16/256 GB - 3|3GHz Silver,"€ 2,359.00"
+Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2017) 16/512 GB - 3|3GHz Space Gray,"€ 2,849.00"
+Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2017) 16/512SSD - 3|1Ghz Space Gray,"€ 3,519.00"
+Laptops QWERTY,HP EliteBook 850 G3 T9X36EA,"€ 1,709.00"
 Laptops QWERTY,HP Probook 430 G4 Y7Z27ET,€ 919.00
-Laptops QWERTY,HP Probook 430 G4 Y8B38ET,€ 1029.00
-Laptops QWERTY,HP ProBook 470 G4 Y8A89ET,€ 1329.00
-Laptops QWERTY,Acer Aspire VN7-793G-73M2,€ 1749.00
-Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar MLH32 Space Gray,€ 2939.00
-Laptops QWERTY,Dell XPS 13 9360-KX17J,€ 1599.00
+Laptops QWERTY,HP Probook 430 G4 Y8B38ET,"€ 1,029.00"
+Laptops QWERTY,HP ProBook 470 G4 Y8A89ET,"€ 1,329.00"
+Laptops QWERTY,Acer Aspire VN7-793G-73M2,"€ 1,749.00"
+Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar MLH32 Space Gray,"€ 2,939.00"
+Laptops QWERTY,Dell XPS 13 9360-KX17J,"€ 1,599.00"
 Laptops QWERTY,Medion Akoya S6421W-i3-128,€ 469.00
-Laptops QWERTY,Dell XPS 13 9360-HVW8J,€ 1899.00
+Laptops QWERTY,Dell XPS 13 9360-HVW8J,"€ 1,899.00"
 Laptops QWERTY,Toshiba Satellite Pro A50-D-14M,€ 849.00
 Laptops QWERTY,MSI GV62M 7RD-1686NL,€ 999.00
 Laptops QWERTY,Asus Chromebook Flip C101PA-FS002,€ 399.00
 Laptops QWERTY,Asus Chromebook Flip C302CA-GU009,€ 699.00
 Laptops QWERTY,Asus Chromebook Flip C213NA-BW0026,€ 499.00
-Laptops QWERTY,Acer Predator Triton 700 PT716-51-743H,€ 3299.00
-Laptops QWERTY,Acer Predator Triton 700 PT716-51-72BR,€ 3899.00
+Laptops QWERTY,Acer Predator Triton 700 PT716-51-743H,"€ 3,299.00"
+Laptops QWERTY,Acer Predator Triton 700 PT716-51-72BR,"€ 3,899.00"
 Laptops QWERTY,Medion Akoya S6421B-P-128,€ 399.00
 Laptops QWERTY,Medion Akoya S6421B-i3-128,€ 499.00
 Laptops QWERTY,Acer Chromebook R751TN-C5SH,€ 449.00
 Laptops QWERTY,Asus VivoBook Flip TP203NA-BP028T,€ 499.00
-Laptops QWERTY,Asus Gaming ROG Strix GL702ZC-GC104T,€ 1799.00
-Laptops QWERTY,MSI GS73VR 7RG-037NL,€ 2999.00
-Laptops QWERTY,HP Omen 15-ce060nd,€ 1399.00
-Laptops QWERTY,HP Omen 15-ce061nd,€ 1699.00
-Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2017) 16/256SSD - 2|2Ghz Silver,€ 2249.00
-Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2017) MLW92N/A Silver,€ 3199.00
-Laptops QWERTY,MSI GS63 7RD-076NL,€ 1399.00
+Laptops QWERTY,Asus Gaming ROG Strix GL702ZC-GC104T,"€ 1,799.00"
+Laptops QWERTY,MSI GS73VR 7RG-037NL,"€ 2,999.00"
+Laptops QWERTY,HP Omen 15-ce060nd,"€ 1,399.00"
+Laptops QWERTY,HP Omen 15-ce061nd,"€ 1,699.00"
+Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2017) 16/256SSD - 2|2Ghz Silver,"€ 2,249.00"
+Laptops QWERTY,Apple MacBook Pro 15'' Touch Bar (2017) MLW92N/A Silver,"€ 3,199.00"
+Laptops QWERTY,MSI GS63 7RD-076NL,"€ 1,399.00"
 Laptops QWERTY,Acer Aspire 5 A517-51G-58ZH,€ 899.00
 Laptops QWERTY,HP Stream 14-ax011nd,€ 299.00
 Laptops QWERTY,HP 15-ba071nd,€ 429.00
-Laptops QWERTY,Apple MacBook Pro 13'' (2017) MPXQ2N/A Space Gray,€ 1399.00
+Laptops QWERTY,Apple MacBook Pro 13'' (2017) MPXQ2N/A Space Gray,"€ 1,399.00"
 Laptops QWERTY,HP Stream 14-ax010nd,€ 299.00
 Laptops QWERTY,Asus VivoBook R540YA-DM181T,€ 599.00
-Laptops QWERTY,Asus Gaming ROG Strix GL553VD-DM666T,€ 1099.00
+Laptops QWERTY,Asus Gaming ROG Strix GL553VD-DM666T,"€ 1,099.00"
 Laptops QWERTY,Acer Aspire F5-573-52P5,€ 669.00
 Laptops QWERTY,HP ProBook 430 G3 W4N73ET,€ 849.00
-Laptops QWERTY,Apple MacBook Pro 13'' (2017) MPXR2N/A Silver,€ 1399.00
-Laptops QWERTY,MSI GP62M 7REX-1289NL Leopard Pro,€ 1399.00
+Laptops QWERTY,Apple MacBook Pro 13'' (2017) MPXR2N/A Silver,"€ 1,399.00"
+Laptops QWERTY,MSI GP62M 7REX-1289NL Leopard Pro,"€ 1,399.00"
 Laptops QWERTY,Asus Eeebook R209HA-FD0060T,€ 237.00
 Laptops QWERTY,Acer Chromebook 14 CB3-431-C7WJ,€ 289.00
 Laptops QWERTY,Asus VivoBook X441NA-FA186T,€ 399.00
@@ -437,69 +437,69 @@ Laptops QWERTY,Asus Eeebook R209HA-FD0070T,€ 249.00
 Laptops QWERTY,Acer Spin 5 SP513-51-552G,€ 777.00
 Laptops QWERTY,Lenovo Yoga 720-13IKB 80X60048MH,€ 999.00
 Laptops QWERTY,Acer Chromebook 15 CB3-532-C8E0,€ 299.00
-Laptops QWERTY,Lenovo ThinkPad E570 - i7-8gb-128ssd+1tb-GTX950M,€ 1099.00
+Laptops QWERTY,Lenovo ThinkPad E570 - i7-8gb-128ssd+1tb-GTX950M,"€ 1,099.00"
 Laptops QWERTY,HP X360 11-ab011nd,€ 449.00
-Laptops QWERTY,HP ZBook 15u G4 i5 8gb 256SSD+1tb,€ 1049.00
+Laptops QWERTY,HP ZBook 15u G4 i5 8gb 256SSD+1tb,"€ 1,049.00"
 Laptops QWERTY,Toshiba Satellite Pro A50-D-119,€ 499.00
 Laptops QWERTY,Asus VivoBook R301UA-R4129T,€ 799.00
 Laptops QWERTY,Toshiba Satellite Pro A50-D-10X,€ 859.00
-Laptops QWERTY,HP Spectre X360 13-ac041nd,€ 1999.00
+Laptops QWERTY,HP Spectre X360 13-ac041nd,"€ 1,999.00"
 Laptops QWERTY,Toshiba Tecra A50-C-1G0,€ 769.00
 Laptops QWERTY,Asus ZenBook UX430UA-GV226T,€ 949.00
 Laptops QWERTY,Asus VivoBook Flip L205SA-FV0231T,€ 499.00
 Laptops QWERTY,Acer Spin 3 SP315-51-39L3,€ 569.00
-Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2016) MPDK2N/A Space Gray,€ 2399.00
+Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar (2016) MPDK2N/A Space Gray,"€ 2,399.00"
 Laptops QWERTY,HP Stream 11-y010nd,€ 289.00
 Laptops QWERTY,Asus EeeBook R209HA-FD0073T,€ 249.00
 Laptops QWERTY,Acer Aspire E5-575G-787U,€ 854.00
 Laptops QWERTY,HP ProBook 450 G4 i5-8gb-128ssd-4G,€ 899.00
 Laptops QWERTY,Acer One 10 S1003-14XA,€ 219.00
-Laptops QWERTY,HP Envy X360 15-bp030nd,€ 1399.00
+Laptops QWERTY,HP Envy X360 15-bp030nd,"€ 1,399.00"
 Laptops QWERTY,Acer Swift 3 SF314-51-593L,€ 899.00
 Laptops QWERTY,Asus VivoBook Flip L205SA-FV0228T,€ 369.00
 Laptops QWERTY,Asus VivoBook R417NA-FA116T,€ 329.00
 Laptops QWERTY,MSI GL62M 7RD-204NL,€ 999.00
-Laptops QWERTY,Asus ZenBook Flip UX360UAK-C4340T,€ 1199.00
-Laptops QWERTY,MSI GE63VR 7RE-007NL,€ 1899.00
+Laptops QWERTY,Asus ZenBook Flip UX360UAK-C4340T,"€ 1,199.00"
+Laptops QWERTY,MSI GE63VR 7RE-007NL,"€ 1,899.00"
 Laptops QWERTY,Asus VivoBook R417NA-FA118T,€ 479.00
 Laptops QWERTY,Lenovo Ideapad 510-15IKB 80SV00K5MH,€ 799.00
 Laptops QWERTY,HP Chromebook 13 Pro G1 T6R48EA,€ 749.00
 Laptops QWERTY,Asus VivoBook R541SA-DM333T,€ 449.00
 Laptops QWERTY,HP Envy x360 15-ar000nd,€ 749.00
 Laptops QWERTY,Asus VivoBook R541UA-DM1426T,€ 629.00
-Laptops QWERTY,Asus ZenBook Deluxe UX490UA-BE009T,€ 1699.00
-Laptops QWERTY,MSI GS63VR 7RF-219NL Stealth Pro,€ 2099.00
-Laptops QWERTY,Asus VivoBook Pro N580VD-E4382R,€ 1499.00
+Laptops QWERTY,Asus ZenBook Deluxe UX490UA-BE009T,"€ 1,699.00"
+Laptops QWERTY,MSI GS63VR 7RF-219NL Stealth Pro,"€ 2,099.00"
+Laptops QWERTY,Asus VivoBook Pro N580VD-E4382R,"€ 1,499.00"
 Laptops QWERTY,Acer Aspire F5-573-50EK,€ 670.00
 Laptops QWERTY,Acer Aspire ES1-332-C0UU,€ 247.00
 Laptops QWERTY,Medion Akoya P6667-i5-1136,€ 679.00
-Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar MLVP2N/A Silver,€ 1799.00
+Laptops QWERTY,Apple MacBook Pro 13'' Touch Bar MLVP2N/A Silver,"€ 1,799.00"
 Laptops QWERTY,Acer Aspire E5-575G-53BZ,€ 727.00
-Laptops QWERTY,Apple MacBook 12'' 512 GB Goud,€ 1398.00
+Laptops QWERTY,Apple MacBook 12'' 512 GB Goud,"€ 1,398.00"
 Laptops QWERTY,Asus R540LA-XX087T,€ 408.00
-Laptops QWERTY,Asus ROG GL552VW-CN470T,€ 1212.00
+Laptops QWERTY,Asus ROG GL552VW-CN470T,"€ 1,212.00"
 Laptops QWERTY,Microsoft Surface Pro 4 - Core M - 4 GB - 128 GB,€ 776.00
 Desktops QWERTY,Acer Aspire TC-780 Core i5,€ 649.00
 Desktops QWERTY,HP 260-a133nd,€ 399.00
 Desktops QWERTY,Intel Compute Stick 2016 (Windows 10),€ 149.00
-Desktops QWERTY,HP Pavilion 570-p071nd,€ 1199.00
+Desktops QWERTY,HP Pavilion 570-p071nd,"€ 1,199.00"
 Desktops QWERTY,HP 260-a115nd,€ 299.00
 Desktops QWERTY,HP Pavilion 570-p081nd,€ 649.00
-Desktops QWERTY,Asus G11CD-K-NL010T,€ 1399.00
+Desktops QWERTY,Asus G11CD-K-NL010T,"€ 1,399.00"
 Desktops QWERTY,HP Pavilion 570-p054nd,€ 749.00
 Desktops QWERTY,HP All-In-One 20-c005nd,€ 439.00
 Desktops QWERTY,HP Pavilion 570-p053nd,€ 749.00
 Desktops QWERTY,Lenovo M710q 10MR0052MH,€ 729.00
-Desktops QWERTY,Apple iMac 21|5'' 3.1GHz Retina 4K,€ 1399.00
+Desktops QWERTY,Apple iMac 21|5'' 3.1GHz Retina 4K,"€ 1,399.00"
 Desktops QWERTY,HP ProDesk 490 G3 MT P5K17EA,€ 649.00
 Desktops QWERTY,Asus VivoPC K20CE-NL019T,€ 399.00
 Desktops QWERTY,Asus Chromebit,€ 119.00
-Desktops QWERTY,Apple iMac 21|5'' 2.8GHz,€ 1249.00
-Desktops QWERTY,Apple iMac 21|5" (2017) MNE02N/A 3.4 GHz Retina 4K,€ 1699.00
+Desktops QWERTY,Apple iMac 21|5'' 2.8GHz,"€ 1,249.00"
+Desktops QWERTY,"Apple iMac 21|5"" (2017) MNE02N/A 3.4 GHz Retina 4K","€ 1,699.00"
 Desktops QWERTY,HP ProDesk 400 G3PD MT P5K01EA,€ 549.00
 Desktops QWERTY,Apple Mac Mini 1.4GHz,€ 529.00
 Desktops QWERTY,Asus VivoPC M32CD-K-NL018T,€ 999.00
-Desktops QWERTY,Apple iMac 21|5" (2017) MNDY2N/A 3.0 GHz Retina 4K,€ 1399.00
+Desktops QWERTY,"Apple iMac 21|5"" (2017) MNDY2N/A 3.0 GHz Retina 4K","€ 1,399.00"
 Desktops QWERTY,Apple Mac Mini 2|6GHz,€ 769.00
 Desktops QWERTY,MSI Cubi-249WE,€ 259.00
 Desktops QWERTY,Asus VivoPC M32CD-K-NL013T,€ 949.00
@@ -507,10 +507,10 @@ Desktops QWERTY,HP ProDesk 400 G4 1JJ60EA,€ 799.00
 Desktops QWERTY,HP Pavilion 570-p070nd,€ 999.00
 Desktops QWERTY,Lenovo Ideacentre 510S-08IKL 90GB0057MH,€ 599.00
 Desktops QWERTY,Lenovo Ideacentre 510S-08IKL 90GB0058MH,€ 599.00
-Desktops QWERTY,HP Pavilion AIO 27-a230nd,€ 1098.99
+Desktops QWERTY,HP Pavilion AIO 27-a230nd,"€ 1,098.99"
 Desktops QWERTY,Lenovo Ideacentre 710-25ISH 90FB0053NY,€ 849.00
 Desktops QWERTY,Acer Aspire TC-780 Core i7,€ 829.00
-Desktops QWERTY,Asus G11CD-K-NL011T,€ 1699.00
+Desktops QWERTY,Asus G11CD-K-NL011T,"€ 1,699.00"
 Desktops QWERTY,Lenovo All-In-One AIO 510-22 F0CC002FNY,€ 649.00
 Desktops QWERTY,HP All-In-One 24-e030nd,€ 899.00
 Desktops QWERTY,HP ProDesk 400 G3 1EX80EA,€ 649.00
@@ -519,118 +519,118 @@ Desktops QWERTY,Lenovo All-In-One AIO 520s-23 F0CU000XNY,€ 949.00
 Desktops QWERTY,Medion Akoya E5138 D,€ 599.00
 Desktops QWERTY,HP 260-p121nd,€ 499.00
 Desktops QWERTY,Asus VivoPC K20CE-NL017T,€ 349.00
-Desktops QWERTY,Apple iMac 27" (2017) MNED2N/A 3|8 GHz 5K,€ 2599.00
+Desktops QWERTY,"Apple iMac 27"" (2017) MNED2N/A 3|8 GHz 5K","€ 2,599.00"
 Desktops QWERTY,Asus Chromebox 2 G072U,€ 229.00
-Desktops QWERTY,MSI Aegis X3 VR7RE-010EU,€ 2399.00
-Desktops QWERTY,Medion Erazer X4708 D,€ 1499.00
+Desktops QWERTY,MSI Aegis X3 VR7RE-010EU,"€ 2,399.00"
+Desktops QWERTY,Medion Erazer X4708 D,"€ 1,499.00"
 Desktops QWERTY,Lenovo All-In-One AIO 510-22 F0CC002ENY,€ 649.00
-Desktops QWERTY,Apple iMac 27" (2017) MNEA2N/A 3|5 GHz 5K,€ 2299.00
+Desktops QWERTY,"Apple iMac 27"" (2017) MNEA2N/A 3|5 GHz 5K","€ 2,299.00"
 Desktops QWERTY,Medion Akoya P4603 D,€ 799.00
 Desktops QWERTY,HP ProDesk 400 G3 i5-8gb-256ssd Mini,€ 749.00
-Desktops QWERTY,Apple iMac 21|5" (2017) MMQA2N/A 2|3GHz,€ 1299.00
-Desktops QWERTY,Apple iMac 27'' 3.3GHz Retina 5K,€ 2279.00
-Desktops QWERTY,Lenovo Y720 Cube 90H20010NY,€ 1499.00
-Desktops QWERTY,Microsoft Surface Studio i7 - 16GB - 128GB + 1TB - GTX965M,€ 4149.00
-Desktops QWERTY,Asus All-In-One ZN270IEGT-RA011T,€ 1499.00
-Desktops QWERTY,Apple Mac Mini 2|8GHz,€ 1029.00
+Desktops QWERTY,"Apple iMac 21|5"" (2017) MMQA2N/A 2|3GHz","€ 1,299.00"
+Desktops QWERTY,Apple iMac 27'' 3.3GHz Retina 5K,"€ 2,279.00"
+Desktops QWERTY,Lenovo Y720 Cube 90H20010NY,"€ 1,499.00"
+Desktops QWERTY,Microsoft Surface Studio i7 - 16GB - 128GB + 1TB - GTX965M,"€ 4,149.00"
+Desktops QWERTY,Asus All-In-One ZN270IEGT-RA011T,"€ 1,499.00"
+Desktops QWERTY,Apple Mac Mini 2|8GHz,"€ 1,029.00"
 Desktops QWERTY,HP ProDesk 400 G4 i7-8gb-256ssd,€ 949.00
-Desktops QWERTY,Medion Erazer X7739 D,€ 1699.00
-Desktops QWERTY,Acer Predator G6-710 I10622 NL,€ 1999.00
+Desktops QWERTY,Medion Erazer X7739 D,"€ 1,699.00"
+Desktops QWERTY,Acer Predator G6-710 I10622 NL,"€ 1,999.00"
 Desktops QWERTY,Intel Compute Stick M3,€ 389.00
-Desktops QWERTY,MSI Aegis 3 VR7RC-004EU,€ 1249.00
-Desktops QWERTY,MSI Aegis 3 VR7RC-003EU,€ 1699.00
-Desktops QWERTY,MSI Aegis 3 VR7RD-001EU,€ 1699.00
-Desktops QWERTY,MSI Aegis 3 VR7RD-002EU,€ 1899.00
+Desktops QWERTY,MSI Aegis 3 VR7RC-004EU,"€ 1,249.00"
+Desktops QWERTY,MSI Aegis 3 VR7RC-003EU,"€ 1,699.00"
+Desktops QWERTY,MSI Aegis 3 VR7RD-001EU,"€ 1,699.00"
+Desktops QWERTY,MSI Aegis 3 VR7RD-002EU,"€ 1,899.00"
 Desktops QWERTY,MSI Nightblade MI3 7RB-006EU,€ 899.00
-Desktops QWERTY,MSI Aegis Ti3 VR7RE SLI-010EU,€ 4599.00
+Desktops QWERTY,MSI Aegis Ti3 VR7RE SLI-010EU,"€ 4,599.00"
 Desktops QWERTY,HP ProDesk 400 G4 i5-8gb-256ssd,€ 849.00
 Desktops QWERTY,HP ProDesk 400 G4 i7-8gb-1tb,€ 879.00
 Desktops QWERTY,Medion Erazer P3611 D,€ 899.00
 Desktops QWERTY,Medion Erazer P3609 D,€ 999.00
-Desktops QWERTY,Medion Erazer X7741 D,€ 1399.00
-Desktops QWERTY,Medion Erazer P3608 D,€ 1099.00
-Desktops QWERTY,Acer Predator G3-710 I107042 NL,€ 1899.00
+Desktops QWERTY,Medion Erazer X7741 D,"€ 1,399.00"
+Desktops QWERTY,Medion Erazer P3608 D,"€ 1,099.00"
+Desktops QWERTY,Acer Predator G3-710 I107042 NL,"€ 1,899.00"
 Desktops QWERTY,Lenovo Ideacentre 510S-08IKL 90GB006DMH,€ 519.00
 Desktops QWERTY,Acer Chromebox CXI2 DT.Z0KEH.001,€ 279.00
 Desktops QWERTY,Lenovo Ideacentre 510S-08IKL 990GB002GNY,€ 725.00
 Desktops QWERTY,HP ProDesk 400 G4 1JJ61EA,€ 627.00
 Desktops QWERTY,Medion Akoya P5138 D,€ 749.00
 Desktops QWERTY,Medion Erazer P5313 J,€ 949.00
-Desktops QWERTY,Medion Akoya P5315 J,€ 1099.00
-Desktops QWERTY,Medion Erazer X5373 G,€ 1699.00
+Desktops QWERTY,Medion Akoya P5315 J,"€ 1,099.00"
+Desktops QWERTY,Medion Erazer X5373 G,"€ 1,699.00"
 Desktops QWERTY,Medion Akoya P3401 D,€ 599.00
 Desktops QWERTY,Medion Akoya P3601 D,€ 749.00
-Desktops QWERTY,MSI VR ONE 7RD-056NL,€ 2249.00
+Desktops QWERTY,MSI VR ONE 7RD-056NL,"€ 2,249.00"
 Desktops QWERTY,Asus VivoPC X M80CJ-NL005T,€ 999.00
 Desktops QWERTY,Asus G11CD-K-NL013T,€ 699.00
-Desktops QWERTY,Microsoft Surface Studio i7 - 32GB - 128GB + 2TB - GTX980M,€ 4999.00
+Desktops QWERTY,Microsoft Surface Studio i7 - 32GB - 128GB + 2TB - GTX980M,"€ 4,999.00"
 Desktops QWERTY,Medion Akoya E2005 F,€ 379.00
 Desktops QWERTY,HP Omen 870-130nd,€ 999.00
 Desktops QWERTY,HP ProDesk 400 G3 SFF T4R71EA,€ 699.00
 Desktops QWERTY,Acer Aspire GX-281 A10502 NL,€ 999.00
-Desktops QWERTY,Acer Aspire GX-281 A510504 NL,€ 1099.00
-Desktops QWERTY,Acer Aspire GX-281 A710603 NL,€ 1499.00
-Desktops QWERTY,Acer Aspire GX-281 A7X10603 NL,€ 1599.00
-Desktops QWERTY,Microsoft Surface Studio i5 - 8GB - 64GB + 1TB - GTX965M,€ 3549.00
+Desktops QWERTY,Acer Aspire GX-281 A510504 NL,"€ 1,099.00"
+Desktops QWERTY,Acer Aspire GX-281 A710603 NL,"€ 1,499.00"
+Desktops QWERTY,Acer Aspire GX-281 A7X10603 NL,"€ 1,599.00"
+Desktops QWERTY,Microsoft Surface Studio i5 - 8GB - 64GB + 1TB - GTX965M,"€ 3,549.00"
 Desktops QWERTY,MSI Cubi 2-005EU,€ 549.00
 Desktops QWERTY,MSI Aegis 3 7RB-045EU,€ 999.00
-Desktops QWERTY,MSI Aegis 3 VR7RC-075EU,€ 1299.00
-Desktops QWERTY,MSI Aegis Ti3 VR7RF SLI-045EU,€ 5499.00
+Desktops QWERTY,MSI Aegis 3 VR7RC-075EU,"€ 1,299.00"
+Desktops QWERTY,MSI Aegis Ti3 VR7RF SLI-045EU,"€ 5,499.00"
 Desktops QWERTY,MSI Trident 3 7RB-074EU,€ 959.00
-Desktops QWERTY,MSI Trident 3 VR7RC-027EU,€ 1259.00
-Desktops QWERTY,Medion Erazer X5372 G,€ 1999.00
-Desktops QWERTY,Medion Erazer X5371 G,€ 2399.00
+Desktops QWERTY,MSI Trident 3 VR7RC-027EU,"€ 1,259.00"
+Desktops QWERTY,Medion Erazer X5372 G,"€ 1,999.00"
+Desktops QWERTY,Medion Erazer X5371 G,"€ 2,399.00"
 Desktops QWERTY,Lenovo M710s 10M7005SMH,€ 749.00
 Desktops QWERTY,Lenovo M710s 10M7005MMH,€ 849.00
-Desktops QWERTY,Lenovo M710q 10MR0051MH,€ 1099.00
-Desktops QWERTY,MSI Trident 3 VR7RC-055EU,€ 1299.00
-Desktops QWERTY,MSI Trident 3 Arctic-060EU,€ 1799.00
-Desktops QWERTY,HP Omen 880-062nd,€ 1799.00
-Desktops QWERTY,MSI Nightblade 3 VR7RC-006EU,€ 1399.00
+Desktops QWERTY,Lenovo M710q 10MR0051MH,"€ 1,099.00"
+Desktops QWERTY,MSI Trident 3 VR7RC-055EU,"€ 1,299.00"
+Desktops QWERTY,MSI Trident 3 Arctic-060EU,"€ 1,799.00"
+Desktops QWERTY,HP Omen 880-062nd,"€ 1,799.00"
+Desktops QWERTY,MSI Nightblade 3 VR7RC-006EU,"€ 1,399.00"
 Desktops QWERTY,Lenovo Y710 Cube 90FL009CNY,€ 849.00
 Desktops QWERTY,Lenovo All-In-One AIO 300-23 F0BY00PMNY,€ 679.00
-Desktops QWERTY,Lenovo All-In-One AIO 520s-23 F0CU0015NY,€ 1099.00
-Desktops QWERTY,MSI Nightblade 3 VR7RD-007EU,€ 1299.00
-Desktops QWERTY,Acer Predator G3-710 I10614 NL,€ 1699.00
+Desktops QWERTY,Lenovo All-In-One AIO 520s-23 F0CU0015NY,"€ 1,099.00"
+Desktops QWERTY,MSI Nightblade 3 VR7RD-007EU,"€ 1,299.00"
+Desktops QWERTY,Acer Predator G3-710 I10614 NL,"€ 1,699.00"
 Desktops QWERTY,Lenovo M710s 10M7005RMH,€ 799.00
-Desktops QWERTY,HP OmenX 900-143nd,€ 2999.00
-Desktops QWERTY,HP Omen 880-052nd,€ 1499.00
+Desktops QWERTY,HP OmenX 900-143nd,"€ 2,999.00"
+Desktops QWERTY,HP Omen 880-052nd,"€ 1,499.00"
 Desktops QWERTY,HP All-In-One 20-c010nd,€ 499.00
 Desktops QWERTY,HP All-In-One 24-e040nd,€ 649.00
 Desktops QWERTY,HP All-In-One 24-e081nd,€ 899.00
 Desktops QWERTY,HP Pavilion All-In-One 24-b235nd,€ 999.00
 Desktops QWERTY,HP Pavilion All-In-One 24-b240nd,€ 799.00
-Desktops QWERTY,MSI Infinite A VR7RD-009EU,€ 1799.00
-Desktops QWERTY,Apple iMac 27" (2017) MNE92N/A 3|4 GHz 5K,€ 2099.00
-Desktops QWERTY,HP Pavilion 27-a241nd,€ 1299.00
+Desktops QWERTY,MSI Infinite A VR7RD-009EU,"€ 1,799.00"
+Desktops QWERTY,"Apple iMac 27"" (2017) MNE92N/A 3|4 GHz 5K","€ 2,099.00"
+Desktops QWERTY,HP Pavilion 27-a241nd,"€ 1,299.00"
 Desktops QWERTY,HP ProDesk 400 G3 1EX82EA,€ 799.00
-Desktops QWERTY,HP ENVY All-In-One 27-b100nd,€ 1999.00
+Desktops QWERTY,HP ENVY All-In-One 27-b100nd,"€ 1,999.00"
 Desktops QWERTY,HP All-In-One 20-r100nd,€ 499.00
-Desktops QWERTY,HP Pavilion All-In-One 27-n100nd,€ 1169.00
-Desktops QWERTY,HP ENVY All-In-One 27-p000nd,€ 1677.00
+Desktops QWERTY,HP Pavilion All-In-One 27-n100nd,"€ 1,169.00"
+Desktops QWERTY,HP ENVY All-In-One 27-p000nd,"€ 1,677.00"
 Desktops QWERTY,HP All-In-One 22-b028nd,€ 549.00
 Desktops QWERTY,HP All-In-One 24-g039nd,€ 782.00
 Desktops QWERTY,HP ProOne 400 G2 All-in-One,€ 891.00
 Desktops QWERTY,Lenovo Ideacentre AIO 510S-23ISU F0C3001JNY All-in-One,€ 999.00
-Desktops QWERTY,Acer Predator G6-710 I107042 NL,€ 2399.00
-Desktops QWERTY,HP Elite Slice Z4C72EA,€ 1252.35
-Desktops QWERTY,Apple iMac 27'' MK482N/A 4|0GHz 32GB - 1TB,€ 4179.00
+Desktops QWERTY,Acer Predator G6-710 I107042 NL,"€ 2,399.00"
+Desktops QWERTY,HP Elite Slice Z4C72EA,"€ 1,252.35"
+Desktops QWERTY,Apple iMac 27'' MK482N/A 4|0GHz 32GB - 1TB,"€ 4,179.00"
 Desktops QWERTY,Acer Revo One i6112BE,€ 436.00
-Desktops QWERTY,MSI Nightblade MI-014EU,€ 1044.00
-Desktops QWERTY,Medion Erazer X5351,€ 1454.00
+Desktops QWERTY,MSI Nightblade MI-014EU,"€ 1,044.00"
+Desktops QWERTY,Medion Erazer X5351,"€ 1,454.00"
 Desktops QWERTY,Medion Akoya P5134 D,€ 513.00
-Desktops QWERTY,MSI Nightblade X2B-243EU,€ 1278.00
+Desktops QWERTY,MSI Nightblade X2B-243EU,"€ 1,278.00"
 Desktops QWERTY,Acer Aspire AC22-720 Silver All-In-One,€ 489.00
-Desktops QWERTY,Medion Erazer X5387 F,€ 1499.00
-Desktops QWERTY,Acer Aspire All-in-One U5-710 9400T NL,€ 1234.00
-Desktops QWERTY,HP Pavilion 560-p143nd,€ 1299.00
-Desktops QWERTY,HP Omen 870-245nd,€ 1999.00
-Desktops QWERTY,HP ENVY All-In-One Curved 34-b000nd,€ 2499.00
+Desktops QWERTY,Medion Erazer X5387 F,"€ 1,499.00"
+Desktops QWERTY,Acer Aspire All-in-One U5-710 9400T NL,"€ 1,234.00"
+Desktops QWERTY,HP Pavilion 560-p143nd,"€ 1,299.00"
+Desktops QWERTY,HP Omen 870-245nd,"€ 1,999.00"
+Desktops QWERTY,HP ENVY All-In-One Curved 34-b000nd,"€ 2,499.00"
 Desktops QWERTY,MSI Nightblade MI3 7RB-027EU,€ 999.00
-Desktops QWERTY,HP Omen 880-071nd,€ 1999.00
-Desktops QWERTY,HP Omen 880-076nd,€ 2499.00
-Desktops QWERTY,HP Omen 880-079nd,€ 2699.00
-Desktops QWERTY,Lenovo Y720 Cube 90H20011NY,€ 1453.00
+Desktops QWERTY,HP Omen 880-071nd,"€ 1,999.00"
+Desktops QWERTY,HP Omen 880-076nd,"€ 2,499.00"
+Desktops QWERTY,HP Omen 880-079nd,"€ 2,699.00"
+Desktops QWERTY,Lenovo Y720 Cube 90H20011NY,"€ 1,453.00"
 Monitoren,Philips 243V7QDAB,€ 139.00
 Monitoren,LG 24M47VQ,€ 119.00
 Monitoren,BenQ Zowie RL2455,€ 169.00
@@ -743,7 +743,7 @@ Monitoren,Dell P2317H,€ 215.00
 Monitoren,AOC G2260VWQ6,€ 129.00
 Monitoren,Samsung LS24E45UFS/EN,€ 179.00
 Monitoren,LG 27MP48HQ,€ 189.00
-Monitoren,Samsung C49HG90,€ 1499.00
+Monitoren,Samsung C49HG90,"€ 1,499.00"
 Monitoren,AOC AGON AG241QG,€ 499.00
 Monitoren,Philips Brilliance BDM4037UW,€ 699.00
 Monitoren,Eizo FlexScan EV2450-BK,€ 299.00
@@ -751,10 +751,10 @@ Monitoren,LG 24MP58VQ-P,€ 139.00
 Monitoren,BenQ SW2700PT,€ 699.00
 Monitoren,AOC U3277FWQ,€ 399.00
 Monitoren,iiyama ProLite X4071UHSU-B1,€ 599.00
-Monitoren,Asus ROG Swift PG348Q,€ 1199.00
+Monitoren,Asus ROG Swift PG348Q,"€ 1,199.00"
 Monitoren,Acer K222HQLCbid,€ 119.00
 Monitoren,iiyama ProLite B2482HD-B1,€ 159.00
-Monitoren,Acer Predator Z35P,€ 1099.00
+Monitoren,Acer Predator Z35P,"€ 1,099.00"
 Monitoren,Acer Predator XB241Hbmipr,€ 439.00
 Monitoren,LG 29UM69G,€ 299.00
 Monitoren,AOC AGON AG241QX,€ 379.00
@@ -780,7 +780,7 @@ Monitoren,iiyama ProLite XB2788QS-B1,€ 349.00
 Monitoren,iiyama ProLite T2252MTS-B5,€ 259.00
 Monitoren,BenQ BL2405HT,€ 159.00
 Monitoren,LG 32UD89,€ 999.00
-Monitoren,Acer Predator X34A,€ 1199.00
+Monitoren,Acer Predator X34A,"€ 1,199.00"
 Monitoren,Eizo FlexScan EV2450-WT,€ 309.00
 Monitoren,Samsung LC27FG73FQUXEN,€ 449.00
 Monitoren,HP EliteDisplay E202,€ 189.00
@@ -819,44 +819,44 @@ Monitoren,BenQ ZOWIE XL2735,€ 499.00
 Monitoren,iiyama ProLite T2452MTS-B5,€ 303.95
 Monitoren,HP Envy 27s,€ 529.00
 Monitoren,Acer BE270UAbmipruzx,€ 459.00
-Monitoren,HP Z30i,€ 1309.00
+Monitoren,HP Z30i,"€ 1,309.00"
 Monitoren,Acer GN246HLBbid,€ 259.00
 Monitoren,LG 23ET63V,€ 399.00
 Monitoren,BenQ SV500,€ 999.00
-Monitoren,BenQ ST550K,€ 1099.00
+Monitoren,BenQ ST550K,"€ 1,099.00"
 Monitoren,BenQ BL2423PT,€ 203.95
 Monitoren,BenQ EW3270ZL,€ 399.00
 Monitoren,Asus VZ279Q,€ 259.00
-Monitoren,iiyama TH7067MIS-B2AG,€ 3249.00
-Monitoren,iiyama ProLite TF3237MSC-B3AG,€ 1269.00
+Monitoren,iiyama TH7067MIS-B2AG,"€ 3,249.00"
+Monitoren,iiyama ProLite TF3237MSC-B3AG,"€ 1,269.00"
 Monitoren,Philips 272B7QPJEB,€ 449.00
 Monitoren,Eizo FlexScan EV2750-BK,€ 769.00
-Monitoren,Asus PA328Q,€ 1249.00
+Monitoren,Asus PA328Q,"€ 1,249.00"
 Monitoren,HP Omen 32,€ 448.99
 Monitoren,BenQ GW2406Z,€ 159.00
 Monitoren,Samsung S32F351FUU,€ 309.00
 Monitoren,Samsung C27F390FHU,€ 239.00
 Monitoren,Acer GF276bmipx,€ 229.00
 Monitoren,Asus MX27AQ,€ 529.00
-Monitoren,BenQ BH380,€ 1079.00
-Monitoren,BenQ IL 420,€ 1499.00
+Monitoren,BenQ BH380,"€ 1,079.00"
+Monitoren,BenQ IL 420,"€ 1,499.00"
 Monitoren,iiyama ProLite T2336MSC-B2,€ 349.00
 Monitoren,iiyama ProLite T2435MSC-B2,€ 399.00
-Monitoren,BenQ RP790,€ 3999.00
-Monitoren,iiyama ProLite TF4637MSC-B2AG,€ 2228.00
+Monitoren,BenQ RP790,"€ 3,999.00"
+Monitoren,iiyama ProLite TF4637MSC-B2AG,"€ 2,228.00"
 Monitoren,AOC G2770PF,€ 339.00
-Monitoren,iiyama ProLite LH5565S-B1,€ 1369.00
+Monitoren,iiyama ProLite LH5565S-B1,"€ 1,369.00"
 Monitoren,Asus MX239H,€ 229.00
 Monitoren,Asus MX279H,€ 289.00
-Monitoren,Eizo ColorEdge CG2420,€ 1289.00
-Monitoren,Eizo ColorEdge CG277,€ 1949.00
+Monitoren,Eizo ColorEdge CG2420,"€ 1,289.00"
+Monitoren,Eizo ColorEdge CG277,"€ 1,949.00"
 Monitoren,Asus MX299Q,€ 399.00
 Monitoren,Acer RT270bmid,€ 239.00
 Monitoren,iiyama ProLite LE4340S-B1,€ 519.00
 Monitoren,BenQ PD2700Q,€ 379.00
 Monitoren,Eizo FORIS FS2434-BK,€ 349.00
 Monitoren,HP Z22n,€ 239.00
-Monitoren,Eizo FlexScan EV3237-BK,€ 1259.00
+Monitoren,Eizo FlexScan EV3237-BK,"€ 1,259.00"
 Monitoren,LG 29UC88,€ 449.00
 Monitoren,BenQ Zowie RL2460,€ 249.00
 Monitoren,BenQ Zowie XL2720,€ 429.00
@@ -868,8 +868,8 @@ Monitoren,BenQ BL2711U,€ 499.00
 Monitoren,iiyama ProLite X2783HSU-B3,€ 199.00
 Monitoren,LG 24MB37PM,€ 169.00
 Monitoren,iiyama ProLite LE4840S-B1,€ 669.00
-Monitoren,iiyama ProLite TE6568MIS-B1AG,€ 2369.00
-Monitoren,iiyama ProLite TE8668MIS-B1AG,€ 5449.00
+Monitoren,iiyama ProLite TE6568MIS-B1AG,"€ 2,369.00"
+Monitoren,iiyama ProLite TE8668MIS-B1AG,"€ 5,449.00"
 Monitoren,Eizo FlexScan EV2780-BK,€ 929.00
 Monitoren,Acer BE240Ybmjjpprzx,€ 239.00
 Monitoren,Acer BE270Ubmjjpprzx,€ 449.00
@@ -879,7 +879,7 @@ Monitoren,LG 22BK55WY-B,€ 189.00
 Monitoren,LG 24BK55WY-B,€ 259.00
 Monitoren,LG 24BK750Y-B,€ 269.00
 Monitoren,LG 27BK750Y,€ 329.00
-Monitoren,HP Z Display Z34c,€ 1089.00
+Monitoren,HP Z Display Z34c,"€ 1,089.00"
 Monitoren,LG 34UM69G,€ 499.00
 Monitoren,LG 34UC99,€ 999.00
 Monitoren,Eizo FlexScan EV2451-BK,€ 359.00
@@ -897,21 +897,21 @@ Monitoren,BenQ EW2770QZ,€ 459.00
 Monitoren,BenQ PD2710QC,€ 669.00
 Monitoren,LG 22MP58VQ-P,€ 129.00
 Monitoren,LG 19MB15T,€ 279.00
-Monitoren,BenQ PV3200PT,€ 1119.00
+Monitoren,BenQ PV3200PT,"€ 1,119.00"
 Monitoren,Asus ROG Swift PG258Q,€ 649.00
 Monitoren,BenQ EX3200R,€ 399.00
 Monitoren,LG 22MB37PU,€ 129.00
-Monitoren,ST650K,€ 1789.00
+Monitoren,ST650K,"€ 1,789.00"
 Monitoren,Philips 328E8QJAB5,€ 299.00
 Monitoren,HP EliteDisplay E243,€ 259.00
-Monitoren,Eizo ColorEdge CG2730,€ 1669.00
+Monitoren,Eizo ColorEdge CG2730,"€ 1,669.00"
 Monitoren,LG 24MB35PH,€ 179.00
 Monitoren,BenQ GL2706PQ,€ 289.00
 Monitoren,Acer Predator Z271Tbmiphzx,€ 799.00
-Monitoren,Eizo ColorEdge CG318-4K,€ 4499.00
+Monitoren,Eizo ColorEdge CG318-4K,"€ 4,499.00"
 Monitoren,LG 17MB15T,€ 259.00
 Monitoren,Acer XZ321Qbmijpphzx,€ 429.00
-Monitoren,HP DreamColor Z27x Professional,€ 1049.00
+Monitoren,HP DreamColor Z27x Professional,"€ 1,049.00"
 Monitoren,Samsung LC32H711QEUXEN,€ 599.00
 Monitoren,LG 24GM79G,€ 299.00
 Monitoren,LG 34UM59-P,€ 379.00
@@ -940,7 +940,7 @@ Monitoren,HP EliteDisplay E240c,€ 241.95
 Monitoren,BenQ GW2480,€ 159.00
 Monitoren,BenQ GW2765HT,€ 325.00
 Monitoren,Dell P2416D,€ 279.00
-Monitoren,LG 32UD99,€ 1099.00
+Monitoren,LG 32UD99,"€ 1,099.00"
 Monitoren,Dell Ultrasharp U2717D,€ 444.00
 Monitoren,Acer K222HQLbid,€ 99.00
 Monitoren,Dell UltraSharp UP2716D,€ 718.00
@@ -949,19 +949,19 @@ Monitoren,Dell Ultrasharp U3415W,€ 819.00
 Monitoren,Asus MB169C+,€ 243.00
 Monitoren,Asus PB287Q,€ 419.00
 Monitoren,Acer G247HYUsmidp,€ 183.00
-Monitoren,Eizo FORIS FS2735,€ 1119.00
+Monitoren,Eizo FORIS FS2735,"€ 1,119.00"
 Monitoren,HP 27es,€ 229.00
-Monitoren,Acer XR342CKbmijphuzx,€ 1049.00
+Monitoren,Acer XR342CKbmijphuzx,"€ 1,049.00"
 Monitoren,BenQ PD3200Q,€ 328.00
 Monitoren,Asus MX34VQ,€ 899.00
 Monitoren,Dell P2418HZ,€ 329.00
-Monitoren,iiyama ProLite TH4265MIS-B1AG,€ 1399.00
+Monitoren,iiyama ProLite TH4265MIS-B1AG,"€ 1,399.00"
 Monitoren,iiyama ProLite XUB2490HS-B1,€ 180.00
 Monitoren,BenQ Zowie XL2730,€ 470.00
 Monitoren,Eizo ColorEdge  CS2420,€ 689.00
 Monitoren,AOC Agon AG352UCG,€ 899.00
-Monitoren,Asus PA329Q,€ 1459.00
-Monitoren,BenQ SW320,€ 1399.00
+Monitoren,Asus PA329Q,"€ 1,459.00"
+Monitoren,BenQ SW320,"€ 1,399.00"
 Monitoren,iiyama ProLite T2252MSC-B1,€ 269.00
 Monitoren,Dell P2415Q,€ 529.00
 Monitoren,Acer KA220HQbid,€ 99.00
@@ -973,12 +973,12 @@ Monitoren,Acer Predator XB271HUbmiprz,€ 581.00
 Monitoren,iiyama G-Master Red Eagle GB2488HSU-B2,€ 229.00
 Monitoren,Dell P2715Q,€ 649.00
 Monitoren,Dell S2716DG,€ 482.00
-Monitoren,iiyama ProLite LE5540S-B1,€ 1019.00
-Monitoren,LG 38UC99,€ 1399.00
+Monitoren,iiyama ProLite LE5540S-B1,"€ 1,019.00"
+Monitoren,LG 38UC99,"€ 1,399.00"
 Monitoren,Acer H277HUkmipuz Goud,€ 549.00
 Monitoren,HP Z27n,€ 538.00
-Monitoren,iiyama TH5565MIS-B1AG,€ 1809.00
-Monitoren,Eizo FlexScan EV3237-GY,€ 1259.00
+Monitoren,iiyama TH5565MIS-B1AG,"€ 1,809.00"
+Monitoren,Eizo FlexScan EV3237-GY,"€ 1,259.00"
 Monitoren,Dell Ultrasharp U3417W,€ 899.00
 Monitoren,Eizo ColorEdge CX271,€ 957.00
 Monitoren,Acer EB321HQUwidp,€ 339.00
@@ -987,7 +987,7 @@ Monitoren,Asus MG248QR,€ 349.00
 Monitoren,Asus VG245H,€ 219.00
 Monitoren,Samsung LC27HG70QQUXEN,€ 699.00
 Monitoren,Asus Zenscreen MB16AC,€ 289.00
-Monitoren,iiyama ProLite TE7568MIS-B1AG,€ 3499.00
+Monitoren,iiyama ProLite TE7568MIS-B1AG,"€ 3,499.00"
 Monitoren,iiyama G-Master Black Hawk GE2488HS-B1,€ 154.00
 Monitoren,HP EliteDisplay E272q,€ 459.00
 Monitoren,Eizo FlexScan EV2780-WT,€ 949.00
@@ -995,7 +995,7 @@ Monitoren,iiyama G-Master Red Eagle GB2488HSU-B3,€ 214.00
 Monitoren,Asus PG278QR,€ 699.00
 Monitoren,AOC AGON AG271QG,€ 799.00
 Monitoren,Acer XZ271bmijpphzx,€ 349.00
-Monitoren,Eizo ColorEdge CS2730,€ 1059.00
+Monitoren,Eizo ColorEdge CS2730,"€ 1,059.00"
 Monitoren,Acer KG271Abmidpx,€ 289.00
 Monitoren,Acer KG241Qbmiix,€ 159.00
 Monitoren,Acer KG221Qbmix,€ 129.00
@@ -1284,7 +1284,7 @@ Toetsenborden QWERTY,Rapoo E1050 Wireless Keyboard Qwerty,€ 25.99
 Toetsenborden QWERTY,Rapoo E9100P Wireless Ultra Slim Zwart Toetsenbord QWERTY,€ 49.99
 Televisies,LG 49UH850V,€ 799.00
 Televisies,Samsung UE32J5200,€ 349.00
-Televisies,Samsung UE55KS7000,€ 1199.00
+Televisies,Samsung UE55KS7000,"€ 1,199.00"
 Televisies,Philips 43PUS6201 - Ambilight,€ 529.00
 Televisies,Philips 55PUS6101,€ 645.00
 Televisies,Sony KDL-48WD650,€ 449.00
@@ -1298,11 +1298,11 @@ Televisies,Philips 32PHS5301,€ 279.00
 Televisies,Samsung UE22H5600,€ 249.00
 Televisies,Philips 49PUS6101,€ 549.00
 Televisies,LG 43UH610V,€ 499.00
-Televisies,LG OLED65E6V,€ 3495.00
+Televisies,LG OLED65E6V,"€ 3,495.00"
 Televisies,LG 55UH850V,€ 995.00
 Televisies,Philips 49PUS6501 - Ambilight,€ 699.00
-Televisies,LG 65UH615V,€ 1095.00
-Televisies,Samsung UE55KS8000,€ 1399.00
+Televisies,LG 65UH615V,"€ 1,095.00"
+Televisies,Samsung UE55KS8000,"€ 1,399.00"
 Televisies,Samsung UE60J6240,€ 899.00
 Televisies,LG 28MT42VF,€ 179.00
 Televisies,Samsung UE40K6300,€ 489.00
@@ -1320,7 +1320,7 @@ Televisies,Finlux FL3222 Smart,€ 229.00
 Televisies,Samsung UE49KU6100,€ 649.00
 Televisies,Philips 49PFS4131,€ 469.00
 Televisies,Samsung UE32J4500,€ 319.00
-Televisies,Samsung UE65KS7000,€ 1799.00
+Televisies,Samsung UE65KS7000,"€ 1,799.00"
 Televisies,Philips 55PUS6501 - Ambilight,€ 879.00
 Televisies,Samsung UE32M5600,€ 485.00
 Televisies,Samsung UE22H5610,€ 249.00
@@ -1334,11 +1334,11 @@ Televisies,Finlux FL4926UHD,€ 449.00
 Televisies,Salora 20LED1600,€ 129.95
 Televisies,Samsung UE55KU6000,€ 899.00
 Televisies,Philips 24PFS4032,€ 189.00
-Televisies,Samsung UE49KS8000,€ 1299.00
+Televisies,Samsung UE49KS8000,"€ 1,299.00"
 Televisies,Samsung UE55KU6100,€ 799.00
 Televisies,Sony KDL-40WE660,€ 529.00
 Televisies,Sony KDL-43WD750,€ 495.00
-Televisies,LG 65UH850V,€ 1549.00
+Televisies,LG 65UH850V,"€ 1,549.00"
 Televisies,Samsung UE55MU6100,€ 899.00
 Televisies,Philips 43PUS6401 - Ambilight,€ 559.00
 Televisies,Samsung UE48J5200,€ 577.00
@@ -1349,7 +1349,7 @@ Televisies,Samsung UE40KU6000,€ 539.00
 Televisies,Samsung UE55K6300,€ 749.00
 Televisies,LG 49UH661V,€ 649.00
 Televisies,Sony KDL-32WE610,€ 379.00
-Televisies,LG OLED55C7V,€ 2499.00
+Televisies,LG OLED55C7V,"€ 2,499.00"
 Televisies,LG 32LJ510B,€ 288.00
 Televisies,Finlux FL3210CB,€ 199.00
 Televisies,Samsung UE49MU6100,€ 799.00
@@ -1359,13 +1359,13 @@ Televisies,LG 43UJ670V,€ 649.00
 Televisies,Salora 24LED1500,€ 149.00
 Televisies,Philips 43PUS6412 - Ambilight,€ 649.00
 Televisies,Finlux FLD2022BK12,€ 189.00
-Televisies,LG OLED55E6V,€ 2299.00
-Televisies,Philips 55PUS7272 - Ambilight,€ 1199.00
+Televisies,LG OLED55E6V,"€ 2,299.00"
+Televisies,Philips 55PUS7272 - Ambilight,"€ 1,199.00"
 Televisies,Hitachi 24HB1T65,€ 219.00
-Televisies,LG OLED55C6V,€ 1850.00
-Televisies,Philips 65PUS7601 - Ambilight,€ 1899.00
+Televisies,LG OLED55C6V,"€ 1,850.00"
+Televisies,Philips 65PUS7601 - Ambilight,"€ 1,899.00"
 Televisies,Samsung UE43MU6100,€ 699.00
-Televisies,Sony KD-55XE9005,€ 1599.00
+Televisies,Sony KD-55XE9005,"€ 1,599.00"
 Televisies,Finlux FL2222,€ 149.00
 Televisies,Philips 49PUS6401 - Ambilight,€ 679.00
 Televisies,Sony KD-43XE8005,€ 899.00
@@ -1375,94 +1375,94 @@ Televisies,Philips 32PFS6402,€ 449.00
 Televisies,Sony KDL-32RD430,€ 299.00
 Televisies,Salora 55UHL2500,€ 549.00
 Televisies,Samsung UE49M5600,€ 749.00
-Televisies,Samsung UE55KS7500,€ 1298.00
-Televisies,Samsung UE55MU8000,€ 1545.00
+Televisies,Samsung UE55KS7500,"€ 1,298.00"
+Televisies,Samsung UE55MU8000,"€ 1,545.00"
 Televisies,Finlux FL3224,€ 219.00
 Televisies,Finlux FL4310CB,€ 329.00
 Televisies,Samsung UE28J4100,€ 279.00
-Televisies,Sony KD-75XE8596,€ 2999.00
+Televisies,Sony KD-75XE8596,"€ 2,999.00"
 Televisies,Samsung UE40MU6400,€ 889.00
-Televisies,Samsung UE65MU7000,€ 2209.00
+Televisies,Samsung UE65MU7000,"€ 2,209.00"
 Televisies,Finlux FLD2422,€ 185.00
 Televisies,Hitachi 65HZ6W69,€ 999.00
 Televisies,Humax Pure Vision UHD-04916,€ 549.00
-Televisies,Samsung UE55MU7000,€ 1499.00
-Televisies,Samsung UE65KS7500,€ 1699.00
-Televisies,Samsung UE65MU6100,€ 1680.00
+Televisies,Samsung UE55MU7000,"€ 1,499.00"
+Televisies,Samsung UE65KS7500,"€ 1,699.00"
+Televisies,Samsung UE65MU6100,"€ 1,680.00"
 Televisies,Salora 49LED9112CSW,€ 399.00
 Televisies,Samsung UE43M5600,€ 649.00
-Televisies,LG 49SJ810V,€ 1099.00
+Televisies,LG 49SJ810V,"€ 1,099.00"
 Televisies,Samsung UE40K5510,€ 599.00
-Televisies,Sony KD-65XE9005,€ 2299.00
+Televisies,Sony KD-65XE9005,"€ 2,299.00"
 Televisies,Sony KDL-49WE750,€ 719.00
 Televisies,Philips 49PUS7272 - Ambilight,€ 999.00
-Televisies,Samsung The Frame UE55LS003,€ 2399.00
+Televisies,Samsung The Frame UE55LS003,"€ 2,399.00"
 Televisies,Salora 32LED1600,€ 219.00
-Televisies,Sony KD-65XD7504,€ 1499.00
+Televisies,Sony KD-65XD7504,"€ 1,499.00"
 Televisies,Samsung UE55M5600,€ 899.00
 Televisies,Sony KD-49XE7004,€ 949.00
 Televisies,Finlux FL3222,€ 229.00
 Televisies,Salora 24CHL3000,€ 159.00
-Televisies,Samsung The Frame UE65LS003,€ 3199.00
+Televisies,Samsung The Frame UE65LS003,"€ 3,199.00"
 Televisies,Philips 43PUS6262 - Ambilight,€ 599.00
 Televisies,Panasonic TX-32ESW504S,€ 399.00
 Televisies,LG 49UH610V,€ 649.00
 Televisies,Salora 43LED9112CSW,€ 389.00
-Televisies,LG OLED65B6V,€ 2799.00
-Televisies,Samsung QE49Q7F - QLED,€ 1999.00
-Televisies,Samsung QE55Q7F - QLED,€ 2499.00
-Televisies,Sony KD-65XD7505,€ 1539.00
-Televisies,Samsung UE49MU7000,€ 1199.00
-Televisies,Samsung UE65MU8000,€ 2445.00
+Televisies,LG OLED65B6V,"€ 2,799.00"
+Televisies,Samsung QE49Q7F - QLED,"€ 1,999.00"
+Televisies,Samsung QE55Q7F - QLED,"€ 2,499.00"
+Televisies,Sony KD-65XD7505,"€ 1,539.00"
+Televisies,Samsung UE49MU7000,"€ 1,199.00"
+Televisies,Samsung UE65MU8000,"€ 2,445.00"
 Televisies,Salora 32HSW5012,€ 249.00
-Televisies,Samsung UE55KS9000,€ 1499.00
+Televisies,Samsung UE55KS9000,"€ 1,499.00"
 Televisies,Sony KDL-43WE750,€ 629.00
 Televisies,Sony KD-49XE7000,€ 899.00
-Televisies,Philips 49PUS7502,€ 1299.00
+Televisies,Philips 49PUS7502,"€ 1,299.00"
 Televisies,Salora 32HDB5005,€ 269.00
 Televisies,Samsung UE49MU6400,€ 899.00
 Televisies,Philips 43PUS7202,€ 949.00
-Televisies,Samsung UE49KS9000,€ 1299.00
-Televisies,Samsung UE55KU6510,€ 1099.00
+Televisies,Samsung UE49KS9000,"€ 1,299.00"
+Televisies,Samsung UE55KU6510,"€ 1,099.00"
 Televisies,Samsung UE55KU6400,€ 999.00
-Televisies,Philips 65PUS6162,€ 1299.00
-Televisies,LG OLED65E7V,€ 4999.00
-Televisies,LG OLED55E7N,€ 2999.00
-Televisies,LG 75SJ955V,€ 3999.00
-Televisies,Panasonic TX-65EZW954 - OLED,€ 4999.00
-Televisies,Panasonic TX-55EZW954 - OLED,€ 2999.00
-Televisies,Panasonic TX-65EXW784,€ 2199.00
-Televisies,Panasonic TX-50EXW784,€ 1299.00
-Televisies,Panasonic TX-75EXW784,€ 3999.00
-Televisies,LG 55SJ850V,€ 1499.00
+Televisies,Philips 65PUS6162,"€ 1,299.00"
+Televisies,LG OLED65E7V,"€ 4,999.00"
+Televisies,LG OLED55E7N,"€ 2,999.00"
+Televisies,LG 75SJ955V,"€ 3,999.00"
+Televisies,Panasonic TX-65EZW954 - OLED,"€ 4,999.00"
+Televisies,Panasonic TX-55EZW954 - OLED,"€ 2,999.00"
+Televisies,Panasonic TX-65EXW784,"€ 2,199.00"
+Televisies,Panasonic TX-50EXW784,"€ 1,299.00"
+Televisies,Panasonic TX-75EXW784,"€ 3,999.00"
+Televisies,LG 55SJ850V,"€ 1,499.00"
 Televisies,LG 43LJ614V,€ 499.00
 Televisies,LG 32LJ610V,€ 399.00
-Televisies,Samsung UE49MU8000,€ 1435.00
-Televisies,Samsung UE49MU9000,€ 1699.00
-Televisies,Samsung UE55MU9000,€ 1825.00
-Televisies,Samsung UE65MU9000,€ 2689.00
-Televisies,Samsung QE65Q7F - QLED,€ 3499.00
-Televisies,Samsung QE75Q7F - QLED,€ 5999.00
-Televisies,Samsung QE49Q7C - QLED,€ 2199.00
-Televisies,Samsung QE55Q7C - QLED,€ 2699.00
-Televisies,Samsung QE65Q7C - QLED,€ 3699.00
-Televisies,Samsung QE55Q8C - QLED,€ 3199.00
-Televisies,Samsung QE65Q8C - QLED,€ 4499.00
-Televisies,Samsung QE75Q8C - QLED,€ 6799.00
-Televisies,Samsung QE65Q9F - QLED,€ 5499.00
+Televisies,Samsung UE49MU8000,"€ 1,435.00"
+Televisies,Samsung UE49MU9000,"€ 1,699.00"
+Televisies,Samsung UE55MU9000,"€ 1,825.00"
+Televisies,Samsung UE65MU9000,"€ 2,689.00"
+Televisies,Samsung QE65Q7F - QLED,"€ 3,499.00"
+Televisies,Samsung QE75Q7F - QLED,"€ 5,999.00"
+Televisies,Samsung QE49Q7C - QLED,"€ 2,199.00"
+Televisies,Samsung QE55Q7C - QLED,"€ 2,699.00"
+Televisies,Samsung QE65Q7C - QLED,"€ 3,699.00"
+Televisies,Samsung QE55Q8C - QLED,"€ 3,199.00"
+Televisies,Samsung QE65Q8C - QLED,"€ 4,499.00"
+Televisies,Samsung QE75Q8C - QLED,"€ 6,799.00"
+Televisies,Samsung QE65Q9F - QLED,"€ 5,499.00"
 Televisies,Sony KDL-32RE400,€ 329.00
-Televisies,Samsung UE55MU6400,€ 1119.00
-Televisies,Samsung UE65MU6400,€ 2130.00
-Televisies,Samsung UE82MU7000,€ 4999.00
-Televisies,Panasonic TX-65DX780E,€ 1999.00
+Televisies,Samsung UE55MU6400,"€ 1,119.00"
+Televisies,Samsung UE65MU6400,"€ 2,130.00"
+Televisies,Samsung UE82MU7000,"€ 4,999.00"
+Televisies,Panasonic TX-65DX780E,"€ 1,999.00"
 Televisies,Philips 55PUS6262 - Ambilight,€ 799.00
-Televisies,Samsung UE65KU6100,€ 1399.00
-Televisies,Loewe Bild 5.32 Grijs,€ 1299.00
-Televisies,Loewe Bild 5.32 Lichtgrijs,€ 1299.00
-Televisies,Loewe Bild 4.55,€ 2999.00
-Televisies,Panasonic TX-65EXW734,€ 2099.00
-Televisies,Panasonic TX-58EXW734,€ 1449.00
-Televisies,Panasonic TX-50EXW734,€ 1199.00
+Televisies,Samsung UE65KU6100,"€ 1,399.00"
+Televisies,Loewe Bild 5.32 Grijs,"€ 1,299.00"
+Televisies,Loewe Bild 5.32 Lichtgrijs,"€ 1,299.00"
+Televisies,Loewe Bild 4.55,"€ 2,999.00"
+Televisies,Panasonic TX-65EXW734,"€ 2,099.00"
+Televisies,Panasonic TX-58EXW734,"€ 1,449.00"
+Televisies,Panasonic TX-50EXW734,"€ 1,199.00"
 Televisies,Panasonic TX-40EXW734,€ 899.00
 Televisies,Panasonic TX-49EXW604,€ 829.00
 Televisies,Panasonic TX-43EXW604,€ 699.00
@@ -1470,9 +1470,9 @@ Televisies,Panasonic TX-55EXW604,€ 899.00
 Televisies,Panasonic TX-49ESW504S,€ 699.00
 Televisies,Panasonic TX-43ESW504S,€ 599.00
 Televisies,Panasonic TX-24ESW504,€ 299.00
-Televisies,LG 55EG9A7V,€ 1799.00
-Televisies,Samsung QE65Q8F - QLED,€ 4299.00
-Televisies,Philips 55PUS7181,€ 1099.00
+Televisies,LG 55EG9A7V,"€ 1,799.00"
+Televisies,Samsung QE65Q8F - QLED,"€ 4,299.00"
+Televisies,Philips 55PUS7181,"€ 1,099.00"
 Televisies,Philips 32PFS5362,€ 329.00
 Televisies,Salora 20HLB5000,€ 169.00
 Televisies,Salora 24HDB5005,€ 219.00
@@ -1483,56 +1483,56 @@ Televisies,Salora 43FSW5012,€ 429.00
 Televisies,Samsung 49M5620,€ 799.00
 Televisies,Samsung 55M5620,€ 899.00
 Televisies,Loewe Bild 1.40,€ 999.00
-Televisies,Loewe Bild 1.55,€ 1999.00
-Televisies,Loewe Bild 1.65,€ 2499.00
-Televisies,Loewe Bild 3.40 Lichtgrijs,€ 1399.00
-Televisies,Samsung QE55Q8F - QLED,€ 2999.00
-Televisies,LG 65UJ630V,€ 1499.00
+Televisies,Loewe Bild 1.55,"€ 1,999.00"
+Televisies,Loewe Bild 1.65,"€ 2,499.00"
+Televisies,Loewe Bild 3.40 Lichtgrijs,"€ 1,399.00"
+Televisies,Samsung QE55Q8F - QLED,"€ 2,999.00"
+Televisies,LG 65UJ630V,"€ 1,499.00"
 Televisies,Philips 50PUS6262 - Ambilight,€ 699.00
 Televisies,Samsung 32M5620,€ 499.00
 Televisies,Samsung 43M5620,€ 699.00
 Televisies,Humax Pure Vision UHD-04316,€ 499.00
-Televisies,Samsung UE75MU8000,€ 4035.00
+Televisies,Samsung UE75MU8000,"€ 4,035.00"
 Televisies,Samsung UE49KU6500,€ 719.00
-Televisies,Samsung UE65KU6500,€ 1499.00
-Televisies,LG OLED65C6V,€ 3659.00
+Televisies,Samsung UE65KU6500,"€ 1,499.00"
+Televisies,LG OLED65C6V,"€ 3,659.00"
 Televisies,Salora 55UHS3500,€ 599.00
-Televisies,Philips 55POS901F,€ 2799.00
-Televisies,Sony KD-65ZD9,€ 3995.00
+Televisies,Philips 55POS901F,"€ 2,799.00"
+Televisies,Sony KD-65ZD9,"€ 3,995.00"
 Televisies,Philips 49PUS6561 - Ambilight,€ 949.00
-Televisies,Sony KD-49XE8005,€ 1099.00
-Televisies,Sony KD-55XE8096,€ 1175.00
-Televisies,Sony KD-65XE8505,€ 2099.00
-Televisies,Sony KD-49XE9005,€ 1549.00
-Televisies,Sony KD-75XE9005,€ 3999.00
-Televisies,Sony KD-65XE9305,€ 2999.00
-Televisies,Sony KD-75XE9405,€ 5999.00
+Televisies,Sony KD-49XE8005,"€ 1,099.00"
+Televisies,Sony KD-55XE8096,"€ 1,175.00"
+Televisies,Sony KD-65XE8505,"€ 2,099.00"
+Televisies,Sony KD-49XE9005,"€ 1,549.00"
+Televisies,Sony KD-75XE9005,"€ 3,999.00"
+Televisies,Sony KD-65XE9305,"€ 2,999.00"
+Televisies,Sony KD-75XE9405,"€ 5,999.00"
 Televisies,Sony KDL-40RE450,€ 499.00
-Televisies,Sony KD-55XE8505,€ 1399.00
-Televisies,LG 65UJ670V,€ 1860.00
-Televisies,LG 55UJ670V,€ 1199.00
+Televisies,Sony KD-55XE8505,"€ 1,399.00"
+Televisies,LG 65UJ670V,"€ 1,860.00"
+Televisies,LG 55UJ670V,"€ 1,199.00"
 Televisies,LG 49UJ670V,€ 899.00
-Televisies,LG OLED65G7V,€ 6999.00
-Televisies,LG OLED65C7V,€ 3999.00
-Televisies,Sony KD-65A1,€ 4999.00
-Televisies,Sony KD-55A1,€ 3499.00
+Televisies,LG OLED65G7V,"€ 6,999.00"
+Televisies,LG OLED65C7V,"€ 3,999.00"
+Televisies,Sony KD-65A1,"€ 4,999.00"
+Televisies,Sony KD-55A1,"€ 3,499.00"
 Televisies,Philips 55PUS6412 - Ambilight,€ 999.00
 Televisies,Philips 49PUS6412 - Ambilight,€ 799.00
-Televisies,Philips 55PUS7502,€ 1499.00
-Televisies,Philips 65PUS6412 - Ambilight,€ 1499.00
-Televisies,Philips 65PUS7502,€ 2199.00
-Televisies,Sony KD-75XD9405,€ 4997.00
-Televisies,Sony KD-65ZD9,€ 3995.00
-Televisies,Philips 55POS9002 - Ambilight,€ 2299.00
-Televisies,Sony KD-55XE7000,€ 1099.00
+Televisies,Philips 55PUS7502,"€ 1,499.00"
+Televisies,Philips 65PUS6412 - Ambilight,"€ 1,499.00"
+Televisies,Philips 65PUS7502,"€ 2,199.00"
+Televisies,Sony KD-75XD9405,"€ 4,997.00"
+Televisies,Sony KD-65ZD9,"€ 3,995.00"
+Televisies,Philips 55POS9002 - Ambilight,"€ 2,299.00"
+Televisies,Sony KD-55XE7000,"€ 1,099.00"
 Televisies,Sony KD-43XE7000,€ 799.00
-Televisies,Sony KD-55XE7004,€ 1099.00
+Televisies,Sony KD-55XE7004,"€ 1,099.00"
 Televisies,Sony KD-43XE7004,€ 849.00
-Televisies,Sony KD-65XE7004,€ 1799.00
-Televisies,Sony KD-65XE7005,€ 1799.00
+Televisies,Sony KD-65XE7004,"€ 1,799.00"
+Televisies,Sony KD-65XE7005,"€ 1,799.00"
 Televisies,Loewe Bild 1.32,€ 799.00
-Televisies,Loewe Bild 3.40 Grijs,€ 1399.00
-Televisies,Samsung UE75MU6100,€ 2799.00
+Televisies,Loewe Bild 3.40 Grijs,"€ 1,399.00"
+Televisies,Samsung UE75MU6100,"€ 2,799.00"
 Televisies,Hitachi 24HB4J65,€ 249.00
 Televisies,Hitachi 49HK6W64,€ 579.00
 Televisies,Hitachi 55HK6W64,€ 699.00
@@ -1542,7 +1542,7 @@ Televisies,LG 55UH615V,€ 699.00
 Televisies,Samsung UE40J5200,€ 419.00
 Televisies,Samsung UE43KU6500,€ 649.00
 Televisies,Samsung UE50J6240,€ 619.00
-Televisies,Samsung UE49KS7000,€ 1099.00
+Televisies,Samsung UE49KS7000,"€ 1,099.00"
 Televisies,Philips 32PFK4101,€ 279.00
 Televisies,Samsung UE40KU6400,€ 649.00
 Televisies,Samsung UE58J5200,€ 729.00
@@ -1553,26 +1553,26 @@ Televisies,Salora 32HDW5015,€ 269.00
 Televisies,Salora 32LED9102CS,€ 229.00
 Televisies,Philips 43PUS6101,€ 491.00
 Televisies,Sony KDL-49WE660,€ 594.00
-Televisies,Samsung UE65KU6400,€ 1135.00
+Televisies,Samsung UE65KU6400,"€ 1,135.00"
 Televisies,Salora 49UHS3500,€ 499.00
 Televisies,Samsung UE55M5510,€ 949.00
-Televisies,Samsung UE55JS8500,€ 1163.00
-Televisies,Samsung UE65KS8000,€ 2036.00
+Televisies,Samsung UE55JS8500,"€ 1,163.00"
+Televisies,Samsung UE65KS8000,"€ 2,036.00"
 Televisies,Philips 24PHK4000,€ 299.00
 Televisies,Philips 32PHK4509,€ 255.00
-Televisies,LG 86SJ957V,€ 7999.00
-Televisies,LG 65SJ850V,€ 2299.00
+Televisies,LG 86SJ957V,"€ 7,999.00"
+Televisies,LG 65SJ850V,"€ 2,299.00"
 Televisies,Salora 20LED1500,€ 127.99
-Televisies,Samsung UE75MU7000,€ 4519.00
+Televisies,Samsung UE75MU7000,"€ 4,519.00"
 Televisies,Humax Pure Vision UHD-05516,€ 849.00
 Televisies,LG 22MT48DF,€ 163.00
 Televisies,Panasonic TX-50CX800E,€ 858.00
 Televisies,Panasonic TX-50DS630E,€ 504.00
 Televisies,Panasonic TX-40DSW404,€ 499.00
-Televisies,Loewe Bild 5.32 Bruin,€ 1299.00
-Televisies,Panasonic TX-65EXW604,€ 1699.00
+Televisies,Loewe Bild 5.32 Bruin,"€ 1,299.00"
+Televisies,Panasonic TX-65EXW604,"€ 1,699.00"
 Televisies,Sony KDL-32WD600,€ 329.00
-Televisies,Samsung UE65KU6000,€ 1179.00
+Televisies,Samsung UE65KU6000,"€ 1,179.00"
 Televisies,LG 55UH668V,€ 787.00
 Televisies,Hitachi 55HGW69,€ 598.00
 Televisies,Sony KD-55XD7005,€ 899.00
@@ -1584,25 +1584,25 @@ Televisies,LG 55LF561V,€ 679.00
 Televisies,Philips 43PUK7100 - Ambilight,€ 550.00
 Televisies,Philips 48PUS7600 - Ambilight,€ 620.00
 Televisies,LG 55UF695V,€ 899.00
-Televisies,Sony KD-75ZD9,€ 7258.00
-Televisies,Sony KD-55XD9305,€ 1164.00
-Televisies,Sony KD-65XD9305,€ 2424.00
+Televisies,Sony KD-75ZD9,"€ 7,258.00"
+Televisies,Sony KD-55XD9305,"€ 1,164.00"
+Televisies,Sony KD-65XD9305,"€ 2,424.00"
 Televisies,LG 32LF580V,€ 499.00
 Televisies,Samsung UE40K5500,€ 499.00
 Televisies,LG 43LH590,€ 429.00
 Televisies,LG 55UH661V,€ 707.00
 Televisies,LG 43UH650V,€ 549.00
 Televisies,LG 60UH615V,€ 902.00
-Televisies,Sony KD-55XE9305,€ 2099.00
+Televisies,Sony KD-55XE9305,"€ 2,099.00"
 Televisies,Philips 32PFS6401 - Ambilight,€ 484.00
 Televisies,Samsung UE40J5100,€ 399.00
-Televisies,Samsung QE88Q9F - QLED,€ 19999.00
-Televisies,Panasonic TX-58EXW784,€ 1599.00
+Televisies,Samsung QE88Q9F - QLED,"€ 19,999.00"
+Televisies,Panasonic TX-58EXW784,"€ 1,599.00"
 Televisies,Samsung UE49KU6400,€ 641.00
 Televisies,Philips 39PHS4112,€ 299.00
 Televisies,LG 24MT49S,€ 239.00
 Televisies,Salora 24LED1600,€ 169.00
-Televisies,Sony KD-77A1,€ 20000.00
+Televisies,Sony KD-77A1,"€ 20,000.00"
 Hoofdtelefoons,JBL T450BT Zwart,€ 49.00
 Hoofdtelefoons,Philips SHB8850NC,€ 99.00
 Hoofdtelefoons,JBL T450BT Wit,€ 49.00
@@ -1840,7 +1840,7 @@ Hoofdtelefoons,Kurio Headphone Roze,€ 24.99
 Hoofdtelefoons,Pioneer HDJ-2000MK2 Zilver,€ 339.00
 Hoofdtelefoons,Urbanears Hellas Blauw,€ 91.00
 Hoofdtelefoons,Urbanears Hellas Zwart,€ 99.00
-Hoofdtelefoons,AKG N90Q Zwart,€ 1299.00
+Hoofdtelefoons,AKG N90Q Zwart,"€ 1,299.00"
 Hoofdtelefoons,Marshall Major 2 Zwart Stof,€ 59.00
 Hoofdtelefoons,Marshall Major 2 Wit,€ 59.00
 Hoofdtelefoons,JBL Everest 300BT Blauw,€ 149.00
@@ -1934,10 +1934,10 @@ Hoofdtelefoons,Sol Republic Tracks HD2 Zwart,€ 96.99
 Hoofdtelefoons,Beats EP Rood,€ 79.00
 Hoofdtelefoons,Sennheiser HD 579,€ 199.00
 Hoofdtelefoons,Marshall Major 2 Bluetooth Wit,€ 99.00
-Hoofdtelefoons,Sony MDR-Z1R,€ 2199.00
+Hoofdtelefoons,Sony MDR-Z1R,"€ 2,199.00"
 Hoofdtelefoons,Beyerdynamic Amiron Home,€ 579.00
 Hoofdtelefoons,Denon AH-D7200,€ 799.00
-Hoofdtelefoons,Beyerdynamic T1 (2nd Generation),€ 1199.00
+Hoofdtelefoons,Beyerdynamic T1 (2nd Generation),"€ 1,199.00"
 Hoofdtelefoons,Philips Fidelio X2HR,€ 349.00
 Hoofdtelefoons,Marshall Major 2 Bluetooth Wit,€ 99.00
 Hoofdtelefoons,Sony MDR-100ABN Roze,€ 279.00
@@ -1945,10 +1945,10 @@ Hoofdtelefoons,Sony MDR-100ABN Geel,€ 279.00
 Hoofdtelefoons,Marshall Monitor Zwart,€ 149.00
 Hoofdtelefoons,Sennheiser PXC 480,€ 299.00
 Hoofdtelefoons,Sennheiser HD 579,€ 199.00
-Hoofdtelefoons,Sony MDR-Z1R,€ 2199.00
+Hoofdtelefoons,Sony MDR-Z1R,"€ 2,199.00"
 Hoofdtelefoons,Beyerdynamic Amiron Home,€ 579.00
 Hoofdtelefoons,Denon AH-D7200,€ 799.00
-Hoofdtelefoons,Beyerdynamic T1 (2nd Generation),€ 1199.00
+Hoofdtelefoons,Beyerdynamic T1 (2nd Generation),"€ 1,199.00"
 Hoofdtelefoons,Philips Fidelio X2HR,€ 349.00
 Hoofdtelefoons,Urbanista Seattle Wireless Zwart,€ 99.00
 Hoofdtelefoons,Philips SHC8575,€ 79.00
