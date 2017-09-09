@@ -32,7 +32,7 @@ for target in target_urls:
         page_soup = pageSoup(target + "?pagina={0}".format(i + 1))
         cards = page_soup.findAll("div", {"class": "product-grid__item card"})
 
-        print(target + "?pagina={0}".format(i + 1))
+        print("    " + target + "?pagina={0}".format(i + 1))
 
         for card in cards:
             # print(card.find("div", {"class":"product__details"}).div.a.text.strip())
@@ -45,9 +45,9 @@ for target in target_urls:
             product_price = card.find(
                 "strong", {"class": "product__sales-price"}).text.strip()
 
-            # print("product_type: " + product_type)
-            # print("product_name: " + product_name)
-            # print("product_price: " + product_price)
+            #print("product_type: " + product_type)
+            print("product_name: " + product_name)
+            #print("product_price: " + product_price)
 
             f.write(product_type + "," + product_name.replace(",", "|") + "," + "€ {0:.2f}".format(
                 float(product_price.replace(".", "").replace(",", ".").replace("-", "00"))) + "\n")
