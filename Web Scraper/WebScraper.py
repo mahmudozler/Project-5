@@ -5,7 +5,10 @@ input("Press ENTER to start...")
 
 target_urls = ["https://www.coolblue.nl/producttype:laptops", "https://www.coolblue.nl/producttype:desktops", "https://www.coolblue.nl/producttype:monitoren",
                "https://www.coolblue.nl/producttype:muizen,gaming-muizen", "https://www.coolblue.nl/producttype:toetsenborden", "https://www.coolblue.nl/producttype:televisies",
-               "https://www.coolblue.nl/producttype:hoofdtelefoons", "https://www.coolblue.nl/producttype:oordopjes", "https://www.coolblue.nl/producttype:bluetooth-speakers"]
+               "https://www.coolblue.nl/producttype:hoofdtelefoons", "https://www.coolblue.nl/producttype:oordopjes", "https://www.coolblue.nl/producttype:bluetooth-speakers",
+               "https://www.coolblue.nl/producttype:mobiele-telefoons", "https://www.coolblue.nl/producttype:tablets", "https://www.coolblue.nl/producttype:consoles",
+               "https://www.coolblue.nl/producttype:speakers", "https://www.coolblue.nl/producttype:spiegelreflexcameras,compactcameras,systeemcameras", "https://www.coolblue.nl/producttype:home-cinema-sets",
+               "https://www.coolblue.nl/producttype:action-cameras"]
 
 product_count = 0
 
