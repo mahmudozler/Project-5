@@ -40,18 +40,18 @@ for target in target_urls:
         for card in cards:
             product_count = product_count + 1
             product_type = card.find(
-                "div", {"class": "product__display"}).a["data-producttypename"]
+                "div", {"class": "product__display"}).a["data-producttypename"].replace("\"", "''")
             product_name = card.find(
-                "div", {"class": "product__details"}).div.a.text.strip()
-            product_price = card.find(
-                "strong", {"class": "product__sales-price"}).text.strip()
+                "div", {"class": "product__details"}).div.a.text.strip().replace("\"", "''")
+            product_price = float(card.find(
+                "strong", {"class": "product__sales-price"}).text.strip().replace(".", "").replace(",", ".").replace("-", "00"))
 
             #print("product_type: " + product_type)
             print("product_name: " + product_name)
             #print("product_price: " + product_price)
 
-            f.write("\"{0}\"".format(product_type) + "," + "\"{0}\"".format(product_name) + "," + "€ {0:.2f}".format(
-                float(product_price.replace(".", "").replace(",", ".").replace("-", "00"))) + "\n")
+            f.write("\"{0}\"".format(product_type) + "," + "\"{0}\"".format(
+                product_name) + "," + "€ {0:.2f}".format(product_price) + "\n")
 
 f.close()
 
