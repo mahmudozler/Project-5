@@ -16,7 +16,7 @@ target_urls = ["https://www.coolblue.nl/producttype:laptops"]
 
 product_count = 0
 
-filename = "products.csv"
+filename = "product_laptops.csv"
 f = open(filename, "w")
 f.write("product_type,product_name,product_price,product_brand,product_model,product_screen,product_screenres,product_cpu,product_graphicscard,product_graphicsmemory,product_memory,product_storage,product_dimensions,product_weight\n")
 
