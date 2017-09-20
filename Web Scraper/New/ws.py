@@ -41,9 +41,12 @@ def getSpec(spec):
         return card_detail.find(text=re.compile(spec)).parent.parent.dd.text.strip().replace("\"", "''")
     except:
         try:
-            return card_detail.find(text=re.compile(spec)).parent.parent.parent.parent.dd.text.strip().replace("\"", "''")
+            return card_detail.find(text=re.compile(spec)).parent.parent.parent.dd.text.strip().replace("\"", "''")
         except:
-            return "None"
+            try:
+                return card_detail.find(text=re.compile(spec)).parent.parent.parent.parent.dd.text.strip().replace("\"", "''")
+            except:
+                return "None"
 
 
 for target in target_urls:
