@@ -5,7 +5,6 @@ from multiprocessing import Pool
 
 import Product
 
-
 class Laptop(Product.Product):
     def __init__(self):
         self.page = "https://www.coolblue.nl/producttype:laptops"
@@ -25,7 +24,7 @@ class Laptop(Product.Product):
         page_count = int(page_count_buffer[len(
             page_count_buffer) - 2].text.strip())
 
-        for i in range(1):
+        for i in range(page_count):
             self.getPageData(i)
 
     def getCardData(self, card_link):

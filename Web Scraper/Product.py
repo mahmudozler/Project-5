@@ -38,7 +38,10 @@ class Product(object):
             try:
                 return card_detail.find(text=re.compile(spec)).parent.parent.parent.parent.dd.text.strip().replace("\"", "''")
             except:
-                return "None"
+                try:
+                    return card_detail.find(text=re.compile(spec)).parent.dd.text.strip().replace("\"", "''")
+                except:
+                    return "None"
 
     def addSpec(self, specs, spec):
         specs.append("\"{0}\"".format(spec.replace("\"", "''")))
