@@ -7,9 +7,6 @@ from multiprocessing import Pool
 class Product(object):
     def __init__(self):
         self.page = "https://www.coolblue.nl"
-        self.count = 0
-
-        self.product_specs = ["Product"]
 
     def run(self):
         pass
@@ -43,8 +40,8 @@ class Product(object):
             except:
                 return "None"
 
-    def addSpec(self, spec):
-        self.product_specs.append("\"{0}\"".format(spec.replace("\"", "''")))
+    def addSpec(self, specs, spec):
+        specs.append("\"{0}\"".format(spec.replace("\"", "''")))
 
     def getCardData(self, card_link):
         pass
