@@ -5,6 +5,7 @@ from multiprocessing import Pool
 
 import Product
 
+
 class Laptop(Product.Product):
     def __init__(self):
         self.page = "https://www.coolblue.nl/producttype:laptops"

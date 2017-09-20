@@ -1,4 +1,5 @@
 import Laptop
+import Desktop
 
 import time
 from urllib.request import urlopen
@@ -10,12 +11,13 @@ def main():
 
     start_time = time.clock()
 
-    products = [Laptop.Laptop()]
+    products = [Laptop.Laptop(), Desktop.Desktop()]
 
     for product in products:
         product.run()
 
     print("\n{0}s".format(time.clock() - start_time))
+
 
 if __name__ == "__main__":
     main()
