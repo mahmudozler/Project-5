@@ -1,8 +1,11 @@
 import re
+import time
 from urllib.request import urlopen as uReq
 from bs4 import BeautifulSoup as soup
 
 input("Press ENTER to start...")
+
+start_time = time.clock()
 
 website = "https://www.coolblue.nl"
 target_urls = ["https://www.coolblue.nl/producttype:laptops"]
@@ -94,3 +97,4 @@ for target in target_urls:
 f.close()
 
 print("found {0} products".format(product_count))
+print("{0}s".format(time.clock() - start_time))
