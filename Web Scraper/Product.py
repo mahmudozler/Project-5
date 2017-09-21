@@ -7,15 +7,10 @@ from multiprocessing import Pool
 class Product(object):
     def __init__(self):
         self.page = "https://www.coolblue.nl"
-        self.product_type = ""
 
     def start(self, filename, headers):
         page_soup_first = self.bsPage(self.page)
 
-        cards = page_soup_first.findAll(
-            "div", {"class": "product-grid__item card"})
-        self.product_type = "\"{0}\"".format(cards[0].find(
-            "div", {"class": "product__display"}).a["data-producttypename"].replace("\"", "''"))
         page_count_buffer = page_soup_first.find(
             "ul", {"class": "pagination js-pagination"}).findAll("li")
         page_count = int(page_count_buffer[len(
@@ -38,7 +33,8 @@ class Product(object):
         page_soup = self.bsPage(self.page + "?pagina={0}".format(pageNr + 1))
         cards = page_soup.findAll(
             "a", {"class": "product__title js-product-title"})
-        card_links = [card["href"] for card in cards]
+        card_links = [[i, cards[i].parent.parent.parent.find(
+            "div", {"class": "product__display"}).a["data-producttypename"].replace("\"", "''"), cards[i]["href"]] for i in range(len(cards))]
 
         print("\t{0}?pagina={1}".format(self.page, pageNr + 1))
 
@@ -61,6 +57,27 @@ class Product(object):
 
     def addSpec(self, specs, spec):
         specs.append("\"{0}\"".format(spec.replace("\"", "''")))
+
+    def removeSymbols(self, name):
+        symbols = "!@#$%^&*+=:;\"\'<,>.?/|\\`~"
+
+        for symbol in symbols:
+            name = name.replace(symbol, "")
+
+        return name
+
+    def getImages(self, card_detail, product_specs):
+        images = card_detail.findAll(
+            "img", {"class": "media-gallery--thumbnail-image js-media-gallery--thumbnail"})
+
+        for i in range(len(images)):
+            images[i] = images[i]["src"][:41]
+
+            imagename = "Data/Images/{0} - ".format(self.removeSymbols(
+                product_specs[1])) + "0000{0}.jpg"[len(str(i)):].format(i)
+            image = open(imagename, "wb")
+            image.write(urlopen(images[i]).read())
+            image.close()
 
     def getCardData(self, card_link):
         pass

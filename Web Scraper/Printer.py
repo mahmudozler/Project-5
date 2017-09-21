@@ -9,7 +9,6 @@ import Product
 class Printer(Product.Product):
     def __init__(self):
         self.page = "https://www.coolblue.nl/producttype:printers,labelprinters,laserprinters,3d-printers"
-        self.product_type = ""
 
     def run(self):
         headers = "product_type,product_name,product_price,product_brand,product_model,product_printertype,product_tech,product_maxsize,product_maxres,product_bwspeed,product_cspeed,product_memory,product_dimensions,product_weight"
@@ -20,8 +19,8 @@ class Printer(Product.Product):
 
     def getCardData(self, card_link):
         if len(card_link) < 16:
-            card_detail = self.bsPage(self.page[:23] + card_link)
-            product_specs = [self.product_type]
+            card_detail = self.bsPage(self.page[:23] + card_link[2])
+            product_specs = [card_link[1]]
 
             self.addSpec(product_specs,
                          card_detail.h1.text.strip())
@@ -54,5 +53,7 @@ class Printer(Product.Product):
             file = open(filename, "a")
             file.write(",".join(product_specs) + "\n")
             file.close()
+
+            self.getImages(card_detail, product_specs)
 
             print(product_specs[0] + "\tproduct_name: " + product_specs[1])
