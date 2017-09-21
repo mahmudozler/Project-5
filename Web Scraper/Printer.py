@@ -6,14 +6,14 @@ from multiprocessing import Pool
 import Product
 
 
-class Laptop(Product.Product):
+class Printer(Product.Product):
     def __init__(self):
-        self.page = "https://www.coolblue.nl/producttype:laptops"
+        self.page = "https://www.coolblue.nl/producttype:printers,labelprinters,laserprinters,3d-printers"
         self.product_type = ""
 
     def run(self):
-        headers = "product_type,product_name,product_price,product_brand,product_model,product_screen,product_screenres,product_cpu,product_graphicscard,product_graphicsmemory,product_memory,product_storage,product_dimensions,product_weight"
-        page_count = self.start("Data/product_laptops.csv", headers)
+        headers = "product_type,product_name,product_price,product_brand,product_model,product_printertype,product_tech,product_maxsize,product_maxres,product_bwspeed,product_cspeed,product_memory,product_dimensions,product_weight"
+        page_count = self.start("Data/product_printers.csv", headers)
 
         for i in range(page_count):
             self.getPageData(i)
@@ -32,25 +32,25 @@ class Laptop(Product.Product):
             self.addSpec(product_specs,
                          self.getSpec(card_detail, "Fabrikantcode"))
             self.addSpec(product_specs,
-                         self.getSpec(card_detail, "Schermdiagonaal"))
+                         self.getSpec(card_detail, "Type printer"))
             self.addSpec(product_specs,
-                         self.getSpec(card_detail, "Resolutie"))
+                         self.getSpec(card_detail, "Afdruktechnologie"))
             self.addSpec(product_specs,
-                         self.getSpec(card_detail, "Processor") + " " + self.getSpec(card_detail, "Processornummer"))
+                         self.getSpec(card_detail, "Maximaal papierformaat"))
             self.addSpec(product_specs,
-                         self.getSpec(card_detail, "Videokaart"))
+                         self.getSpec(card_detail, "Maximale afdrukresolutie"))
             self.addSpec(product_specs,
-                         self.getSpec(card_detail, "Videogeheugen"))
+                         self.getSpec(card_detail, "Afdruksnelheid zwart-wit"))
+            self.addSpec(product_specs,
+                         self.getSpec(card_detail, "Afdruksnelheid kleur"))
             self.addSpec(product_specs,
                          self.getSpec(card_detail, "RAM-geheugen"))
-            self.addSpec(product_specs,
-                         self.getSpec(card_detail, "Opslagcapaciteit"))
             self.addSpec(product_specs, "{0} x {1} x {2}".format(
                 self.getSpec(card_detail, "Breedte"), self.getSpec(card_detail, "Diepte"), self.getSpec(card_detail, "Hoogte")))
             self.addSpec(product_specs, self.getSpec(
                 card_detail, "Gewicht"))
 
-            filename = "Data/product_laptops.csv"
+            filename = "Data/product_printers.csv"
             file = open(filename, "a")
             file.write(",".join(product_specs) + "\n")
             file.close()

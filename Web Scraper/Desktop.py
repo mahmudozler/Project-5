@@ -9,21 +9,11 @@ import Product
 class Desktop(Product.Product):
     def __init__(self):
         self.page = "https://www.coolblue.nl/producttype:desktops"
+        self.product_type = ""
 
     def run(self):
-        filename = "Data/product_desktops.csv"
-        file = open(filename, "w")
-        file.write("product_type,product_name,product_price,product_brand,product_model,product_wifi,product_bluetooth,product_cpu,product_graphicscard,product_graphicsmemory,product_memory,product_storage,product_dimensions,product_weight\n")
-        file.close()
-
-        page_soup_first = self.bsPage(self.page)
-
-        cards = page_soup_first.findAll(
-            "div", {"class": "product-grid__item card"})
-        page_count_buffer = page_soup_first.find(
-            "ul", {"class": "pagination js-pagination"}).findAll("li")
-        page_count = int(page_count_buffer[len(
-            page_count_buffer) - 2].text.strip())
+        headers = "product_type,product_name,product_price,product_brand,product_model,product_wifi,product_bluetooth,product_cpu,product_graphicscard,product_graphicsmemory,product_memory,product_storage,product_dimensions,product_weight"
+        page_count = self.start("Data/product_desktops.csv", headers)
 
         for i in range(page_count):
             self.getPageData(i)
@@ -31,7 +21,7 @@ class Desktop(Product.Product):
     def getCardData(self, card_link):
         if len(card_link) < 16:
             card_detail = self.bsPage(self.page[:23] + card_link)
-            product_specs = ["Desktop"]
+            product_specs = [self.product_type]
 
             self.addSpec(product_specs,
                          card_detail.h1.text.strip())
@@ -65,4 +55,4 @@ class Desktop(Product.Product):
             file.write(",".join(product_specs) + "\n")
             file.close()
 
-            print("product_name: " + product_specs[1])
+            print(product_specs[0] + "\tproduct_name: " + product_specs[1])
