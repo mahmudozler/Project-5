@@ -18,7 +18,7 @@ class Monitor(Product.Product):
             self.getPageData(i)
 
     def getCardData(self, card_link):
-        if len(card_link) < 16:
+        if len(card_link[2]) < 16:
             card_detail = self.bsPage(self.page[:23] + card_link[2])
             product_specs = [card_link[1]]
 

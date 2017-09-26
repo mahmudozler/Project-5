@@ -14,11 +14,11 @@ class Laptop(Product.Product):
         headers = "product_type,product_name,product_price,product_brand,product_model,product_screen,product_screenres,product_cpu,product_graphicscard,product_graphicsmemory,product_memory,product_storage,product_dimensions,product_weight"
         page_count = self.start("Data/product_laptops.csv", headers)
 
-        for i in range(page_count):
+        for i in range(17, page_count):
             self.getPageData(i)
 
     def getCardData(self, card_link):
-        if len(card_link) < 16:
+        if len(card_link[2]) < 16:
             card_detail = self.bsPage(self.page[:23] + card_link[2])
             product_specs = [card_link[1]]
 
