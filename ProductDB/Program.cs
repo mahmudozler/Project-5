@@ -13,6 +13,7 @@ namespace ProductDB
         static void Main(string[] args)
         {
             // DataInsertion();
+            Projection();
         }
 
         static void DataInsertion()
@@ -61,6 +62,21 @@ namespace ProductDB
 
                 var count = db.SaveChanges();
                 Console.WriteLine("{0} records saved to database", count);
+            }
+        }
+
+        static void Projection()
+        {
+            using (var db = new ProductContext())
+            {
+                var projected_products = from p in db.products
+                                       select new { p.id, p.type, p.name, p.price };
+
+                Console.WriteLine("id | type | name | price");
+                foreach (var product in projected_products)
+                {
+                    Console.WriteLine("- {0} | {1} | {2} | {3}", product.id, product.type, product.name, product.price);
+                }
             }
         }
     }
