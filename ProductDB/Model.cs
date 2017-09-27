@@ -10,7 +10,7 @@ namespace Model
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("User ID=postgres;Password=1510;Host=localhost;Port=5432;Database=ProductDB;Pooling=true;");
+            optionsBuilder.UseNpgsql("User ID=postgres;Password=;Host=localhost;Port=5432;Database=ProductDB;Pooling=true;");
         }
     }
 
