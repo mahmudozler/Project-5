@@ -12,8 +12,8 @@ namespace ProductDB
     {
         static void Main(string[] args)
         {
-            // DataInsertion();
-            Projection();
+            DataInsertion();
+            // Projection();
         }
 
         static void DataInsertion()
@@ -34,11 +34,12 @@ namespace ProductDB
                         {
                             string product_type = file_column[0].Replace("\"", "");
                             string product_name = file_column[1].Replace("\"", "");
+                            string product_desc = file_column[2].Replace("\"", "");
                             float product_price = 0.00f;
-                            float.TryParse(file_column[2].Replace("-", "00").Replace("\"", "").Replace(",", ";").Replace(".", ",").Replace(";", "."), out product_price);
+                            float.TryParse(file_column[3].Replace("-", "00").Replace("\"", "").Replace(",", ";").Replace(".", ",").Replace(";", "."), out product_price);
                             List<Specification> specs = new List<Specification>();
 
-                            for (int j = 3; j < file_column.Length; j++)
+                            for (int j = 4; j < file_column.Length; j++)
                             {
                                 specs.Add(new Specification
                                 {
@@ -51,6 +52,7 @@ namespace ProductDB
                             {
                                 type = product_type,
                                 name = product_name,
+                                description = product_desc,
                                 price = product_price,
                                 specifications = specs
                             };
@@ -70,7 +72,7 @@ namespace ProductDB
             using (var db = new ProductContext())
             {
                 var projected_products = from p in db.products
-                                       select new { p.id, p.type, p.name, p.price };
+                                         select new { p.id, p.type, p.name, p.price };
 
                 Console.WriteLine("id | type | name | price");
                 foreach (var product in projected_products)
