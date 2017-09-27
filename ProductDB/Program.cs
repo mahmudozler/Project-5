@@ -12,8 +12,8 @@ namespace ProductDB
     {
         static void Main(string[] args)
         {
-            DataInsertion();
-            // Projection();
+            // DataInsertion();
+            Projection();
         }
 
         static void DataInsertion()
