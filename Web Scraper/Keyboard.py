@@ -11,7 +11,7 @@ class Keyboard(Product.Product):
         self.page = "https://www.coolblue.nl/producttype:toetsenborden"
 
     def run(self):
-        headers = "product_type,product_name,product_price,product_brand,product_model,product_keyboardtype,product_numpad,product_layout,product_mech,product_prog,product_media,product_connection,product_dimensions,product_light"
+        headers = "product_type,product_name,product_desc,product_price,product_brand,product_model,product_keyboardtype,product_numpad,product_layout,product_mech,product_prog,product_media,product_connection,product_dimensions,product_light"
         page_count = self.start("Data/product_keyboards.csv", headers)
 
         for i in range(page_count):
@@ -24,6 +24,8 @@ class Keyboard(Product.Product):
 
             self.addSpec(product_specs,
                          card_detail.h1.text.strip())
+            self.addSpec(product_specs,
+                         self.getSpec(card_detail, "", True))
             self.addSpec(product_specs,
                          card_detail.find("strong", {"class": "sales-price--current"}).text.strip())
             self.addSpec(product_specs,

@@ -11,7 +11,7 @@ class Mouse(Product.Product):
         self.page = "https://www.coolblue.nl/producttype:muizen,gaming-muizen"
 
     def run(self):
-        headers = "product_type,product_name,product_price,product_brand,product_model,product_mousemodel,product_lr,product_buttons,product_sensor,product_dpi,product_connection,product_os,product_dimensions,product_color"
+        headers = "product_type,product_name,product_desc,product_price,product_brand,product_model,product_mousemodel,product_lr,product_buttons,product_sensor,product_dpi,product_connection,product_os,product_dimensions,product_color"
         page_count = self.start("Data/product_mouse.csv", headers)
 
         for i in range(page_count):
@@ -24,6 +24,8 @@ class Mouse(Product.Product):
 
             self.addSpec(product_specs,
                          card_detail.h1.text.strip())
+            self.addSpec(product_specs,
+                         self.getSpec(card_detail, "", True))
             self.addSpec(product_specs,
                          card_detail.find("strong", {"class": "sales-price--current"}).text.strip())
             self.addSpec(product_specs,

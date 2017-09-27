@@ -43,17 +43,23 @@ class Product(object):
         p.terminate()
         p.join()
 
-    def getSpec(self, card_detail, spec):
-        try:
-            return card_detail.find(text=re.compile(spec)).parent.parent.dd.text.strip().replace("\"", "''")
-        except:
+    def getSpec(self, card_detail, spec, desc=False):
+        if (desc):
             try:
-                return card_detail.find(text=re.compile(spec)).parent.parent.parent.parent.dd.text.strip().replace("\"", "''")
+                return card_detail.find("div", {"class", "product-description--content cms-content js-product-description-content"}).p.text.strip()
+            except:
+                return "None"
+        else:
+            try:
+                return card_detail.find(text=re.compile(spec)).parent.parent.dd.text.strip().replace("\"", "''")
             except:
                 try:
-                    return card_detail.find(text=re.compile(spec)).parent.dd.text.strip().replace("\"", "''")
+                    return card_detail.find(text=re.compile(spec)).parent.parent.parent.parent.dd.text.strip().replace("\"", "''")
                 except:
-                    return "None"
+                    try:
+                        return card_detail.find(text=re.compile(spec)).parent.dd.text.strip().replace("\"", "''")
+                    except:
+                        return "None"
 
     def addSpec(self, specs, spec):
         specs.append("\"{0}\"".format(spec.replace("\"", "''")))

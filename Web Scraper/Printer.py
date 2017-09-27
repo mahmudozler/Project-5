@@ -11,7 +11,7 @@ class Printer(Product.Product):
         self.page = "https://www.coolblue.nl/producttype:printers,labelprinters,laserprinters,3d-printers"
 
     def run(self):
-        headers = "product_type,product_name,product_price,product_brand,product_model,product_printertype,product_tech,product_maxsize,product_maxres,product_bwspeed,product_cspeed,product_memory,product_dimensions,product_weight"
+        headers = "product_type,product_name,product_desc,product_price,product_brand,product_model,product_printertype,product_tech,product_maxsize,product_maxres,product_bwspeed,product_cspeed,product_memory,product_dimensions,product_weight"
         page_count = self.start("Data/product_printers.csv", headers)
 
         for i in range(page_count):
@@ -24,6 +24,8 @@ class Printer(Product.Product):
 
             self.addSpec(product_specs,
                          card_detail.h1.text.strip())
+            self.addSpec(product_specs,
+                         self.getSpec(card_detail, "", True))
             self.addSpec(product_specs,
                          card_detail.find("strong", {"class": "sales-price--current"}).text.strip())
             self.addSpec(product_specs,

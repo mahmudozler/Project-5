@@ -11,8 +11,8 @@ class Monitor(Product.Product):
         self.page = "https://www.coolblue.nl/producttype:monitoren"
 
     def run(self):
-        headers = "product_type,product_name,product_price,product_brand,product_model,product_screen,product_screenres,product_response,product_brightness,product_refresh,product_screentype,product_connection,product_dimensions,product_weight"
-        page_count = self.start("Data/product_monitoren.csv", headers)
+        headers = "product_type,product_name,product_desc,product_price,product_brand,product_model,product_screen,product_screenres,product_response,product_brightness,product_refresh,product_screentype,product_connection,product_dimensions,product_weight"
+        page_count = self.start("Data/product_monitors.csv", headers)
 
         for i in range(page_count):
             self.getPageData(i)
@@ -24,6 +24,8 @@ class Monitor(Product.Product):
 
             self.addSpec(product_specs,
                          card_detail.h1.text.strip())
+            self.addSpec(product_specs,
+                         self.getSpec(card_detail, "", True))
             self.addSpec(product_specs,
                          card_detail.find("strong", {"class": "sales-price--current"}).text.strip())
             self.addSpec(product_specs,
@@ -49,7 +51,7 @@ class Monitor(Product.Product):
             self.addSpec(product_specs, self.getSpec(
                 card_detail, "Gewicht"))
 
-            filename = "Data/product_monitoren.csv"
+            filename = "Data/product_monitors.csv"
             file = open(filename, "a")
             file.write(",".join(product_specs) + "\n")
             file.close()
