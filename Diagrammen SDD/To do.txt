@@ -1,0 +1,24 @@
+to do
+*4 +1 view
+*system/subsystem decomposition (high level design)
+*low level design, design internal interfaces.
+
+
+-logical view (done) Muhammet Demir
+ Component diagram
+ statemachine diagram
+
+-development view (?) Satrya Sabeni
+ Component package
+ class diagrams
+
+-process view (?) Mahmut Ozler
+ Activity diagram
+ sequence diagram
+
+-Physical view (?) Endy Hu
+ deployment diagram
+ 
+-Scenarios (Done) Muhammed Incekara
+ use case diagrams
+ 
