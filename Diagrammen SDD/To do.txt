@@ -13,7 +13,7 @@ to do
  Component diagram
  statemachine diagram
 
--development view (?) Satrya Sabeni
+-development view (done) Satrya Sabeni
  Component package
  class diagrams
 
