@@ -1,9 +1,14 @@
 to do
-*4 +1 view
+
 *system/subsystem decomposition (high level design)
+-Domains, Phenomena
+-Boolean logic
+-States, Events
+-Finite state Machines
+
 *low level design, design internal interfaces.
 
-
+*4 +1 view
 -logical view (done) Muhammet Demir
  Component diagram
  statemachine diagram
