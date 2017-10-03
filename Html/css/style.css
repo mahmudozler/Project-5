@@ -10,9 +10,10 @@ main{
   background:#ebebeb;
   min-height:350px;
   width:84%;
-  display:block;
+  /*display:block;*/
   margin:0 auto;
   padding:0 8%;
+  display: flex;
 }
 #menu{
   width:84%;
@@ -74,7 +75,6 @@ main{
   padding:10px 7px;
 }
 .points{
-  width:73%;
   height:270px;
   background:#dadada;
   float: left;
@@ -123,13 +123,56 @@ main{
   height:270px;
   background:#61bbcb;
 }
+.product_container{
+  width:46%;
+  float:left;
+
+  height:auto;
+  /*background:red;*/
+  margin-top:25px;
+  display: block;
+  margin-right: 2%;
+}
+.thumb_slide{
+  width:30%;
+  height:106px;
+  background:blue;
+  margin:10px 3% 10px 0;
+  float:left;
+}
+.product_slides{
+  display: flex;
+}
+/*.thumb_slide:first-child{
+  margin-left:1%;
+}*/
+.specificaties{
+  padding-left: 17px;
+}
+.specificaties li{
+  margin-bottom: 10px;
+}
+.koop_button{
+  background: #0b59ab;
+  color:#fff;
+  padding:5px 10px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.product_description{
+  padding:10px 0;
+}
+.product_container img{
+  width:100%;
+}
 .product_img{
   width:46%;
   height:250px;
   float:left;
   margin-top: 65px;
   margin-left: 30px;
-  
+
 }
 .product_img img{
 	width:50%;
