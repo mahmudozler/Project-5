@@ -119,6 +119,18 @@ main{
   color:#424242;
   list-style-type:
 }
+#btnzoeken{
+  margin-left: 690px;
+    margin-top: 1px;
+    width: 84px;
+    height: 45px;   
+    background: transparent;
+    border: none;
+    color: white;   
+    font-size:0.9em;
+    font-family:'Roboto';
+    
+}
 .slider{
   margin-top:25px;
   display: block;
