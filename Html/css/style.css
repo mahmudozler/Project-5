@@ -93,9 +93,12 @@ main{
   border-left: 1px solid #ccc;
   height:100%;
 }
+
 .login span{
   display:block;
-  padding-top:13px;
+  padding-top:6px;
+  
+
 }
 #search{
   margin-top:8px;
