@@ -9,6 +9,15 @@
   <title>Document</title>
 </head>
 <body>
+	<script>
+      function zre(){
+    document.getElementById("zrtext").innerHTML="Resulaten"
+    document.getElementById("zr").src="img/s8.png"
+    document.getElementById("zr2").src="img/s8.png"
+    document.getElementById("zr3").src="img/s8.png"
+    document.getElementById("zr4").src="img/s8.png"
+}
+</script>
   <div id="menu">
 
     <a href = "index.html" style="text-decoration:none">
@@ -28,6 +37,7 @@
 	  </a>
 	</div>
     <input type="text" id="search" placeholder="Zoek een product..."/>
+	   <button id="btnzoeken" onclick="zre()" >Zoeken</button> 
   </div>
   <main>
     <div class="categories">
