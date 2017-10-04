@@ -181,6 +181,11 @@ main{
 .product_img img{
 	width:50%;
 }
+
+.icon_img img{
+	width:7%;
+}
+
 #bestsellers{
   height:220px;
   background:#b5b5b5;
