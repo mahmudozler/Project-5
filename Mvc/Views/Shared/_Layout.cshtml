@@ -38,13 +38,17 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                 </ul>
+				<form class="form-inline my-2 my-lg-0" id="search">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+                </form>
             </div>
         </div>
     </nav>
     <div class="body-content">
         @RenderBody()
         <footer class="row">
-			<div class="col-lg-4">
+			<div class="col-lg-4 col-md-4">
               Klantenservice
               <ul>
                 <li>verzending</li>
@@ -52,14 +56,14 @@
                 <li>veelgestelde vragen</li>
               </ul>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4">
               Over RoboMarkt
               <ul>
                 <li>Algemeen</li>
                 <li>&copy; 2017 - Mvc</li>
               </ul>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4">
               Social Media
             </div>
         </footer>

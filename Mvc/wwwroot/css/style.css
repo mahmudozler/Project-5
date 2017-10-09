@@ -22,7 +22,11 @@ body {
     background: #b5b5b5;
     display: block;
     margin-top: 22px;
+    padding:15px 0;
     //padding: 15px 8%;
+}
+.best_verkocht .container{
+    padding:0 30px;
 }
 .container{
     //margin:0px !important;
@@ -77,4 +81,11 @@ footer div ul li {
     list-style-type: none;
     font-size: 0.9em;
     margin-bottom: 4px;
+}
+#search{
+    float:right;
+    margin-top:8px;
+}
+#search input{
+    width:250px;
 }
