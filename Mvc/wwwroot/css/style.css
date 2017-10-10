@@ -120,3 +120,8 @@ footer div ul li {
 .login_button {
     color: #fff !important;
 }
+.logo {
+    width: 195px;
+    margin-top: -10px;
+    margin-right: 60px;
+}
