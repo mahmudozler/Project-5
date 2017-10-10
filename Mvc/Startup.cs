@@ -24,7 +24,8 @@ namespace Mvc
         public void ConfigureServices(IServiceCollection services)
         {
 			services.AddDbContext<ProductContext>(
-				opt => opt.UseNpgsql(@"Host=localhostdededed;Database=postgres;Username=postgres;Password=asdjkl")
+				//opt => opt.UseNpgsql(@"Host=localhost;Database=postgres;Username=postgres;Password=asdjkl")
+                opt => opt.UseNpgsql(@"Host=145.24.222.165;Database=robomarkt;Username=postgres;Password=admin1399")
 			);
 
             services.AddMvc();
