@@ -50,7 +50,10 @@ body {
     border-radius: 3px;
     overflow: hidden;
 }
-
+.categorie-items li a {
+    color:#1b1b1b;
+    letter-spacing:1px;
+}
 .categorie-items li:first-child {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
