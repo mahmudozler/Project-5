@@ -31,19 +31,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">ROBOMARKT</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand"><img src="~/images/logo_robomarkt.png" class="logo" /></a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-						<li><a asp-area="" asp-controller="Home" asp-action="Producten">Producten</a></li>
+					<li><a asp-area="" asp-controller="Home" asp-action="Producten">Producten</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                 </ul>
 				<form class="form-inline my-2 my-lg-0" id="search">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search" id="search" value"" onkeypress="zre(this.value,event)">
                     <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+                    <a asp-area="" asp-controller="Home" asp-action="Inloggen" class="login_button">Inloggen</a>
                 </form>
+                    
+
+
             </div>
         </div>
     </nav>
