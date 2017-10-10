@@ -1,0 +1,127 @@
+.navbar-inverse {
+    background-color: #526cb6 !important;
+    border: 0px !important;
+}
+
+.navbar {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff !important;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff !important;
+}
+
+body {
+    font-family: 'Roboto', sans-serif !important;
+    margin: 0px;
+    padding-bottom: 0px !important;
+}
+
+.best_verkocht {
+    height: 220px;
+    background: #b5b5b5;
+    display: block;
+    margin-top: 22px;
+    padding: 15px 0;
+    //padding: 15px 8%;
+}
+
+.best_verkocht .container {
+    padding: 0 30px;
+}
+
+.container {
+    //margin:0px !important;
+}
+
+.body-content {
+    margin-top: 25px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.categorie-items {
+    padding: 0px 5px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.categorie-items li:first-child {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.categorie-items li:last-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.categorie-items li {
+    background: #c9c9c9;
+    list-style-type: none;
+    margin-bottom: 2px;
+    padding: 10px 7px;
+}
+
+.selling-points li {
+    margin-bottom: 10px;
+    color: #424242;
+    list-style-type: ;
+}
+
+.slider {
+    background: #ccc;
+    height: 250px;
+}
+
+footer {
+    height: 200px;
+    background: #526cb6;
+    padding: 20px 8%;
+    color: #d5d5d5;
+}
+
+footer div ul {
+    padding-left: 0px;
+}
+
+footer div ul li {
+    list-style-type: none;
+    font-size: 0.9em;
+    margin-bottom: 4px;
+}
+
+#search {
+    float: right;
+    margin-top: 8px;
+}
+
+#search input {
+    width: 250px;
+}
+
+.product {
+    margin-bottom: 10px;
+    padding: 5px;
+    height: 200px;
+}
+
+.product-container {
+    background: #ccc;
+    height: 100%;
+    padding: 10px 15px;
+}
+
+.login_button {
+    color: #fff !important;
+}
+.logo {
+    width: 195px;
+    margin-top: -10px;
+    margin-right: 60px;
+}
