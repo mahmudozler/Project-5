@@ -7,6 +7,7 @@ namespace Model
     {
         public DbSet<Product> products { get; set; }
         public DbSet<Specification> specifications { get; set; }
+        public DbSet<User> users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -31,5 +32,13 @@ namespace Model
         public string value { get; set; }
         public int productid { get; set; }
         public Product product { get; set; }
+    }
+
+    public class User
+    {
+        public int id { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
+        public string email { get; set; }
     }
 }
