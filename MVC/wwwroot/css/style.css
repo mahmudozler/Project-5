@@ -137,3 +137,20 @@ footer div ul li {
 .foot-col ul li a {
     color: #eee;
 }
+/*  code below is the style of the login page*/
+.LoginPageInput{
+    width: 250px;
+}
+
+.LoginPageListStyle{
+    list-style-type: none;
+    margin-bottom: 10px;    
+}
+
+.InlogPageButton{
+    background-color: #3399FF;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 25px;
+}
