@@ -25,15 +25,15 @@ namespace lesson4.Controllers
 
             if (!String.IsNullOrEmpty(searchString) && !String.IsNullOrEmpty(category))
             {
-                products = _context.products.Where(p => p.name.ToLower().Contains(searchString.ToLower().Replace(" ", "")) && p.type.ToLower().Contains(category.ToLower().Replace(" ", "")));
+                products = _context.products.Where(p => p.name.ToLower().Contains(searchString.ToLower()) && p.type.ToLower().Contains(category.ToLower()));
             }
             else if (!String.IsNullOrEmpty(searchString))
             {
-                products = _context.products.Where(p => p.name.ToLower().Contains(searchString.ToLower().Replace(" ", "")) || p.type.ToLower().Contains(searchString.ToLower().Replace(" ", "")));
+                products = _context.products.Where(p => p.name.ToLower().Contains(searchString.ToLower()) || p.type.ToLower().Contains(searchString.ToLower()));
             }
             else if (!String.IsNullOrEmpty(category))
             {
-                products = _context.products.Where(p => p.type.ToLower().Contains(category.ToLower().Replace(" ", "")));
+                products = _context.products.Where(p => p.type.ToLower().Contains(category.ToLower()));
             }
 
             return View(await products.ToListAsync());
