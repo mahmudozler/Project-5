@@ -50,10 +50,12 @@ body {
     border-radius: 3px;
     overflow: hidden;
 }
+
 .categorie-items li a {
-    color:#1b1b1b;
-    letter-spacing:1px;
+    color: #1b1b1b;
+    letter-spacing: 1px;
 }
+
 .categorie-items li:first-child {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
@@ -125,11 +127,13 @@ footer div ul li {
     margin-left: 40px;
     margin-right: 15px;
 }
+
 .logo {
     width: 195px;
     margin-top: -10px;
     margin-right: 60px;
 }
+
 .foot-col {
     color: #eee;
 }
@@ -137,20 +141,44 @@ footer div ul li {
 .foot-col ul li a {
     color: #eee;
 }
+
+
 /*  code below is the style of the login page*/
-.LoginPageInput{
+
+.LoginPageInput {
     width: 250px;
 }
 
-.LoginPageListStyle{
+.LoginPageListStyle {
     list-style-type: none;
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
 }
 
-.InlogPageButton{
+.InlogPageButton {
     background-color: #3399FF;
     color: white;
     border: none;
     width: 100px;
     height: 25px;
+}
+
+.RegisterPageButton {
+    background-color: #3399FF;
+    color: white;
+    border: none;
+    padding: 0px 17px;
+    height: 25px;
+}
+
+.Registerblock {
+    border-left: 1px solid gray;
+    padding-left: 100px !important;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    margin-bottom: 50px;
+}
+
+.Loginblock {
+    padding-left: 100px !important;
+    margin-top: 100px;
 }

@@ -1,7 +1,9 @@
 @{
     ViewData["Title"] = "Inloggen";
 }
-<div class="container">
+<div class="container"> 
+    <div class="col-lg-6 Loginblock">
+
     <h2>@ViewData["Title"]</h2>
     <h3>@ViewData["Message"]</h3>
 
@@ -9,5 +11,18 @@
     <li class="LoginPageListStyle"><input class="LoginPageInput" name="password" type="text" placeholder="Password" value="" ></li>
      <li class="LoginPageListStyle"><button class="InlogPageButton">Inloggen</button></li>
 
-    <p>Use this area to provide additional information.</p>
+
+
+    
+    </div>
+     <div class="col-lg-6 Registerblock"> 
+         <h2>Nieuwe klant</h2>
+         <p>Redenen om een account aan te maken:</p>
+      <li>Je winkelmandje altijd en overal opgeslagen</li>
+      <li>Bestel sneller met je bewaarde adresgegevens</li>
+      <li>Al je bestellingen en retouren op één plek</li>   
+      <br/>
+      <button class="RegisterPageButton">Account aanmaken</button>
+
+     </div>
 </div>
