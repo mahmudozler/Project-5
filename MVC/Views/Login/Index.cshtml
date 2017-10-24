@@ -7,11 +7,9 @@
     <h2>@ViewData["Title"]</h2>
     <!-- <h3>@ViewData["Message"]</h3> -->
 
-
-
-    <form>
-        <li class="LoginPageListStyle"><input class="LoginPageInput" name="username" type="text" placeholder="Username"></li>
-        <li class="LoginPageListStyle"><input class="LoginPageInput" name="password" type="text" placeholder="Password"></li>
+    <form asp-action="Login">
+        <li class="LoginPageListStyle"><input class="LoginPageInput" name="User" type="text" placeholder="Username" required="required"></li>
+        <li class="LoginPageListStyle"><input class="LoginPageInput" name="Pass" type="password" placeholder="Password" required="required"></li>
         <li class="LoginPageListStyle"><button class="InlogPageButton">Inloggen</button></li>
     </form>
     
@@ -24,8 +22,7 @@
       <li>Al je bestellingen en retouren op één plek</li>   
       <br/>
 
-      <a class="RegisterPageButton" asp-area="" asp-controller="Login" asp-action="Register">Account aanmaken</a>
-
+      <a class="RegisterPageButton" asp-area="" asp-controller="Register" asp-action="">Account aanmaken</a>
 
      </div>
 </div>

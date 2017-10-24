@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Registerpage";
+}
+
+<div class="container">
+    <form asp-action="Register">
+        <li class="LoginPageListStyle"><input class="LoginPageInput" name="User" type="text" placeholder="Username" required="required" minlength="6" maxlength="18"></li>    
+        <li class="LoginPageListStyle"><input class="LoginPageInput" name="Pass" type="password" placeholder="Password" required="required" minlength="6" maxlength="18"></li>
+        <li class="LoginPageListStyle"><input class="LoginPageInput" name="Mail" type="email" placeholder="Email" required="required"></li>
+        <li class="LoginPageListStyle"><button class="InlogPageButton">Registeren</button></li>
+    </form>
+</div>

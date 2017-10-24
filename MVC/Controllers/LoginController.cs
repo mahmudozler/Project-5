@@ -1,6 +1,8 @@
 using System;
+using System.Text;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -18,156 +20,69 @@ namespace lesson4.Controllers
             _context = context;
         }
 
-        
-        public async Task<IActionResult> Index()
+        static string GetSHA512Hash(string input, string salt = "")
         {
-            return View();
-        }
-        
-        public async Task<IActionResult> Account()
-        {
-            return View();
-        }
+            SHA512 shaM = SHA512.Create();
+            StringBuilder sBuilder = new StringBuilder();
 
-        public async Task<IActionResult> Register(string User, string Pass, string Mail)
-        {
-            
-            User newUser = new User() {
-                username = User,
-                password = Pass,
-                email = Mail
-            };
-            _context.Add(newUser);
-            _context.SaveChanges();
+            byte[] data = shaM.ComputeHash(Encoding.ASCII.GetBytes(input + salt));
 
-            return View();
-        }
-        
-        /*
-
-        // GET: Product/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
+            for (int i = 0; i < data.Length; i++)
             {
-                return NotFound();
+                sBuilder.Append(data[i].ToString("x2"));
             }
 
-            var product = await _context.products
-                .SingleOrDefaultAsync(m => m.id == id);
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            return View(product);
+            return sBuilder.ToString();
         }
 
-        // GET: Product/Create
-        public IActionResult Create()
+        public IActionResult Index()
         {
             return View();
         }
 
-        // POST: Product/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,type,name,description,price")] Product product)
+        public IActionResult Login(string User, string Pass)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(product);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(product);
-        }
+            var buffer = from u in _context.users
+                         select new { u.username, u.password, u.salt };
 
-        // GET: Product/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
+            List<string> usernames = new List<string>();
+            List<string> passwords = new List<string>();
+            List<string> salts = new List<string>();
+
+            foreach (var user in buffer)
             {
-                return NotFound();
+                usernames.Add(user.username);
+                passwords.Add(user.password);
+                salts.Add(user.salt);
             }
 
-            var product = await _context.products.SingleOrDefaultAsync(m => m.id == id);
-            if (product == null)
+            try
             {
-                return NotFound();
-            }
-            return View(product);
-        }
+                int index = usernames.IndexOf(User);
 
-        // POST: Product/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,type,name,description,price")] Product product)
-        {
-            if (id != product.id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
+                if (passwords[index] == GetSHA512Hash(Pass, salts[index]))
                 {
-                    _context.Update(product);
-                    await _context.SaveChangesAsync();
+                    ViewData["Message"] = "You have succesfully logged in.";
+                    return View();
+
                 }
-                catch (DbUpdateConcurrencyException)
+                else
                 {
-                    if (!ProductExists(product.id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    ViewData["Message"] = "Wrong password, Try again.";
+                    return View();
+
                 }
-                return RedirectToAction(nameof(Index));
             }
-            return View(product);
-        }
-
-        // GET: Product/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
+            catch
             {
-                return NotFound();
+                ViewData["Message"] = "Couldn't find your account.";
+                return View();
             }
-
-            var product = await _context.products
-                .SingleOrDefaultAsync(m => m.id == id);
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            return View(product);
         }
 
-        // POST: Product/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public IActionResult Account()
         {
-            var product = await _context.products.SingleOrDefaultAsync(m => m.id == id);
-            _context.products.Remove(product);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return View();
         }
-
-        private bool ProductExists(int id)
-        {
-            return _context.products.Any(e => e.id == id);
-        }*/
-    } 
+    }
 }
