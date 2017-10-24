@@ -52,8 +52,8 @@
                         <a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0" id="search">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" value="" onkeypress="search(this.value,event)">
+                <form asp-controller="Product" class="form-inline my-2 my-lg-0" id="search">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" name="searchString">
                     <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
                     <a asp-area="" asp-controller="Home" asp-action="Inloggen" class="login_button">Inloggen</a>
                 </form>
