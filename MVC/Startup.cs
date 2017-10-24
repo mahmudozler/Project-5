@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 
-using ProductModel;
+using RobomarktModel;
 
 namespace MVC
 {
@@ -24,7 +24,7 @@ namespace MVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ProductContext>(
+            services.AddDbContext<RobomarktContext>(
                 opt => opt.UseNpgsql(@"Host=145.24.222.165;Database=robomarkt;User ID=postgres;Password=admin1399"));
             services.AddMvc();
         }

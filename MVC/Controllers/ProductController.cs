@@ -5,15 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using ProductModel;
+using RobomarktModel;
 
 namespace lesson4.Controllers
 {
     public class ProductController : Controller
     {
-        private readonly ProductContext _context;
+        private readonly RobomarktContext _context;
 
-        public ProductController(ProductContext context)
+        public ProductController(RobomarktContext context)
         {
             _context = context;
         }
