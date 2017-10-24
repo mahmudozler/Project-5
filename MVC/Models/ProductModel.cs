@@ -1,15 +1,15 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace RobomarktModel
+namespace ProductModel
 {
-    public class RobomarktContext : DbContext
+    public class ProductContext : DbContext
     {
         public DbSet<Product> products { get; set; }
         public DbSet<Specification> specifications { get; set; }
         public DbSet<User> users { get; set; }
 
-        public RobomarktContext(DbContextOptions<RobomarktContext> options) : base(options) { }
+        public ProductContext(DbContextOptions<ProductContext> options) : base(options) { }
     }
 
     public class Product
