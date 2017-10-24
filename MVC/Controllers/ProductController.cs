@@ -19,21 +19,13 @@ namespace lesson4.Controllers
         }
 
         // GET: Product
-        public async Task<IActionResult> Index(string searchString, string category)
+        public async Task<IActionResult> Index(string searchString)
         {
             var products = _context.products.Select(p => p);
 
-            if (!String.IsNullOrEmpty(searchString) && !String.IsNullOrEmpty(category))
-            {
-                products = _context.products.Where(p => p.name.ToLower().Contains(searchString.ToLower()) && p.type.ToLower().Contains(category.ToLower()));
-            }
-            else if (!String.IsNullOrEmpty(searchString))
+            if (!String.IsNullOrEmpty(searchString))
             {
                 products = _context.products.Where(p => p.name.ToLower().Contains(searchString.ToLower()) || p.type.ToLower().Contains(searchString.ToLower()));
-            }
-            else if (!String.IsNullOrEmpty(category))
-            {
-                products = _context.products.Where(p => p.type.ToLower().Contains(category.ToLower()));
             }
 
             return View(await products.ToListAsync());
