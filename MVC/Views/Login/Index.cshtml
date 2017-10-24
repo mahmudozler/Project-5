@@ -5,7 +5,9 @@
     <div class="col-lg-6 Loginblock">
 
     <h2>@ViewData["Title"]</h2>
-    <h3>@ViewData["Message"]</h3>
+    <!-- <h3>@ViewData["Message"]</h3> -->
+
+
 
     <form>
         <li class="LoginPageListStyle"><input class="LoginPageInput" name="username" type="text" placeholder="Username"></li>
@@ -21,6 +23,9 @@
       <li>Bestel sneller met je bewaarde adresgegevens</li>
       <li>Al je bestellingen en retouren op één plek</li>   
       <br/>
-      <button class="RegisterPageButton">Account aanmaken</button>
+
+      <a class="RegisterPageButton" asp-area="" asp-controller="Login" asp-action="Register">Account aanmaken</a>
+
+
      </div>
 </div>

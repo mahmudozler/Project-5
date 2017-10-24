@@ -29,12 +29,7 @@ namespace lesson4.Controllers
             return View();
         }
 
-        public IActionResult Inloggen()
-        {
-            ViewData["Message"] = "Your inlog page.";
-
-            return View();
-        }
+    
 
         public IActionResult Error()
         {
