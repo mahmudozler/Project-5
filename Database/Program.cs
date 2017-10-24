@@ -1,12 +1,12 @@
-﻿using Model;
-
-using System;
+﻿using System;
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace ProductDB
+using Model;
+
+namespace Database
 {
     class Program
     {

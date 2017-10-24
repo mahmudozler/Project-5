@@ -25,7 +25,7 @@ namespace lesson4.Controllers
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                products = _context.products.Where(p => p.name.ToLower().Contains(searchString.ToLower()));
+                products = _context.products.Where(p => p.name.ToLower().Contains(searchString.ToLower()) || p.type.ToLower().Contains(searchString.ToLower()));
             }
 
             return View(await products.ToListAsync());

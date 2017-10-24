@@ -17,7 +17,7 @@ namespace lesson4.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Your Application description page.";
 
             return View();
         }
@@ -25,6 +25,13 @@ namespace lesson4.Controllers
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+
+        public IActionResult Inloggen()
+        {
+            ViewData["Message"] = "Your inlog page.";
 
             return View();
         }

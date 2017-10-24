@@ -3,40 +3,71 @@
 @{
     ViewData["Title"] = "Details";
 }
-
-<h2>Details</h2>
-
-<div>
-    <h4>Product</h4>
+<div class="container">
+	<div class="product-edit">
+        <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+	
+    <h2>@Html.DisplayFor(model => model.name)</h2>
     <hr />
-    <dl class="dl-horizontal">
+
+	<div class="col-lg-7">
+        <div class="product-image">
+			
+		</div>
+	</div>
+	<div class="col-lg-5">
+		<div class="price-bar">
+    		<h3>€ @Html.DisplayFor(model => model.price)</h3>
+			<button class="btn kopen">In winkelmandje</button>
+			<br/>
+            <ul class="selling-points">
+                <li>Snelle levering</li>
+                <li>Niet goed geld terug!</li>
+                <li>Voor 17:00 besteld, morgen in huis!</li>
+                <li>Tijdelijk 10% korting op alle producten</li>
+            </ul>
+		</div>
+	</div>
+    
+    <dl class="dl-horizontal col-lg-7 product-info">
+		
         <dt>
             @Html.DisplayNameFor(model => model.type)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.type)
         </dd>
+		
+		<br/>
+
+		
         <dt>
             @Html.DisplayNameFor(model => model.name)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.name)
         </dd>
+
+		<br>
+		
         <dt>
             @Html.DisplayNameFor(model => model.description)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.description)
         </dd>
+
+		<!--
         <dt>
             @Html.DisplayNameFor(model => model.price)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.price)
         </dd>
+		-->
     </dl>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+
