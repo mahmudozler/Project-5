@@ -3,10 +3,23 @@
 }
 
 <div class="container">
-    <form asp-action="Register">
-        <li class="LoginPageListStyle"><input class="LoginPageInput" name="User" type="text" placeholder="Username" required="required" minlength="6" maxlength="18"></li>    
-        <li class="LoginPageListStyle"><input class="LoginPageInput" name="Pass" type="password" placeholder="Password" required="required" minlength="6" maxlength="18"></li>
-        <li class="LoginPageListStyle"><input class="LoginPageInput" name="Mail" type="email" placeholder="Email" required="required"></li>
+    <h2>Register</h2>
+    <form asp-action="Register" method="POST">
+        <li class="LoginPageListStyle"><input class="LoginPageInput" name="User" type="text" placeholder="Username" pattern="[A-Za-z0-9.-]+" title="Please use only letters (a-z), numbers, periods, dashes and underscores." required="required" minlength="6" maxlength="18"></li>
+        <li class="LoginPageListStyle"><input class="LoginPageInput" name="Pass" type="password" placeholder="Password" pattern="[\x20-\x7E]+" title="The following are allowed in your password: a-z, A-Z, 0-9, and common punctuation." required="required" minlength="6" maxlength="18"></li>
+        <li class="LoginPageListStyle"><input class="LoginPageInput" name="Mail" type="email" placeholder="Email" pattern="[A-Za-z0-9\x40.]+" title="Please use only letters (a-z), numbers, and periods." required="required"></li>
+        <li class="LoginPageListStyle"><input class="LoginPageInput" name="Name" type="text" placeholder="Name" pattern="[A-Za-z0-9.- ]+" title="Please use only letters (a-z), spaces, numbers, periods, dashes and underscores." required="required"></li>
+        <li class="LoginPageListStyle"><input class="LoginPageInput" name="Surname" type="text" placeholder="Surname" pattern="[A-Za-z0-9.- ]+" title="Please use only letters (a-z), spaces, numbers, periods, dashes and underscores." required="required"></li>
+        <li class="LoginPageListStyle">
+            <select name="Gender">
+                <option disabled="disabled" selected="selected">I am...</option>                
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+            </select>
+            </li>
+        <li class="LoginPageListStyle"><input class="LoginPageInput" name="Phonenumber" type="text" placeholder="Phonenumber" pattern="[0-9]{10}" title="This phone number format is not recognized." required="required"></li>
+        <li class="LoginPageListStyle"><input class="LoginPageInput" name="Zipcode" type="text" placeholder="Zip Code" pattern="[A-Za-z0-9.- ]+" title="Please use only letters (a-z), spaces, numbers, periods, dashes and underscores." required="required"></li>
+        <li class="LoginPageListStyle"><input class="LoginPageInput" name="Address" type="text" placeholder="Address" pattern="[A-Za-z0-9.- ]+" title="Please use only letters (a-z), spaces, numbers, periods, dashes and underscores." required="required"></li>
         <li class="LoginPageListStyle"><button class="InlogPageButton">Registeren</button></li>
     </form>
 </div>

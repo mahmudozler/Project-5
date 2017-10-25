@@ -7,16 +7,17 @@
     <h2>@ViewData["Title"]</h2>
     <!-- <h3>@ViewData["Message"]</h3> -->
 
-    <form asp-action="Login">
-        <li class="LoginPageListStyle"><input class="LoginPageInput" name="User" type="text" placeholder="Username" required="required"></li>
-        <li class="LoginPageListStyle"><input class="LoginPageInput" name="Pass" type="password" placeholder="Password" required="required"></li>
+    <form asp-action="Login" method="POST">
+        <li class="LoginPageListStyle"><input class="LoginPageInput" name="User" type="text" placeholder="Username" pattern="[\x20-\x7E]+" title="Please use only letters (a-z), numbers, and periods." required="required"></li>
+        <li class="LoginPageListStyle"><input class="LoginPageInput" name="Pass" type="password" placeholder="Password" pattern="[\x20-\x7E]+" title="The following are allowed in your password: a-z, A-Z, 0-9, and common punctuation." required="required"></li>
         <li class="LoginPageListStyle"><button class="InlogPageButton">Inloggen</button></li>
     </form>
+    <p>@ViewData["Message"]</p>
     
     </div>
      <div class="col-lg-6 Registerblock"> 
-         <h2>Nieuwe klant</h2>
-         <p>Redenen om een account aan te maken:</p>
+        <h2>Nieuwe klant</h2>
+        <p>Redenen om een account aan te maken:</p>
       <li>Je winkelmandje altijd en overal opgeslagen</li>
       <li>Bestel sneller met je bewaarde adresgegevens</li>
       <li>Al je bestellingen en retouren op één plek</li>   

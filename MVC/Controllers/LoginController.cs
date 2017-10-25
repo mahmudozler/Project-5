@@ -35,8 +35,10 @@ namespace lesson4.Controllers
             return sBuilder.ToString();
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string message)
         {
+            ViewData["Message"] = message;
+
             return View();
         }
 
@@ -62,21 +64,16 @@ namespace lesson4.Controllers
 
                 if (passwords[index] == GetSHA512Hash(Pass, salts[index]))
                 {
-                    ViewData["Message"] = "You have succesfully logged in.";
-                    return View();
-
+                    return View("Account");
                 }
                 else
                 {
-                    ViewData["Message"] = "Wrong password, Try again.";
-                    return View();
-
+                    return RedirectToAction("Index", new { message = "Wrong password, Try again." });
                 }
             }
             catch
             {
-                ViewData["Message"] = "Couldn't find your account.";
-                return View();
+                return RedirectToAction("Index", new { message = "Couldn't find your account." });
             }
         }
 

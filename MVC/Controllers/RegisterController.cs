@@ -48,7 +48,7 @@ namespace lesson4.Controllers
             return View();
         }
 
-        public IActionResult Register(string User, string Pass, string Mail)
+        public IActionResult Register(string User, string Pass, string Mail, string Name, string Surname, string Gender, string Phonenumber, string Zipcode, string Address)
         {
             var buffer = from u in _context.users
                          select new { u.username, u.email };
@@ -82,7 +82,13 @@ namespace lesson4.Controllers
                     username = User,
                     password = Password,
                     salt = Salt,
-                    email = Mail
+                    email = Mail,
+                    name = Name,
+                    surname = Surname,
+                    gender = Gender,
+                    phonenumber = Phonenumber,
+                    zipcode = Zipcode,
+                    address = Address
                 };
 
                 _context.users.Add(newUser);
