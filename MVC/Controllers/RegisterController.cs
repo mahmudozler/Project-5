@@ -51,18 +51,25 @@ namespace lesson4.Controllers
         public IActionResult Register(string User, string Pass, string Mail)
         {
             var buffer = from u in _context.users
-                         select u.username;
+                         select new { u.username, u.email };
 
             List<string> usernames = new List<string>();
+            List<string> emails = new List<string>();
 
-            foreach (string username in buffer)
+            foreach (var user in buffer)
             {
-                usernames.Add(username);
+                usernames.Add(user.username);
+                emails.Add(user.email);
             }
 
             if (usernames.Contains(User))
             {
                 ViewData["Message"] = "That username is taken. Try another.";
+                return View();
+            }
+            else if (emails.Contains(Mail))
+            {
+                ViewData["Message"] = "That email is taken. Try another.";
                 return View();
             }
             else
@@ -81,7 +88,7 @@ namespace lesson4.Controllers
                 _context.users.Add(newUser);
                 _context.SaveChanges();
 
-                ViewData["Message"] = "You have succesfully registered.";                
+                ViewData["Message"] = "You have succesfully registered.";
                 return View();
             }
         }

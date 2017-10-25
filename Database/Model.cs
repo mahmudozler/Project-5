@@ -47,6 +47,7 @@ namespace Model
         public string phonenumber { get; set; }
         public string zipcode { get; set; }
         public string address { get; set; }
+        public bool verified { get; set; }
         public bool admin { get; set; }
     }
 }
