@@ -34,15 +34,17 @@ namespace lesson4.Controllers
 
             return sBuilder.ToString();
         }
-
+        
+        [HttpGet]
         public IActionResult Index(string message)
         {
-            ViewData["Message"] = message;
+            TempData["Message"] = message;
 
-            return View();
+            return View("Index");
         }
 
-        public IActionResult Login(string User, string Pass)
+        [HttpPost]
+        public IActionResult Index(string User, string Pass)
         {
             var buffer = from u in _context.users
                          select new { u.username, u.password, u.salt };
@@ -68,12 +70,12 @@ namespace lesson4.Controllers
                 }
                 else
                 {
-                    return RedirectToAction("Index", new { message = "Wrong password, Try again." });
+                    return Index("Wrong password, Try again.");
                 }
             }
             catch
             {
-                return RedirectToAction("Index", new { message = "Couldn't find your account." });
+                return Index("Couldn't find your account.");
             }
         }
 

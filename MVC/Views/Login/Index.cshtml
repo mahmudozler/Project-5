@@ -5,14 +5,13 @@
     <div class="col-lg-6 Loginblock">
 
     <h2>@ViewData["Title"]</h2>
-    <!-- <h3>@ViewData["Message"]</h3> -->
 
-    <form asp-action="Login" method="POST">
+    <form method="POST">
         <li class="LoginPageListStyle"><input class="LoginPageInput" name="User" type="text" placeholder="Username" pattern="[\x20-\x7E]+" title="Please use only letters (a-z), numbers, and periods." required="required"></li>
         <li class="LoginPageListStyle"><input class="LoginPageInput" name="Pass" type="password" placeholder="Password" pattern="[\x20-\x7E]+" title="The following are allowed in your password: a-z, A-Z, 0-9, and common punctuation." required="required"></li>
         <li class="LoginPageListStyle"><button class="InlogPageButton">Inloggen</button></li>
     </form>
-    <p>@ViewData["Message"]</p>
+    <p>@TempData["Message"]</p>
     
     </div>
      <div class="col-lg-6 Registerblock"> 

@@ -43,12 +43,16 @@ namespace lesson4.Controllers
             return sBuilder.ToString();
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult Index(string message)
         {
-            return View();
+            TempData["Message"] = message;
+
+            return View("Index");
         }
 
-        public IActionResult Register(string User, string Pass, string Mail, string Name, string Surname, string Gender, string Phonenumber, string Zipcode, string Address)
+        [HttpPost]
+        public IActionResult Index(string User, string Pass, string Mail, string Name, string Surname, string Gender, string Phonenumber, string Zipcode, string Address)
         {
             var buffer = from u in _context.users
                          select new { u.username, u.email };
@@ -64,13 +68,11 @@ namespace lesson4.Controllers
 
             if (usernames.Contains(User))
             {
-                ViewData["Message"] = "That username is taken. Try another.";
-                return View();
+                return Index("That username is taken. Try another.");
             }
             else if (emails.Contains(Mail))
             {
-                ViewData["Message"] = "That email is taken. Try another.";
-                return View();
+                return Index("That email is taken. Try another.");
             }
             else
             {
@@ -94,8 +96,7 @@ namespace lesson4.Controllers
                 _context.users.Add(newUser);
                 _context.SaveChanges();
 
-                ViewData["Message"] = "You have succesfully registered.";
-                return View();
+                return View("Account", "LoginController");
             }
         }
     }

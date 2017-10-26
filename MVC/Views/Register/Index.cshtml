@@ -4,7 +4,7 @@
 
 <div class="container">
     <h2>Register</h2>
-    <form asp-action="Register" method="POST">
+    <form method="POST">
         <li class="LoginPageListStyle"><input class="LoginPageInput" name="User" type="text" placeholder="Username" pattern="[A-Za-z0-9.-]+" title="Please use only letters (a-z), numbers, periods, dashes and underscores." required="required" minlength="6" maxlength="18"></li>
         <li class="LoginPageListStyle"><input class="LoginPageInput" name="Pass" type="password" placeholder="Password" pattern="[\x20-\x7E]+" title="The following are allowed in your password: a-z, A-Z, 0-9, and common punctuation." required="required" minlength="6" maxlength="18"></li>
         <li class="LoginPageListStyle"><input class="LoginPageInput" name="Mail" type="email" placeholder="Email" pattern="[A-Za-z0-9\x40.]+" title="Please use only letters (a-z), numbers, and periods." required="required"></li>
@@ -22,4 +22,5 @@
         <li class="LoginPageListStyle"><input class="LoginPageInput" name="Address" type="text" placeholder="Address" pattern="[A-Za-z0-9.- ]+" title="Please use only letters (a-z), spaces, numbers, periods, dashes and underscores." required="required"></li>
         <li class="LoginPageListStyle"><button class="InlogPageButton">Registeren</button></li>
     </form>
+    <p>@TempData["Message"]</p>
 </div>
