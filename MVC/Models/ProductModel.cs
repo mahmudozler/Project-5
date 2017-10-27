@@ -36,6 +36,15 @@ namespace ProductModel
         public int id { get; set; }
         public string username { get; set; }
         public string password { get; set; }
+        public string salt { get; set; }
         public string email { get; set; }
+        public string name { get; set; }
+        public string surname { get; set; }
+        public string gender { get; set; }
+        public string phonenumber { get; set; }
+        public string zipcode { get; set; }
+        public string address { get; set; }
+        public bool verified { get; set; }
+        public bool admin { get; set; }
     }
 }
