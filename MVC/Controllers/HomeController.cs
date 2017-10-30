@@ -5,20 +5,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using lesson4.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace lesson4.Controllers
 {
     public class HomeController : Controller
     {
+
         public IActionResult Index()
         {
+
             return View();
         }
 
         public IActionResult About()
         {
             ViewData["Message"] = "Your Application description page.";
-
             return View();
         }
 
@@ -28,7 +30,6 @@ namespace lesson4.Controllers
 
             return View();
         }
-
     
 
         public IActionResult Error()

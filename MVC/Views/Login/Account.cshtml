@@ -2,5 +2,7 @@
     ViewData["Title"] = "logged in";
 }
 <div class="container">
-    <h1>Your Account</h1>
+    <h1>Your Account<span>@ViewData["username"]</span></h1>
+	@Html.ActionLink("Uitloggen", "Logout", "Login")
+
 </div>

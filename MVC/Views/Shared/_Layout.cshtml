@@ -1,6 +1,14 @@
-﻿<!DOCTYPE html>
-<html>
+﻿@using Microsoft.AspNetCore.Http;
+@using Microsoft.AspNetCore.Mvc;
 
+@{
+    ViewData["Title"] = "Home Page";
+    if(Context.Session.GetString("username") != null){
+        var x = Context.Session.GetString("username");
+    }
+}
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -55,7 +63,7 @@
                 <form asp-controller="Product" asp-action="" class="form-inline my-2 my-lg-0" id="search" method="GET">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search" name="searchString">
                     <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-                    <a asp-area="" asp-controller="Login" asp-action="index" class="login_button">Inloggen</a>
+                    <a asp-area="" asp-controller="Login" asp-action="index" class="login_button">@if(@Context.Session.GetString("username") != null) {@Context.Session.GetString("username");} else { <text>Inloggen</text> }</a>
                 </form>
 
 
