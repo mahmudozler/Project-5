@@ -52,14 +52,16 @@ namespace lesson4.Controllers
         public IActionResult Index(string User, string Pass)
         {
             var buffer = from u in _context.users
-                         select new { u.username, u.password, u.salt };
+                         select new { u.id, u.username, u.password, u.salt };
 
+            List<int> ids = new List<int>();
             List<string> usernames = new List<string>();
             List<string> passwords = new List<string>();
             List<string> salts = new List<string>();
 
             foreach (var user in buffer)
             {
+                ids.Add(user.id);
                 usernames.Add(user.username);
                 passwords.Add(user.password);
                 salts.Add(user.salt);
@@ -71,7 +73,7 @@ namespace lesson4.Controllers
 
                 if (passwords[index] == GetSHA512Hash(Pass, salts[index]))
                 {
-                    HttpContext.Session.Set("User", new UserSession(1, User));
+                    HttpContext.Session.Set("User", new UserSession(ids[index], User));
                     return RedirectToAction("Account");
                 }
                 else
