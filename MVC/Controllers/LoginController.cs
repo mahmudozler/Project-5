@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ProductModel;
 using Microsoft.AspNetCore.Http;
+using MVC.Extension;
 
 namespace lesson4.Controllers
 {
@@ -39,7 +40,7 @@ namespace lesson4.Controllers
         [HttpGet]
         public IActionResult Index(string message)
         {
-            if(HttpContext.Session.GetString("username") != null){
+            if(HttpContext.Session.GetString("User") != null){
                 return RedirectToAction("Account");
             }
 
@@ -70,7 +71,8 @@ namespace lesson4.Controllers
 
                 if (passwords[index] == GetSHA512Hash(Pass, salts[index]))
                 {
-                    HttpContext.Session.SetString("username", User);
+                    //HttpContext.Session.SetString("username", User);
+                    HttpContext.Session.Set("User", new UserSession(1, User));
                     return RedirectToAction("Account");
                 }
                 else
@@ -86,13 +88,18 @@ namespace lesson4.Controllers
 
         public IActionResult Account(string userName)
         {
-            ViewData["username"] = HttpContext.Session.GetString("username");
+            if (HttpContext.Session.GetString("User") == null)
+            {
+                return RedirectToAction("Index");
+            }
+            
+            ViewData["username"] = HttpContext.Session.Get<UserSession>("User").Username;
             return View();
         }
 
         public ActionResult Logout()
         {
-            HttpContext.Session.Remove("username");
+            HttpContext.Session.Remove("User");
             return RedirectToAction("Index");
         }
     }
