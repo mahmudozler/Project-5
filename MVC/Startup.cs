@@ -26,7 +26,15 @@ namespace MVC
         {
             services.AddDbContext<ProductContext>(
                 opt => opt.UseNpgsql(@"Host=145.24.222.165;Database=robomarkt;User ID=postgres;Password=admin1399"));
+
             services.AddMvc();
+
+            services.AddDistributedMemoryCache();
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(10);
+                options.Cookie.HttpOnly = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,12 +51,15 @@ namespace MVC
 
             app.UseStaticFiles();
 
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+
         }
     }
 }
