@@ -71,7 +71,6 @@ namespace lesson4.Controllers
 
                 if (passwords[index] == GetSHA512Hash(Pass, salts[index]))
                 {
-                    //HttpContext.Session.SetString("username", User);
                     HttpContext.Session.Set("User", new UserSession(1, User));
                     return RedirectToAction("Account");
                 }
