@@ -26,7 +26,6 @@ namespace MVC
         {
             services.AddDbContext<ProductContext>(
                 opt => opt.UseNpgsql(@"Host=145.24.222.165;Database=robomarkt;User ID=postgres;Password=admin1399"));
-
             services.AddMvc();
 
             services.AddDistributedMemoryCache();
