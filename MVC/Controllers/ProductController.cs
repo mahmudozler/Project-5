@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+
 using ProductModel;
+using Paginator;
 
 namespace lesson4.Controllers
 {
@@ -19,17 +21,30 @@ namespace lesson4.Controllers
         }
 
         // GET: Product
-        public async Task<IActionResult> Index(string searchString)
+        [HttpGet("Product/{page_index}")]
+        public IActionResult Index(int page_index)
         {
-            var products = _context.products.Select(p => p);
+            var res = _context.products.GetPage<Product>(page_index - 1, 25, a => a.id);
 
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                products = _context.products.Where(p => p.name.ToLower().Contains(searchString.ToLower()) || p.type.ToLower().Contains(searchString.ToLower()));
-            }
+            if (res == null) { return NotFound(); }
 
-            return View(await products.ToListAsync());
+            ViewBag.pageIndex = page_index;
+            ViewBag.totalPages = res.totalPages + 1;
+
+            return View(res.items.ToList());
         }
+
+        // public async Task<IActionResult> Index(string searchString)
+        // {
+        //     var products = _context.products.Select(p => p);
+
+        //     if (!String.IsNullOrEmpty(searchString))
+        //     {
+        //         products = _context.products.Where(p => p.name.ToLower().Contains(searchString.ToLower()) || p.type.ToLower().Contains(searchString.ToLower()));
+        //     }
+
+        //     return View(await products.ToListAsync());
+        // }
 
         // GET: Product/Details/5
         public async Task<IActionResult> Details(int? id)

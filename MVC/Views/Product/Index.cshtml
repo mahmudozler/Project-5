@@ -51,4 +51,45 @@
     }
         </tbody>
 </table>
+<p>Page @ViewBag.pageIndex of @(ViewBag.totalPages)</p>
+<div class="pagination">
+    @if(ViewBag.pageIndex > 1){
+        <a href="@(ViewBag.pageIndex - 1)">Previous</a>
+    }
+
+    @if(ViewBag.pageIndex + 5 > ViewBag.totalPages){
+        for(int i = ViewBag.totalPages - 9; i <= ViewBag.totalPages; i++){
+            if(i == ViewBag.pageIndex){
+                <a class="active" href="@i">@i</a>
+            }
+            else{
+                <a href="@i">@i</a>
+            }
+        }
+    }
+    else if(ViewBag.pageIndex > 6){
+        for(int i = ViewBag.pageIndex - 5; i <= ViewBag.pageIndex + 4; i++){
+            if(i == ViewBag.pageIndex){
+            <a class="active" href="@i">@i</a>
+            }
+            else{
+                <a href="@i">@i</a>
+            }
+        }
+    }
+    else{
+        for(int i = 1; i <= 10; i++){
+            if(i == ViewBag.pageIndex){
+                <a class="active" href="@i">@i</a>
+            }
+            else{
+                <a href="@i">@i</a>
+            }
+        }
+    }
+
+    @if(ViewBag.pageIndex < ViewBag.totalPages){
+        <a href="@(ViewBag.pageIndex + 1)">Next</a>
+    }
+</div>
 </div>
