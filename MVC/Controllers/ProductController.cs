@@ -21,14 +21,22 @@ namespace lesson4.Controllers
         }
 
         // GET: Product
-        [HttpGet("Product/{page_index}")]
-        public IActionResult Index(int page_index)
+        public IActionResult Index(string searchString, int pageIndex = 1)
         {
-            var res = _context.products.GetPage<Product>(page_index - 1, 25, a => a.id);
+            var res = _context.products.GetPage<Product>(pageIndex - 1, 25, p => p.id);
+
+            ViewBag.searchString = "";
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                res = _context.products.GetPage<Product>(pageIndex - 1, 25, p => p.id,
+                                                                                p => p.name.ToLower().Contains(searchString.ToLower()) ||
+                                                                                p.type.ToLower().Contains(searchString.ToLower()));
+                ViewBag.searchString = "&searchString=" + searchString;
+            }
 
             if (res == null) { return NotFound(); }
 
-            ViewBag.pageIndex = page_index;
+            ViewBag.pageIndex = pageIndex;
             ViewBag.totalPages = res.totalPages + 1;
 
             return View(res.items.ToList());

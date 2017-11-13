@@ -5,10 +5,7 @@
 }
 <div class="container">
     <h2>Index</h2>
-
-    <p>
-        <a asp-action="Create">Create New</a>
-    </p>
+    <p dir="rtl">Page @ViewBag.pageIndex of @ViewBag.totalPages</p>    
     <table class="table">
         <thead>
             <tr>
@@ -51,45 +48,54 @@
     }
         </tbody>
 </table>
-<p>Page @ViewBag.pageIndex of @(ViewBag.totalPages)</p>
 <div class="pagination">
     @if(ViewBag.pageIndex > 1){
-        <a href="@(ViewBag.pageIndex - 1)">Previous</a>
+        <a href="?pageIndex=@(ViewBag.pageIndex - 1)@ViewBag.searchString">Previous</a>
     }
 
-    @if(ViewBag.pageIndex + 5 > ViewBag.totalPages){
-        for(int i = ViewBag.totalPages - 9; i <= ViewBag.totalPages; i++){
+    @if(ViewBag.totalPages <= 10){
+        for(int i = 1; i <= ViewBag.totalPages; i++){
             if(i == ViewBag.pageIndex){
-                <a class="active" href="@i">@i</a>
+                <a class="active" href="?pageIndex=@i@ViewBag.searchString">@i</a>
             }
             else{
-                <a href="@i">@i</a>
+                <a href="?pageIndex=@i@ViewBag.searchString">@i</a>
+            }
+        }
+    }
+    else if(ViewBag.pageIndex + 5 > ViewBag.totalPages){
+        for(int i = ViewBag.totalPages - 9; i <= ViewBag.totalPages; i++){
+            if(i == ViewBag.pageIndex){
+                <a class="active" href="?pageIndex=@i@ViewBag.searchString">@i</a>
+            }
+            else{
+                <a href="?pageIndex=@i@ViewBag.searchString">@i</a>
             }
         }
     }
     else if(ViewBag.pageIndex > 6){
         for(int i = ViewBag.pageIndex - 5; i <= ViewBag.pageIndex + 4; i++){
             if(i == ViewBag.pageIndex){
-            <a class="active" href="@i">@i</a>
+            <a class="active" href="?pageIndex=@i@ViewBag.searchString">@i</a>
             }
             else{
-                <a href="@i">@i</a>
+                <a href="?pageIndex=@i@ViewBag.searchString">@i</a>
             }
         }
     }
     else{
         for(int i = 1; i <= 10; i++){
             if(i == ViewBag.pageIndex){
-                <a class="active" href="@i">@i</a>
+                <a class="active" href="?pageIndex=@i@ViewBag.searchString">@i</a>
             }
             else{
-                <a href="@i">@i</a>
+                <a href="?pageIndex=@i@ViewBag.searchString">@i</a>
             }
         }
     }
 
     @if(ViewBag.pageIndex < ViewBag.totalPages){
-        <a href="@(ViewBag.pageIndex + 1)">Next</a>
+        <a href="?pageIndex=@(ViewBag.pageIndex + 1)@ViewBag.searchString">Next</a>
     }
 </div>
 </div>
