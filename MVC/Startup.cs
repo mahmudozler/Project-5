@@ -8,7 +8,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 
-using ProductModel;
+using MVC.Data;
+using Microsoft.AspNetCore.Identity;
+using MVC.Models;
+using MVC.Services;
 
 namespace MVC
 {
@@ -24,9 +27,21 @@ namespace MVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ProductContext>(
-                opt => opt.UseNpgsql(@"Host=145.24.222.165;Database=robomarkt;User ID=postgres;Password=admin1399"));
-            services.AddMvc();
+            services.AddDbContext<ProductDbContext>(options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            {
+                // Password settings
+                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 8;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequiredUniqueChars = 2;
+            })
+                .AddEntityFrameworkStores<ProductDbContext>()
+                .AddDefaultTokenProviders();
+
 
             services.AddDistributedMemoryCache();
             services.AddSession(options =>
@@ -34,6 +49,12 @@ namespace MVC
                 options.IdleTimeout = TimeSpan.FromMinutes(10);
                 options.Cookie.HttpOnly = true;
             });
+
+            // Add application services.
+            services.AddTransient<IEmailSender, EmailSender>();
+
+            services.AddMvc();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +63,8 @@ namespace MVC
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseBrowserLink();
+                app.UseDatabaseErrorPage();
             }
             else
             {
@@ -49,6 +72,8 @@ namespace MVC
             }
 
             app.UseStaticFiles();
+
+            app.UseAuthentication();
 
             app.UseSession();
             app.UseMvc(routes =>

@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace Paginator
+namespace MVC.Services
 {
     public class Page<T>
     {

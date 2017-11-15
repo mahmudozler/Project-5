@@ -51,9 +51,12 @@
                     <li>
                         <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
-                    <li>
-                        <a asp-area="" asp-controller="Product" asp-action="Index">Producten</a>
-                    </li>
+                    @if (this.User.IsInRole("Admin"))
+                    {
+                        <li>
+                            <a asp-area="" asp-controller="Product" asp-action="Index">Producten</a>
+                        </li>
+                    }
                     <li>
                         <a asp-area="" asp-controller="Home" asp-action="About">Over ons</a>
                     </li>
@@ -61,11 +64,7 @@
                         <a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
                     </li>
                 </ul>
-                <form asp-controller="Product" asp-action="" class="form-inline my-2 my-lg-0" id="search" method="GET">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" name="searchString">
-                    <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-                    <a asp-area="" asp-controller="Login" asp-action="index" class="login_button">@if( @Context.Session.Get<UserSession>("User") != null) { @Context.Session.GetString("User");} else { <text>Inloggen</text> }</a>
-                </form>
+                @await Html.PartialAsync("_LoginPartial")
 
 
 

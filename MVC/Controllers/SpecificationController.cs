@@ -5,15 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using ProductModel;
+using MVC.Models;
+using MVC.Data;
 
-namespace lesson4.Controllers
+namespace MVC.Controllers
 {
     public class SpecificationController : Controller
     {
-        private readonly ProductContext _context;
+        private readonly ProductDbContext _context;
 
-        public SpecificationController(ProductContext context)
+        public SpecificationController(ProductDbContext context)
         {
             _context = context;
         }
@@ -21,7 +22,7 @@ namespace lesson4.Controllers
         // GET: Specification
         public async Task<IActionResult> Index()
         {
-            var productContext = _context.specifications.Include(s => s.product);
+            var productContext = _context.Specifications.Include(s => s.Product);
             return View(await productContext.ToListAsync());
         }
 
@@ -33,9 +34,9 @@ namespace lesson4.Controllers
                 return NotFound();
             }
 
-            var specification = await _context.specifications
-                .Include(s => s.product)
-                .SingleOrDefaultAsync(m => m.id == id);
+            var specification = await _context.Specifications
+                .Include(s => s.Product)
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (specification == null)
             {
                 return NotFound();
@@ -47,7 +48,7 @@ namespace lesson4.Controllers
         // GET: Specification/Create
         public IActionResult Create()
         {
-            ViewData["productid"] = new SelectList(_context.products, "id", "id");
+            ViewData["productid"] = new SelectList(_context.Products, "id", "id");
             return View();
         }
 
@@ -64,7 +65,7 @@ namespace lesson4.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["productid"] = new SelectList(_context.products, "id", "id", specification.productid);
+            ViewData["productid"] = new SelectList(_context.Products, "id", "id", specification.ProductId);
             return View(specification);
         }
 
@@ -76,12 +77,12 @@ namespace lesson4.Controllers
                 return NotFound();
             }
 
-            var specification = await _context.specifications.SingleOrDefaultAsync(m => m.id == id);
+            var specification = await _context.Specifications.SingleOrDefaultAsync(m => m.Id == id);
             if (specification == null)
             {
                 return NotFound();
             }
-            ViewData["productid"] = new SelectList(_context.products, "id", "id", specification.productid);
+            ViewData["productid"] = new SelectList(_context.Products, "id", "id", specification.ProductId);
             return View(specification);
         }
 
@@ -92,7 +93,7 @@ namespace lesson4.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("id,name,value,productid")] Specification specification)
         {
-            if (id != specification.id)
+            if (id != specification.Id)
             {
                 return NotFound();
             }
@@ -106,7 +107,7 @@ namespace lesson4.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!SpecificationExists(specification.id))
+                    if (!SpecificationExists(specification.Id))
                     {
                         return NotFound();
                     }
@@ -117,7 +118,7 @@ namespace lesson4.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["productid"] = new SelectList(_context.products, "id", "id", specification.productid);
+            ViewData["productid"] = new SelectList(_context.Products, "id", "id", specification.ProductId);
             return View(specification);
         }
 
@@ -129,9 +130,9 @@ namespace lesson4.Controllers
                 return NotFound();
             }
 
-            var specification = await _context.specifications
-                .Include(s => s.product)
-                .SingleOrDefaultAsync(m => m.id == id);
+            var specification = await _context.Specifications
+                .Include(s => s.Product)
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (specification == null)
             {
                 return NotFound();
@@ -145,15 +146,15 @@ namespace lesson4.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var specification = await _context.specifications.SingleOrDefaultAsync(m => m.id == id);
-            _context.specifications.Remove(specification);
+            var specification = await _context.Specifications.SingleOrDefaultAsync(m => m.Id == id);
+            _context.Specifications.Remove(specification);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool SpecificationExists(int id)
         {
-            return _context.specifications.Any(e => e.id == id);
+            return _context.Specifications.Any(e => e.Id == id);
         }
     }
 }

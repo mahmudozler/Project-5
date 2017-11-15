@@ -6,16 +6,19 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
-using ProductModel;
-using Paginator;
+using MVC.Models;
+using MVC.Data;
+using MVC.Services;
+using Microsoft.AspNetCore.Authorization;
 
-namespace lesson4.Controllers
+namespace MVC.Controllers
 {
+    //[Authorize] [Authorize("Admin")]
     public class ProductController : Controller
     {
-        private readonly ProductContext _context;
+        private readonly ProductDbContext _context;
 
-        public ProductController(ProductContext context)
+        public ProductController(ProductDbContext context)
         {
             _context = context;
         }
@@ -23,14 +26,15 @@ namespace lesson4.Controllers
         // GET: Product
         public IActionResult Index(string searchString, int pageIndex = 1)
         {
-            var res = _context.products.GetPage<Product>(pageIndex - 1, 25, p => p.id);
+            
+            var res = _context.Products.GetPage<Product>(pageIndex - 1, 25, p => p.Id);
 
             ViewBag.searchString = "";
             if (!String.IsNullOrEmpty(searchString))
             {
-                res = _context.products.GetPage<Product>(pageIndex - 1, 25, p => p.id,
-                                                                                p => p.name.ToLower().Contains(searchString.ToLower()) ||
-                                                                                p.type.ToLower().Contains(searchString.ToLower()));
+                res = _context.Products.GetPage<Product>(pageIndex - 1, 25, p => p.Id,
+                                                                                p => p.Name.ToLower().Contains(searchString.ToLower()) ||
+                                                                                p.Type.ToLower().Contains(searchString.ToLower()));
                 ViewBag.searchString = "&searchString=" + searchString;
             }
 
@@ -40,6 +44,7 @@ namespace lesson4.Controllers
             ViewBag.totalPages = res.totalPages + 1;
 
             return View(res.items.ToList());
+            //return View();
         }
 
         // public async Task<IActionResult> Index(string searchString)
@@ -62,8 +67,8 @@ namespace lesson4.Controllers
                 return NotFound();
             }
 
-            var product = await _context.products
-                .SingleOrDefaultAsync(m => m.id == id);
+            var product = await _context.Products
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (product == null)
             {
                 return NotFound();
@@ -102,7 +107,7 @@ namespace lesson4.Controllers
                 return NotFound();
             }
 
-            var product = await _context.products.SingleOrDefaultAsync(m => m.id == id);
+            var product = await _context.Products.SingleOrDefaultAsync(m => m.Id == id);
             if (product == null)
             {
                 return NotFound();
@@ -117,7 +122,7 @@ namespace lesson4.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("id,type,name,description,price")] Product product)
         {
-            if (id != product.id)
+            if (id != product.Id)
             {
                 return NotFound();
             }
@@ -131,7 +136,7 @@ namespace lesson4.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProductExists(product.id))
+                    if (!ProductExists(product.Id))
                     {
                         return NotFound();
                     }
@@ -153,8 +158,8 @@ namespace lesson4.Controllers
                 return NotFound();
             }
 
-            var product = await _context.products
-                .SingleOrDefaultAsync(m => m.id == id);
+            var product = await _context.Products
+                .SingleOrDefaultAsync(m => m.Id == id);
             if (product == null)
             {
                 return NotFound();
@@ -168,15 +173,15 @@ namespace lesson4.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var product = await _context.products.SingleOrDefaultAsync(m => m.id == id);
-            _context.products.Remove(product);
+            var product = await _context.Products.SingleOrDefaultAsync(m => m.Id == id);
+            _context.Products.Remove(product);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ProductExists(int id)
         {
-            return _context.products.Any(e => e.id == id);
+            return _context.Products.Any(e => e.Id == id);
         }
     }
 }
