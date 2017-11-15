@@ -11,7 +11,7 @@ class Speaker(Product.Product):
         self.page = "https://www.coolblue.nl/producttype:speakers"
 
     def run(self):
-        headers = "product_type,product_name,product_desc,product_price,product_brand,product_model,product_speakertype,product_color,product_waterres,product_filter,product_freq,product_imp,product_dimensions,product_weight"
+        headers = "product_type,product_name,product_desc,product_price,product_brand,product_model,product_speakertype,product_color,product_waterres,product_filter,product_freq,product_imp,product_dimensions,product_weight,product_images"
         page_count = self.start("Data/product_speakers.csv", headers)
 
         for i in range(page_count):
@@ -48,6 +48,7 @@ class Speaker(Product.Product):
                 self.getSpec(card_detail, "Breedte"), self.getSpec(card_detail, "Diepte"), self.getSpec(card_detail, "Hoogte")))
             self.addSpec(product_specs, self.getSpec(
                 card_detail, "Gewicht"))
+            self.addSpec(product_specs, self.getImages)
 
             filename = "Data/product_speakers.csv"
             file = open(filename, "a")

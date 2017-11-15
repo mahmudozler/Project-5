@@ -11,7 +11,7 @@ class Laptop(Product.Product):
         self.page = "https://www.coolblue.nl/producttype:laptops"
 
     def run(self):
-        headers = "product_type,product_name,product_desc,product_price,product_brand,product_model,product_screen,product_screenres,product_cpu,product_graphicscard,product_graphicsmemory,product_memory,product_storage,product_dimensions,product_weight"
+        headers = "product_type,product_name,product_desc,product_price,product_brand,product_model,product_screen,product_screenres,product_cpu,product_graphicscard,product_graphicsmemory,product_memory,product_storage,product_dimensions,product_weight,product_images"
         page_count = self.start("Data/product_laptops.csv", headers)
 
         for i in range(page_count):
@@ -50,6 +50,8 @@ class Laptop(Product.Product):
                 self.getSpec(card_detail, "Breedte"), self.getSpec(card_detail, "Diepte"), self.getSpec(card_detail, "Hoogte")))
             self.addSpec(product_specs, self.getSpec(
                 card_detail, "Gewicht"))
+            self.addSpec(product_specs, self.getImages)
+            
 
             filename = "Data/product_laptops.csv"
             file = open(filename, "a")
