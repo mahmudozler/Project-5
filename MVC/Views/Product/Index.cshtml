@@ -9,7 +9,17 @@
    
     @foreach (var item in Model) {
 
-            <label class="product-card"></label>
+            <label class="product-card">
+                <div class="product-card-title">@Html.DisplayFor(modelItem => item.Name)</div>
+                
+                <img height="50%" width="90%" src="https://rukminim1.flixcart.com/image/832/832/j431rbk0/computer/t/h/p/hp-notebook-original-imaev2zfjqfpf3ng.jpeg?q=70">
+                
+                <div class="product-card-price">@Html.DisplayFor(modelItem => item.Price)
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                </div>
+                
+
+            </label>
             
             <!-- <tr>
                 <td>

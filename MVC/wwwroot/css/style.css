@@ -263,11 +263,11 @@ footer div ul li {
     position: absolute;
     top: 90px;
     right: 50px;
-<<<<<<< HEAD
+
 }
 
 .product-card{
-    width: 350px;
+    width: 360px;
     height: 400px;
     border: solid 1px #1b1b1b;
     
@@ -275,7 +275,17 @@ footer div ul li {
     margin-bottom: 17px;
     
 }
-
-=======
+.product-card-title{
+    margin-left: 28%;
+    margin-bottom: 10%;
 }
->>>>>>> 44b923cda5434a24ce97732fcb0286e6b6a820c3
+
+.product-card-price{
+    margin-left:10%;
+    margin-top: 20%;
+    font-size: 1.5em;
+}
+
+
+
+
