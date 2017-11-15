@@ -13,8 +13,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace MVC.Controllers
 {
-    [Authorize]
-    [Authorize("Admin")]
+    //[Authorize] [Authorize("Admin")]
     public class ProductController : Controller
     {
         private readonly ProductDbContext _context;
@@ -27,7 +26,7 @@ namespace MVC.Controllers
         // GET: Product
         public IActionResult Index(string searchString, int pageIndex = 1)
         {
-
+            
             var res = _context.Products.GetPage<Product>(pageIndex - 1, 25, p => p.Id);
 
             ViewBag.searchString = "";
