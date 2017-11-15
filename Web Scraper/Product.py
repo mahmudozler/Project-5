@@ -75,19 +75,15 @@ class Product(object):
     def getImages(self, card_detail, product_specs):
         images = card_detail.findAll(
             "img", {"class": "media-gallery--thumbnail-image js-media-gallery--thumbnail"})
-        res = ""
 
         for i in range(len(images)):
             images[i] = images[i]["src"][:41]
-            res = res + images[i] + ">>"
 
-            # imagename = "Data/Images/{0} - ".format(self.removeSymbols(
-            #     product_specs[1])) + "0000{0}.jpg"[len(str(i)):].format(i)
-            # image = open(imagename, "wb")
-            # image.write(urlopen(images[i]).read())
-            # image.close()
-
-        return res
+            imagename = "Data/Images/{0} - ".format(self.removeSymbols(
+                product_specs[1])) + "0000{0}.jpg"[len(str(i)):].format(i)
+            image = open(imagename, "wb")
+            image.write(urlopen(images[i]).read())
+            image.close()
 
     def getCardData(self, card_link):
         pass
