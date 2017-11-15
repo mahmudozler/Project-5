@@ -6,27 +6,12 @@
 <div class="container">
     <h2>Index</h2>
     <p dir="rtl">Page @ViewBag.pageIndex of @ViewBag.totalPages</p>    
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Type)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Name)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Description)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Price)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
+   
     @foreach (var item in Model) {
-            <tr>
+
+            <label class="product-card"></label>
+            
+            <!-- <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.Type)
                 </td>
@@ -39,19 +24,15 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Price)
                 </td>
-                 @if (this.User.IsInRole("Admin")){
                 <td>
-                   
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                     <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                     <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                    
                 </td>
-                 }
-            </tr>
+            </tr> -->
     }
-        </tbody>
-</table>
+        <!-- </tbody> -->
+<div>
 <div class="pagination">
     @if(ViewBag.pageIndex > 1){
         <a href="?pageIndex=@(ViewBag.pageIndex - 1)@ViewBag.searchString">Previous</a>
@@ -101,5 +82,6 @@
     @if(ViewBag.pageIndex < ViewBag.totalPages){
         <a href="?pageIndex=@(ViewBag.pageIndex + 1)@ViewBag.searchString">Next</a>
     }
+</div>
 </div>
 </div>

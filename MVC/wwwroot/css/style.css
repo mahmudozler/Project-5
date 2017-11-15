@@ -17,6 +17,7 @@
 }
 
 .pagination {
+    float: top;
     display: inline-block;
 }
 
@@ -69,6 +70,7 @@ body {
 }
 
 .container {
+    
     //margin:0px !important;
 }
 
@@ -263,5 +265,15 @@ footer div ul li {
     position: absolute;
     top: 90px;
     right: 50px;
+}
+
+.product-card{
+    width: 350px;
+    height: 400px;
+    border: solid 1px #1b1b1b;
+    
+    margin-right: 17px;
+    margin-bottom: 17px;
+    
 }
 

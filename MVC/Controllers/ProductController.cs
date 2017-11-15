@@ -27,12 +27,12 @@ namespace MVC.Controllers
         public IActionResult Index(string searchString, int pageIndex = 1)
         {
             
-            var res = _context.Products.GetPage<Product>(pageIndex - 1, 25, p => p.Id);
+            var res = _context.Products.GetPage<Product>(pageIndex - 1, 24, p => p.Id);
 
             ViewBag.searchString = "";
             if (!String.IsNullOrEmpty(searchString))
             {
-                res = _context.Products.GetPage<Product>(pageIndex - 1, 25, p => p.Id,
+                res = _context.Products.GetPage<Product>(pageIndex - 1, 24, p => p.Id,
                                                                                 p => p.Name.ToLower().Contains(searchString.ToLower()) ||
                                                                                 p.Type.ToLower().Contains(searchString.ToLower()));
                 ViewBag.searchString = "&searchString=" + searchString;
