@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using MVC.Models;
 using MVC.ViewModels;
 using MVC.Data;
-using System.Data.Entity;
 
 namespace MVC.Controllers
 {
@@ -59,6 +58,19 @@ namespace MVC.Controllers
                 _shoppingCart.RemoveFromCart(selectedDrink);
             }
             return RedirectToAction("Index");
+        }
+
+        public IActionResult QuickAddToCart(int Id)
+        {
+            var selectedProduct = _context.Products.FirstOrDefault(p => p.Id == Id);
+            if(selectedProduct != null)
+            {
+                _shoppingCart.AddToCart(selectedProduct,1);
+                
+            }
+
+            return View("~/Views/Product/Index.cshtml");
+
         }
     }
 

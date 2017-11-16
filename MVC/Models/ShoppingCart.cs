@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using MVC.Models;
 using MVC.Data;
 using Microsoft.AspNetCore.Http;
@@ -63,7 +63,7 @@ namespace MVC.Models
         public int RemoveFromCart(Product product)
         {
             var shoppingCartItem =
-                    _appDbContext.ShoppingCartItems.SingleOrDefault(
+                    _appDbContext.ShoppingCartItems.FirstOrDefault(
                         s => s.Product.Id == s.Product.Id && s.ShoppingCartId == ShoppingCartId);
 
             var localAmount = 0;
@@ -92,7 +92,8 @@ namespace MVC.Models
                    (ShoppingCartItems =
                        _appDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId)
                            .Include(s => s.Product)
-                           .ToList());
+                           .ToList()
+                           );
         }
 
         public void ClearCart()
