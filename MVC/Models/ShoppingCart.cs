@@ -64,7 +64,7 @@ namespace MVC.Models
         {
             var shoppingCartItem =
                     _appDbContext.ShoppingCartItems.FirstOrDefault(
-                        s => s.Product.Id == s.Product.Id && s.ShoppingCartId == ShoppingCartId);
+                        s => s.Product.Id == product.Id && s.ShoppingCartId == ShoppingCartId);
 
             var localAmount = 0;
 
