@@ -5,23 +5,27 @@ namespace Model
 {
     public class ProductContext : DbContext
     {
-        public DbSet<Product> products { get; set; }
+        public DbSet<Product> Products2 { get; set; }
         public DbSet<Specification> specifications { get; set; }
         public DbSet<User> users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+<<<<<<< HEAD
             optionsBuilder.UseNpgsql("User ID=postgres;Password=Dingdong50;Host=localhost;Port=5432;Database=robomarkt;Pooling=true;");
+=======
+            optionsBuilder.UseNpgsql("User ID=postgres;Password=;Host=localhost;Port=5432;Database=postgres;Pooling=true;");
+>>>>>>> 5b63ca1ae53666fe0f45e065e782f19f99a566cf
         }
     }
 
     public class Product
     {
-        public int id { get; set; }
-        public string type { get; set; }
-        public string name { get; set; }
-        public string description { get; set; }
-        public float price { get; set; }
+        public int Id { get; set; }
+        public string Type { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public float Price { get; set; }
         public List<Specification> specifications { get; set; }
     }
 

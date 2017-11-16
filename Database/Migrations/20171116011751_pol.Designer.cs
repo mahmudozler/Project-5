@@ -11,9 +11,10 @@ using System;
 namespace Database.Migrations
 {
     [DbContext(typeof(ProductContext))]
-    partial class ProductContextModelSnapshot : ModelSnapshot
+    [Migration("20171116011751_pol")]
+    partial class pol
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,22 +23,6 @@ namespace Database.Migrations
 
             modelBuilder.Entity("Model.Product", b =>
                 {
-<<<<<<< HEAD
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("description");
-
-                    b.Property<string>("name");
-
-                    b.Property<float>("price");
-
-                    b.Property<string>("type");
-
-                    b.HasKey("id");
-
-                    b.ToTable("products");
-=======
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
@@ -52,7 +37,6 @@ namespace Database.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products2");
->>>>>>> 5b63ca1ae53666fe0f45e065e782f19f99a566cf
                 });
 
             modelBuilder.Entity("Model.Specification", b =>
