@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿/*using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using System;
 
@@ -32,5 +32,4 @@ namespace MVC.Extension
 
         public int ID { get; set; }
         public string Username { get; set; }
-    }
-}
+    }*/

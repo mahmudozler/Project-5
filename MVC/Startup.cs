@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
@@ -43,18 +44,22 @@ namespace MVC
                 .AddDefaultTokenProviders();
 
 
-            services.AddDistributedMemoryCache();
+            /*services.AddDistributedMemoryCache();
             services.AddSession(options =>
             {
                 options.IdleTimeout = TimeSpan.FromMinutes(10);
                 options.Cookie.HttpOnly = true;
-            });
+            });*/
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
 
-            services.AddMvc();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sp => ShoppingCart.GetCart(sp));
 
+            services.AddMvc();
+            services.AddMemoryCache();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -71,6 +76,8 @@ namespace MVC
                 app.UseExceptionHandler("/Home/Error");
             }
 
+            
+            app.UseStatusCodePages();
             app.UseStaticFiles();
 
             app.UseAuthentication();
