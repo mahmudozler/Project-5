@@ -10,12 +10,27 @@
     @foreach (var item in Model) {
 
             <label class="product-card">
-                <div class="product-card-title">@Html.DisplayFor(modelItem => item.Name)</div>
+                <div class="product-card-title">
+                    <a class="product-card-title" asp-action="Details" asp-route-id="@item.Id">
+                    @Html.DisplayFor(modelItem => item.Name)
+                    </a>
+
+                </div>
                 
                 <img height="50%" width="90%" src="https://rukminim1.flixcart.com/image/832/832/j431rbk0/computer/t/h/p/hp-notebook-original-imaev2zfjqfpf3ng.jpeg?q=70">
-                
-                <div class="product-card-price">@Html.DisplayFor(modelItem => item.Price)
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                <div class="product-card-infobox">
+                <div class="product-card-price">
+                    <p>€ @Html.DisplayFor(modelItem => item.Price)
+                        <!-- <a asp-action="Details" asp-route-id="@item.Id">Details</a> -->
+                    </p>
+                </div>
+
+                    <p class="product-card-descript">@Html.DisplayFor(modelItem => item.Description)</p>
+                    <label class="product-card-descript-overflow" >
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </label>
                 </div>
                 
 

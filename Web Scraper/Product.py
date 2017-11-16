@@ -80,12 +80,11 @@ class Product(object):
         for i in range(len(images)):
             images[i] = images[i]["src"][:41]
             res = res + images[i] + ">>"
-
-            # imagename = "Data/Images/{0} - ".format(self.removeSymbols(
-            #     product_specs[1])) + "0000{0}.jpg"[len(str(i)):].format(i)
-            # image = open(imagename, "wb")
-            # image.write(urlopen(images[i]).read())
-            # image.close()
+            imagename = "Data/Images/{0} - ".format(self.removeSymbols(
+            product_specs[1])) + "0000{0}.jpg"[len(str(i)):].format(i)
+            image = open(imagename, "wb")
+            image.write(urlopen(images[i]).read())
+            image.close()
 
         return res
 
