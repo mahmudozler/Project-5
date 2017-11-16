@@ -12,7 +12,7 @@ namespace Database
     {
         static void Main(string[] args)
         {
-            // DataInsertion();
+            DataInsertion();
             Projection();
         }
 
@@ -50,10 +50,10 @@ namespace Database
 
                             Product p = new Product
                             {
-                                type = product_type,
-                                name = product_name,
-                                description = product_desc,
-                                price = product_price,
+                                Type = product_type,
+                                Name = product_name,
+                                Description = product_desc,
+                                Price = product_price,
                                 specifications = specs
                             };
 
@@ -71,13 +71,13 @@ namespace Database
         {
             using (var db = new ProductContext())
             {
-                var projected_products = from p in db.products
-                                         select new { p.id, p.type, p.name, p.price };
+                var projected_products = from p in db.Products2
+                                         select new { p.Id, p.Type, p.Name, p.Price };
 
                 Console.WriteLine("id | type | name | price");
                 foreach (var product in projected_products)
                 {
-                    Console.WriteLine("- {0} | {1} | {2} | {3}", product.id, product.type, product.name, product.price);
+                    Console.WriteLine("- {0} | {1} | {2} | {3}", product.Id, product.Type, product.Name, product.Price);
                 }
             }
         }

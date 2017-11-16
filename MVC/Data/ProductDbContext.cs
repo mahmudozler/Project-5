@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace MVC.Data
 {
     public class ProductDbContext : IdentityDbContext<ApplicationUser>
@@ -26,6 +27,7 @@ namespace MVC.Data
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Specification> Specifications { get; set; }
+        public DbSet<ShoppingCartItem> ShoppingCartItems {get;set;}
 
     }
 }
