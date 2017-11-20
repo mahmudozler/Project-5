@@ -35,9 +35,12 @@
                 <td class="text-right">
                     @Model.ShoppingCartTotal.ToString("c") 
                 </td>
+                <td class="text-right">@Model.ShoppingCart.GetShoppingCartTotalItems()</td>
             </tr>
         </tfoot>
     </table>
+
+    <a asp-controller="ShoppingCart" asp-action="ClearCart">Clear cart</a>
 
     <!--<a asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-Id="4">voge toe gap</a>
     <a asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCart" asp-route-Id="4">verwijder gap</a>-->

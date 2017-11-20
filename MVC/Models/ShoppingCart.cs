@@ -31,7 +31,8 @@ namespace MVC.Models
             var context = services.GetService<ProductDbContext>();
             string cartId = session.GetString("CartId") ?? Guid.NewGuid().ToString();
 
-            session.SetString("CartId", cartId);
+            session.SetString("CartId",cartId);
+            //session.SetString("CartId", JsonConvert.SerializeObject(cartId));
 
             return new ShoppingCart(context) { ShoppingCartId = cartId };
         }
@@ -111,6 +112,12 @@ namespace MVC.Models
         {
             var total = _appDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId)
                 .Select(c => c.Product.Price * c.Amount).Sum();
+            return total;
+        }
+
+        public int GetShoppingCartTotalItems()
+        {
+            var total = _appDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId).Select(c => c.Amount).Sum();
             return total;
         }
 

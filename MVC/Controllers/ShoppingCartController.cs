@@ -20,11 +20,6 @@ namespace MVC.Controllers
             _context = context;
         }
 
-        /*public IActionResult Index()
-        {
-            return View();
-        }*/
-
         public ViewResult Index()
         {
             var items = _shoppingCart.GetShoppingCartItems();
@@ -57,6 +52,13 @@ namespace MVC.Controllers
             {
                 _shoppingCart.RemoveFromCart(selectedDrink);
             }
+            return RedirectToAction("Index");
+        }
+
+        public RedirectToActionResult ClearCart()
+        {
+            _shoppingCart.ClearCart();
+
             return RedirectToAction("Index");
         }
 
