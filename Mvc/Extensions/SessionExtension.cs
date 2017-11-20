@@ -27,14 +27,3 @@ namespace MVC.Extension
 
     
 }
-    /* 
-    public class UserSession
-    {
-        public UserSession(int _ID,string _Username){
-            this.ID = _ID;
-            this.Username = _Username;
-        }
-
-        public int ID { get; set; }
-        public string Username { get; set; }
-    } */

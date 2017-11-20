@@ -16,6 +16,9 @@
             <li>
                 <button type="submit" class="btn btn-link navbar-btn navbar-link">Log out</button>
             </li>
+            <li>
+                @await Component.InvokeAsync("ShoppingCartSummary")
+            </li>
         </ul>
     </form>
 }
@@ -24,13 +27,8 @@ else
     <ul class="nav navbar-nav navbar-right">
         <li><a asp-area="" asp-controller="Account" asp-action="Register">Register</a></li>
         <li><a asp-area="" asp-controller="Account" asp-action="Login">Log in</a></li>
-		<li><a asp-area="" asp-controller="ShoppingCart" asp-action="Index"> Cart</a></li>
-        <li>@{
-            if(Context.Session.IfExists("CartId"))
-            {
-                @Context.Session.GetString("CartId");
-            }
-        }
+        <li>
+            @await Component.InvokeAsync("ShoppingCartSummary")
         </li>
 	</ul>
 }
