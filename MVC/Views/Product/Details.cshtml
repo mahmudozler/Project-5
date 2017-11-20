@@ -22,7 +22,7 @@
 		<div class="price-bar">
     		<h3>€ @Html.DisplayFor(model => model.Price)</h3>
 			<!--<button class="btn kopen" >In winkelmandje</button>-->
-            <a class="btn kopen" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-Id="@Model.Id">In winkelmandje</a>
+            <a class="btn kopen" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-Id="@Model.Id">In winkelmandje  <span class="glyphicon glyphicon-shopping-cart"></span></a>
 			<br/>
             <ul class="selling-points">
                 <li>Snelle levering</li>
