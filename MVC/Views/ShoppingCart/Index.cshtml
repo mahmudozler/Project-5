@@ -27,7 +27,7 @@
                         @(itemcart.Amount * itemcart.Product.Price)
                     </td> 
                     <td class="td-calc"><a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCart" asp-route-Id="@itemcart.Product.Id">-</a></td>
-                    <td class="td-calc"><a class="btn btn-primary" >+</a></td>
+                    <td class="td-calc"><a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-Id="@itemcart.Product.Id">+</a></td>
                 </tr>
             } 
         </tbody>
@@ -42,14 +42,14 @@
         </tfoot>
     </table>
 
-    <a asp-controller="ShoppingCart" asp-action="ClearCart">Clear cart</a>
+    <a asp-controller="ShoppingCart" asp-action="ClearCart" class="btn btn-warning" aria-label="Left Align">Clear cart</a>
 
     <!--<a asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-Id="4">voge toe gap</a>
     <a asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCart" asp-route-Id="4">verwijder gap</a>-->
 
     <div class="text-right">
         <div class="btn-group ">
-            <a class="btn btn-success" asp-controller="Order" asp-action="Checkout">Check out</a>
+            <a class="btn btn-success" asp-controller="Order" asp-action="Checkout">Check out <span class="glyphicon glyphicon-log-in"></span></a>
             <!--<a class="btn-group">
                 <a class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                     Add more drinks<span class="caret"></span>
@@ -61,4 +61,6 @@
             </a>-->
         </div>
     </div>
+
+    <br/><br/><br/>
 </div>

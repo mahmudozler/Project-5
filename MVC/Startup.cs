@@ -43,14 +43,6 @@ namespace MVC
                 .AddEntityFrameworkStores<ProductDbContext>()
                 .AddDefaultTokenProviders();
 
-
-            /*services.AddDistributedMemoryCache();
-            services.AddSession(options =>
-            {
-                options.IdleTimeout = TimeSpan.FromMinutes(10);
-                options.Cookie.HttpOnly = true;
-            });*/
-
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
 
