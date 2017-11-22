@@ -5,17 +5,13 @@ namespace Model
 {
     public class ProductContext : DbContext
     {
-        public DbSet<Product> Products2 { get; set; }
-        public DbSet<Specification> specifications { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Specification> Specifications { get; set; }
         public DbSet<User> users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-<<<<<<< HEAD
-            optionsBuilder.UseNpgsql("User ID=postgres;Password=Dingdong50;Host=localhost;Port=5432;Database=robomarkt;Pooling=true;");
-=======
-            optionsBuilder.UseNpgsql("User ID=postgres;Password=;Host=localhost;Port=5432;Database=postgres;Pooling=true;");
->>>>>>> 5b63ca1ae53666fe0f45e065e782f19f99a566cf
+            optionsBuilder.UseNpgsql("User ID=postgres;Password=admin1399;Host=145.24.222.165;Port=5432;Database=robomarkt;Pooling=true;");
         }
     }
 
@@ -26,16 +22,16 @@ namespace Model
         public string Name { get; set; }
         public string Description { get; set; }
         public float Price { get; set; }
-        public List<Specification> specifications { get; set; }
+        public List<Specification> Specifications { get; set; }
     }
 
     public class Specification
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string value { get; set; }
-        public int productid { get; set; }
-        public Product product { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Value { get; set; }
+        public int ProductId { get; set; }
+        public Product Product { get; set; }
     }
 
     public class User

@@ -13,7 +13,7 @@ namespace Database
         static void Main(string[] args)
         {
             DataInsertion();
-            Projection();
+            // Projection();
         }
 
         static void DataInsertion()
@@ -43,8 +43,8 @@ namespace Database
                             {
                                 specs.Add(new Specification
                                 {
-                                    name = headers[j].Replace("\"", ""),
-                                    value = file_column[j].Replace("\"", "")
+                                    Name = headers[j].Replace("\"", ""),
+                                    Value = file_column[j].Replace("\"", "")
                                 });
                             }
 
@@ -54,7 +54,7 @@ namespace Database
                                 Name = product_name,
                                 Description = product_desc,
                                 Price = product_price,
-                                specifications = specs
+                                Specifications = specs
                             };
 
                             db.Add(p);
@@ -71,7 +71,7 @@ namespace Database
         {
             using (var db = new ProductContext())
             {
-                var projected_products = from p in db.Products2
+                var projected_products = from p in db.Products
                                          select new { p.Id, p.Type, p.Name, p.Price };
 
                 Console.WriteLine("id | type | name | price");
