@@ -19,3 +19,14 @@ C:/Users/Mahmut Ozler/Desktop/Project-5/MVC/obj/Debug/netcoreapp2.0/MVC.pdb
 /Users/satrya/Documents/Github/Project-5/MVC/obj/Debug/netcoreapp2.0/MVC.AssemblyInfo.cs
 /Users/satrya/Documents/Github/Project-5/MVC/obj/Debug/netcoreapp2.0/MVC.dll
 /Users/satrya/Documents/Github/Project-5/MVC/obj/Debug/netcoreapp2.0/MVC.pdb
+/Users/mincekara/Desktop/Project-5/MVC/bin/Debug/netcoreapp2.0/MVC.deps.json
+/Users/mincekara/Desktop/Project-5/MVC/bin/Debug/netcoreapp2.0/MVC.runtimeconfig.json
+/Users/mincekara/Desktop/Project-5/MVC/bin/Debug/netcoreapp2.0/MVC.runtimeconfig.dev.json
+/Users/mincekara/Desktop/Project-5/MVC/bin/Debug/netcoreapp2.0/MVC.dll
+/Users/mincekara/Desktop/Project-5/MVC/bin/Debug/netcoreapp2.0/MVC.pdb
+/Users/mincekara/Desktop/Project-5/MVC/obj/Debug/netcoreapp2.0/MVC.csproj.CoreCompileInputs.cache
+/Users/mincekara/Desktop/Project-5/MVC/obj/Debug/netcoreapp2.0/MVC.AssemblyInfoInputs.cache
+/Users/mincekara/Desktop/Project-5/MVC/obj/Debug/netcoreapp2.0/MVC.AssemblyInfo.cs
+/Users/mincekara/Desktop/Project-5/MVC/obj/Debug/netcoreapp2.0/MVC.dll
+/Users/mincekara/Desktop/Project-5/MVC/obj/Debug/netcoreapp2.0/MVC.pdb
+/Users/mincekara/Desktop/Project-5/MVC/obj/Debug/netcoreapp2.0/MVC.csprojResolveAssemblyReference.cache

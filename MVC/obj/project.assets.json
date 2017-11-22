@@ -13171,23 +13171,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/satrya/.nuget/packages/": {},
+    "/Users/mincekara/.nuget/packages/": {},
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/satrya/Documents/Github/Project-5/MVC/MVC.csproj",
+      "projectUniqueName": "/Users/mincekara/Desktop/Project-5/MVC/MVC.csproj",
       "projectName": "MVC",
-      "projectPath": "/Users/satrya/Documents/Github/Project-5/MVC/MVC.csproj",
-      "packagesPath": "/Users/satrya/.nuget/packages/",
-      "outputPath": "/Users/satrya/Documents/Github/Project-5/MVC/obj/",
+      "projectPath": "/Users/mincekara/Desktop/Project-5/MVC/MVC.csproj",
+      "packagesPath": "/Users/mincekara/.nuget/packages/",
+      "outputPath": "/Users/mincekara/Desktop/Project-5/MVC/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/satrya/.nuget/NuGet/NuGet.Config"
+        "/Users/mincekara/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
