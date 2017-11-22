@@ -13,6 +13,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Extensions\SessionObjects.cs" />
+    <Compile Remove="Models\ManageViewModels\ChangePasswordViewModel %28copy%29.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\Account\AccessDenied.cshtml" />
