@@ -12,8 +12,8 @@ namespace Database
     {
         static void Main(string[] args)
         {
-            DataInsertion();
-            // Projection();
+            // DataInsertion();
+            Projection();
         }
 
         static void DataInsertion()
