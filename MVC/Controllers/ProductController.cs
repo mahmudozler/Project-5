@@ -38,7 +38,7 @@ namespace MVC.Controllers
                                                                                 p.Type.ToLower().Contains(searchString.ToLower()));
                 ViewBag.searchString = "&searchString=" + searchString;
 
-                ViewData["Message"] = "Zoekterm " + "\"" + searchString + "\"";
+                ViewData["Message"] = "Resultaten voor " + "\"" + searchString + "\"";
             }
 
             if (res == null) { return NotFound(); }
