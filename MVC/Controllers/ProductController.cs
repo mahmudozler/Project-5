@@ -26,7 +26,8 @@ namespace MVC.Controllers
         // GET: Product
         public IActionResult Index(string searchString, int pageIndex = 1)
         {
-            
+            ViewData["Message"] = "";
+
             var res = _context.Products.GetPage<Product>(pageIndex - 1, 24, p => p.Id);
 
             ViewBag.searchString = "";
@@ -36,6 +37,8 @@ namespace MVC.Controllers
                                                                                 p => p.Name.ToLower().Contains(searchString.ToLower()) ||
                                                                                 p.Type.ToLower().Contains(searchString.ToLower()));
                 ViewBag.searchString = "&searchString=" + searchString;
+
+                ViewData["Message"] = "Zoekterm " + "\"" + searchString + "\"";
             }
 
             if (res == null) { return NotFound(); }
