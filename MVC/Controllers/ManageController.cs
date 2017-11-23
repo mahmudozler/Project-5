@@ -13,6 +13,8 @@ using Microsoft.Extensions.Options;
 using MVC.Models;
 using MVC.Models.ManageViewModels;
 using MVC.Services;
+using Microsoft.EntityFrameworkCore;
+using MVC.ViewModels;
 
 namespace MVC.Controllers
 {
@@ -180,17 +182,28 @@ namespace MVC.Controllers
         [HttpGet]
         public async Task<IActionResult> Users()
         {
-            var user = await _userManager.GetUserAsync(User);
-            if (user == null)
+            //var user = await _userManager.GetUserAsync(User);
+            List<ManageUserViewModel> userlist = new List<ManageUserViewModel>();
+            foreach(var u in _userManager.Users.ToList())
             {
-                throw new ApplicationException($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+                await _userManager.GetRolesAsync(u);
+
+                userlist.Add(new ManageUserViewModel(){
+                    user = u,
+                    Roles = await _userManager.GetRolesAsync(u)
+                });
             }
 
-            var model = new UsersViewModel { StatusMessage = StatusMessage };
-            return View(model);
+            return View(userlist);
         }
 
-        [HttpPost]
+        public async Task<IActionResult> toAdmin(string email)
+        {
+            await _userManager.AddToRoleAsync(await _userManager.FindByEmailAsync(email),"Admin");
+            return View();
+        }
+
+        /*[HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Users(UsersViewModel model)
         {
@@ -206,7 +219,7 @@ namespace MVC.Controllers
             }
 
             return RedirectToAction(nameof(Users));
-        }
+        }*/
 
 
         [HttpGet]

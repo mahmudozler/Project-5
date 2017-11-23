@@ -133,6 +133,12 @@ body {
 .slider {
     background: #ccc;
     height: 250px;
+    overflow:hidden;
+    padding:0px !important;
+}
+
+.carousel-inner{
+    height:250px;
 }
 
 footer {

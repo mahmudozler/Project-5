@@ -1,12 +1,22 @@
-﻿@model UsersViewModel
+﻿@using MVC.ViewModels
+@model System.Collections.Generic.List<ManageUserViewModel>
+
 @{
-    ViewData["Title"] = "Users";
+    ViewData["Title"] = "Manage Users";
     ViewData.AddActivePage(ManageNavPages.Users);
 }
 
-<h4>@ViewData["Title"]</h4>
-@Html.Partial("_StatusMessage", Model.StatusMessage)
-
+@if (this.User.IsInRole("Admin")){
+    <h4>@ViewData["Title"]</h4>
+    
+    @foreach (var item in Model) {
+        <p>@item.user.Email
+        @foreach (var role in @item.Roles) {
+            <span class="badge">@role</span>
+        }
+        </p>
+    }
+} 
 
 @section Scripts {
     @await Html.PartialAsync("_ValidationScriptsPartial")
