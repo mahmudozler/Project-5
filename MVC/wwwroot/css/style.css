@@ -389,12 +389,19 @@ footer div ul li {
     margin-top: 0;
     padding-left: 2em;
     list-style-type: none;
+    height:250px;
+    background: #eee;
+    padding-top:15px;
 }
 
     .featureList li:before {
         position: absolute;
         margin-left: -1.3em;
         font-weight: bold;
+    }
+
+    .featureList li{
+        margin-bottom: 10px;
     }
 
     .featureList li.tick:before {
