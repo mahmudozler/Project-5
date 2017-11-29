@@ -6,7 +6,7 @@
     ViewData.AddActivePage(ManageNavPages.Users);
 }
 
-@if (this.User.IsInRole("Admin")){
+@*if (this.User.IsInRole("Admin")){
     <h4>@ViewData["Title"]</h4>
     
     @foreach (var item in Model) {
@@ -16,7 +16,8 @@
         }
         </p>
     }
-} 
+} *@
+User Stats
 
 @section Scripts {
     @await Html.PartialAsync("_ValidationScriptsPartial")
