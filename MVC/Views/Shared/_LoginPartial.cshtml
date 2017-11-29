@@ -14,6 +14,8 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" asp-area="" asp-controller="Manage" asp-action="Index" title="Manage" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hello @UserManager.GetUserName(User)!</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" asp-controller="Manage" asp-action="Index">Manage Account</a>
+                        <hr>
                         <a class="dropdown-item" asp-controller="customers" asp-action="Index">Customers</a>
                     </div>
                 </li>

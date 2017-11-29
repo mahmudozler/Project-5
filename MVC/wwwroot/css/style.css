@@ -394,22 +394,36 @@ footer div ul li {
     padding-top:15px;
 }
 
-    .featureList li:before {
-        position: absolute;
-        margin-left: -1.3em;
-        font-weight: bold;
-    }
+.featureList li:before {
+    position: absolute;
+    margin-left: -1.3em;
+    font-weight: bold;
+}
 
-    .featureList li{
-        margin-bottom: 10px;
-    }
+.featureList li{
+    margin-bottom: 10px;
+}
 
-    .featureList li.tick:before {
-        content: "\2713";
-        color: darkgreen;
-    }
+.featureList li.tick:before {
+    content: "\2713";
+    color: darkgreen;
+}
 
-    .featureList li.cross:before {
-        content: "\2717";
-        color: crimson;
-    }
+.featureList li.cross:before {
+    content: "\2717";
+    color: crimson;
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
+    background-color: #445994 !important;
+}
+.dropdown-menu{
+    padding:10px !important;
+}
+.dropdown-menu hr{
+    margin-bottom:10px !important;
+    margin-top:10px !important;
+}
+.dropdown-item{
+    margin-bottom:10px !important;
+}
