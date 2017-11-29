@@ -43,4 +43,7 @@
     <None Include="Views\Manage\_StatusMessage.cshtml" />
     <None Include="Views\Manage\_ViewImports.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Checkout\" />
+  </ItemGroup>
 </Project>

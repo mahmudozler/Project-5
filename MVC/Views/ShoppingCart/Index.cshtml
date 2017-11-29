@@ -2,6 +2,9 @@
 @using MVC.Models;
 @model MVC.ViewModels.ShoppingCartViewModel
 
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+		
 <div class="container">
     <h2>Your shopping cart</h2>
     <h4>Here are the products in your shopping cart.</h4>
@@ -49,7 +52,11 @@
 
     <div class="text-right">
         <div class="btn-group ">
-            <a class="btn btn-success" asp-controller="Order" asp-action="Checkout">Check out <span class="glyphicon glyphicon-log-in"></span></a>
+			@if (SignInManager.IsSignedIn(User)){
+            <a class="btn btn-success" asp-controller="Checkout" asp-action="Index">Check out <span class="glyphicon glyphicon-log-in"></span></a>
+					
+			}
+            else {<a class="btn btn-success" asp-controller="Account" asp-action="Login">Check out <span class="glyphicon glyphicon-log-in"></span></a>}
             <!--<a class="btn-group">
                 <a class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                     Add more drinks<span class="caret"></span>
