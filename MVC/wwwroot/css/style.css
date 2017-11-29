@@ -382,3 +382,27 @@ footer div ul li {
     color: rgb(29, 25, 25);
     border: 1px solid #526cb6;
 }
+
+
+/* List styling */
+.featureList, .featureList ul {
+    margin-top: 0;
+    padding-left: 2em;
+    list-style-type: none;
+}
+
+    .featureList li:before {
+        position: absolute;
+        margin-left: -1.3em;
+        font-weight: bold;
+    }
+
+    .featureList li.tick:before {
+        content: "\2713";
+        color: darkgreen;
+    }
+
+    .featureList li.cross:before {
+        content: "\2717";
+        color: crimson;
+    }
