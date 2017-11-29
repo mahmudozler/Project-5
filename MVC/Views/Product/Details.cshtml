@@ -15,26 +15,66 @@
 
 	<div class="col-lg-7">
         <div class="product-image">
-			<img height="380px" width="635px" src="~/images/products/@Html.DisplayFor(model => model.Name) - 0000.jpg">
+			<img height="380px" width="635px" id="detailimage" src="~/images/products/@Html.DisplayFor(model => model.Name) - 0000.jpg">
+           
 		</div>
+        <script>
+            function nextimage(){
+                var a = document.getElementById("detailimage");
+                a.src = "/images/products/@Html.DisplayFor(model => model.Name) - 0000.jpg";
+            }
+            function nextimage2(){
+                var a = document.getElementById("detailimage");
+                a.src = "/images/products/@Html.DisplayFor(model => model.Name) - 0001.jpg";
+            }
+
+            function nextimage3(){
+                var a = document.getElementById("detailimage");
+                a.src = "/images/products/@Html.DisplayFor(model => model.Name) - 0002.jpg";
+            }
+            function nextimage4(){
+                var a = document.getElementById("detailimage");
+                a.src = "/images/products/@Html.DisplayFor(model => model.Name) - 0003.jpg";
+            }
+            function nextimage5(){
+                var a = document.getElementById("detailimage");
+                a.src = "/images/products/@Html.DisplayFor(model => model.Name) - 0004.jpg";
+            }
+
+        </script>
 	</div>
+    
 	<div class="col-lg-5">
 		<div class="price-bar">
+            
     		<h3>€ @Html.DisplayFor(model => model.Price)</h3>
 			<!--<button class="btn kopen" >In winkelmandje</button>-->
             <a class="btn kopen" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-Id="@Model.Id">In winkelmandje  <span class="glyphicon glyphicon-shopping-cart"></span></a>
+            
 			<br/>
             <ul class="selling-points">
                 <li>Snelle levering</li>
                 <li>Niet goed geld terug!</li>
                 <li>Voor 17:00 besteld, morgen in huis!</li>
                 <li>Tijdelijk 10% korting op alle producten</li>
+                
             </ul>
+           
 		</div>
 	</div>
     
     <dl class="dl-horizontal col-lg-7 product-info">
-		
+        <div>
+
+		<div class="nextimagestyle">
+            <button  onclick="nextimage()">1</button>
+            <button onclick="nextimage2()">2</button>
+            <button onclick="nextimage3()">3</button>
+            <button onclick="nextimage4()">4</button>
+            <button onclick="nextimage5()">5</button>
+        </div>
+        <br/>
+        <br/>
         <dt>
             @Html.DisplayNameFor(model => model.Type)
         </dt>
