@@ -12,8 +12,11 @@
     <table class="table">
         <thead>
             <tr>
-                    <!--<th>
+                    <!-- <th>
                         @Html.DisplayNameFor(model => model.Surname)
+                    </th> -->
+                     <th>
+                         @Html.DisplayNameFor(model => model.Email) 
                     </th>
                     <th>
                         @Html.DisplayNameFor(model => model.Address)
@@ -21,21 +24,19 @@
                     <th>
                         @Html.DisplayNameFor(model => model.Zipcode)
                     </th>
-                    <th>
+                    <!-- <th>
                         @Html.DisplayNameFor(model => model.UserName)
-                    </th>-->
-                    <th>
+                    </th>--> 
+                    <!-- <th>
                         @Html.DisplayNameFor(model => model.NormalizedUserName)
-                    </th>
+                    </th> -->
+                   
                     <th>
-                        @Html.DisplayNameFor(model => model.Email)
+                        <!-- @Html.DisplayNameFor(model => model.Name) -->
                     </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Name)
-                    </th>
-                    <th>
+                    <!-- <th>
                         @Html.DisplayNameFor(model => model.NormalizedEmail)
-                    </th>
+                    </th> -->
                     <!--<th>
                         @Html.DisplayNameFor(model => model.EmailConfirmed)
                     </th>
@@ -72,30 +73,33 @@
         <tbody>
     @foreach (var item in Model) {
             <tr>
-                <!--<td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Surname)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Address)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Zipcode)
-                </td>-->
-                <td>
-                    @Html.DisplayFor(modelItem => item.UserName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NormalizedUserName)
-                </td>
-                <td>
+                 <td>
                     @Html.DisplayFor(modelItem => item.Email)
                 </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NormalizedEmail)
+                  <td>
+                    @Html.DisplayFor(modelItem => item.Address)
                 </td>
+                 <td>
+                    @Html.DisplayFor(modelItem => item.Zipcode)
+                </td>
+                <td>
+                    <!-- @Html.DisplayFor(modelItem => item.Name) -->
+                </td>
+                <!-- <td>
+                    @Html.DisplayFor(modelItem => item.Surname)
+                </td> -->
+              
+               
+                <!-- <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td> -->
+                <!-- <td>
+                    @Html.DisplayFor(modelItem => item.NormalizedUserName)
+                </td> -->
+               
+                <!-- <td>
+                    @Html.DisplayFor(modelItem => item.NormalizedEmail)
+                </td> -->
                 <!--<td>
                     @Html.DisplayFor(modelItem => item.EmailConfirmed)
                 </td>
