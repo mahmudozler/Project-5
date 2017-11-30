@@ -26,7 +26,7 @@ namespace MVC.Controllers
         // GET: Product
         public IActionResult Index(string searchString, int pageIndex = 1, string orderBy = "Relevantie")
         {
-            ViewData["Message"] = "";
+            ViewData["Message"] = "Alle Producten";
 
             Func<Product, object> order_by_selector;
             bool descending = false;
@@ -35,16 +35,20 @@ namespace MVC.Controllers
             {
                 case "PrijsLH":
                     order_by_selector = p => p.Price;
+                    ViewBag.orderByString = "Prijs Laag - Hoog";
                     break;
                 case "PrijsHL":
                     order_by_selector = p => p.Price;
                     descending = true;
+                    ViewBag.orderByString = "Prijs Hoog - Laag";
                     break;
                 case "Best":
                     order_by_selector = p => p.Id;
+                    ViewBag.orderByString = "Best Verkocht";
                     break;
                 default:
                     order_by_selector = p => p.Id;
+                    ViewBag.orderByString = "Relevantie";
                     break;
             }
 
@@ -56,7 +60,7 @@ namespace MVC.Controllers
             }
 
             ViewBag.searchString = "";
-            ViewBag.orderBy = "";
+            ViewBag.orderBy = "&orderBy=" + orderBy;
             if (!String.IsNullOrEmpty(searchString))
             {
                 if (descending == true)
@@ -73,7 +77,6 @@ namespace MVC.Controllers
                                                                                     p.Type.ToLower().Contains(searchString.ToLower()));
                 }
                 ViewBag.searchString = "&searchString=" + searchString;
-                ViewBag.orderBy = "&orderBy=" + orderBy;
 
                 ViewData["Message"] = "Resultaten voor " + "\"" + searchString + "\"";
             }

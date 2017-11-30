@@ -61,13 +61,13 @@
         <div>
             <ul class="nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" asp-area="" asp-controller="Manage" asp-action="Index" title="Manage" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sorteren op</a>
+                    <a class="nav-link dropdown-toggle" asp-area="" asp-controller="Manage" asp-action="Index" title="Manage" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sorteren op: @ViewBag.orderByString</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="?pageIndex=@(ViewBag.pageIndex)@ViewBag.searchString&orderBy=Relevantie">Relevantie</a>
                         <hr>
-                        <a class="dropdown-item" href="?pageIndex=@(ViewBag.pageIndex)@ViewBag.searchString&orderBy=PrijsLH">Prijs laag - hoog</a>
+                        <a class="dropdown-item" href="?pageIndex=@(ViewBag.pageIndex)@ViewBag.searchString&orderBy=PrijsLH">Prijs Laag - Hoog</a>
                         <hr>
-                        <a class="dropdown-item" href="?pageIndex=@(ViewBag.pageIndex)@ViewBag.searchString&orderBy=PrijsHL">Prijs hoog - laag</a>
+                        <a class="dropdown-item" href="?pageIndex=@(ViewBag.pageIndex)@ViewBag.searchString&orderBy=PrijsHL">Prijs Hoog - Laag</a>
                         <hr>
                         <a class="dropdown-item" href="?pageIndex=@(ViewBag.pageIndex)@ViewBag.searchString&orderBy=Best">Best Verkocht</a>
                     </div>
