@@ -24,19 +24,56 @@ namespace MVC.Controllers
         }
 
         // GET: Product
-        public IActionResult Index(string searchString, int pageIndex = 1)
+        public IActionResult Index(string searchString, int pageIndex = 1, string orderBy = "Relevantie")
         {
             ViewData["Message"] = "";
 
-            var res = _context.Products.GetPage<Product>(pageIndex - 1, 24, p => p.Id);
+            Func<Product, object> order_by_selector;
+            bool descending = false;
+
+            switch (orderBy)
+            {
+                case "PrijsLH":
+                    order_by_selector = p => p.Price;
+                    break;
+                case "PrijsHL":
+                    order_by_selector = p => p.Price;
+                    descending = true;
+                    break;
+                case "Best":
+                    order_by_selector = p => p.Id;
+                    break;
+                default:
+                    order_by_selector = p => p.Id;
+                    break;
+            }
+
+            var res = _context.Products.GetPage<Product>(pageIndex - 1, 24, order_by_selector);
+
+            if (descending == true)
+            {
+                res = _context.Products.GetPage<Product>(pageIndex - 1, 24, order_by_selector, descending);
+            }
 
             ViewBag.searchString = "";
+            ViewBag.orderBy = "";
             if (!String.IsNullOrEmpty(searchString))
             {
-                res = _context.Products.GetPage<Product>(pageIndex - 1, 24, p => p.Id,
+                if (descending == true)
+                {
+                    res = _context.Products.GetPage<Product>(pageIndex - 1, 24, order_by_selector, descending,
                                                                                 p => p.Name.ToLower().Contains(searchString.ToLower()) ||
                                                                                 p.Type.ToLower().Contains(searchString.ToLower()));
+                }
+                else
+                {
+                    res = _context.Products.GetPage<Product>(pageIndex - 1, 24, order_by_selector,
+                                                                                    filter_by_predicate:
+                                                                                    p => p.Name.ToLower().Contains(searchString.ToLower()) ||
+                                                                                    p.Type.ToLower().Contains(searchString.ToLower()));
+                }
                 ViewBag.searchString = "&searchString=" + searchString;
+                ViewBag.orderBy = "&orderBy=" + orderBy;
 
                 ViewData["Message"] = "Resultaten voor " + "\"" + searchString + "\"";
             }

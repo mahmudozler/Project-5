@@ -12,7 +12,7 @@ namespace MVC.Services
 
     public static class Paginator
     {
-        public static Page<T> GetPage<T>(this Microsoft.EntityFrameworkCore.DbSet<T> list, int page_index, int page_size, Func<T, object> order_by_selector, Func<T, bool> filter_by_predicate = null)
+        public static Page<T> GetPage<T>(this Microsoft.EntityFrameworkCore.DbSet<T> list, int page_index, int page_size, Func<T, object> order_by_selector, bool descending = false, Func<T, bool> filter_by_predicate = null)
             where T : class
         {
             var res = list.OrderBy(order_by_selector)
@@ -20,18 +20,43 @@ namespace MVC.Services
                           .Take(page_size)
                           .ToArray();
 
-            var tot_items = list.Count();
-
-            if (filter_by_predicate != null)
+            if (descending == true)
             {
-                res = list.Where(filter_by_predicate)
-                          .OrderBy(order_by_selector)
+                res = list.OrderByDescending(order_by_selector)
                           .Skip(page_index * page_size)
                           .Take(page_size)
                           .ToArray();
+            }
 
-                tot_items = list.Where(filter_by_predicate)
-                                .Count();
+            var tot_items = list.Count();
+
+            if (descending == true)
+            {
+                if (filter_by_predicate != null)
+                {
+                    res = list.Where(filter_by_predicate)
+                              .OrderByDescending(order_by_selector)
+                              .Skip(page_index * page_size)
+                              .Take(page_size)
+                              .ToArray();
+
+                    tot_items = list.Where(filter_by_predicate)
+                                    .Count();
+                }
+            }
+            else
+            {
+                if (filter_by_predicate != null)
+                {
+                    res = list.Where(filter_by_predicate)
+                              .OrderBy(order_by_selector)
+                              .Skip(page_index * page_size)
+                              .Take(page_size)
+                              .ToArray();
+
+                    tot_items = list.Where(filter_by_predicate)
+                                    .Count();
+                }
             }
 
             if (res == null || res.Length == 0) { return null; }

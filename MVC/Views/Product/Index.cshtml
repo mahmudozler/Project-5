@@ -8,54 +8,71 @@
         <div class="text-center">
             <div class="pagination">
             @if(ViewBag.pageIndex > 1){
-                <a href="?pageIndex=@(ViewBag.pageIndex - 1)@ViewBag.searchString">Previous</a>
+                <a href="?pageIndex=@(ViewBag.pageIndex - 1)@ViewBag.searchString@ViewBag.orderBy">Previous</a>
             }
 
             @if(ViewBag.totalPages <= 10){
                 for(int i = 1; i <= ViewBag.totalPages; i++){
                     if(i == ViewBag.pageIndex){
-                        <a class="active" href="?pageIndex=@i@ViewBag.searchString">@i</a>
+                        <a class="active" href="?pageIndex=@i@ViewBag.searchString@ViewBag.orderBy">@i</a>
                     }
                     else{
-                        <a href="?pageIndex=@i@ViewBag.searchString">@i</a>
+                        <a href="?pageIndex=@i@ViewBag.searchString@ViewBag.orderBy">@i</a>
                     }
                 }
             }
             else if(ViewBag.pageIndex + 5 > ViewBag.totalPages){
                 for(int i = ViewBag.totalPages - 9; i <= ViewBag.totalPages; i++){
                     if(i == ViewBag.pageIndex){
-                        <a class="active" href="?pageIndex=@i@ViewBag.searchString">@i</a>
+                        <a class="active" href="?pageIndex=@i@ViewBag.searchString@ViewBag.orderBy">@i</a>
                     }
                     else{
-                        <a href="?pageIndex=@i@ViewBag.searchString">@i</a>
+                        <a href="?pageIndex=@i@ViewBag.searchString@ViewBag.orderBy">@i</a>
                     }
                 }
             }
             else if(ViewBag.pageIndex > 6){
                 for(int i = ViewBag.pageIndex - 5; i <= ViewBag.pageIndex + 4; i++){
                     if(i == ViewBag.pageIndex){
-                    <a class="active" href="?pageIndex=@i@ViewBag.searchString">@i</a>
+                    <a class="active" href="?pageIndex=@i@ViewBag.searchString@ViewBag.orderBy">@i</a>
                     }
                     else{
-                        <a href="?pageIndex=@i@ViewBag.searchString">@i</a>
+                        <a href="?pageIndex=@i@ViewBag.searchString@ViewBag.orderBy">@i</a>
                     }
                 }
             }
             else{
                 for(int i = 1; i <= 10; i++){
                     if(i == ViewBag.pageIndex){
-                        <a class="active" href="?pageIndex=@i@ViewBag.searchString">@i</a>
+                        <a class="active" href="?pageIndex=@i@ViewBag.searchString@ViewBag.orderBy">@i</a>
                     }
                     else{
-                        <a href="?pageIndex=@i@ViewBag.searchString">@i</a>
+                        <a href="?pageIndex=@i@ViewBag.searchString@ViewBag.orderBy">@i</a>
                     }
                 }
             }
 
             @if(ViewBag.pageIndex < ViewBag.totalPages){
-                <a href="?pageIndex=@(ViewBag.pageIndex + 1)@ViewBag.searchString">Next</a>
+                <a href="?pageIndex=@(ViewBag.pageIndex + 1)@ViewBag.searchString@ViewBag.orderBy">Next</a>
             }
             </div>
+        </div>
+
+        <div>
+            <ul class="nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" asp-area="" asp-controller="Manage" asp-action="Index" title="Manage" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sorteren op</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="?pageIndex=@(ViewBag.pageIndex)@ViewBag.searchString&orderBy=Relevantie">Relevantie</a>
+                        <hr>
+                        <a class="dropdown-item" href="?pageIndex=@(ViewBag.pageIndex)@ViewBag.searchString&orderBy=PrijsLH">Prijs laag - hoog</a>
+                        <hr>
+                        <a class="dropdown-item" href="?pageIndex=@(ViewBag.pageIndex)@ViewBag.searchString&orderBy=PrijsHL">Prijs hoog - laag</a>
+                        <hr>
+                        <a class="dropdown-item" href="?pageIndex=@(ViewBag.pageIndex)@ViewBag.searchString&orderBy=Best">Best Verkocht</a>
+                    </div>
+                </li>
+            </ul>
         </div>
 
 
@@ -125,40 +142,40 @@
             @if(ViewBag.totalPages <= 10){
                 for(int i = 1; i <= ViewBag.totalPages; i++){
                     if(i == ViewBag.pageIndex){
-                        <a class="active" href="?pageIndex=@i@ViewBag.searchString">@i</a>
+                        <a class="active" href="?pageIndex=@i@ViewBag.searchString@ViewBag.orderBy">@i</a>
                     }
                     else{
-                        <a href="?pageIndex=@i@ViewBag.searchString">@i</a>
+                        <a href="?pageIndex=@i@ViewBag.searchString@ViewBag.orderBy">@i</a>
                     }
                 }
             }
             else if(ViewBag.pageIndex + 5 > ViewBag.totalPages){
                 for(int i = ViewBag.totalPages - 9; i <= ViewBag.totalPages; i++){
                     if(i == ViewBag.pageIndex){
-                        <a class="active" href="?pageIndex=@i@ViewBag.searchString">@i</a>
+                        <a class="active" href="?pageIndex=@i@ViewBag.searchString@ViewBag.orderBy">@i</a>
                     }
                     else{
-                        <a href="?pageIndex=@i@ViewBag.searchString">@i</a>
+                        <a href="?pageIndex=@i@ViewBag.searchString@ViewBag.orderBy">@i</a>
                     }
                 }
             }
             else if(ViewBag.pageIndex > 6){
                 for(int i = ViewBag.pageIndex - 5; i <= ViewBag.pageIndex + 4; i++){
                     if(i == ViewBag.pageIndex){
-                    <a class="active" href="?pageIndex=@i@ViewBag.searchString">@i</a>
+                    <a class="active" href="?pageIndex=@i@ViewBag.searchString@ViewBag.orderBy">@i</a>
                     }
                     else{
-                        <a href="?pageIndex=@i@ViewBag.searchString">@i</a>
+                        <a href="?pageIndex=@i@ViewBag.searchString@ViewBag.orderBy">@i</a>
                     }
                 }
             }
             else{
                 for(int i = 1; i <= 10; i++){
                     if(i == ViewBag.pageIndex){
-                        <a class="active" href="?pageIndex=@i@ViewBag.searchString">@i</a>
+                        <a class="active" href="?pageIndex=@i@ViewBag.searchString@ViewBag.orderBy">@i</a>
                     }
                     else{
-                        <a href="?pageIndex=@i@ViewBag.searchString">@i</a>
+                        <a href="?pageIndex=@i@ViewBag.searchString@ViewBag.orderBy">@i</a>
                     }
                 }
             }
