@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Index";
 }
+@if (this.User.IsInRole("Admin")){
 <div class="container">
     <h2>All Users</h2>
 
@@ -141,3 +142,4 @@
     </table>
     <br/><br/><br/><br/>
 </div>
+}
