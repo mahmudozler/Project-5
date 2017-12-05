@@ -447,3 +447,26 @@ footer div ul li {
       font-size: 0;
       animation: 30s slidy infinite; 
     }
+
+.panda-container-outer{
+    margin: 0 auto;
+    width: 1280px;
+    height: 720px;
+}
+
+.panda-container-inner{
+    margin: 0 auto;
+    width: 1280px;
+    height: 720px;
+}
+
+.panda-iframe{
+    position: absolute;
+}
+
+.panda-overlay{
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+    background-color: transparent;
+}
