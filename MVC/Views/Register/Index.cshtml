@@ -1,9 +1,9 @@
 @{
-    ViewData["Title"] = "Registerpage";
+    ViewData["Title"] = "Registreerpagina";
 }
 
 <div class="container">
-    <h2>Register</h2>
+    <h2>Registreer</h2>
     <form method="POST">
         <li class="LoginPageListStyle"><input class="LoginPageInput" name="User" type="text" placeholder="Username" pattern="[A-Za-z0-9.-]+" title="Please use only letters (a-z), numbers, periods, dashes and underscores." required="required" minlength="6" maxlength="18"></li>
         <li class="LoginPageListStyle"><input class="LoginPageInput" name="Pass" type="password" placeholder="Password" pattern="[\x20-\x7E]+" title="The following are allowed in your password: a-z, A-Z, 0-9, and common punctuation." required="required" minlength="6" maxlength="18"></li>
@@ -12,7 +12,7 @@
         <li class="LoginPageListStyle"><input class="LoginPageInput" name="Surname" type="text" placeholder="Surname" pattern="[A-Za-z0-9.- ]+" title="Please use only letters (a-z), spaces, numbers, periods, dashes and underscores." required="required"></li>
         <li class="LoginPageListStyle">
             <select name="Gender">
-                <option disabled="disabled" selected="selected">I am...</option>                
+                <option disabled="disabled" selected="selected">Ik ben...</option>                
                 <option value="Female">Female</option>
                 <option value="Male">Male</option>
             </select>
