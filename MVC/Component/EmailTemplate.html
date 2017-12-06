@@ -1,0 +1,50 @@
+<!<!DOCTYPE html>
+<head>
+    <title></title>
+</head>
+<body>
+    <!-- <h1>User information</h1>
+    <br/>
+    <table>
+        <tr>
+            <td><b>First Name</b></td>
+            <td>{fname}</td>
+        </tr>
+    </table> -->
+    <h4>Here are the products in your shopping cart.</h4>
+    <table class="table table-bordered table-striped shoppingcart-table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Selected amount</th>
+                <th class="text-left">Price</th>
+                <th class="text-left">Subtotal</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+                <tr>
+                    <td class="text-left"><a >{itemcart.Product.Name}</a></td> 
+                    <td class="text-center">{itemcart.Amount}</td>
+                    <td class="text-left" style="color:gray">{itemcart.Product.Price}</td> 
+                    <td class="text-left">
+                        {(itemcart.Amount * itemcart.Product.Price)}
+                    </td> 
+                    
+                </tr>
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td class="text-center">{Model.ShoppingCart.GetShoppingCartTotalItems()}</td>
+                <td class="text-right">Total:</td>
+                <td class="text-right">
+                    &#8364; <b>{Model.ShoppingCartTotal.ToString()} </b>
+                </td>
+                <td colspan="2"></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>

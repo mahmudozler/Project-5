@@ -15,6 +15,7 @@ using MVC.Models.ManageViewModels;
 using MVC.Services;
 using Microsoft.EntityFrameworkCore;
 using MVC.ViewModels;
+using System.IO;
 
 namespace MVC.Controllers
 {
@@ -42,21 +43,24 @@ namespace MVC.Controllers
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
                 IsEmailConfirmed = user.EmailConfirmed,
+                
             };
 
-            ViewData["Message"] = sendit(model.Email);
+            ViewData["Message"] = sendit(model.Email, model.Username);
 
             return View(model);
         }
 
-        public static string sendit(string ReciverMail)
+        public static string sendit(string ReciverMail, string username )
         {
             MailMessage msg = new MailMessage();
 
             msg.From = new MailAddress("robomarkt.g3@gmail.com");
             msg.To.Add(ReciverMail);
             msg.Subject = "Your Robomarkt order! " + DateTime.Now.ToString();
-            msg.Body = "Hi panda";
+            msg.Body = CreateBody(username);
+            msg.IsBodyHtml = true;
+
             SmtpClient client = new SmtpClient();
             client.UseDefaultCredentials = true;
             client.Host = "smtp.gmail.com";
@@ -78,6 +82,17 @@ namespace MVC.Controllers
             {
                 msg.Dispose();
             }
+        }
+
+        private static string CreateBody(string UserName)
+        {
+            string body = string.Empty;
+            using(StreamReader reader = new StreamReader("../MVC/Component/EmailTemplate.html"))
+            {
+                body = reader.ReadToEnd();  
+            }
+            //body = body.Replace("{fname}",UserName);
+            return body;
         }
     }
 }
