@@ -55,8 +55,8 @@ namespace MVC.Controllers
 
             msg.From = new MailAddress("robomarkt.g3@gmail.com");
             msg.To.Add(ReciverMail);
-            msg.Subject = "Hello world! " + DateTime.Now.ToString();
-            msg.Body = "hi to you ... :)";
+            msg.Subject = "Your Robomarkt order! " + DateTime.Now.ToString();
+            msg.Body = "Hi panda";
             SmtpClient client = new SmtpClient();
             client.UseDefaultCredentials = true;
             client.Host = "smtp.gmail.com";
@@ -68,7 +68,7 @@ namespace MVC.Controllers
             try
             {
                 client.Send(msg);
-                return "Mail has been successfully sent!";
+                return " ";
             }
             catch (Exception ex)
             {

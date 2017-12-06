@@ -3,6 +3,8 @@
 @{
     ViewData["Title"] = "Bewerk";
 }
+<div class="container">
+
 
 <h2>Bewerk</h2>
 
@@ -119,8 +121,14 @@
 </div>
 
 <div>
-    <a asp-action="Index">Terug naar lijst.</a>
+    <a asp-action="Index">Terug naar lijst</a>
 </div>
+
+ </div> 
+
+
+<br/><br/><br/><br/><br/><br/>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

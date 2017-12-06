@@ -3,6 +3,9 @@
 @{
     ViewData["Title"] = "Creëren";
 }
+<div class="container">
+    
+
 
 <h2>Creëren</h2>
 
@@ -114,13 +117,16 @@
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </form>
-    </div>
-</div>
+       </div>
+            </div>
+
 
 <div>
     <a asp-action="Index">Terug naar lijst</a>
 </div>
+</div>
 
+<br/><br/><br/><br/><br/><br/>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

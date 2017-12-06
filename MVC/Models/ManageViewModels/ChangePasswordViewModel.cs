@@ -20,7 +20,7 @@ namespace MVC.Models.ManageViewModels
         public string NewPassword { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "bevestig nieuwe wachtwoord")]
+        [Display(Name = "Bevestig nieuwe wachtwoord")]
         [Compare("NewPassword", ErrorMessage = "De nieuwe wachtwoord en bevestigde wachtwoord komen niet overeen.")]
         public string ConfirmPassword { get; set; }
 
