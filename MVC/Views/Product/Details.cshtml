@@ -7,7 +7,7 @@
 	<div class="product-edit">
 		@if (this.User.IsInRole("Admin")){
         <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>}
-        <a asp-action="Index">Back to List</a>
+        <a asp-action="Index">Terug naar lijst</a>
     </div>
 	
     <h2>@Html.DisplayFor(model => model.Name)</h2>

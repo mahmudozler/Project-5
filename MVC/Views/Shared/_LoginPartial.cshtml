@@ -12,20 +12,20 @@
         <ul class="nav navbar-nav navbar-right">
             @if (User.IsInRole("Admin")) { 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" asp-area="" asp-controller="Manage" asp-action="Index" title="Manage" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hello @UserManager.GetUserName(User)!</a>
+                    <a class="nav-link dropdown-toggle" asp-area="" asp-controller="Manage" asp-action="Index" title="Manage" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hallo @UserManager.GetUserName(User)!</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" asp-controller="Manage" asp-action="Index">Manage Account</a>
+                        <a class="dropdown-item" asp-controller="Manage" asp-action="Index">Beheer Account</a>
                         <hr>
-                        <a class="dropdown-item" asp-controller="customers" asp-action="Index">Customers</a>
+                        <a class="dropdown-item" asp-controller="customers" asp-action="Index">Klanten</a>
                     </div>
                 </li>
             } else {
                 <li>
-                    <a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage" role="button">Hello @UserManager.GetUserName(User)!</a>
+                    <a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage" role="button">Hallo @UserManager.GetUserName(User)!</a>
                 </li>
             }
             <li>
-                <button type="submit" class="btn btn-link navbar-btn navbar-link">Log out</button>
+                <button type="submit" class="btn btn-link navbar-btn navbar-link">Uitloggen</button>
             </li>
             <li>
                 @await Component.InvokeAsync("ShoppingCartSummary")
@@ -36,8 +36,8 @@
 else
 {
     <ul class="nav navbar-nav navbar-right">
-        <li><a asp-area="" asp-controller="Account" asp-action="Register">Register</a></li>
-        <li><a asp-area="" asp-controller="Account" asp-action="Login">Log in</a></li>
+        <li><a asp-area="" asp-controller="Account" asp-action="Register">Registreer</a></li>
+        <li><a asp-area="" asp-controller="Account" asp-action="Login">Inloggen</a></li>
         <li>
             @await Component.InvokeAsync("ShoppingCartSummary")
         </li>

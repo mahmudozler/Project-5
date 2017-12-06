@@ -6,14 +6,14 @@
 @inject UserManager<ApplicationUser> UserManager
 		
 <div class="container">
-    <h2>Your shopping cart</h2>
-    <h4>Here are the products in your shopping cart.</h4>
+    <h2>Je winkelmand</h2>
+    <h4>Hier zijn de producten in je winkelmand.</h4>
     <table class="table table-bordered table-striped shoppingcart-table">
         <thead>
             <tr>
                 <th>Product</th>
-                <th>Selected amount</th>
-                <th class="text-left">Price</th>
+                <th>Selecteer aantal</th>
+                <th class="text-left">Prijs</th>
                 <th class="text-left">Subtotal</th>
                 <th class="text-center">Min</th>
                 <th class="text-center">Plus</th>
@@ -38,7 +38,7 @@
             <tr>
                 <td></td>
                 <td class="text-center">@Model.ShoppingCart.GetShoppingCartTotalItems()</td>
-                <td class="text-right">Total:</td>
+                <td class="text-right">Totaal:</td>
                 <td class="text-right">
                     &#8364; <b>@Model.ShoppingCartTotal.ToString() </b>
                 </td>
@@ -47,7 +47,7 @@
         </tfoot>
     </table>
 
-    <a asp-controller="ShoppingCart" asp-action="ClearCart" class="btn btn-warning" aria-label="Left Align">Clear cart</a>
+    <a asp-controller="ShoppingCart" asp-action="ClearCart" class="btn btn-warning" aria-label="Left Align">Verwijder winkelmand</a>
 
     <!--<a asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-Id="4">voge toe gap</a>
     <a asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCart" asp-route-Id="4">verwijder gap</a>-->
