@@ -105,22 +105,23 @@ namespace MVC.Controllers
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
                 IsEmailConfirmed = user.EmailConfirmed,
+                Address = user.Address
 
             };
 
-            ViewData["Message"] = this.sendit(model.Email, model.Username);
+            ViewData["Message"] = this.sendit(model.Email, model.Username, user.Address);
 
             return View(model);
         }
 
-        public string sendit(string ReciverMail, string username)
+        public string sendit(string ReciverMail, string username, string Adres)
         {
             MailMessage msg = new MailMessage();
 
             msg.From = new MailAddress("robomarkt.g3@gmail.com");
             msg.To.Add(ReciverMail);
             msg.Subject = "Your Robomarkt order! " + DateTime.Now.ToString();
-            msg.Body = this.CreateBody(username);
+            msg.Body = this.CreateBody(username, Adres);
             msg.IsBodyHtml = true;
 
             SmtpClient client = new SmtpClient();
@@ -146,7 +147,7 @@ namespace MVC.Controllers
             }
         }
 
-        private string CreateBody(string UserName)
+        private string CreateBody(string UserName, string Adres)
         {
             string body = string.Empty;
             ShoppingCart shoppingCart = _shoppingCart;
@@ -174,7 +175,7 @@ namespace MVC.Controllers
 
             body= body.Replace("{swapthatshit}",bodystring);
             body = body.Replace("{Username}", UserName);
-            // body = body.Replace("{Adres}", adres);
+            body = body.Replace("{Adres}", Adres);
             
             return body;
         }
