@@ -14,6 +14,7 @@
   <ItemGroup>
     <Compile Remove="Extensions\SessionObjects.cs" />
     <Compile Remove="Models\ManageViewModels\ChangePasswordViewModel %28copy%29.cs" />
+    <Compile Remove="Models\EmptyClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\Account\AccessDenied.cshtml" />
@@ -42,8 +43,5 @@
     <None Include="Views\Manage\_ManageNav.cshtml" />
     <None Include="Views\Manage\_StatusMessage.cshtml" />
     <None Include="Views\Manage\_ViewImports.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Checkout\" />
   </ItemGroup>
 </Project>

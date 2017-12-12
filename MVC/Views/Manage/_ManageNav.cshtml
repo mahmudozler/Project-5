@@ -7,13 +7,12 @@
 <ul class="nav nav-pills nav-stacked">
     <li class="@ManageNavPages.IndexNavClass(ViewContext)"><a asp-action="Index">Profiel</a></li>
     <li class="@ManageNavPages.ChangePasswordNavClass(ViewContext)"><a asp-action="ChangePassword">Wachtwoord</a></li>
-    @if(this.User.IsInRole("Admin")){
-        <!-- <li class="@ManageNavPages.UsersNavClass(ViewContext)"><a asp-action="Users">Users</a></li> !-->
+    <li class="@ManageNavPages.OrderHistoryNavClass(ViewContext)"><a asp-action="OrderHistory">Ordergeschiedenis</a></li>  
         @if (hasExternalLogins)
         {
             <li class="@ManageNavPages.ExternalLoginsNavClass(ViewContext)"><a asp-action="ExternalLogins">External logins</a></li>
         }
-    }
+    
   
 </ul>
 

@@ -11,7 +11,7 @@ namespace Model
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("User ID=postgres;Password=admin1399;Host=145.24.222.165;Port=5432;Database=robomarkt;Pooling=true;");
+            optionsBuilder.UseNpgsql("User ID=postgres;Password=admin1399;Host=145.24.222.165;Port=5432;Database=robomarkt;Pooling=true;");  
         }
     }
 
@@ -22,6 +22,7 @@ namespace Model
         public string Name { get; set; }
         public string Description { get; set; }
         public float Price { get; set; }
+
         public List<Specification> Specifications { get; set; }
     }
 
