@@ -14,6 +14,10 @@ namespace MVC.Models.AccountViewModels
         public string Email { get; set; }
 
         [Required]
+        [Display(Name = "Adres")]
+        public string Address { get; set; }
+
+        [Required]
         [StringLength(100, ErrorMessage = "De {0} moet min {2} en max {1} karakters lang zijn.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Wachtwoord")]
@@ -23,5 +27,6 @@ namespace MVC.Models.AccountViewModels
         [Display(Name = "Bevestig wachtwoord")]
         [Compare("Password", ErrorMessage = "De nieuwe wachtwoord en bevestigde wachtwoord komen niet overeen.")]
         public string ConfirmPassword { get; set; }
+
     }
 }

@@ -61,6 +61,7 @@ namespace MVC.Controllers
                 Username = user.UserName,
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
+                Address = user.Address,
                 IsEmailConfirmed = user.EmailConfirmed,
                 StatusMessage = StatusMessage
             };
@@ -102,6 +103,16 @@ namespace MVC.Controllers
                     throw new ApplicationException($"Unexpected error occurred setting phone number for user with ID '{user.Id}'.");
                 }
             }
+
+            /*var Address = user.Address;
+            if (model.Address != Address)
+            {
+                var setAdressResult = await _userManager.set(user, model.PhoneNumber);
+                if (!setAdressResult.Succeeded)
+                {
+                    throw new ApplicationException($"Unexpected error occurred setting phone number for user with ID '{user.Id}'.");
+                }
+            }*/
 
             StatusMessage = "Your profile has been updated";
             return RedirectToAction(nameof(Index));

@@ -17,13 +17,13 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            Naam
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Name)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Surname)
+            Achternaam
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Surname)
@@ -35,32 +35,105 @@
             @Html.DisplayFor(model => model.Address)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Zipcode)
+             Zipcode
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Zipcode)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.UserName)
+            Email
         </dt>
-        <dd>
+        <!-- <dd>
             @Html.DisplayFor(model => model.UserName)
-        </dd>
-        <dt>
+        </dd> -->
+        <!-- <dt>
+
+            Normalizedgebruikersnaam
+        </dt> -->
+        <!-- <dd>
+            @Html.DisplayFor(model => model.NormalizedUserName)
+        </dd> -->
+        <!-- <dt>
+
             @Html.DisplayNameFor(model => model.Email)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dd> -->
+        <!-- <dt>
+
+            @Html.DisplayNameFor(model => model.NormalizedEmail)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.PhoneNumber)
+            @Html.DisplayFor(model => model.NormalizedEmail)
+        </dd> -->
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailConfirmed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmailConfirmed)
         </dd>
+        <!-- <dt>
+            Wachtwoordhash
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PasswordHash)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecurityStamp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecurityStamp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConcurrencyStamp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConcurrencyStamp)
+        </dd> -->
+        <dt>
+            Telefoonnummer
+
+            <!-- @Html.DisplayNameFor(model => model.PhoneNumber) -->
+
+        </dt>
+        <!-- <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd> -->
+
+        <!-- <dt>
+            Telefoonnummer bevestigd
+        </dt> -->
+        <!-- <dd>
+            @Html.DisplayFor(model => model.PhoneNumberConfirmed)
+        </dd>
+        <!-- <dt> -->
+            <!-- @Html.DisplayNameFor(model => model.TwoFactorEnabled)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TwoFactorEnabled)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LockoutEnd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LockoutEnd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LockoutEnabled)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LockoutEnabled)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccessFailedCount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccessFailedCount)
+        </dd> --> 
 
     </dl>
-    
+    <br><br><br><br><br>
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
 
