@@ -520,6 +520,14 @@ namespace MVC.Controllers
             return View(model);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> OrderHistory()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            var model = new ChangePasswordViewModel { StatusMessage = StatusMessage };
+            return View(model);
+        }
+
         #region Helpers
 
         private void AddErrors(IdentityResult result)
