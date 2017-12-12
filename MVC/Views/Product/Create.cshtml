@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Creëren";
 }
+<div class="container">
 @if (this.User.IsInRole("Admin")){
 <h2>Creëren</h2>
 
@@ -18,17 +19,17 @@
                 <span asp-validation-for="Type" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Naam" class="control-label">Naam</label>
+                <label asp-for="Name" class="control-label">Naam</label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Beschrijving" class="control-label">Beschrijving</label>
+                <label asp-for="Description" class="control-label">Beschrijving</label>
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Prijs" class="control-label">Prijs</label>
+                <label asp-for="Price" class="control-label">Prijs</label>
                 <input asp-for="Price" class="form-control" />
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
