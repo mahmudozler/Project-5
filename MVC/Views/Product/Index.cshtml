@@ -76,10 +76,11 @@
         </div>
 
 
-    <!--<p dir="rtl">Page @ViewBag.pageIndex of @ViewBag.totalPages</p>-->    
+    <!--<p dir="rtl">Page @ViewBag.pageIndex of @ViewBag.totalPages</p>--> 
+	@if (this.User.IsInRole("Admin")){
    <p class="text-right" style="position:absolute; top:160px;left:1100px;">
         <a asp-action="Create" class="btn btn-primary">Maak een nieuw product aan</a>
-    </p>
+    </p>}
     @foreach (var item in Model) {
 
             <label class="product-card">
