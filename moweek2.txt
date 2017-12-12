@@ -1,0 +1,7 @@
+verwijderen klant oranje knop
+
+tussenvoegsel
+postcode gegevens controle
+knop toevoegen van product create
+onnodige dingen eruit halen create users
+deteails testen van recuirment

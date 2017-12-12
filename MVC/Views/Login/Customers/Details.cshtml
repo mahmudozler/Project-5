@@ -14,13 +14,13 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            Naam
+            @Html.DisplayNameFor(model => model.Name)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Name)
         </dd>
         <dt>
-            Surname
+            @Html.DisplayNameFor(model => model.Surname)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Surname)
@@ -32,47 +32,43 @@
             @Html.DisplayFor(model => model.Address)
         </dd>
         <dt>
-            Postcode
+            @Html.DisplayNameFor(model => model.Zipcode)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Zipcode)
         </dd>
         <dt>
-            Gebruikersnaam
+            @Html.DisplayNameFor(model => model.UserName)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.UserName)
         </dd>
         <dt>
-<<<<<<< HEAD
-            Normalizedgebruikersnaam
+            @Html.DisplayNameFor(model => model.NormalizedUserName)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.NormalizedUserName)
         </dd>
         <dt>
-=======
->>>>>>> 0528aad52512012d9b80cabf0fbb315175851b6b
             @Html.DisplayNameFor(model => model.Email)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Email)
         </dd>
         <dt>
-<<<<<<< HEAD
             @Html.DisplayNameFor(model => model.NormalizedEmail)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.NormalizedEmail)
         </dd>
         <dt>
-            EmailBevestigd
+            @Html.DisplayNameFor(model => model.EmailConfirmed)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.EmailConfirmed)
         </dd>
         <dt>
-            Wachtwoordhash
+            @Html.DisplayNameFor(model => model.PasswordHash)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.PasswordHash)
@@ -90,17 +86,13 @@
             @Html.DisplayFor(model => model.ConcurrencyStamp)
         </dd>
         <dt>
-            Telefoonnummer
-=======
             @Html.DisplayNameFor(model => model.PhoneNumber)
->>>>>>> 0528aad52512012d9b80cabf0fbb315175851b6b
         </dt>
         <dd>
             @Html.DisplayFor(model => model.PhoneNumber)
         </dd>
-<<<<<<< HEAD
         <dt>
-            Telefoonnummer bevestigd
+            @Html.DisplayNameFor(model => model.PhoneNumberConfirmed)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.PhoneNumberConfirmed)
@@ -129,8 +121,6 @@
         <dd>
             @Html.DisplayFor(model => model.AccessFailedCount)
         </dd>
-=======
->>>>>>> 0528aad52512012d9b80cabf0fbb315175851b6b
     </dl>
 </div>
 
