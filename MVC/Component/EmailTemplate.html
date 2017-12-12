@@ -67,9 +67,9 @@ body {
 .card-header-color h1{
     color: white;
     text-align: center;
-    position: absolute;
-    top:20px;
-    left: 120px;
+    position: relative;
+    /* top:120px; */
+    /* left: 120px; */
 }
 
 .card-header-color{
@@ -87,11 +87,26 @@ body {
     </style>
 </head>
 <body>
+    
     <div class="card">
+            <h3>Verzendbevestiging</h3>
+            <p>Verzendbevestiging Geachte heer {Username}</p>
+            <p> 
+                Uw bestelling bij Robomarkt met ordernummer 19216455
+                is verzonden naar het volgende adres:
+            <p>{Username}</p>
+            <p>{Adres}</p>
+                Uw bestelling wordt zaterdag
+                29 oktober 2016 tussen 08.30 en 18.00
+                aangeboden door een koerier van AMP Logistics.
+                Deze zal met u aan de deur het contract afhandelen.</p>
         <div class="card-header-color">
         <h1>Your Robomarkt order!</h1>
-        <img src="robomarkt.png">
+        <!-- <img src="robomarkt.png"> -->
         </div>
+        <h1>Uw factuur</h1>
+        
+        <p> factuur vindt u hieronder. Bewaar uw factuur zorgvuldig.</p>
         <table class="zui-table zui-table-rounded">
                 <thead>
                     <tr>
@@ -103,42 +118,18 @@ body {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Laptop</td>
-                        <td>1</td>
-                        <td>30,-</td>
-                        <td></td>
-                        
-                    </tr>
-                    <tr>
-                        <td>Printer</td>
-                        <td>2</td>
-                        <td>50,-"</td>
-                        <td></td>
-                        
-                    </tr>
-                    <tr>
-                        <td>Macbook</td>
-                        <td>1</td>
-                        <td>1000,-</td>
-                        <td></td>
-                        
-                    </tr>
-                    <tr>
-                        <td>TV</td>
-                        <td>1</td>
-                        <td>500,-</td>
-                        <td></td>
-                        
-                    </tr>
-                    <tr>
-                        <td>Desktop</td>
-                        <td>1</td>
-                        <td>40,-</td>
-                        <td>1620,-</td>
-                        
-                    </tr>
+                    {swapthatshit}
+                    
+                    
                 </tbody>
             </table>
+            <h1>Na ontvangst van uw bestelling</h1>
+            <p>Veelgestelde vragen en instellingen Heeft u een vraag over een product of zoekt u hulp bij het instellen? 
+            Voor veel producten zijn antwoorden te vinden op veelgestelde vragen. 
+            Klik op de productpagina op 'Veelgestelde vragen'. 
+            Geef uw mening over uw aankoop Wij nodigen u graag uit voor het schrijven van een review.
+            Zo helpt u andere klanten met uw ervaringen met onze producten.
+            Klik op 'Reviews' op de productpagina om uw beoordeling te plaatsen. Meer informatie vindt u op Robomarkt.</p>
+        </p>
         </div>
 </body>

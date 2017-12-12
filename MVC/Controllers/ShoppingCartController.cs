@@ -108,19 +108,19 @@ namespace MVC.Controllers
 
             };
 
-            ViewData["Message"] = sendit(model.Email, model.Username);
+            ViewData["Message"] = this.sendit(model.Email, model.Username);
 
             return View(model);
         }
 
-        public static string sendit(string ReciverMail, string username)
+        public string sendit(string ReciverMail, string username)
         {
             MailMessage msg = new MailMessage();
 
             msg.From = new MailAddress("robomarkt.g3@gmail.com");
             msg.To.Add(ReciverMail);
             msg.Subject = "Your Robomarkt order! " + DateTime.Now.ToString();
-            msg.Body = CreateBody(username);
+            msg.Body = this.CreateBody(username);
             msg.IsBodyHtml = true;
 
             SmtpClient client = new SmtpClient();
@@ -146,14 +146,36 @@ namespace MVC.Controllers
             }
         }
 
-        private static string CreateBody(string UserName)
+        private string CreateBody(string UserName)
         {
             string body = string.Empty;
+            ShoppingCart shoppingCart = _shoppingCart;
             using (StreamReader reader = new StreamReader("../MVC/Component/EmailTemplate.html"))
             {
                 body = reader.ReadToEnd();
             }
-            //body = body.Replace("{fname}",UserName);
+            
+            string bodystring ="";
+            foreach(var cartitem in shoppingCart.GetShoppingCartItems())
+            {
+                
+                bodystring += 
+                "<tr><td>"+cartitem.Product.Name+
+                " </td><td>"+cartitem.Amount.ToString()+
+                "</td><td>"+"€ " +cartitem.Product.Price.ToString() +
+                "</td><td></td></tr>";
+
+                
+            }
+            bodystring += "<tr><td>"+
+                " </td><td>" +
+                "</td><td>"+
+                "</td><td>"+"€ " +shoppingCart.GetShoppingCartTotal().ToString()+"</td></tr>";
+
+            body= body.Replace("{swapthatshit}",bodystring);
+            body = body.Replace("{Username}", UserName);
+            // body = body.Replace("{Adres}", adres);
+            
             return body;
         }
 
