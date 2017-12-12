@@ -14,13 +14,13 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            Naam
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Name)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Surname)
+            Achternaam
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Surname)
@@ -32,32 +32,102 @@
             @Html.DisplayFor(model => model.Address)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Zipcode)
+            Postcode
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Zipcode)
         </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.UserName)
+        <!-- <dt>
+            Gebruikersnaam
         </dt>
         <dd>
             @Html.DisplayFor(model => model.UserName)
-        </dd>
+        </dd> -->
+        <!-- <dt>
+            Normalizedgebruikersnaam
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NormalizedUserName)
+        </dd> -->
         <dt>
+
             @Html.DisplayNameFor(model => model.Email)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Email)
         </dd>
+        <!-- <dt>
+
+            @Html.DisplayNameFor(model => model.NormalizedEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NormalizedEmail)
+        </dd> -->
         <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
+            EmailBevestigd
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmailConfirmed)
+        </dd>
+        <!-- <dt>
+            Wachtwoordhash
+        </dt> -->
+        <!-- <dd>
+            @Html.DisplayFor(model => model.PasswordHash)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecurityStamp)
+        </dt> -->
+        <!-- <dd>
+           
+        </dd> @Html.DisplayFor(model => model.SecurityStamp)
+        <dt>
+            @Html.DisplayNameFor(model => model.ConcurrencyStamp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConcurrencyStamp)
+        </dd> -->
+        <dt>
+            Telefoonnummer
         </dt>
         <dd>
             @Html.DisplayFor(model => model.PhoneNumber)
         </dd>
+<!-- 
+        <dt>
+            Telefoonnummer bevestigd
+        </dt> -->
+        <!-- <dd>
+            @Html.DisplayFor(model => model.PhoneNumberConfirmed)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TwoFactorEnabled)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TwoFactorEnabled)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LockoutEnd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LockoutEnd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LockoutEnabled)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LockoutEnabled)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccessFailedCount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccessFailedCount)
+        </dd> -->
+
     </dl>
 </div>
-
+<br/><br/><br/><br/><br/>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Bewerk</a> |
     <a asp-action="Index">Terug naar lijst</a>

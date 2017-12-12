@@ -16,6 +16,11 @@ namespace MVC.Models.ManageViewModels
         [EmailAddress]
         public string Email { get; set; }
 
+        [Required]
+        [Display(Name = "Address")]
+        public string Address { get; set; }
+
+
         [Phone]
         [Display(Name = "telefoon nummer")]
         public string PhoneNumber { get; set; }
