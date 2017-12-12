@@ -437,9 +437,10 @@ footer div ul li {
     }
     
     
-    div#slider { overflow: hidden; }
-    div#slider figure img { width: 20%; float: left;margin-left:30px; background-color: transparent; }
+    div#slider { overflow: hidden; background-color: gray;}
+    div#slider figure img { width: 18%; float: left;margin-left:30px; background-color: transparent;background-color: transparent; }
     div#slider figure { 
+        
       position: relative;
       width: 130%;
       height: 200%;
