@@ -175,7 +175,7 @@ namespace MVC.Controllers
 
             body= body.Replace("{swapthatshit}",bodystring);
             body = body.Replace("{Username}", UserName);
-            body = body.Replace("{Adres}", Adres);
+            body = body.Replace("{Geen Adres}", Adres);
             
             return body;
         }
