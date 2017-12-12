@@ -55,7 +55,7 @@
     <div class="text-right">
         <div class="btn-group ">
 			@if (SignInManager.IsSignedIn(User)){
-            <a class="btn btn-success" asp-controller="Checkout" asp-action="Index">Check out <span class="glyphicon glyphicon-log-in"></span></a>
+            <a class="btn btn-success" asp-controller="ShoppingCart" asp-action="Checkout">Check out <span class="glyphicon glyphicon-log-in"></span></a>
 					
 			}
             else {<a class="btn btn-success" asp-controller="Account" asp-action="Login">Check out <span class="glyphicon glyphicon-log-in"></span></a>}
