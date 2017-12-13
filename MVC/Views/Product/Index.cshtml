@@ -5,7 +5,7 @@
 }
 <div class="container">
     <h2>@ViewData["Message"]</h2>
-        <div class="text-center">
+        <div class="text-center" style="position:relative">
             <div class="pagination">
             @if(ViewBag.pageIndex > 1){
                 <a href="?pageIndex=@(ViewBag.pageIndex - 1)@ViewBag.searchString@ViewBag.orderBy">Previous</a>
@@ -56,12 +56,17 @@
                 <a href="?pageIndex=@(ViewBag.pageIndex + 1)@ViewBag.searchString@ViewBag.orderBy">Volgende</a>
             }
             </div>
+
+            @if (this.User.IsInRole("Admin")){
+            <p class="text-right" style="position:absolute; top:21px;right:0px;">
+                <a asp-action="Create" class="btn btn-primary">Maak een nieuw product aan</a>
+            </p>}
         </div>
 
         <div>
             <ul class="nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" asp-area="" asp-controller="Manage" asp-action="Index" title="Manage" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sorteren op: @ViewBag.orderByString</a>
+                    <a class="nav-link dropdown-toggle filterbar" asp-area="" asp-controller="Manage" asp-action="Index" title="Manage" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sorteren op: @ViewBag.orderByString</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="?pageIndex=@(ViewBag.pageIndex)@ViewBag.searchString&orderBy=Relevantie">Relevantie</a>
                         <hr>
@@ -77,10 +82,6 @@
 
 
     <!--<p dir="rtl">Page @ViewBag.pageIndex of @ViewBag.totalPages</p>--> 
-	@if (this.User.IsInRole("Admin")){
-   <p class="text-right" style="position:absolute; top:160px;left:1100px;">
-        <a asp-action="Create" class="btn btn-primary">Maak een nieuw product aan</a>
-    </p>}
     @foreach (var item in Model) {
 
             <label class="product-card">

@@ -104,15 +104,14 @@ namespace MVC.Controllers
                 }
             }
 
-            /*var Address = user.Address;
+            //-- Adress
+            var Address = user.Address;
             if (model.Address != Address)
             {
-                var setAdressResult = await _userManager.set(user, model.PhoneNumber);
-                if (!setAdressResult.Succeeded)
-                {
-                    throw new ApplicationException($"Unexpected error occurred setting phone number for user with ID '{user.Id}'.");
-                }
-            }*/
+                var setUserAdress = await _userManager.FindByIdAsync(user.Id);
+                setUserAdress.Address = model.Address;
+                await _userManager.UpdateAsync(user);
+            }
 
             StatusMessage = "Your profile has been updated";
             return RedirectToAction(nameof(Index));

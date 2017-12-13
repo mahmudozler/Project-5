@@ -473,3 +473,6 @@ footer div ul li {
     position: absolute;
     background-color: transparent;
 }
+.filterbar{
+    margin-bottom:15px;
+}
