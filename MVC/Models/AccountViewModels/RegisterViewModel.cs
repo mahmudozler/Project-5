@@ -18,6 +18,10 @@ namespace MVC.Models.AccountViewModels
         public string Address { get; set; }
 
         [Required]
+        [Display(Name = "Postcode")]
+        public string Zipcode { get; set; }
+
+        [Required]
         [StringLength(100, ErrorMessage = "De {0} moet min {2} en max {1} karakters lang zijn.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Wachtwoord")]

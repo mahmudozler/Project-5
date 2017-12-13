@@ -62,6 +62,7 @@ namespace MVC.Controllers
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
                 Address = user.Address,
+                Zipcode = user.Zipcode,
                 IsEmailConfirmed = user.EmailConfirmed,
                 StatusMessage = StatusMessage
             };
@@ -110,6 +111,15 @@ namespace MVC.Controllers
             {
                 var setUserAdress = await _userManager.FindByIdAsync(user.Id);
                 setUserAdress.Address = model.Address;
+                await _userManager.UpdateAsync(user);
+            }
+
+            //-- Zipcode
+            var Zipcode = user.Zipcode;
+            if (model.Zipcode != Zipcode)
+            {
+                var setUserZipcode = await _userManager.FindByIdAsync(user.Id);
+                setUserZipcode.Zipcode = model.Zipcode;
                 await _userManager.UpdateAsync(user);
             }
 

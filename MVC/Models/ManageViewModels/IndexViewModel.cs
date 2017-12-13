@@ -19,6 +19,8 @@ namespace MVC.Models.ManageViewModels
         [Display(Name = "Address")]
         public string Address { get; set; }
 
+        [Display(Name = "Postcode")]
+        public string Zipcode { get; set; }
 
         [Phone]
         [Display(Name = "telefoon nummer")]
