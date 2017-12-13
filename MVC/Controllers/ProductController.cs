@@ -24,7 +24,7 @@ namespace MVC.Controllers
         }
 
         // GET: Product
-        public IActionResult Index(string searchString, int pageIndex = 1, string orderBy = "Relevantie")
+        public IActionResult Index(string searchString, int pageIndex = 1, string orderBy = "Alphabetisch")
         {
             ViewData["Message"] = "Alle Producten";
 
@@ -47,8 +47,8 @@ namespace MVC.Controllers
                     ViewBag.orderByString = "Best Verkocht";
                     break;
                 default:
-                    order_by_selector = p => p.Id;
-                    ViewBag.orderByString = "Relevantie";
+                    order_by_selector = p => p.Name;
+                    ViewBag.orderByString = "Alphabetisch";
                     break;
             }
 
