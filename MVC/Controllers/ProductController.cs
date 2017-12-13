@@ -117,6 +117,18 @@ namespace MVC.Controllers
                 return NotFound();
             }
 
+            var product_specifications = from p in _context.Products
+                                         from s in _context.Specifications
+                                         where p.Id == id
+                                         where p.Id == s.ProductId
+                                         select new Specification
+                                         {
+                                             Name = s.Name,
+                                             Value = s.Value
+                                         };
+
+            product.Specifications = product_specifications.ToList();
+
             return View(product);
         }
 

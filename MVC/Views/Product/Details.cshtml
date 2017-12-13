@@ -94,42 +94,18 @@
             <button class="nisb4" onclick="nextimage4()">4</button>
             <button class="nisb5" onclick="nextimage5()">5</button>
         </div>
-        <br/>
-        <br/>
-        <dt>
-            @Html.DisplayNameFor(model => model.Type)
-        </dt>
-        <dd> 
-            @Html.DisplayFor(model => model.Type)
-        </dd>
-		
-		<br/>
+        
+        <h3>Omschrijving @Html.DisplayFor(model => model.Name)</h3>
+        <p>@Html.DisplayFor(model => model.Description)</p>
 
-		
-        <dt>
-            Naam
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+        <h3>Specificaties</h3>
+        <dl>
+            @foreach(var s in Model.Specifications){
+                <dt>@s.Name</dt>
+                <dd>@s.Value</dd>
+            }
+        </dl>
 
-		<br>
-		
-        <dt>
-            Beschrijving
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-		<!--
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-		-->
     </dl>
 </div>
 
