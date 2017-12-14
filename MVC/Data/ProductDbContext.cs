@@ -27,7 +27,7 @@ namespace MVC.Data
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Specification> Specifications { get; set; }
-        public DbSet<ShoppingCartItem> ShoppingCartItems {get;set;}
-
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
+        public DbSet<OrderHistory> OrderHistory { get; set; }
     }
 }

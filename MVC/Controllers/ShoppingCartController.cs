@@ -109,6 +109,23 @@ namespace MVC.Controllers
 
             };
 
+            var orderDate = DateTime.Now;
+
+            foreach (var si in _shoppingCart.GetShoppingCartItems())
+            {
+                OrderHistory order = new OrderHistory() {
+                    UserId = user.Id,
+                    ProductId = _context.Products.Where(p => p.Id == si.Product.Id).First().Id,
+                    Amount = si.Amount,
+                    Date = orderDate
+                };
+
+                _context.OrderHistory.Update(order);
+
+                _context.Products.Where(p => p.Id == si.Product.Id).First().Amount -= si.Amount;
+                _context.SaveChanges();
+            }
+
             ViewData["Message"] = this.sendit(model.Email, model.Username, user.Address);
 
             return View(model);
@@ -155,28 +172,28 @@ namespace MVC.Controllers
             {
                 body = reader.ReadToEnd();
             }
-            
-            string bodystring ="";
-            foreach(var cartitem in shoppingCart.GetShoppingCartItems())
+
+            string bodystring = "";
+            foreach (var cartitem in shoppingCart.GetShoppingCartItems())
             {
-                
-                bodystring += 
-                "<tr><td>"+cartitem.Product.Name+
-                " </td><td>"+cartitem.Amount.ToString()+
-                "</td><td>"+"€ " +cartitem.Product.Price.ToString() +
+
+                bodystring +=
+                "<tr><td>" + cartitem.Product.Name +
+                " </td><td>" + cartitem.Amount.ToString() +
+                "</td><td>" + "€ " + cartitem.Product.Price.ToString() +
                 "</td><td></td></tr>";
 
-                
-            }
-            bodystring += "<tr><td>"+
-                " </td><td>" +
-                "</td><td>"+
-                "</td><td>"+"€ " +shoppingCart.GetShoppingCartTotal().ToString()+"</td></tr>";
 
-            body= body.Replace("{swapthatshit}",bodystring);
+            }
+            bodystring += "<tr><td>" +
+                " </td><td>" +
+                "</td><td>" +
+                "</td><td>" + "€ " + shoppingCart.GetShoppingCartTotal().ToString() + "</td></tr>";
+
+            body = body.Replace("{swapthatshit}", bodystring);
             body = body.Replace("{Username}", UserName);
             body = body.Replace("{Geen Adres}", Adres);
-            
+
             return body;
         }
 
