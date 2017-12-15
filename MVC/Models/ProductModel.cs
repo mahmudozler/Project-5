@@ -24,12 +24,27 @@ namespace MVC.Models
         public Product Product { get; set; }
     }
 
-    public class OrderHistory
+    public class PartialOrder
     {
-        public string Id { get; set;}
+        public string Id { get; set; }
+        public string OrderId { get; set; }
         public string UserId { get; set; }
         public int ProductId { get; set; }
+        public float Price { get; set; }
         public int Amount { get; set; }
         public DateTime Date { get; set; }
+    }
+
+    public class OrderHistory
+    {
+        public string OrderId { get; set; }
+        public float Price { get; set; }
+        public DateTime Date { get; set; }
+        public List<Product> Orders { get; set; }
+    }
+
+    public class UserOrders
+    {
+        public List<OrderHistory> Orders { get; set; }
     }
 }

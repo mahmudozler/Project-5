@@ -110,17 +110,21 @@ namespace MVC.Controllers
             };
 
             var orderDate = DateTime.Now;
+            string orderId = getOrderId();
 
             foreach (var si in _shoppingCart.GetShoppingCartItems())
             {
-                OrderHistory order = new OrderHistory() {
+                PartialOrder order = new PartialOrder()
+                {
                     UserId = user.Id,
+                    OrderId = orderId,
                     ProductId = _context.Products.Where(p => p.Id == si.Product.Id).First().Id,
+                    Price = _shoppingCart.GetShoppingCartTotal(),
                     Amount = si.Amount,
                     Date = orderDate
                 };
 
-                _context.OrderHistory.Update(order);
+                _context.PartialOrder.Update(order);
 
                 _context.Products.Where(p => p.Id == si.Product.Id).First().Amount -= si.Amount;
                 _context.SaveChanges();
@@ -129,6 +133,16 @@ namespace MVC.Controllers
             ViewData["Message"] = this.sendit(model.Email, model.Username, user.Address);
 
             return View(model);
+        }
+
+        public string getOrderId()
+        {
+            Random random = new Random();
+            string orderId = "20" + random.Next(0, 100).ToString("000") + "-" +
+                             DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Year.ToString().Substring(2) + "-" + 
+                             DateTime.Now.Hour.ToString() + DateTime.Now.Millisecond.ToString();
+
+            return orderId;
         }
 
         public string sendit(string ReciverMail, string username, string Adres)

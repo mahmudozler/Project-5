@@ -28,6 +28,6 @@ namespace MVC.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<Specification> Specifications { get; set; }
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
-        public DbSet<OrderHistory> OrderHistory { get; set; }
+        public DbSet<PartialOrder> PartialOrder { get; set; }
     }
 }

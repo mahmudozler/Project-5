@@ -476,3 +476,82 @@ footer div ul li {
 .filterbar{
     margin-bottom:15px;
 }
+
+.order-card-container{
+    width: 100%;
+}
+
+.order-card{
+    position: relative;
+    width: 100%;
+    height: 155px;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 1px;
+    transition: 0.3s;
+    margin-bottom: 8px;
+    padding-right: 2px;
+    white-space: nowrap;
+}
+
+.order-card:hover{
+    box-shadow: 0px 0px 1px #526cb6;
+    border-color: #526cb6;
+}
+
+.order-properties{
+    width: 25%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 24px 16px 24px 24px;
+}
+
+.order-properties strong{
+    font-size: 18px;
+    color: #526cb6;
+}
+
+.order-properties p{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.order-properties a{
+    position: absolute;
+    bottom: 24px;
+}
+
+.order-list{
+    width: 75%;
+    height: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: auto;
+    padding: 24px 24px 0 0;
+}
+
+.order-product-container{
+    width: 35%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.order-product-image{
+    width: 64px;
+    min-height: 64px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: lightgray;
+}
+
+.order-product-name{
+    margin-left: 8px;
+    width: 66%;
+    max-height: 64px;
+    display: inline-block;
+    white-space: normal;
+}

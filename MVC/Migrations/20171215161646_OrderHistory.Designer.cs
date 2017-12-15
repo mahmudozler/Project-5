@@ -11,7 +11,7 @@ using System;
 namespace MVC.Migrations
 {
     [DbContext(typeof(ProductDbContext))]
-    [Migration("20171214155232_OrderHistory")]
+    [Migration("20171215161646_OrderHistory")]
     partial class OrderHistory
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -186,7 +186,7 @@ namespace MVC.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("MVC.Models.OrderHistory", b =>
+            modelBuilder.Entity("MVC.Models.PartialOrder", b =>
                 {
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
@@ -195,13 +195,17 @@ namespace MVC.Migrations
 
                     b.Property<DateTime>("Date");
 
+                    b.Property<string>("OrderId");
+
+                    b.Property<float>("Price");
+
                     b.Property<int>("ProductId");
 
                     b.Property<string>("UserId");
 
                     b.HasKey("Id");
 
-                    b.ToTable("OrderHistory");
+                    b.ToTable("PartialOrder");
                 });
 
             modelBuilder.Entity("MVC.Models.Product", b =>
