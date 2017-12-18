@@ -92,7 +92,9 @@
 
                 </div>
                 <a asp-action="Details" asp-route-id="@item.Id">
-                <img height="50%" width="90%" src="~/images/products/@Html.DisplayFor(modelItem => item.Name) - 0000.jpg">
+                <div class="product-card-image">
+                    <img height="50%" width="90%" src="~/images/products/@Html.DisplayFor(modelItem => item.Name) - 0000.jpg">
+                </div>
                 </a>
                 <div class="product-card-infobox">
                 <div class="product-card-price">

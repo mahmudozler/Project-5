@@ -247,10 +247,26 @@ footer div ul li {
 }
 
 .product-image {
+    display: block;
     max-width: 635px;
     max-height: 380px;
     width: auto;
     height: auto;
+    margin: auto;
+}
+
+.product-card-image{
+    width: 90%;
+    height: 50%;
+}
+
+.product-card-image img{
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    margin: auto;
 }
 
 .product-info {
