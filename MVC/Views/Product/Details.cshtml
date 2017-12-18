@@ -15,29 +15,29 @@
 
 	<div class="col-lg-7">
         <div class="product-image-container">
-			<img class="product-image" id="detailimage" src="~/images/products/@Html.DisplayFor(model => model.Name) - 0000.jpg">
+			<img class="product-image" id="detailimage" src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0000.jpg">
 		</div>
         <script>
             function nextimage(){
                 var a = document.getElementById("detailimage");
-                a.src = "/images/products/@Html.DisplayFor(model => model.Name) - 0000.jpg";
+                a.src = "/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0000.jpg";
             }
             function nextimage2(){
                 var a = document.getElementById("detailimage");
-                a.src = "/images/products/@Html.DisplayFor(model => model.Name) - 0001.jpg";
+                a.src = "/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0001.jpg";
             }
 
             function nextimage3(){
                 var a = document.getElementById("detailimage");
-                a.src = "/images/products/@Html.DisplayFor(model => model.Name) - 0002.jpg";
+                a.src = "/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0002.jpg";
             }
             function nextimage4(){
                 var a = document.getElementById("detailimage");
-                a.src = "/images/products/@Html.DisplayFor(model => model.Name) - 0003.jpg";
+                a.src = "/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0003.jpg";
             }
             function nextimage5(){
                 var a = document.getElementById("detailimage");
-                a.src = "/images/products/@Html.DisplayFor(model => model.Name) - 0004.jpg";
+                a.src = "/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0004.jpg";
             }
 
         </script>
@@ -52,15 +52,15 @@
             
         </style>
 		<div class="nextimagestyle">
-            <button class="nisb1" onclick="nextimage()"><img src="~/images/products/@Html.DisplayFor(model => model.Name) - 0000.jpg"/></button>
+            <button class="nisb1" onclick="nextimage()"><img src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0000.jpg"/></button>
             
-            <button class="nisb2" onclick="nextimage2()"><img src="~/images/products/@Html.DisplayFor(model => model.Name) - 0001.jpg"/></button>
+            <button class="nisb2" onclick="nextimage2()"><img src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0001.jpg"/></button>
             
-            <button class="nisb3" onclick="nextimage3()"><img src="~/images/products/@Html.DisplayFor(model => model.Name) - 0002.jpg"/></button>
+            <button class="nisb3" onclick="nextimage3()"><img src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0002.jpg"/></button>
             
-            <button class="nisb4" onclick="nextimage4()"><img src="~/images/products/@Html.DisplayFor(model => model.Name) - 0003.jpg"/></button>
+            <button class="nisb4" onclick="nextimage4()"><img src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0003.jpg"/></button>
             
-            <button class="nisb5" onclick="nextimage5()"><img src="~/images/products/@Html.DisplayFor(model => model.Name) - 0004.jpg"/></button>
+            <button class="nisb5" onclick="nextimage5()"><img src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0004.jpg"/></button>
         </div>
         
         <h3>Omschrijving @Html.DisplayFor(model => model.Name)</h3>

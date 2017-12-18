@@ -76,7 +76,7 @@
         <figure>
 
           @foreach(var product in Model) {
-            <a href="http://localhost:5000/Product/Details/@product.Id"><img src="@product.Name - 0000.jpg" alt/></a>
+            <a href="http://localhost:5000/Product/Details/@product.Id"><img src="@product.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0000.jpg" alt/></a>
           }
           
         <!-- <a href="http://localhost:5000/Product/Details/729"><img src="Acer Switch SW312-31-P9XJ - 0000.jpg" alt></a>
