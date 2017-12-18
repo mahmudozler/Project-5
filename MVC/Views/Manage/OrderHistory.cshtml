@@ -1,4 +1,7 @@
 ﻿@model MVC.Models.UserOrders
+@using Microsoft.AspNetCore.Identity;
+@inject UserManager<ApplicationUser> UserManager
+@{ var user = await UserManager.FindByNameAsync(@UserManager.GetUserName(User)); }
 
 @{
     ViewData["Title"] = "Ordergeschiedenis";
@@ -11,7 +14,8 @@
             <div class="order-properties">
                 <strong>@o.Date.ToString("dd MMMM yyy")</strong>
                 <p class="order-price">@string.Format("€ {0:N2}", o.Price)</p>
-                <a>Bekijk bestelling</a>
+                <!--<a>Bekijk bestelling @UserManager.GetUserName(User)</a>-->
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#@o.OrderId">Bekijk bestelling</button>
             </div>
             <div class="order-list">
                 @foreach(var po in o.Orders){
@@ -27,5 +31,50 @@
                 }
             </div>
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="@o.OrderId" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title"><b>Besteldatum:</b> @o.Date</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="bestelgegevens">
+                            <b>Aflever en Factuuradres</b>
+                            <p>Koper: @user.Name @user.Tussenvoegsel @user.Surname</p>
+                            <p>Adres: @user.Address</p>
+                            <p>Postcode: @user.Zipcode</p>
+                            <p>Email: @UserManager.GetUserName(User)</p>
+                            <p></p>
+                        </div>
+
+                        <div class="order-detail-list">
+                            @foreach(var po in o.Orders){
+                                <div class="order-product-container">
+                                    <div class="order-product-image">
+                                    <img src="~/images/products/@po.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0000.jpg"/>
+
+                                    </div>
+                                    <div class="order-product-name">
+                                        <strong>@po.Amount x <a asp-controller="Product" asp-action="Details" asp-route-id="@po.Id">@po.Name</a></strong>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <span class="totaalprijs">Totaalprijs: @string.Format("€ {0:N2}", o.Price)</span>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Sluiten</button>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
     }
+    
+
 </div>
