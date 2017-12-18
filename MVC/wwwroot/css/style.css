@@ -389,13 +389,14 @@ footer div ul li {
     /* margin-left: 19%; */
     margin-bottom: 5%;
     margin-top: 5%;
-
+    
     text-align: center;
     
 }
 
 
 .nextimagestyle img{
+    float: left;
     display: inline-block;
     margin-bottom: 5px;
     
@@ -405,19 +406,27 @@ footer div ul li {
     height: auto;
     /* margin: auto; */
 }
+
 .nextimagestyle button{
     background-color: transparent;
     /* float: left; */
     margin-right: 20px;
     padding: 8px 16px;
+    transition: 0.3s;
     text-decoration: none;
-    border: 1px solid #ddd;
+    border: 1px solid lightgray;
     width: 100px;
     height: 75px;
     margin-bottom: 40px;
     position: relative;
     
 }
+
+.nextimagestyle button:hover{
+    box-shadow: 0px 0px 1px #526cb6;
+    border-color: #526cb6;
+}
+
 .nextimagestyle button.active {
     background-color: #1f2125;
     color: rgb(29, 25, 25);
