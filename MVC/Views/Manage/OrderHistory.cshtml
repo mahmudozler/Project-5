@@ -17,7 +17,8 @@
                 @foreach(var po in o.Orders){
                     <div class="order-product-container">
                         <div class="order-product-image">
-                            <img/>
+                        <img style="diplay: block; margin: auto; max-width:100%; max-height:100%;width:auto;height:auto;" src="~/images/products/@po.Name - 0000.jpg"/>
+
                         </div>
                         <div class="order-product-name">
                             <strong>@po.Amount x @po.Name</strong>
