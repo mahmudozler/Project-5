@@ -62,6 +62,9 @@ namespace MVC.Controllers
 
             var model = new IndexViewModel
             {
+                Name = user.Name,
+                Tussenvoegsel= user.Tussenvoegsel,
+                Surname = user.Surname,
                 Username = user.UserName,
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
@@ -124,6 +127,30 @@ namespace MVC.Controllers
             {
                 var setUserZipcode = await _userManager.FindByIdAsync(user.Id);
                 setUserZipcode.Zipcode = model.Zipcode;
+                await _userManager.UpdateAsync(user);
+            }
+
+              var Name = user.Name;
+            if (model.Name != Name)
+            {
+                var setUserName = await _userManager.FindByIdAsync(user.Id);
+                setUserName.Name = model.Name;
+                await _userManager.UpdateAsync(user);
+            }
+
+             var Tussenvoegsel = user.Tussenvoegsel;
+            if (model.Tussenvoegsel != Tussenvoegsel)
+            {
+                var setUserTussenvoegsel = await _userManager.FindByIdAsync(user.Id);
+                setUserTussenvoegsel.Tussenvoegsel = model.Tussenvoegsel;
+                await _userManager.UpdateAsync(user);
+            }
+            
+              var Surname = user.Surname;
+            if (model.Surname != Surname)
+            {
+                var setUserSurname = await _userManager.FindByIdAsync(user.Id);
+                setUserSurname.Surname = model.Surname;
                 await _userManager.UpdateAsync(user);
             }
 

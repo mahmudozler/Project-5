@@ -10,6 +10,19 @@
     <div class="col-md-6">
         <form method="post">
             <div asp-validation-summary="All" class="text-danger"></div>
+              <div class="form-group">
+                <label asp-for="Name">Naam</label>
+                <input asp-for="Name" class="form-control"  />
+            </div>
+              <div class="form-group">
+                <label asp-for="Tussenvoegsel"></label>
+                <input asp-for="Tussenvoegsel" class="form-control"  />
+            </div>
+            
+              <div class="form-group">
+                <label asp-for="Surname">Achternaam</label>
+                <input asp-for="Surname" class="form-control"  />
+            </div>
             <div class="form-group">
                 <label asp-for="Username">Gebuikersnaam</label>
                 <input asp-for="Username" class="form-control" disabled />

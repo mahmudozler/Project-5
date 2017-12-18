@@ -246,7 +246,7 @@ namespace MVC.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Address = model.Address, Zipcode = model.Zipcode };
+                var user = new ApplicationUser { Name = model.Name , Surname = model.Surname, UserName = model.Email, Tussenvoegsel = model.Tussenvoegsel, Email = model.Email, Address = model.Address, Zipcode = model.Zipcode };
                 IdentityResult result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

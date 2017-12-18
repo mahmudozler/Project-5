@@ -9,6 +9,18 @@ namespace MVC.Models.AccountViewModels
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name = "Naam")]
+        public string Name { get; set; }
+
+        [Required]
+        [Display(Name = "Tussenvoegsel")]
+        public string Tussenvoegsel { get; set; }
+
+        [Required]
+        [Display(Name = "Achternaam")]
+        public string Surname { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
@@ -18,7 +30,7 @@ namespace MVC.Models.AccountViewModels
         public string Address { get; set; }
 
         [Required]
-        [StringLength(6, MinimumLength = 6),RegularExpression("[0-9]{4}"+"[A-Z]{2}",ErrorMessage = "Vul een correct postcode in(bijv. 1234AB)")]
+        [StringLength(6, MinimumLength = 6), RegularExpression("[0-9]{4}" + "[A-Z]{2}", ErrorMessage = "Vul een correct postcode in(bijv. 1234AB)")]
         [Display(Name = "Postcode")]
         public string Zipcode { get; set; }
 
