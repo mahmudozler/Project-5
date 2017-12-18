@@ -15,7 +15,7 @@
 
 	<div class="col-lg-7">
         <div class="product-image-container">
-			<img class="product-image" id="detailimage" src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0000.jpg">
+			<img class="product-image" id="detailimage" src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0000.jpg" onError="this.onerror=null;this.src='../../images/not-found.jpg';">
 		</div>
         <script>
             function nextimage(){
