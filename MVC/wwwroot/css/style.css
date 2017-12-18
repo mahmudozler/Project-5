@@ -569,7 +569,7 @@ footer div ul li {
     min-height: 64px;
     display: inline-block;
     vertical-align: top;
-    background-color: lightgray;
+    background-color: transparent;
 }
 
 .order-product-name{
