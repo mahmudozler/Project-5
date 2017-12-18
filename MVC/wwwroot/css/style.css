@@ -57,8 +57,8 @@ body {
 }
 
 .best_verkocht {
-    height: 280px;
-    background: #b5b5b5;
+    height: 250px;
+    background: transparent;
     display: block;
     margin-top: 22px;
     padding: 15px 0;
@@ -393,15 +393,29 @@ footer div ul li {
     text-align: center;
     
 }
+
+
+.nextimagestyle img{
+    display: inline-block;
+    margin-bottom: 5px;
+    
+    max-width: 64px;
+    max-height: 64px;
+    width: auto;
+    height: auto;
+    /* margin: auto; */
+}
 .nextimagestyle button{
-    color: #526cb6;
-    float: left;
+    background-color: transparent;
+    /* float: left; */
+    margin-right: 20px;
     padding: 8px 16px;
     text-decoration: none;
     border: 1px solid #ddd;
     width: 100px;
     height: 75px;
     margin-bottom: 40px;
+    position: relative;
     
 }
 .nextimagestyle button.active {
@@ -456,25 +470,48 @@ footer div ul li {
 }
 @keyframes slidy {
     0% { left: 0%; }
-    20% { left: 0%; }
-    25% { left: -100%; }
-    
+    /* 25% { left: -25%; } */
+    50% { left: -100%; }
+    /* 75% { left: -75%; } */
+    100% { left: 0%; }
     }
     
     
-    div#slider { overflow: hidden; background-color: gray;}
-    div#slider figure img { width: 18%; float: left;margin-left:30px; background-color: transparent;background-color: transparent; }
+    div#slider { overflow: hidden; background-color: rgb(255, 255, 255);
+        border-style: solid;
+        border-width: 2px;
+        border-color: lightgray;
+    }
+    div#slider figure img { 
+        margin-top:5px;
+        display: inline-block;
+        max-width: 180px;
+        max-height: 180px;
+        margin-right: 90px;
+        width: auto;
+        height: auto;
+        margin-bottom: 50px;
+         }
     div#slider figure { 
-        
       position: relative;
-      width: 130%;
-      height: 200%;
+      width: 200%;
+      height: 150px;
       margin: 0;
       left: 0;
       text-align: left;
       font-size: 0;
-      animation: 30s slidy infinite; 
+      
+      animation: 20s slidy infinite;
     }
+    div#slider figure:hover { 
+        position: relative;
+        width: 200%;
+        height: 150px;
+        margin: 0;
+        left: 0;
+        text-align: left;
+        font-size: 0;
+        animation-play-state: paused;}
 
 .panda-container-outer{
     margin: 0px auto 80px auto;
