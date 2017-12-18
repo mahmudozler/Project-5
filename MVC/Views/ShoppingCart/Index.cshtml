@@ -30,7 +30,7 @@
                         @(itemcart.Amount * itemcart.Product.Price)
                     </td> 
                     <td class="td-calc"><a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCart" asp-route-Id="@itemcart.Product.Id">-</a></td>
-                    <td class="td-calc"><a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-Id="@itemcart.Product.Id">+</a></td>
+                    @if (itemcart.Amount < itemcart.Product.Amount){                     <td class="td-calc"><a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-Id="@itemcart.Product.Id">+</a></td>}                        else {                     <td class="td-calc"><a style="background-color:gray" class="btn btn-primary" asp-controller="ShoppingCart" asp-action="Index" asp-route-Id="@itemcart.Product.Id">+</a></td>                         } 
                 </tr>
             } 
         </tbody>
