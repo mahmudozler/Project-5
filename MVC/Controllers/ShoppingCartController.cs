@@ -53,7 +53,15 @@ namespace MVC.Controllers
         public RedirectToActionResult AddToShoppingCart(int Id)
         {
             var selectedProduct = _context.Products.FirstOrDefault(p => p.Id == Id);
-            if (selectedProduct != null)
+
+            if (_shoppingCart.GetShoppingCartItems().Where(p => p.Product.Id == Id).FirstOrDefault() != null)
+            {
+                if (_shoppingCart.GetShoppingCartItems().Where(p => p.Product.Id == Id).FirstOrDefault().Amount < selectedProduct.Amount)
+                {
+                    _shoppingCart.AddToCart(selectedProduct, 1);
+                }
+            }
+            else if (selectedProduct != null)
             {
                 _shoppingCart.AddToCart(selectedProduct, 1);
             }
@@ -139,7 +147,7 @@ namespace MVC.Controllers
         {
             Random random = new Random();
             string orderId = "20" + random.Next(0, 100).ToString("000") + "-" +
-                             DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Year.ToString().Substring(2) + "-" + 
+                             DateTime.Now.Day.ToString() + DateTime.Now.Month.ToString() + DateTime.Now.Year.ToString().Substring(2) + "-" +
                              DateTime.Now.Hour.ToString() + DateTime.Now.Millisecond.ToString();
 
             return orderId;
