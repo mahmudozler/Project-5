@@ -64,34 +64,19 @@
     <dl class="dl-horizontal col-lg-7 product-info">
         <div>
         <style>
-            .nisb1{
-                background: url("/images/products/@Html.DisplayFor(model => model.Name) - 0000.jpg");
-                background-size: 100% 100%;
-                margin-right: 3%;}
-            .nisb2{
-                background: url("/images/products/@Html.DisplayFor(model => model.Name) - 0001.jpg");
-                background-size: 100% 100%;
-                margin-right: 3%;}
-            .nisb3{
-                background: url("/images/products/@Html.DisplayFor(model => model.Name) - 0002.jpg");
-                background-size: 100% 100%;
-                margin-right: 3%;}
-            .nisb4{
-                background: url("/images/products/@Html.DisplayFor(model => model.Name) - 0003.jpg");
-                background-size: 100% 100%;
-                margin-right: 3%;}
-            .nisb5{
-                background: url("/images/products/@Html.DisplayFor(model => model.Name) - 0004.jpg");
-                background-size: 100% 100%;
-                margin-right: 3%;}
+            
             
         </style>
 		<div class="nextimagestyle">
-            <button class="nisb1" onclick="nextimage()">1</button>
-            <button class="nisb2" onclick="nextimage2()">2</button>
-            <button class="nisb3" onclick="nextimage3()">3</button>
-            <button class="nisb4" onclick="nextimage4()">4</button>
-            <button class="nisb5" onclick="nextimage5()">5</button>
+            <button class="nisb1" onclick="nextimage()"><img src="~/images/products/@Html.DisplayFor(model => model.Name) - 0000.jpg"/></button>
+            
+            <button class="nisb2" onclick="nextimage2()"><img src="~/images/products/@Html.DisplayFor(model => model.Name) - 0001.jpg"/></button>
+            
+            <button class="nisb3" onclick="nextimage3()"><img src="~/images/products/@Html.DisplayFor(model => model.Name) - 0002.jpg"/></button>
+            
+            <button class="nisb4" onclick="nextimage4()"><img src="~/images/products/@Html.DisplayFor(model => model.Name) - 0003.jpg"/></button>
+            
+            <button class="nisb5" onclick="nextimage5()"><img src="~/images/products/@Html.DisplayFor(model => model.Name) - 0004.jpg"/></button>
         </div>
         
         <h3>Omschrijving @Html.DisplayFor(model => model.Name)</h3>

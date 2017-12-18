@@ -392,15 +392,29 @@ footer div ul li {
     text-align: center;
     
 }
+
+
+.nextimagestyle img{
+    display: inline-block;
+    margin-bottom: 5px;
+    
+    max-width: 64px;
+    max-height: 64px;
+    width: auto;
+    height: auto;
+    /* margin: auto; */
+}
 .nextimagestyle button{
-    color: #526cb6;
-    float: left;
+    background-color: transparent;
+    /* float: left; */
+    margin-right: 20px;
     padding: 8px 16px;
     text-decoration: none;
     border: 1px solid #ddd;
     width: 100px;
     height: 75px;
     margin-bottom: 40px;
+    position: relative;
     
 }
 .nextimagestyle button.active {
