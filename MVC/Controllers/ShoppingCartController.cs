@@ -129,7 +129,7 @@ namespace MVC.Controllers
                 _context.Products.Where(p => p.Id == si.Product.Id).First().Amount -= si.Amount;
                 _context.SaveChanges();
             }
-
+            ClearCart();
             ViewData["Message"] = this.sendit(model.Email, model.Username, user.Address);
 
             return View(model);
