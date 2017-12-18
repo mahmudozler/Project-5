@@ -19,9 +19,9 @@ namespace MVC.Models
         {
             _appDbContext = context;
         }
-        public string ShoppingCartId { get;set;}
-        public List<ShoppingCartItem> ShoppingCartItems {get;set;}
-   
+        public string ShoppingCartId { get; set; }
+        public List<ShoppingCartItem> ShoppingCartItems { get; set; }
+
         //Shopping Cart methods
         public static ShoppingCart GetCart(IServiceProvider services)
         {
@@ -31,7 +31,7 @@ namespace MVC.Models
             var context = services.GetService<ProductDbContext>();
             string cartId = session.GetString("CartId") ?? Guid.NewGuid().ToString();
 
-            session.SetString("CartId",cartId);
+            session.SetString("CartId", cartId);
             //session.SetString("CartId", JsonConvert.SerializeObject(cartId));
 
             return new ShoppingCart(context) { ShoppingCartId = cartId };
@@ -121,5 +121,5 @@ namespace MVC.Models
             return total;
         }
 
-   }
+    }
 }
