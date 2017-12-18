@@ -240,10 +240,17 @@ footer div ul li {
     margin-top: 100px;
 }
 
+.product-image-container {
+    height: 380px;
+    width: 635px;
+    background: white;
+}
+
 .product-image {
-    width: 100%;
-    height: 350px;
-    background: #ccc;
+    max-width: 635px;
+    max-height: 380px;
+    width: auto;
+    height: auto;
 }
 
 .product-info {
@@ -362,7 +369,7 @@ footer div ul li {
     line-height: 2.4 !important;
 }
 .nextimagestyle{
-    margin-left: 19%;
+    /* margin-left: 19%; */
     margin-bottom: 5%;
     margin-top: 5%;
 
@@ -375,8 +382,9 @@ footer div ul li {
     padding: 8px 16px;
     text-decoration: none;
     border: 1px solid #ddd;
-    width: 75px;
+    width: 100px;
     height: 75px;
+    margin-bottom: 40px;
     
 }
 .nextimagestyle button.active {
