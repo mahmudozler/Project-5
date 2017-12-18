@@ -43,7 +43,9 @@ namespace MVC.Controllers
                     ViewBag.orderByString = "Prijs Hoog - Laag";
                     break;
                 case "Best":
-                    order_by_selector = p => p.Id;
+                    updateSold();
+                    order_by_selector = p => p.Sold;
+                    descending = true;
                     ViewBag.orderByString = "Best Verkocht";
                     break;
                 default:
@@ -237,6 +239,22 @@ namespace MVC.Controllers
         private bool ProductExists(int id)
         {
             return _context.Products.Any(e => e.Id == id);
+        }
+
+        private void updateSold()
+        {
+            DateTime today = DateTime.Now.Date;
+
+            foreach (var order in _context.PartialOrder.GroupBy(p => p.OrderId)
+                                                       .Select(g => g.First())
+                                                       .Where(p => (today - p.Date).TotalDays <= 7))
+            {
+                var temp_product = _context.Products.Where(p => p.Id == order.ProductId).FirstOrDefault();
+
+                temp_product.Sold = order.Amount;
+            }
+
+            _context.SaveChanges();
         }
     }
 }

@@ -12,6 +12,7 @@ namespace MVC.Models
         public string Description { get; set; }
         public float Price { get; set; }
         public int Amount { get; set; }
+        public int Sold { get; set; }
         public List<Specification> Specifications { get; set; }
     }
 

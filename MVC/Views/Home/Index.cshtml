@@ -1,4 +1,6 @@
-﻿@{      
+﻿@model IEnumerable<MVC.Models.Product>
+
+@{      
    ViewData["Title"] = "Home Page";       
 }
 <div class="container">
@@ -72,21 +74,21 @@
         <base href="/images/products/">
         <div id="slider">
         <figure>
-        <a href="http://localhost:5000/Product/Details/729"><img src="Acer Switch SW312-31-P9XJ - 0000.jpg" alt></a>
-        <a href="http://localhost:5000/Product/Details/483"><img src="Trust Elight Toetsenbord QWERTY - 0004.jpg" alt></a>
 
+          @foreach(var product in Model) {
+            <a href="http://localhost:5000/Product/Details/@product.Id"><img src="@product.Name - 0000.jpg" alt/></a>
+          }
+          
+        <!-- <a href="http://localhost:5000/Product/Details/729"><img src="Acer Switch SW312-31-P9XJ - 0000.jpg" alt></a>
+        <a href="http://localhost:5000/Product/Details/483"><img src="Trust Elight Toetsenbord QWERTY - 0004.jpg" alt></a>
         <a href="http://localhost:5000/Product/Details/828"><img src="Acer Predator G9-593-7757 - 0000.jpg" alt></a>
         <a href="http://localhost:5000/Product/Details/456"><img src="R-Go-Tools Ergo Compact Toetsenbord QWERTY - 0000.jpg" alt></a>
         <a href="http://localhost:5000/Product/Details/1364"><img src="Acer Aspire Z24-880 I9420 NL All-in-One - 0000.jpg" alt></a>
         <a href="http://localhost:5000/Product/Details/1340"><img src="Acer Chromebook 11 CB3-131-C2SS - 0000.jpg" alt></a>
         <a href="http://localhost:5000/Product/Details/561"><img src="Acer KG241Qbmiix - 0003.jpg" alt></a>
         <a href="http://localhost:5000/Product/Details/1016"><img src="Acer Spin 1 SP111-31-C34F - 0002.jpg" alt></a>
-        <a href="http://localhost:5000/Product/Details/1019"><img src="Apple MacBook 12 (2017) MNYH2NA Silver - 0000.jpg" alt></a>
+        <a href="http://localhost:5000/Product/Details/1019"><img src="Apple MacBook 12 (2017) MNYH2NA Silver - 0000.jpg" alt></a> -->
         
-        
-        
-        
-
         </figure>
         </div>
 	</div>
