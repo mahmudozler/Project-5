@@ -16,7 +16,7 @@ namespace MVC.Models.ManageViewModels
         [Display(Name = "Naam")]
         public string Name { get; set; }
 
-        [Required]
+      
         [Display(Name = "Tussenvoegsel")]
         public string Tussenvoegsel { get; set; }
 
