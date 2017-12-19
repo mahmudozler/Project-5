@@ -145,7 +145,7 @@ namespace MVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,type,name,description,price,amount")] Product product)
+        public async Task<IActionResult> Create([Bind("Id,Type,Name,Description,Price,Amount")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -165,7 +165,7 @@ namespace MVC.Controllers
             }
 
             var product = await _context.Products.SingleOrDefaultAsync(m => m.Id == id);
-            if (product == null)
+            if (product == null) 
             {
                 return NotFound();
             }
@@ -177,7 +177,7 @@ namespace MVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,type,name,description,price,amount")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Type,Name,Description,Price,Amount")] Product product)
         {
             if (id != product.Id)
             {
@@ -194,7 +194,7 @@ namespace MVC.Controllers
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!ProductExists(product.Id))
-                    {
+                    {   
                         return NotFound();
                     }
                     else

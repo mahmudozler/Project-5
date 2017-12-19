@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Bewerk";
 }
+@if (this.User.IsInRole("Admin")){
 <div class="container">
 
 
@@ -76,7 +77,7 @@
 
  </div> 
 
-
+ }
 <br/><br/><br/><br/><br/><br/>
 
 
