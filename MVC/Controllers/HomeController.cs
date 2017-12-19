@@ -59,9 +59,7 @@ namespace MVC.Controllers
         {
             DateTime today = DateTime.Now.Date;
 
-            foreach (var order in _context.PartialOrder.GroupBy(p => p.OrderId)
-                                                       .Select(g => g.First())
-                                                       .Where(p => (today - p.Date).TotalDays <= 7))
+            foreach (var order in _context.PartialOrder.Where(p => (today - p.Date).TotalDays <= 7))
             {
                 var temp_product = _context.Products.Where(p => p.Id == order.ProductId).FirstOrDefault();
 

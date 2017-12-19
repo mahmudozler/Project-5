@@ -24,7 +24,7 @@ namespace MVC.Controllers
         }
 
         // GET: Product
-        public IActionResult Index(string searchString, int pageIndex = 1, string orderBy = "Alphabetisch")
+        public IActionResult Index(string searchString, int pageIndex = 1, string orderBy = "Best")
         {
             ViewData["Message"] = "Alle Producten";
 
@@ -33,6 +33,12 @@ namespace MVC.Controllers
 
             switch (orderBy)
             {
+                case "Best":
+                    updateSold();
+                    order_by_selector = p => p.Sold;
+                    descending = true;
+                    ViewBag.orderByString = "Best Verkocht";
+                    break;
                 case "PrijsLH":
                     order_by_selector = p => p.Price;
                     ViewBag.orderByString = "Prijs Laag - Hoog";
@@ -41,12 +47,6 @@ namespace MVC.Controllers
                     order_by_selector = p => p.Price;
                     descending = true;
                     ViewBag.orderByString = "Prijs Hoog - Laag";
-                    break;
-                case "Best":
-                    updateSold();
-                    order_by_selector = p => p.Sold;
-                    descending = true;
-                    ViewBag.orderByString = "Best Verkocht";
                     break;
                 default:
                     order_by_selector = p => p.Name;
@@ -178,6 +178,7 @@ namespace MVC.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Type,Name,Description,Price,Amount")] Product product)
+
         {
             if (id != product.Id)
             {
@@ -245,15 +246,13 @@ namespace MVC.Controllers
         {
             DateTime today = DateTime.Now.Date;
 
-            foreach (var order in _context.PartialOrder.GroupBy(p => p.OrderId)
-                                                       .Select(g => g.First())
-                                                       .Where(p => (today - p.Date).TotalDays <= 7))
+            foreach (var order in _context.PartialOrder.Where(p => (today - p.Date).TotalDays <= 7))
             {
                 var temp_product = _context.Products.Where(p => p.Id == order.ProductId).FirstOrDefault();
 
                 temp_product.Sold = order.Amount;
             }
-
+                
             _context.SaveChanges();
         }
     }

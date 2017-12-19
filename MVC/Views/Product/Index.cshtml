@@ -68,13 +68,13 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle filterbar" asp-area="" asp-controller="Manage" asp-action="Index" title="Manage" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sorteren op: @ViewBag.orderByString</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="?pageIndex=@(ViewBag.pageIndex)@ViewBag.searchString&orderBy=Alphabetisch">Alphabetisch</a>
+                        <a class="dropdown-item" href="?pageIndex=@(ViewBag.pageIndex)@ViewBag.searchString&orderBy=Best">Best Verkocht</a>
                         <hr>
                         <a class="dropdown-item" href="?pageIndex=@(ViewBag.pageIndex)@ViewBag.searchString&orderBy=PrijsLH">Prijs Laag - Hoog</a>
                         <hr>
                         <a class="dropdown-item" href="?pageIndex=@(ViewBag.pageIndex)@ViewBag.searchString&orderBy=PrijsHL">Prijs Hoog - Laag</a>
                         <hr>
-                        <a class="dropdown-item" href="?pageIndex=@(ViewBag.pageIndex)@ViewBag.searchString&orderBy=Best">Best Verkocht</a>
+                        <a class="dropdown-item" href="?pageIndex=@(ViewBag.pageIndex)@ViewBag.searchString&orderBy=Alphabetisch">Alphabetisch</a>
                     </div>
                 </li>
             </ul>
@@ -94,7 +94,7 @@
                 <a asp-action="Details" asp-route-id="@item.Id">
                 <div class="product-card-image">
                     @if (item.Name != null){
-                        <img height="50%" width="90%" src="~/images/products/@item.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0000.jpg"/>
+                        <img height="50%" width="90%" src="~/images/products/@item.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0000.jpg" alt="~/images/not-found.jpg"/>
                     }else{
                         <img height="50%" width="90%" src='../../images/not-found.jpg';"/>
                     }
