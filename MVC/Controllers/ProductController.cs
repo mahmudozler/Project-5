@@ -33,6 +33,12 @@ namespace MVC.Controllers
 
             switch (orderBy)
             {
+                case "Best":
+                    updateSold();
+                    order_by_selector = p => p.Sold;
+                    descending = true;
+                    ViewBag.orderByString = "Best Verkocht";
+                    break;
                 case "PrijsLH":
                     order_by_selector = p => p.Price;
                     ViewBag.orderByString = "Prijs Laag - Hoog";
@@ -42,15 +48,15 @@ namespace MVC.Controllers
                     descending = true;
                     ViewBag.orderByString = "Prijs Hoog - Laag";
                     break;
-                case "Best":
+                case "Alphabetisch":
+                    order_by_selector = p => p.Name;
+                    ViewBag.orderByString = "Alphabetisch";
+                    break;
+                default:
                     updateSold();
                     order_by_selector = p => p.Sold;
                     descending = true;
                     ViewBag.orderByString = "Best Verkocht";
-                    break;
-                default:
-                    order_by_selector = p => p.Name;
-                    ViewBag.orderByString = "Alphabetisch";
                     break;
             }
 
