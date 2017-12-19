@@ -8,11 +8,12 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
+    var user = await UserManager.FindByNameAsync(@UserManager.GetUserName(User));
     <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
         <ul class="nav navbar-nav navbar-right">
             @if (User.IsInRole("Admin")) { 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" asp-area="" asp-controller="Manage" asp-action="Index" title="Manage" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hallo @UserManager.GetUserName(User)!</a>
+                    <a class="nav-link dropdown-toggle" asp-area="" asp-controller="Manage" asp-action="Index" title="Manage" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hallo @user.Name!</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" asp-controller="Manage" asp-action="Index">Beheer Account</a>
                         <hr>
@@ -26,7 +27,7 @@
                 </li>
             } else {
                 <li>
-                    <a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage" role="button">Hallo @UserManager.GetUserName(User)!</a>
+                    <a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage" role="button">Hallo @user.Name!</a>
                 </li>
             }
             <li>
