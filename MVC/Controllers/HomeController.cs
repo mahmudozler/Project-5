@@ -66,9 +66,8 @@ namespace MVC.Controllers
                 var temp_product = _context.Products.Where(p => p.Id == order.ProductId).FirstOrDefault();
 
                 temp_product.Sold = order.Amount;
+                _context.SaveChanges();
             }
-
-            _context.SaveChanges();
         }
     }
 }
