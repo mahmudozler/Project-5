@@ -93,7 +93,9 @@
                 </div>
                 <a asp-action="Details" asp-route-id="@item.Id">
                 <div class="product-card-image">
-                    <img height="50%" width="90%" src="~/images/products/@item.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0000.jpg" onError="this.onerror=null;this.src='../../images/not-found.jpg';"/>
+                    @if (item.Name != null){
+                        <img height="50%" width="90%" src="~/images/products/@item.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0000.jpg" onError="this.onerror=null;this.src='../../images/not-found.jpg';"/>
+                    }
                 </div>
                 </a>
                 <div class="product-card-infobox">
