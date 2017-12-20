@@ -62,8 +62,8 @@ body {
     margin-bottom: 100px;
     /* box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2); */
     width:600px;
-    height: 600px;
-    
+    height: 600;
+    overflow:auto;
 }
 .card-header-color h1{
     color: white;
@@ -92,12 +92,12 @@ body {
     
     <div class="card">
             <h3>Verzendbevestiging</h3>
-            <p>Geachte heer {Username}</p>
+            <p>Geachte heer {Surname}</p>
             <p> 
-                Uw bestelling bij Robomarkt met ordernummer 19216455
+                Uw bestelling bij Robomarkt met ordernummer {orderid}
                 is verzonden naar het volgende adres:
-            <p>{Username}</p>
-            <p>{Geen Adres}</p>
+            <p>{Zipcode} <br/>
+            {Geen Adres}</p>
                 Uw bestelling wordt
                 aangeboden door een koerier van AMP Logistics.
                 Deze zal met u aan de deur het contract afhandelen.</p>

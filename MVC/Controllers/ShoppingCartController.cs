@@ -113,7 +113,9 @@ namespace MVC.Controllers
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
                 IsEmailConfirmed = user.EmailConfirmed,
-                Address = user.Address
+                Address = user.Address,
+                Surname = user.Surname,
+                Zipcode = user.Zipcode
 
             };
 
@@ -137,8 +139,8 @@ namespace MVC.Controllers
                 _context.Products.Where(p => p.Id == si.Product.Id).First().Amount -= si.Amount;
                 _context.SaveChanges();
             }
+            ViewData["Message"] = this.sendit(model.Email, model.Surname, user.Address, user.Zipcode, orderId);
             ClearCart();
-            ViewData["Message"] = this.sendit(model.Email, model.Username, user.Address);
 
             return View(model);
         }
@@ -153,14 +155,14 @@ namespace MVC.Controllers
             return orderId;
         }
 
-        public string sendit(string ReciverMail, string username, string Adres)
+        public string sendit(string ReciverMail, string surname, string Adres, string Zipcode, string OrderId)
         {
             MailMessage msg = new MailMessage();
 
             msg.From = new MailAddress("robomarkt.g3@gmail.com");
             msg.To.Add(ReciverMail);
             msg.Subject = "Your Robomarkt order! " + DateTime.Now.ToString();
-            msg.Body = this.CreateBody(username, Adres);
+            msg.Body = this.CreateBody(surname, Adres, Zipcode, OrderId);
             msg.IsBodyHtml = true;
 
             SmtpClient client = new SmtpClient();
@@ -186,7 +188,7 @@ namespace MVC.Controllers
             }
         }
 
-        private string CreateBody(string UserName, string Adres)
+        private string CreateBody(string Surname, string Adres, string Zipcode, string orderId)
         {
             string body = string.Empty;
             ShoppingCart shoppingCart = _shoppingCart;
@@ -203,18 +205,21 @@ namespace MVC.Controllers
                 "<tr><td>" + cartitem.Product.Name +
                 " </td><td>" + cartitem.Amount.ToString() +
                 "</td><td>" + "€ " + cartitem.Product.Price.ToString() +
-                "</td><td></td></tr>";
+                "</td><td>€ " + (cartitem.Product.Price * cartitem.Amount).ToString() + "</td></tr>";
 
 
             }
             bodystring += "<tr><td>" +
                 " </td><td>" +
                 "</td><td>" +
-                "</td><td>" + "€ " + shoppingCart.GetShoppingCartTotal().ToString() + "</td></tr>";
+                "</td><td><b>" + "€ " + shoppingCart.GetShoppingCartTotal().ToString() + "</b></td></tr>";
 
             body = body.Replace("{swapthatshit}", bodystring);
-            body = body.Replace("{Username}", UserName);
+            body = body.Replace("{Surname}", Surname);
             body = body.Replace("{Geen Adres}", Adres);
+            body = body.Replace("{Zipcode}", Zipcode);
+            body = body.Replace("{orderid}", orderId);
+
 
             return body;
         }
