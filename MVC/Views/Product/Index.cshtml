@@ -84,7 +84,7 @@
     <!--<p dir="rtl">Page @ViewBag.pageIndex of @ViewBag.totalPages</p>--> 
     @foreach (var item in Model) {
 
-            <label class="product-card">
+            <div class="product-card col col-lg-4 col-md-4">
                 <div class="product-card-title">
                     <a class="product-card-title" asp-action="Details" asp-route-id="@item.Id">
                     @Html.DisplayFor(modelItem => item.Name)
@@ -120,29 +120,9 @@
                 </div>
                 
 
-            </label>
+            </div>
             
-            <!-- <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Type)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Description)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Price)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr> -->
     }
-        <!-- </tbody> -->
     <div class="text-center">
         <div class="pagination">
             @if(ViewBag.pageIndex > 1){
