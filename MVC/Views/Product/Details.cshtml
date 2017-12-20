@@ -15,7 +15,7 @@
 
 	<div class="col-lg-7">
         <div class="product-image-container">
-			<img class="product-image" id="detailimage" src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0000.jpg" onError="this.onerror=null;this.src='../../images/not-found.jpg';">
+			<img class="product-image" id="detailimage" src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0000.jpg" onError="this.onerror=null;this.src='../../images/not-found-large.jpg';">
 		</div>
         <script>
             function nextimage(){
@@ -52,15 +52,15 @@
             
         </style>
 		<div class="nextimagestyle">
-            <button class="nisb1" onclick="nextimage()"><img src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0000.jpg"/></button>
+            <button class="nisb1" onclick="nextimage()"><img src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0000.jpg" alt=""/></button>
             
-            <button class="nisb2" onclick="nextimage2()"><img src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0001.jpg"/></button>
+            <button class="nisb2" onclick="nextimage2()"><img src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0001.jpg" alt=""/></button>
             
-            <button class="nisb3" onclick="nextimage3()"><img src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0002.jpg"/></button>
+            <button class="nisb3" onclick="nextimage3()"><img src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0002.jpg" alt=""/></button>
             
-            <button class="nisb4" onclick="nextimage4()"><img src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0003.jpg"/></button>
+            <button class="nisb4" onclick="nextimage4()"><img src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0003.jpg" alt=""/></button>
             
-            <button class="nisb5" onclick="nextimage5()"><img src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0004.jpg"/></button>
+            <button class="nisb5" onclick="nextimage5()"><img src="~/images/products/@Model.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0004.jpg" alt=""/></button>
         </div>
         
         <h3>Omschrijving @Html.DisplayFor(model => model.Name)</h3>
