@@ -321,11 +321,12 @@ footer div ul li {
 }
 
 .product-card-title{
-    margin-left: 10%;
+    height: 2.2em;
+    /* margin-left: 10%; */
     margin-bottom: 10%;
     font-size: 1.1em;
     color: black;
-    
+    text-align: center;
 }
 
 .product-card-details{
