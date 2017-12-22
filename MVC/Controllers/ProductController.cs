@@ -165,7 +165,7 @@ namespace MVC.Controllers
             }
 
             var product = await _context.Products.SingleOrDefaultAsync(m => m.Id == id);
-            if (product == null) 
+            if (product == null)
             {
                 return NotFound();
             }
@@ -195,7 +195,7 @@ namespace MVC.Controllers
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!ProductExists(product.Id))
-                    {   
+                    {
                         return NotFound();
                     }
                     else
@@ -244,6 +244,11 @@ namespace MVC.Controllers
 
         private void updateSold()
         {
+            foreach (var p in _context.Products)
+            {
+                p.Sold = 0;
+            }
+
             DateTime today = DateTime.Now.Date;
 
             foreach (var order in _context.PartialOrder.Where(p => (today - p.Date).TotalDays <= 7))
@@ -252,7 +257,7 @@ namespace MVC.Controllers
 
                 temp_product.Sold = order.Amount;
             }
-                
+
             _context.SaveChanges();
         }
     }

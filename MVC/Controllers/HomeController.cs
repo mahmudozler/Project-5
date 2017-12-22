@@ -57,6 +57,11 @@ namespace MVC.Controllers
 
         private void updateSold()
         {
+            foreach (var p in _context.Products)
+            {
+                p.Sold = 0;
+            }
+
             DateTime today = DateTime.Now.Date;
 
             foreach (var order in _context.PartialOrder.Where(p => (today - p.Date).TotalDays <= 7))

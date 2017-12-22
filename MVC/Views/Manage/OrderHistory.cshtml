@@ -13,7 +13,8 @@
         <div class="order-card">
             <div class="order-properties">
                 <strong>@o.Date.ToString("dd MMMM yyy")</strong>
-                <p class="order-price">@string.Format("€ {0:N2}", o.Price)</p>
+                <p><b>@string.Format("€ {0:N2}", o.Price)</b></p>
+                <p>Aantal producten: @o.Orders.Count()</p>
                 <!--<a>Bekijk bestelling @UserManager.GetUserName(User)</a>-->
                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#@o.OrderId">Bekijk bestelling</button>
             </div>
