@@ -541,11 +541,18 @@ footer div ul li {
     height: 100%;
 }
 
-.coinmarketcap-currency-widget {
+.panda-container-widget{
     display: inline-block;
     width: 25%;
     vertical-align: top;
     margin-left: 24px; 
+}
+
+.coinmarketcap-currency-widget{
+    display: block;
+    width: 100%;
+    height: 25%;
+    margin-bottom: 24px;
 }
 
 .filterbar{
