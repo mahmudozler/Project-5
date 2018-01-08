@@ -544,15 +544,17 @@ footer div ul li {
 .panda-container-widget{
     display: inline-block;
     width: 25%;
+    height: 100%;
     vertical-align: top;
     margin-left: 24px; 
+    overflow: auto;
 }
 
 .coinmarketcap-currency-widget{
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: 170px;
     height: 25%;
-    margin-bottom: 24px;
+    margin-bottom: 64px;
 }
 
 .filterbar{
