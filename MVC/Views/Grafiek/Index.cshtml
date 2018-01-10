@@ -1,0 +1,87 @@
+
+
+<div id="piechart"></div>
+<div id="areachart" style="width: 900px; height: 500px;"></div>
+<div id="piechartproducten"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Omzet in euro'],
+  ['Maandag', 8],
+  ['Dinsdag', 2],
+  ['Woensdag', 4],
+  ['Donderdag', 2],
+  ['Vrijdag', 8],
+  ['Zaterdag', 4],
+  ['Zondag', 6],
+  
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Omzet in dagen', 'width':900, 'height':600};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.ColumnChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+
+ <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Inkomsten', 'Uitgave'],
+          ['2015',  1000,      400],
+          ['2016',  1170,      460],
+          ['2017',  660,       1120],
+          ['2018',  1030,      540]
+        ]);
+
+        var options = {
+          title: 'Bedrijf prestaties',
+          hAxis: {title: 'Jaar',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+          
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('areachart'));
+        chart.draw(data, options);
+      }
+    </script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Aantal producten'],
+  ['Asus zenbook', 80],
+  ['Apple macbook', 20],
+  ['lg Tv', 40],
+  ['samsung oled tv', 20],
+  ['Monitor samsung', 80],
+  
+  
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Producten hoeveelheid < 100', 'width':900, 'height':600};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.ColumnChart(document.getElementById('piechartproducten'));
+  chart.draw(data, options);
+}
+</script>
