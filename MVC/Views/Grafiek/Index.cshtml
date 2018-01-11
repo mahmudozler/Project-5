@@ -1,87 +1,80 @@
+@{ ViewData["Title"] = "Grafieken"; }
 
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        // Load the Visualization API and the corechart package.
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
 
-<div id="piechart"></div>
-<div id="areachart" style="width: 900px; height: 500px;"></div>
-<div id="piechartproducten"></div>
+        // Set a callback to run when the Google Visualization API is loaded.
+        google.charts.setOnLoadCallback(drawChart);
 
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        // Callback that creates and populates a data table,
+        // instantiates the pie chart, passes in the data and
+        // draws it.
+        function drawChart() {
 
-<script type="text/javascript">
-// Load google charts
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
+            // Create the data table.
+            var data = new google.visualization.DataTable();
+            data.addColumn('date', 'Maand');
+            data.addColumn('number', 'Omzet (EUR)');
 
-// Draw the chart and set the chart values
-function drawChart() {
-  var data = google.visualization.arrayToDataTable([
-  ['Task', 'Omzet in euro'],
-  ['Maandag', 8],
-  ['Dinsdag', 2],
-  ['Woensdag', 4],
-  ['Donderdag', 2],
-  ['Vrijdag', 8],
-  ['Zaterdag', 4],
-  ['Zondag', 6],
-  
-]);
+            @for(int i = 0; i < ViewBag.Data.Length; i++) {
+                <text>
+                    data.addRows([[new Date(@ViewBag.Data[i].Date.ToUniversalTime().Subtract(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalMilliseconds), @ViewBag.Data[i].Price]]);
+                </text>
+            }
 
-  // Optional; add a title and set the width and height of the chart
-  var options = {'title':'Omzet in dagen', 'width':900, 'height':600};
+            var result = google.visualization.data.group(
+                data,
+                [{'column': 0, 'modifier': getMonth, 'type': 'date'}],
+                [{'column': 1, 'aggregation': google.visualization.data.sum, 'type': 'number'}]
+            );
 
-  // Display the chart inside the <div> element with id="piechart"
-  var chart = new google.visualization.ColumnChart(document.getElementById('piechart'));
-  chart.draw(data, options);
-}
-</script>
+            function getMonth(x){
+                var month = x.getMonth();
+                var year = x.getFullYear();
 
- <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
+                return new Date(year, month);
+            }
 
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Year', 'Inkomsten', 'Uitgave'],
-          ['2015',  1000,      400],
-          ['2016',  1170,      460],
-          ['2017',  660,       1120],
-          ['2018',  1030,      540]
-        ]);
+            // Set chart options
+            var options = {
+                title: 'Robomarkt Omzet, in €',
+                curveType: 'function',
+                height: 600,
+                colors: ['#526cb6'],
+                hAxis: {
+                    format: 'MMM yy',
+                    viewWindow: {
+                        min: new Date(2018, 0),
+                        max: new Date(2018, 11)
+                    },
+                    gridlines: {
+                        count: 12
+                    }
+                },
+                vAxis: {
+                    format: 'short'
+                },
+                explorer: {
+                    actions: ['dragToPan', 'rightClickToReset'],
+                    axis: 'horizontal'
+                }
+            };
 
-        var options = {
-          title: 'Bedrijf prestaties',
-          hAxis: {title: 'Jaar',  titleTextStyle: {color: '#333'}},
-          vAxis: {minValue: 0}
-          
-        };
-
-        var chart = new google.visualization.AreaChart(document.getElementById('areachart'));
-        chart.draw(data, options);
-      }
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.LineChart(document.getElementById('chart_revenue'));
+            chart.draw(result, options);
+        }
     </script>
+</head>
 
-<script type="text/javascript">
-// Load google charts
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
-
-// Draw the chart and set the chart values
-function drawChart() {
-  var data = google.visualization.arrayToDataTable([
-  ['Task', 'Aantal producten'],
-  ['Asus zenbook', 80],
-  ['Apple macbook', 20],
-  ['lg Tv', 40],
-  ['samsung oled tv', 20],
-  ['Monitor samsung', 80],
-  
-  
-]);
-
-  // Optional; add a title and set the width and height of the chart
-  var options = {'title':'Producten hoeveelheid < 100', 'width':900, 'height':600};
-
-  // Display the chart inside the <div> element with id="piechart"
-  var chart = new google.visualization.ColumnChart(document.getElementById('piechartproducten'));
-  chart.draw(data, options);
-}
-</script>
+<body>
+    <div class="container">
+        <h2>Grafieken</h2>
+        <div id="chart_revenue"></div>
+    </div>
+</body>
