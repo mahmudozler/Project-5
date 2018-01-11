@@ -27,19 +27,6 @@
                 </text>
             }
 
-            var result = google.visualization.data.group(
-                data,
-                [{'column': 0, 'modifier': getMonth, 'type': 'date'}],
-                [{'column': 1, 'aggregation': google.visualization.data.sum, 'type': 'number'}]
-            );
-
-            function getMonth(x){
-                var month = x.getMonth();
-                var year = x.getFullYear();
-
-                return new Date(year, month);
-            }
-
             // Set chart options
             var options = {
                 title: 'Robomarkt Omzet, in €',
@@ -57,17 +44,101 @@
                     }
                 },
                 vAxis: {
-                    format: 'short'
+                    format: 'short',
+                    gridlines: {
+                        count: 10
+                    }
                 },
                 explorer: {
                     actions: ['dragToPan', 'rightClickToReset'],
                     axis: 'horizontal'
+                },
+                crosshair: {
+                    trigger: 'both'
+                },  
+                animation: {
+                    duration: 600,
+                    easing: 'inAndOut'
                 }
             };
 
+            function drawDaily(){
+                var dailyResult = google.visualization.data.group(
+                    data,
+                    [{'column': 0, 'modifier': getDaily, 'type': 'date'}],
+                    [{'column': 1, 'aggregation': google.visualization.data.sum, 'type': 'number'}]
+                );
+
+                function getDaily(x){
+                    var day = x.getDate();
+                    var month = x.getMonth();
+                    var year = x.getFullYear();
+
+                    return new Date(year, month, day);
+                }
+
+                options.hAxis.viewWindow.min = new Date(2018, 0, 1);
+                options.hAxis.viewWindow.max = new Date(2018, 0, 14);
+                options.hAxis.format = 'dd MMM yy';
+                options.hAxis.gridlines.count = 14;
+
+                chart.draw(dailyResult, options);                
+            }
+
+            function drawMonthly(){
+                var monthlyResult = google.visualization.data.group(
+                    data,
+                    [{'column': 0, 'modifier': getMonthly, 'type': 'date'}],
+                    [{'column': 1, 'aggregation': google.visualization.data.sum, 'type': 'number'}]
+                );
+
+                function getMonthly(x){
+                    var month = x.getMonth();
+                    var year = x.getFullYear();
+
+                    return new Date(year, month);
+                }
+
+                options.hAxis.viewWindow.min = new Date(2018, 0);
+                options.hAxis.viewWindow.max = new Date(2018, 11);
+                options.hAxis.format = 'MMM yy';
+                options.hAxis.gridlines.count = 12;
+
+                chart.draw(monthlyResult, options);                
+            }
+
+            function drawAnnually(){
+                var annuallyResult = google.visualization.data.group(
+                    data,
+                    [{'column': 0, 'modifier': getAnnually, 'type': 'date'}],
+                    [{'column': 1, 'aggregation': google.visualization.data.sum, 'type': 'number'}]
+                );
+
+                function getAnnually(x){
+                    var year = x.getFullYear();
+
+                    return new Date(year, 0);
+                }
+
+                options.hAxis.viewWindow.min = new Date(2018, 0);
+                options.hAxis.viewWindow.max = new Date(2028, 0);
+                options.hAxis.format = 'yyyy';
+                options.hAxis.gridlines.count = 10;
+
+                chart.draw(annuallyResult, options);                
+            }
+
             // Instantiate and draw our chart, passing in some options.
             var chart = new google.visualization.LineChart(document.getElementById('chart_revenue'));
-            chart.draw(result, options);
+            var daily_button = document.getElementById('daily_button');
+            var monthly_button = document.getElementById('monthly_button');
+            var annually_button = document.getElementById('annually_button');
+
+            daily_button.onclick = function() { drawDaily(); }
+            monthly_button.onclick = function() { drawMonthly(); }
+            annually_button.onclick = function() { drawAnnually(); }
+
+            drawMonthly();
         }
     </script>
 </head>
@@ -75,6 +146,9 @@
 <body>
     <div class="container">
         <h2>Grafieken</h2>
+        <button id="daily_button">1d</button>
+        <button id="monthly_button">1m</button>
+        <button id="annually_button">1y</button>
         <div id="chart_revenue"></div>
     </div>
 </body>

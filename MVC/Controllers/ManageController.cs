@@ -63,7 +63,7 @@ namespace MVC.Controllers
             var model = new IndexViewModel
             {
                 Name = user.Name,
-                Tussenvoegsel= user.Tussenvoegsel,
+                Tussenvoegsel = user.Tussenvoegsel,
                 Surname = user.Surname,
                 Username = user.UserName,
                 Email = user.Email,
@@ -130,7 +130,7 @@ namespace MVC.Controllers
                 await _userManager.UpdateAsync(user);
             }
 
-              var Name = user.Name;
+            var Name = user.Name;
             if (model.Name != Name)
             {
                 var setUserName = await _userManager.FindByIdAsync(user.Id);
@@ -138,15 +138,15 @@ namespace MVC.Controllers
                 await _userManager.UpdateAsync(user);
             }
 
-             var Tussenvoegsel = user.Tussenvoegsel;
+            var Tussenvoegsel = user.Tussenvoegsel;
             if (model.Tussenvoegsel != Tussenvoegsel)
             {
                 var setUserTussenvoegsel = await _userManager.FindByIdAsync(user.Id);
                 setUserTussenvoegsel.Tussenvoegsel = model.Tussenvoegsel;
                 await _userManager.UpdateAsync(user);
             }
-            
-              var Surname = user.Surname;
+
+            var Surname = user.Surname;
             if (model.Surname != Surname)
             {
                 var setUserSurname = await _userManager.FindByIdAsync(user.Id);
@@ -594,6 +594,8 @@ namespace MVC.Controllers
 
                 userOrders.Orders.Add(orderHistory);
             }
+
+            userOrders.Orders = userOrders.Orders.OrderByDescending(o => o.Date).ToList();
 
             return View(userOrders);
         }

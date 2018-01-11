@@ -20,7 +20,7 @@ namespace MVC.Controllers
 
         public IActionResult Index()
         {
-            var partialOrders = _context.PartialOrder.GroupBy(g => g.OrderId).Select(s => s.First());
+            var partialOrders = _context.PartialOrder.GroupBy(g => g.OrderId).Select(s => s.First()).OrderByDescending(o => o.Date);
 
             ViewBag.Data = partialOrders.ToArray();
 
