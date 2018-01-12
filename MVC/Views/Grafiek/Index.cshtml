@@ -30,10 +30,16 @@
             // Set chart options
             var options = {
                 title: 'Robomarkt Omzet, in €',
-                curveType: 'function',
                 height: 600,
+                bar: {
+                    groupWidth: '80%'
+                },
+                trendlines: {
+                    0: {type: 'polynomial', lineWidth: 12, opacity: .5}
+                },
                 colors: ['#526cb6'],
                 hAxis: {
+                    title: 'Datum',
                     format: 'MMM yy',
                     viewWindow: {
                         min: new Date(2018, 0),
@@ -44,21 +50,18 @@
                     }
                 },
                 vAxis: {
+                    title: 'Omzet (EUR)',
                     format: 'short',
                     gridlines: {
                         count: 10
                     }
                 },
                 explorer: {
-                    actions: ['dragToPan', 'rightClickToReset'],
+                    maxZoomIn: 1,
                     axis: 'horizontal'
                 },
                 crosshair: {
                     trigger: 'both'
-                },  
-                animation: {
-                    duration: 600,
-                    easing: 'inAndOut'
                 }
             };
 
@@ -125,18 +128,22 @@
                 options.hAxis.format = 'yyyy';
                 options.hAxis.gridlines.count = 10;
 
-                chart.draw(annuallyResult, options);                
+                chart.draw(annuallyResult, options);
+            }
+
+            function rebuildChart(){
+                chart = new google.visualization.ColumnChart(document.getElementById('chart_revenue'));
             }
 
             // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.LineChart(document.getElementById('chart_revenue'));
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_revenue'));
             var daily_button = document.getElementById('daily_button');
             var monthly_button = document.getElementById('monthly_button');
             var annually_button = document.getElementById('annually_button');
 
-            daily_button.onclick = function() { drawDaily(); }
-            monthly_button.onclick = function() { drawMonthly(); }
-            annually_button.onclick = function() { drawAnnually(); }
+            daily_button.onclick = function() { drawDaily(); rebuildChart(); }
+            monthly_button.onclick = function() { drawMonthly(); rebuildChart(); }
+            annually_button.onclick = function() { drawAnnually(); rebuildChart(); }
 
             drawMonthly();
         }
