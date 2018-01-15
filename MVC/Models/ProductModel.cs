@@ -48,4 +48,11 @@ namespace MVC.Models
     {
         public List<OrderHistory> Orders { get; set; }
     }
+
+    public class Bookmark
+    {
+        public int BookmarkId { get; set; }
+        public int ProductId { get; set; }
+        public string UserId { get; set; }
+    }
 }

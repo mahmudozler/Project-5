@@ -10,6 +10,7 @@ using MVC.Models;
 using MVC.Data;
 using MVC.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace MVC.Controllers
 {
@@ -17,10 +18,12 @@ namespace MVC.Controllers
     public class ProductController : Controller
     {
         private readonly ProductDbContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public ProductController(ProductDbContext context)
+        public ProductController(ProductDbContext context,UserManager<ApplicationUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: Product
@@ -260,5 +263,23 @@ namespace MVC.Controllers
 
             _context.SaveChanges();
         }
+
+        public async Task<IActionResult> Bookmark(int productId){
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                throw new ApplicationException($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+            }
+
+            _context.Bookmarks.Add(new Bookmark(){ 
+                ProductId = productId,
+                UserId = user.Id
+             });
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Details", new{ id = productId});
+        }
+
+        
     }
 }

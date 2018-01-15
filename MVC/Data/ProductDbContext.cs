@@ -29,5 +29,6 @@ namespace MVC.Data
         public DbSet<Specification> Specifications { get; set; }
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
         public DbSet<PartialOrder> PartialOrder { get; set; }
+        public DbSet<Bookmark> Bookmarks { get; set; }
     }
 }
