@@ -698,6 +698,14 @@ footer div ul li {
     font-size: 1.2em;
     font-weight: bold;
 }
+.bookmark{
+    float:right;
+    margin-right:195px;
+    margin-top:-5px;
+    border:0px;
+    background: #e87d7d !important;
+    border-color: #e87d7d !important;
+}
 
 /* DESKTOP */
 @media (min-width: 1200px) {

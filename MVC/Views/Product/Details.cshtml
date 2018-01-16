@@ -2,7 +2,9 @@
 @inject SignInManager<ApplicationUser> SignInManager 
 @inject UserManager<ApplicationUser> UserManager 
 
-@{ var user = await UserManager.FindByNameAsync(@UserManager.GetUserName(User)); }
+@*if (SignInManager.IsSignedIn(User)){
+    var user = await UserManager.FindByNameAsync(@UserManager.GetUserName(User));
+}*@
 @{
     ViewData["Title"] = "Details";
 }
@@ -46,7 +48,7 @@
         </script>
 	</div>
     
-	<div class="col-lg-5">   <div class="price-bar">@if (SignInManager.IsSignedIn(User)){ @await Component.InvokeAsync("BookmarkComponent", new { productId = @Model.Id, userId = @user.Id });  }                          <h3>€ @Html.DisplayFor(model => model.Price)</h3>           <!--<button class="btn kopen" >In winkelmandje</button>-->          @if(Model.Amount >=1){              <a class="btn kopen" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-Id="@Model.Id">In winkelmandje  <span class="glyphicon glyphicon-shopping-cart"></span></a>             }           else{             <p style= "font-weight:bold;color:red;position:absolute;top:18px;left:160px"> Deze product is tijdelijk niet op voorraad! </p>            }           <br/>            <ul class="featureList">             <li class = "tick" >Snelle levering</li>             <li class = "tick" >Niet goed geld terug!</li>             <li class = "tick" >Voor 17:00 besteld, morgen in huis!</li>             <li class = "tick" >Tijdelijk 10% korting op alle producten</li>             </ul>                   </div>     </div>
+	<div class="col-lg-5">   <div class="price-bar">@if (SignInManager.IsSignedIn(User)){ var user = await UserManager.FindByNameAsync(@UserManager.GetUserName(User)); @await Component.InvokeAsync("BookmarkComponent", new { productId = @Model.Id, userId = @user.Id });  }                          <h3>€ @Html.DisplayFor(model => model.Price)</h3>           <!--<button class="btn kopen" >In winkelmandje</button>-->          @if(Model.Amount >=1){              <a class="btn kopen" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-Id="@Model.Id">In winkelmandje  <span class="glyphicon glyphicon-shopping-cart"></span></a>             }           else{             <p style= "font-weight:bold;color:red;position:absolute;top:18px;left:160px"> Deze product is tijdelijk niet op voorraad! </p>            }           <br/>            <ul class="featureList">             <li class = "tick" >Snelle levering</li>             <li class = "tick" >Niet goed geld terug!</li>             <li class = "tick" >Voor 17:00 besteld, morgen in huis!</li>             <li class = "tick" >Tijdelijk 10% korting op alle producten</li>             </ul>                   </div>     </div>
     
     <dl class="dl-horizontal col-lg-7 product-info">
         <div>
