@@ -1,0 +1,8 @@
+@model MVC.ViewModels.BookmarkViewModel
+
+@if(Model.Bookmarks.Count() > 0){
+    <a asp-controller="Product" asp-action="Bookmark" asp-route-productId="@Model.currentProduct">Bookmark</a>
+} else {
+    <span>no</span>
+}
+

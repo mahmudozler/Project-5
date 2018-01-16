@@ -280,6 +280,5 @@ namespace MVC.Controllers
             return RedirectToAction("Details", new{ id = productId});
         }
 
-        
     }
 }
