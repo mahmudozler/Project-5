@@ -716,6 +716,35 @@ footer div ul li {
     float:left;
     width:100%;
     padding:10px 0;
+    border:1px solid #ccc;
+    padding-left:10px;
+    margin-bottom:3px;
+    min-height:70px;
+    position: relative;
+}
+.bookmark-list li img{
+    display: block;
+    max-width: 64px;
+    max-height: 64px;
+    width: auto;
+    height: auto;
+    margin: auto;
+    float:left;
+}
+.bookmark-list li .image-box{
+    height:65px;
+    width:64px;
+    float:left;
+    display: block;
+    margin-right:20px;
+}
+.bookmark-link{
+    margin-right:40px;
+    color:#000;
+}
+.remove-link{
+    position: absolute;
+    right:20px;
 }
 
 /* DESKTOP */

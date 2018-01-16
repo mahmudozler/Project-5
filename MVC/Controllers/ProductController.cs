@@ -295,5 +295,20 @@ namespace MVC.Controllers
             return RedirectToAction("Details", new{ id = productId});
         }
 
+        public async Task<IActionResult> RemoveBookmarkFromlist(int productId){
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                throw new ApplicationException($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+            }
+
+            var bookmarkrem = _context.Bookmarks.Where(b => b.UserId == user.Id && b.ProductId == productId).FirstOrDefault();
+
+            _context.Bookmarks.Remove(bookmarkrem);
+
+            await _context.SaveChangesAsync();
+            return 	RedirectToAction("Bookmarks","Manage");
+        }
+
     }
 }
