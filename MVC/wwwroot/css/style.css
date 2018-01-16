@@ -706,6 +706,17 @@ footer div ul li {
     background: #e87d7d !important;
     border-color: #e87d7d !important;
 }
+.bookmark-list{
+    min-height: 200px;
+    padding-left:0px;
+}
+.bookmark-list li{
+    display:inline;
+    list-style-type: none;
+    float:left;
+    width:100%;
+    padding:10px 0;
+}
 
 /* DESKTOP */
 @media (min-width: 1200px) {

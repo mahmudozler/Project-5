@@ -19,6 +19,8 @@ namespace Booking.Views.Manage
 
         public static string OrderHistory => "OrderHistory";
 
+        public static string Bookmarks => "Bookmarks";
+
         public static string ExternalLogins => "ExternalLogins";
 
         public static string TwoFactorAuthentication => "TwoFactorAuthentication";
@@ -29,7 +31,9 @@ namespace Booking.Views.Manage
 
         public static string UsersNavClass(ViewContext viewContext) => PageNavClass(viewContext, Users);
 
-       public static string OrderHistoryNavClass(ViewContext viewContext) => PageNavClass(viewContext, OrderHistory);
+        public static string OrderHistoryNavClass(ViewContext viewContext) => PageNavClass(viewContext, OrderHistory);
+
+        public static string BookmarksNavClass(ViewContext viewContext) => PageNavClass(viewContext, Bookmarks);
 
         public static string ExternalLoginsNavClass(ViewContext viewContext) => PageNavClass(viewContext, ExternalLogins);
 

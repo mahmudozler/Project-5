@@ -1,0 +1,9 @@
+@using MVC.Models
+@model System.Collections.Generic.List<Product>
+
+<h2>Bookmarks</h2>
+<ul class="bookmark-list">
+    @foreach(var bookmark in Model){
+        <li><a asp-controller="Product" asp-action="Details" asp-route-id="@bookmark.Id">@bookmark.Name</a></li>
+    }
+</ul>

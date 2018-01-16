@@ -600,6 +600,21 @@ namespace MVC.Controllers
             return View(userOrders);
         }
 
+        public async Task<IActionResult> Bookmarks(){
+            var user = await _userManager.GetUserAsync(User);
+
+            var bookmarks = _context.Bookmarks.Where(b => b.UserId == user.Id).ToList();
+
+            List<Product> bookmarked_products = new List<Product>(); 
+            foreach (var bookmark in bookmarks){
+                var product = _context.Products.Where(p => p.Id == bookmark.ProductId).FirstOrDefault();
+                bookmarked_products.Add(product);
+            }
+           
+
+            return View(bookmarked_products);
+        }
+
         #region Helpers
 
         private void AddErrors(IdentityResult result)
