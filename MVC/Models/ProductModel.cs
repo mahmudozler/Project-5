@@ -55,4 +55,11 @@ namespace MVC.Models
         public int ProductId { get; set; }
         public string UserId { get; set; }
     }
+
+    public class Sub
+    {
+        public int SubId { get; set; }
+        public int ProductId { get; set; }
+        public string UserId { get; set; }
+    }
 }

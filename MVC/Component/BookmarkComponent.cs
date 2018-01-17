@@ -18,13 +18,14 @@ namespace MVC.Components
             _context = context;
         }
 
-        public IViewComponentResult Invoke(int productId,string userId)
+        public IViewComponentResult Invoke(int productId,string userId, int amount)
         {
             var bookmarks = _context.Bookmarks.Where(b => b.UserId == userId && b.ProductId == productId).ToList();
 
             var bookmarkstatus = new BookmarkViewModel{
                 Bookmarks = bookmarks,
-                currentProduct = productId
+                currentProduct = productId,
+                productAmount = amount
             };
 
             return View(bookmarkstatus);

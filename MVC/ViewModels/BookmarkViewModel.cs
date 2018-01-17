@@ -10,5 +10,6 @@ namespace MVC.ViewModels
     {
         public List<Bookmark> Bookmarks {get;set;}
         public int currentProduct {get;set;}
+        public int productAmount {get;set;}
     }
 }

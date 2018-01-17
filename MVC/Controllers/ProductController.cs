@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -180,9 +182,10 @@ namespace MVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Type,Name,Description,Price,Amount")] Product product)
+        public async Task<IActionResult> Edit(int id, int OriginalAmount,[Bind("Id,Type,Name,Description,Price,Amount")] Product product)
 
         {
+
             if (id != product.Id)
             {
                 return NotFound();
@@ -192,6 +195,20 @@ namespace MVC.Controllers
             {
                 try
                 {
+                    //product amount on 0 and amount updated to >0
+                    if(OriginalAmount <= 0 && product.Amount > 0){
+                        var subscribers = _context.Subscriptions.Where(p => p.ProductId == id).ToList();
+                        var emailList = new List<string>();
+                        foreach(var sub in subscribers){
+                            var u = await _userManager.FindByIdAsync(sub.UserId.ToString());
+                            emailList.Add(u.UserName);
+                        }
+                        sendit(emailList); 
+                        foreach(var sub in subscribers){
+                            _context.Subscriptions.Remove(sub);
+                        }
+                    }
+
                     _context.Update(product);
                     await _context.SaveChangesAsync();
                 }
@@ -308,6 +325,59 @@ namespace MVC.Controllers
 
             await _context.SaveChangesAsync();
             return 	RedirectToAction("Bookmarks","Manage");
+        }
+
+        public async Task<IActionResult> Subscribe(int productId){
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                throw new ApplicationException($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+            }
+
+            _context.Subscriptions.Add(new Sub(){ 
+                ProductId = productId,
+                UserId = user.Id
+             });
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Details", new{ id = productId});
+        }
+
+        public string sendit(List<string> mailList)
+        {
+            MailMessage msg = new MailMessage();
+
+            msg.From = new MailAddress("robomarkt.g3@gmail.com");
+            foreach(var email in mailList){
+                msg.To.Add(email);
+            }
+            /*msg.To.Add("s.sabeni17@gmail.com");
+            msg.To.Add("0934244@hr.nl");*/
+            msg.Subject = "Product back in stock " + DateTime.Now.ToString();
+            msg.Body = "product amount updated";
+            msg.IsBodyHtml = true;
+
+            SmtpClient client = new SmtpClient();
+            client.UseDefaultCredentials = true;
+            client.Host = "smtp.gmail.com";
+            client.Port = 587;
+            client.EnableSsl = true;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.Credentials = new NetworkCredential("robomarkt.g3@gmail.com", "MachineLearning");
+            client.Timeout = 20000;
+            try
+            {
+                client.Send(msg);
+                return " ";
+            }
+            catch (Exception ex)
+            {
+                return "Fail Has error" + ex.Message;
+            }
+            finally
+            {
+                msg.Dispose();
+            }
         }
 
     }
