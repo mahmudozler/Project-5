@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
+using System.IO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -203,7 +204,7 @@ namespace MVC.Controllers
                             var u = await _userManager.FindByIdAsync(sub.UserId.ToString());
                             emailList.Add(u.UserName);
                         }
-                        sendit(emailList,product.Name); 
+                        sendit(emailList,product.Name,product.Id); 
                         foreach(var sub in subscribers){
                             _context.Subscriptions.Remove(sub);
                         }
@@ -358,7 +359,7 @@ namespace MVC.Controllers
             return RedirectToAction("Details", new{ id = productId});
         }
 
-        public string sendit(List<string> mailList,string productName)
+        public string sendit(List<string> mailList,string productName,int productId)
         {
             MailMessage msg = new MailMessage();
 
@@ -366,8 +367,8 @@ namespace MVC.Controllers
             foreach(var email in mailList){
                 msg.To.Add(email);
             }
-            msg.Subject = productName + " back in stock " + DateTime.Now.ToString();
-            msg.Body = "product amount updated";
+            msg.Subject = "Robomarkt - " + productName + " is weer op voorraad! " + DateTime.Now.ToString();
+            msg.Body = this.CreateBody(productName,productId);
             msg.IsBodyHtml = true;
 
             SmtpClient client = new SmtpClient();
@@ -392,6 +393,22 @@ namespace MVC.Controllers
                 msg.Dispose();
             }
         }
+
+        private string CreateBody(string productName, int productId)
+        {
+            string body = string.Empty;
+            using (StreamReader reader = new StreamReader("../MVC/Component/EmailUpdateStock.cshtml"))
+            {
+                body = reader.ReadToEnd();
+            }
+
+            body = body.Replace("{productName}", productName);
+            body = body.Replace("{productId}", productId.ToString());
+
+            return body;
+        }
+
+        
 
     }
 }
