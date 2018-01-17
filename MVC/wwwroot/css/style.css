@@ -746,6 +746,14 @@ footer div ul li {
     position: absolute;
     right:20px;
 }
+.robobuilding{
+    height:430px;
+    overflow:hidden;
+}
+.robobuilding img{
+    margin-top:-50px;
+    max-width:1000px;
+}
 
 /* DESKTOP */
 @media (min-width: 1200px) {
