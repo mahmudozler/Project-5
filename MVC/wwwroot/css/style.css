@@ -706,6 +706,46 @@ footer div ul li {
     background: #e87d7d !important;
     border-color: #e87d7d !important;
 }
+.bookmark-list{
+    min-height: 200px;
+    padding-left:0px;
+}
+.bookmark-list li{
+    display:inline;
+    list-style-type: none;
+    float:left;
+    width:100%;
+    padding:10px 0;
+    border:1px solid #ccc;
+    padding-left:10px;
+    margin-bottom:3px;
+    min-height:70px;
+    position: relative;
+}
+.bookmark-list li img{
+    display: block;
+    max-width: 64px;
+    max-height: 64px;
+    width: auto;
+    height: auto;
+    margin: auto;
+    
+}
+.bookmark-list li .image-box{
+    height:65px;
+    width:64px;
+    float:left;
+    display: block;
+    margin-right:20px;
+}
+.bookmark-link{
+    margin-right:40px;
+    color:#000;
+}
+.remove-link{
+    position: absolute;
+    right:20px;
+}
 
 /* DESKTOP */
 @media (min-width: 1200px) {

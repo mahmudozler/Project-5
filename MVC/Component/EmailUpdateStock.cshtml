@@ -1,4 +1,4 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <head>
     <title></title>
     <style>
@@ -100,47 +100,18 @@ body {
 <body>
 
     <div class="card">
-            <h3>Verzendbevestiging</h3>
-            <p>Geachte heer {Surname}</p>
-            <p>
-                Uw bestelling bij Robomarkt met ordernummer {orderid}
-                is verzonden naar het volgende adres:
-            <p>{Zipcode} <br/>
-            {Geen Adres}</p>
-                Uw bestelling wordt
-                aangeboden door een koerier van AMP Logistics.
-                Deze zal met u aan de deur het contract afhandelen.</p>
         <div class="card-header-color">
         <img src="https://github.com/0937452/Project-5/blob/master/robomarkt-white.png?raw=true">
-        <h1>Jouw Robomarkt order!</h1>
+        <h1>Voorraad Update!</h1>
         </div>
-        <h1>Uw factuur</h1>
 
-        <p> Factuur vindt u hieronder. Bewaar uw factuur zorgvuldig.</p>
-        <table class="zui-table zui-table-rounded">
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Selected amount</th>
-                        <th>Price</th>
-                        <th>Subtotal</th>
+        <p>Hallo!</p>
+    
+        <p>{productName} is weer op voorraad!</p>
+        <a href="http://localhost:5000/Product/Details/{productId}">Klik hier om te bestellen</a>
+        <p>Met vriendelijke groet,</p>
 
-                    </tr>
-                </thead>
-                <tbody>
-                    {swapthatshit}
-
-
-                </tbody>
-            </table>
-            <h1>Na ontvangst van uw bestelling</h1>
-            <p>Veelgestelde vragen en instellingen Heeft u een vraag over een product of zoekt u hulp bij het instellen?
-            Voor veel producten zijn antwoorden te vinden op veelgestelde vragen.
-            Klik op de productpagina op 'Veelgestelde vragen'.
-            Geef uw mening over uw aankoop Wij nodigen u graag uit voor het schrijven van een review.
-            Zo helpt u andere klanten met uw ervaringen met onze producten.
-            Klik op 'Reviews' op de productpagina om uw beoordeling te plaatsen. Meer informatie vindt u op Robomarkt.</p>
-        </p>
-        </div>
-        <!-- <div style="margin-bottom:100px;"></div> -->
+        <p>Robomarkt</p>
+    </div>
+        
 </body>

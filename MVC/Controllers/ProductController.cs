@@ -1,7 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Threading.Tasks;
+using System.IO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -180,9 +183,10 @@ namespace MVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Type,Name,Description,Price,Amount")] Product product)
+        public async Task<IActionResult> Edit(int id, int OriginalAmount,[Bind("Id,Type,Name,Description,Price,Amount")] Product product)
 
         {
+
             if (id != product.Id)
             {
                 return NotFound();
@@ -192,6 +196,20 @@ namespace MVC.Controllers
             {
                 try
                 {
+                    //product amount on 0 and amount updated to >0
+                    if(OriginalAmount <= 0 && product.Amount > 0){
+                        var subscribers = _context.Subscriptions.Where(p => p.ProductId == id).ToList();
+                        var emailList = new List<string>();
+                        foreach(var sub in subscribers){
+                            var u = await _userManager.FindByIdAsync(sub.UserId.ToString());
+                            emailList.Add(u.UserName);
+                        }
+                        sendit(emailList,product.Name,product.Id); 
+                        foreach(var sub in subscribers){
+                            _context.Subscriptions.Remove(sub);
+                        }
+                    }
+
                     _context.Update(product);
                     await _context.SaveChangesAsync();
                 }
@@ -294,6 +312,103 @@ namespace MVC.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction("Details", new{ id = productId});
         }
+
+        public async Task<IActionResult> RemoveBookmarkFromlist(int productId){
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                throw new ApplicationException($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+            }
+
+            var bookmarkrem = _context.Bookmarks.Where(b => b.UserId == user.Id && b.ProductId == productId).FirstOrDefault();
+
+            _context.Bookmarks.Remove(bookmarkrem);
+
+            await _context.SaveChangesAsync();
+            return 	RedirectToAction("Bookmarks","Manage");
+        }
+
+        public async Task<IActionResult> Subscribe(int productId){
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                throw new ApplicationException($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+            }
+
+            _context.Subscriptions.Add(new Sub(){ 
+                ProductId = productId,
+                UserId = user.Id
+             });
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Details", new{ id = productId});
+        }
+
+        public async Task<IActionResult> UnSubscribe(int productId){
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                throw new ApplicationException($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+            }
+
+            var subrem = _context.Subscriptions.Where(s => s.UserId == user.Id && s.ProductId == productId).FirstOrDefault();
+            
+            _context.Subscriptions.Remove(subrem);
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Details", new{ id = productId});
+        }
+
+        public string sendit(List<string> mailList,string productName,int productId)
+        {
+            MailMessage msg = new MailMessage();
+
+            msg.From = new MailAddress("robomarkt.g3@gmail.com");
+            foreach(var email in mailList){
+                msg.To.Add(email);
+            }
+            msg.Subject = "Robomarkt - " + productName + " is weer op voorraad! " + DateTime.Now.ToString();
+            msg.Body = this.CreateBody(productName,productId);
+            msg.IsBodyHtml = true;
+
+            SmtpClient client = new SmtpClient();
+            client.UseDefaultCredentials = true;
+            client.Host = "smtp.gmail.com";
+            client.Port = 587;
+            client.EnableSsl = true;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.Credentials = new NetworkCredential("robomarkt.g3@gmail.com", "MachineLearning");
+            client.Timeout = 20000;
+            try
+            {
+                client.Send(msg);
+                return " ";
+            }
+            catch (Exception ex)
+            {
+                return "Fail Has error" + ex.Message;
+            }
+            finally
+            {
+                msg.Dispose();
+            }
+        }
+
+        private string CreateBody(string productName, int productId)
+        {
+            string body = string.Empty;
+            using (StreamReader reader = new StreamReader("../MVC/Component/EmailUpdateStock.cshtml"))
+            {
+                body = reader.ReadToEnd();
+            }
+
+            body = body.Replace("{productName}", productName);
+            body = body.Replace("{productId}", productId.ToString());
+
+            return body;
+        }
+
+        
 
     }
 }

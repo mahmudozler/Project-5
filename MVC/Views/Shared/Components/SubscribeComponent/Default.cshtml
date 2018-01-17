@@ -1,0 +1,10 @@
+@model MVC.ViewModels.SubcribeViewModel
+
+
+@if(Model.productAmount <= 0){
+    @if(Model.SubsribeStatus.Count <= 0){
+        <a class="btn btn-primary subscribe" asp-controller="Product" asp-action="Subscribe" asp-route-productId="@Model.currentProduct">Ontvang email bij volgende voorraad</a>
+    } else {
+        <a class="btn btn-primary subscribe" asp-controller="Product" asp-action="UnSubscribe" asp-route-productId="@Model.currentProduct">Annuleer email update</a>
+    }
+}

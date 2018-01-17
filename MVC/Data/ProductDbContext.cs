@@ -30,5 +30,6 @@ namespace MVC.Data
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
         public DbSet<PartialOrder> PartialOrder { get; set; }
         public DbSet<Bookmark> Bookmarks { get; set; }
+        public DbSet<Sub> Subscriptions { get; set; }
     }
 }

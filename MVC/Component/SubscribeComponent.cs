@@ -9,26 +9,27 @@ using MVC.Data;
 
 namespace MVC.Components
 {
-    public class BookmarkComponent: ViewComponent
+    public class SubscribeComponent: ViewComponent
     {
         private readonly ProductDbContext _context;
 
-        public BookmarkComponent(ProductDbContext context)
+        public SubscribeComponent(ProductDbContext context)
         {
             _context = context;
         }
 
         public IViewComponentResult Invoke(int productId,string userId, int amount)
         {
-            var bookmarks = _context.Bookmarks.Where(b => b.UserId == userId && b.ProductId == productId).ToList();
+            var subscribeStatus = _context.Subscriptions.Where(s => s.UserId == userId && s.ProductId == productId).ToList();
 
-            var bookmarkstatus = new BookmarkViewModel{
-                Bookmarks = bookmarks,
+
+            var substatus = new SubcribeViewModel{
+                SubsribeStatus = subscribeStatus,
                 currentProduct = productId,
                 productAmount = amount
             };
 
-            return View(bookmarkstatus);
+            return View(substatus);
         }
 
     }
