@@ -1,0 +1,17 @@
+@using MVC.Models
+@model System.Collections.Generic.List<Product>
+
+@{
+    ViewData["Title"] = "Subscribe";
+    ViewData.AddActivePage(ManageNavPages.Subscribe);
+}
+
+<h2>Update meldingen voor producten</h2>
+@if(Model.Count <= 0){
+    <p>Geen</p>
+}
+<ul class="bookmark-list">
+    @foreach(var sub in Model){
+        <li><div class="image-box"><img src="~/images/products/@sub.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0000.jpg"/></div><a class="bookmark-link" asp-controller="Product" asp-action="Details" asp-route-id="@sub.Id">@sub.Name</a> <a class="remove-link" asp-controller="Product" asp-action="RemoveBookmarkFromlist" asp-route-productId="@sub.Id">Verwijder update melding</a></li>
+    }
+</ul> 

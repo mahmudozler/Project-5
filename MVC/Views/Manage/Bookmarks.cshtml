@@ -9,6 +9,6 @@
 <h2>Bookmarks</h2>
 <ul class="bookmark-list">
     @foreach(var bookmark in Model){
-        <li><div class="image-box"><img src="~/images/products/@bookmark.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0000.jpg"/></div><a class="bookmark-link" asp-controller="Product" asp-action="Details" asp-route-id="@bookmark.Id">@bookmark.Name</a> <a class="remove-link" asp-controller="Product" asp-action="RemoveBookmarkFromlist" asp-route-productId="@bookmark.Id">Remove Bookmark</a></li>
+        <li><div class="image-box"><img src="~/images/products/@bookmark.Name.Replace("'", "").Replace("/", "").Replace(",", "").Replace(".", "") - 0000.jpg"/></div><a class="bookmark-link" asp-controller="Product" asp-action="Details" asp-route-id="@bookmark.Id">@bookmark.Name</a> <a class="remove-link" asp-controller="Product" asp-action="RemoveBookmarkFromlist" asp-route-productId="@bookmark.Id">Verwijder Bookmark</a></li>
     }
 </ul>

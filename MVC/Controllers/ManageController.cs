@@ -615,6 +615,19 @@ namespace MVC.Controllers
             return View(bookmarked_products);
         }
 
+        public async Task<IActionResult> Subscribe(){
+            var user = await _userManager.GetUserAsync(User);
+
+            var subscriptions = _context.Subscriptions.Where(s => s.UserId == user.Id).ToList();
+
+            List<Product> subscribed_products = new List<Product>(); 
+            foreach (var sub in subscriptions){
+                var product = _context.Products.Where(p => p.Id == sub.ProductId).FirstOrDefault();
+                subscribed_products.Add(product);
+            }
+            return View(subscribed_products);
+        }
+
         #region Helpers
 
         private void AddErrors(IdentityResult result)
