@@ -187,7 +187,7 @@
         data.addColumn('string', 'productnaam');
         data.addColumn('number', 'Aantal producten');
 
-        @foreach(var product in Model){
+        @foreach(var product in Model.OrderBy(O => O.Amount)){
                     <text>
                     data.addRows([["@product.Name", @product.Amount]]);
                     </text>
@@ -195,7 +195,7 @@
 
 
         // Optional; add a title and set the width and height of the chart
-        var options = {'title':'Minst beschikabare producten', 'width':1200, 'height':600};
+        var options = {'title':'Minst beschikbare producten', 'width':1200, 'height':600};
 
         // Display the chart inside the <div> element with id="piechart"
         var chart = new google.visualization.ColumnChart(document.getElementById('voorraadproducten'));
