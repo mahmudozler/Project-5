@@ -203,7 +203,7 @@ namespace MVC.Controllers
                             var u = await _userManager.FindByIdAsync(sub.UserId.ToString());
                             emailList.Add(u.UserName);
                         }
-                        sendit(emailList); 
+                        sendit(emailList,product.Name); 
                         foreach(var sub in subscribers){
                             _context.Subscriptions.Remove(sub);
                         }
@@ -343,7 +343,22 @@ namespace MVC.Controllers
             return RedirectToAction("Details", new{ id = productId});
         }
 
-        public string sendit(List<string> mailList)
+        public async Task<IActionResult> UnSubscribe(int productId){
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                throw new ApplicationException($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+            }
+
+            var subrem = _context.Subscriptions.Where(s => s.UserId == user.Id && s.ProductId == productId).FirstOrDefault();
+            
+            _context.Subscriptions.Remove(subrem);
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Details", new{ id = productId});
+        }
+
+        public string sendit(List<string> mailList,string productName)
         {
             MailMessage msg = new MailMessage();
 
@@ -351,9 +366,7 @@ namespace MVC.Controllers
             foreach(var email in mailList){
                 msg.To.Add(email);
             }
-            /*msg.To.Add("s.sabeni17@gmail.com");
-            msg.To.Add("0934244@hr.nl");*/
-            msg.Subject = "Product back in stock " + DateTime.Now.ToString();
+            msg.Subject = productName + " back in stock " + DateTime.Now.ToString();
             msg.Body = "product amount updated";
             msg.IsBodyHtml = true;
 
