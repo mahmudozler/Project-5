@@ -89,7 +89,9 @@ namespace MVC.Controllers
                 ViewData["Message"] = "Resultaten voor " + "\"" + searchString + "\"";
             }
 
-            if (res == null) { return NotFound(); }
+            ViewData["Message"] = "Geen resultaten gevonden voor " + "\"" + searchString + "\"";
+
+            if (res == null) { return View(_context.Products.GetPage(pageIndex - 1, 24, p => p.Sold).items.ToList()); }
 
             ViewBag.pageIndex = pageIndex;
             ViewBag.totalPages = res.totalPages + 1;
