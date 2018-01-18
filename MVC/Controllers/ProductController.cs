@@ -87,8 +87,8 @@ namespace MVC.Controllers
                 ViewBag.searchString = "&searchString=" + searchString;
 
                 ViewData["Message"] = "Resultaten voor " + "\"" + searchString + "\"";
-            }
-s
+            };
+
 
             if (res == null)
             {
