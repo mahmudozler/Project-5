@@ -23,7 +23,7 @@ namespace MVC.Controllers
         private readonly ProductDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public ProductController(ProductDbContext context,UserManager<ApplicationUser> userManager)
+        public ProductController(ProductDbContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
             _userManager = userManager;
@@ -88,10 +88,13 @@ namespace MVC.Controllers
 
                 ViewData["Message"] = "Resultaten voor " + "\"" + searchString + "\"";
             }
+s
 
-            ViewData["Message"] = "Geen resultaten gevonden voor " + "\"" + searchString + "\"";
-
-            if (res == null) { return View(_context.Products.GetPage(pageIndex - 1, 24, p => p.Sold).items.ToList()); }
+            if (res == null)
+            {
+                ViewData["Message"] = "Geen resultaten gevonden voor " + "\"" + searchString + "\"";
+                return View(_context.Products.GetPage(pageIndex - 1, 24, p => p.Sold).items.ToList());
+            }
 
             ViewBag.pageIndex = pageIndex;
             ViewBag.totalPages = res.totalPages + 1;
@@ -185,7 +188,7 @@ namespace MVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, int OriginalAmount,[Bind("Id,Type,Name,Description,Price,Amount")] Product product)
+        public async Task<IActionResult> Edit(int id, int OriginalAmount, [Bind("Id,Type,Name,Description,Price,Amount")] Product product)
 
         {
 
@@ -199,15 +202,18 @@ namespace MVC.Controllers
                 try
                 {
                     //product amount on 0 and amount updated to >0
-                    if(OriginalAmount <= 0 && product.Amount > 0){
+                    if (OriginalAmount <= 0 && product.Amount > 0)
+                    {
                         var subscribers = _context.Subscriptions.Where(p => p.ProductId == id).ToList();
                         var emailList = new List<string>();
-                        foreach(var sub in subscribers){
+                        foreach (var sub in subscribers)
+                        {
                             var u = await _userManager.FindByIdAsync(sub.UserId.ToString());
                             emailList.Add(u.UserName);
                         }
-                        sendit(emailList,product.Name,product.Id); 
-                        foreach(var sub in subscribers){
+                        sendit(emailList, product.Name, product.Id);
+                        foreach (var sub in subscribers)
+                        {
                             _context.Subscriptions.Remove(sub);
                         }
                     }
@@ -284,23 +290,26 @@ namespace MVC.Controllers
             _context.SaveChanges();
         }
 
-        public async Task<IActionResult> Bookmark(int productId){
+        public async Task<IActionResult> Bookmark(int productId)
+        {
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
                 throw new ApplicationException($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
             }
 
-            _context.Bookmarks.Add(new Bookmark(){ 
+            _context.Bookmarks.Add(new Bookmark()
+            {
                 ProductId = productId,
                 UserId = user.Id
-             });
+            });
 
             await _context.SaveChangesAsync();
-            return RedirectToAction("Details", new{ id = productId});
+            return RedirectToAction("Details", new { id = productId });
         }
 
-        public async Task<IActionResult> RemoveBookmark(int productId){
+        public async Task<IActionResult> RemoveBookmark(int productId)
+        {
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
@@ -312,10 +321,11 @@ namespace MVC.Controllers
             _context.Bookmarks.Remove(bookmarkrem);
 
             await _context.SaveChangesAsync();
-            return RedirectToAction("Details", new{ id = productId});
+            return RedirectToAction("Details", new { id = productId });
         }
 
-        public async Task<IActionResult> RemoveBookmarkFromlist(int productId){
+        public async Task<IActionResult> RemoveBookmarkFromlist(int productId)
+        {
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
@@ -327,26 +337,29 @@ namespace MVC.Controllers
             _context.Bookmarks.Remove(bookmarkrem);
 
             await _context.SaveChangesAsync();
-            return 	RedirectToAction("Bookmarks","Manage");
+            return RedirectToAction("Bookmarks", "Manage");
         }
 
-        public async Task<IActionResult> Subscribe(int productId){
+        public async Task<IActionResult> Subscribe(int productId)
+        {
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
                 throw new ApplicationException($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
             }
 
-            _context.Subscriptions.Add(new Sub(){ 
+            _context.Subscriptions.Add(new Sub()
+            {
                 ProductId = productId,
                 UserId = user.Id
-             });
+            });
 
             await _context.SaveChangesAsync();
-            return RedirectToAction("Details", new{ id = productId});
+            return RedirectToAction("Details", new { id = productId });
         }
 
-        public async Task<IActionResult> UnSubscribe(int productId){
+        public async Task<IActionResult> UnSubscribe(int productId)
+        {
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
@@ -354,23 +367,24 @@ namespace MVC.Controllers
             }
 
             var subrem = _context.Subscriptions.Where(s => s.UserId == user.Id && s.ProductId == productId).FirstOrDefault();
-            
+
             _context.Subscriptions.Remove(subrem);
 
             await _context.SaveChangesAsync();
-            return RedirectToAction("Details", new{ id = productId});
+            return RedirectToAction("Details", new { id = productId });
         }
 
-        public string sendit(List<string> mailList,string productName,int productId)
+        public string sendit(List<string> mailList, string productName, int productId)
         {
             MailMessage msg = new MailMessage();
 
             msg.From = new MailAddress("robomarkt.g3@gmail.com");
-            foreach(var email in mailList){
+            foreach (var email in mailList)
+            {
                 msg.To.Add(email);
             }
             msg.Subject = "Robomarkt - " + productName + " is weer op voorraad! " + DateTime.Now.ToString();
-            msg.Body = this.CreateBody(productName,productId);
+            msg.Body = this.CreateBody(productName, productId);
             msg.IsBodyHtml = true;
 
             SmtpClient client = new SmtpClient();
@@ -410,7 +424,7 @@ namespace MVC.Controllers
             return body;
         }
 
-        
+
 
     }
 }
